@@ -255,3 +255,25 @@ def test_readme_scorecard_matches_results_discussion() -> None:
 
     readme, disc = scorecard(ROOT / "README.md"), scorecard(ROOT / "RESULTS_DISCUSSION.md")
     assert readme and readme == disc
+
+
+def test_markdown_tables_have_consistent_columns() -> None:
+    """GitHub silently drops or misrenders table rows whose column count differs."""
+    for md in _tracked_markdown():
+        block: list[str] = []
+        for line in [*md.read_text(encoding="utf-8").splitlines(), ""]:
+            if line.startswith("|"):
+                block.append(line)
+            elif block:
+                counts = {row.replace(r"\|", "").count("|") for row in block}  # \| is escaped
+                assert len(counts) == 1, f"{md.name}: ragged table starting {block[0][:50]!r}"
+                block = []
+
+
+def test_figures_are_opaque_for_dark_mode() -> None:
+    from PIL import Image
+
+    for png in [*FIG.glob("*.png"), *(ROOT / "docs" / "screenshots").glob("*.png")]:
+        with Image.open(png) as im:
+            alpha = im.convert("RGBA").getchannel("A")
+            assert alpha.getextrema()[0] == 255, f"{png.name} has transparent pixels"

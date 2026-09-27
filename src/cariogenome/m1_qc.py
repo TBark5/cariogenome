@@ -137,11 +137,13 @@ def write_accessions(cat: pd.DataFrame, fam: pd.DataFrame | None = None) -> None
         "|---|---|---|---|---|---|---|---|",
     ]
     for r in cat.itertuples():
+        # pandas reads empty CSV cells as NaN; print them as empty cells
         pid = r.protein_id if isinstance(r.protein_id, str) else ""
+        flags = r.flags if isinstance(r.flags, str) else ""
         lines.append(
             f"| {r.gene} | {r.label} | {r.locus_tag} | {pid} | {r.accession}:{r.start}-{r.end}"
             f"({r.strand}) | {r.identity_to_query:.3f} | {'yes' if r.included else 'no'} "
-            f"| {r.flags} |"
+            f"| {flags} |"
         )
     if fam is not None and len(fam):
         lines += [
@@ -152,7 +154,8 @@ def write_accessions(cat: pd.DataFrame, fam: pd.DataFrame | None = None) -> None
             "|---|---|---|---|---|",
         ]
         for r in fam.itertuples():
-            lines.append(f"| {r.id} | *{r.species}* | {r.protein_id} | {r.product} | {r.length} |")
+            rid = r.id.replace("|", "\\|")  # the ID contains "|", which would split the cell
+            lines.append(f"| {rid} | *{r.species}* | {r.protein_id} | {r.product} | {r.length} |")
     other = {k: v for k, v in log.items() if not k.startswith(("NC_", "NZ_"))}
     if other:
         lines += [

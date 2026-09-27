@@ -143,7 +143,7 @@ Three ways:
 - Simulated codon evolution along a known tree with known ω: the pipeline recovers the
   exact topology (RF = 0) and ω (Spearman 0.991, median error 8.8%).
 - The NG86 code agrees with Biopython's implementation within 2%.
-- 30 unit tests, a clean-clone rebuild that reproduces every result file, and a test
+- 43 automated tests (methods, documentation and dashboard), a clean-clone rebuild that reproduces every result file, and a test
   that checks each README number against `results/`.
 
 **20. So what does this tell us about tooth decay?**

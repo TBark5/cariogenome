@@ -324,17 +324,17 @@ Every sequence and structure used in this project, with the date it was download
 
 | ID | Species | Protein ID | Product | Length (aa) |
 |---|---|---|---|---|
-| Smu_UA159|SMU_RS04620 | *S. mutans* | WP_002352268.1 | glucosyltransferase GtfB | 1476 |
-| Smu_UA159|SMU_RS04625 | *S. mutans* | WP_002352269.1 | glucosyltransferase GtfC | 1455 |
-| Smu_UA159|SMU_RS04210 | *S. mutans* | WP_002352262.1 | glucosyltransferase-S | 1462 |
-| Ssa_SK36|SSA_RS03130 | *S. sanguinis* | WP_011836622.1 | glycoside hydrolase family 70 protein | 1568 |
-| Sgo_CH1|SGO_RS02460 | *S. gordonii* | WP_041789547.1 | glycoside hydrolase family 70 protein | 1577 |
-| Ssl_JIM8777|SALIVA_RS07005 | *S. salivarius* | WP_014634754.1 | glycoside hydrolase family 70 protein | 1565 |
-| Ssl_JIM8777|SALIVA_RS04175 | *S. salivarius* | WP_014634305.1 | glycoside hydrolase family 70 protein | 1518 |
-| Ssl_JIM8777|SALIVA_RS04170 | *S. salivarius* | WP_014634304.1 | glycoside hydrolase family 70 protein | 1493 |
-| Ssl_JIM8777|SALIVA_RS04180 | *S. salivarius* | WP_014634306.1 | glycoside hydrolase family 70 protein | 1599 |
-| Ssl_JIM8777|SALIVA_RS06990 | *S. salivarius* | WP_014634751.1 | glycoside hydrolase family 70 protein | 1579 |
-| Ssl_JIM8777|SALIVA_RS07110 | *S. salivarius* | WP_014634774.1 | glycoside hydrolase family 70 protein | 1450 |
+| Smu_UA159\|SMU_RS04620 | *S. mutans* | WP_002352268.1 | glucosyltransferase GtfB | 1476 |
+| Smu_UA159\|SMU_RS04625 | *S. mutans* | WP_002352269.1 | glucosyltransferase GtfC | 1455 |
+| Smu_UA159\|SMU_RS04210 | *S. mutans* | WP_002352262.1 | glucosyltransferase-S | 1462 |
+| Ssa_SK36\|SSA_RS03130 | *S. sanguinis* | WP_011836622.1 | glycoside hydrolase family 70 protein | 1568 |
+| Sgo_CH1\|SGO_RS02460 | *S. gordonii* | WP_041789547.1 | glycoside hydrolase family 70 protein | 1577 |
+| Ssl_JIM8777\|SALIVA_RS07005 | *S. salivarius* | WP_014634754.1 | glycoside hydrolase family 70 protein | 1565 |
+| Ssl_JIM8777\|SALIVA_RS04175 | *S. salivarius* | WP_014634305.1 | glycoside hydrolase family 70 protein | 1518 |
+| Ssl_JIM8777\|SALIVA_RS04170 | *S. salivarius* | WP_014634304.1 | glycoside hydrolase family 70 protein | 1493 |
+| Ssl_JIM8777\|SALIVA_RS04180 | *S. salivarius* | WP_014634306.1 | glycoside hydrolase family 70 protein | 1599 |
+| Ssl_JIM8777\|SALIVA_RS06990 | *S. salivarius* | WP_014634751.1 | glycoside hydrolase family 70 protein | 1579 |
+| Ssl_JIM8777\|SALIVA_RS07110 | *S. salivarius* | WP_014634774.1 | glycoside hydrolase family 70 protein | 1450 |
 
 ## Other downloads
 

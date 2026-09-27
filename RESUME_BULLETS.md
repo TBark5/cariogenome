@@ -15,7 +15,7 @@
   (dN/dS 0.156 vs 0.019; Cliff's δ = 0.88, FDR q = 0.012) and are less conserved, with no
   compositional or phylogenetic evidence of horizontal transfer. Reported a failed
   prediction openly.
-- Delivered 30 automated tests, synthetic-data validation (exact tree recovery,
+- Delivered 43 automated tests, synthetic-data validation (exact tree recovery,
   ω Spearman 0.99), a clean-clone reproducibility check, and an interactive Streamlit
   dashboard with 3D protein structure views.
 
