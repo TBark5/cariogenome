@@ -1,0 +1,16 @@
+gene,class,n_found,n_included,n_species,median_nt_length,min_nt_length,max_nt_length
+gtfB,virulence,10,9,1,4431.0,4431,4434
+gtfC,virulence,10,10,1,4368.0,4368,4368
+gtfD,virulence,18,18,4,4389.0,4389,4734
+spaP,virulence,16,16,3,4695.0,4566,4737
+ftf,virulence,13,13,2,2388.0,2388,2916
+luxS,virulence,22,22,5,483.0,483,483
+recA,control,22,21,5,1152.0,1137,1155
+rpoB,control,22,22,5,3567.0,3564,3609
+gyrB,control,21,21,5,1953.0,1947,1953
+gyrA,control,22,22,5,2463.0,2445,2469
+sodA,control,22,22,5,606.0,606,612
+pheS,control,22,22,5,1044.0,1044,1050
+atpD,control,22,22,5,1407.0,1407,1407
+tuf,control,22,22,5,1197.0,1197,1197
+16S,rRNA control,22,22,5,1557.0,1506,1557

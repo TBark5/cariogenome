@@ -1,0 +1,50 @@
+LOCUS       Smu_LP13_16S            1557 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_LP13 16S SMUNUM_RS00075 region of NZ_AP014571.1.
+ACCESSION   NZ_AP014571.1:16881-18437
+VERSION     NZ_AP014571.1:16881-18437
+KEYWORDS    .
+SOURCE      Streptococcus mutans LP13
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1557
+                     /locus_tag="SMUNUM_RS00075"
+                     /old_locus_tag="SMNUM_r001"
+     rRNA            1..1557
+                     /locus_tag="SMUNUM_RS00075"
+                     /old_locus_tag="SMNUM_r001"
+                     /product="16S ribosomal RNA"
+                     /inference="COORDINATES: nucleotide
+                     motif:Rfam:15.0:RF00177"
+                     /inference="COORDINATES: profile:INFERNAL:1.1.5"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: cmsearch."
+                     /db_xref="RFAM:RF00177"
+ORIGIN
+        1 tttaatgaga gtttgatcct ggctcaggac gaacgctggc ggcgtgccta atacatgcaa
+       61 gtgggacgca agggaacaca ctgtgcttgc acaccgtgtt ttcttgagtc gcgaacgggt
+      121 gagtaacgcg taggtaacct gcctattagc gggggataac tattggaaac gatagctaat
+      181 accgcataat attaattatt gcatgataat tgattgaaag atgcaagcgc atcactagta
+      241 gatggacctg cgttgtatta gctagttggt aaggtaagag cttaccaagg cgacgataca
+      301 tagccgacct gagagggtga tcggccacac tgggactgag acacggccca gactcctacg
+      361 ggaggcagca gtagggaatc ttcggcaatg gacgaaagtc tgaccgagca acgccgcgtg
+      421 agtgaagaag gttttcggat cgtaaagctc tgttgtaagt caagaacgtg tgtgagagtg
+      481 gaaagttcac acagtgacgg tagcttacca gaaagggacg gctaactacg tgccagcagc
+      541 cgcggtaata cgtaggtccc gagcgttgtc cggatttatt gggcgtaaag ggagcgcagg
+      601 cggtcaggaa agtctggagt aaaaggctat ggctcaacca tagtgtgctc tggaaactgt
+      661 ctgacttgag tgcagaaggg gagagtggaa ttccatgtgt agcggtgaaa tgcgtagata
+      721 tatggaggaa caccagtggc gaaagcggct ctctggtctg tcactgacgc tgaggctcga
+      781 aagcgtgggt agcgaacagg attagatacc ctggtagtcc acgccgtaaa cgatgagtgc
+      841 taggtgttag gccctttccg gggcttagtg ccggagctaa cgcaataagc actccgcctg
+      901 gggagtacga ccgcaaggtt gaaactcaaa ggaattgacg ggggcccgca caagcggtgg
+      961 agcatgtggt ttaattcgaa gcaacgcgaa gaaccttacc aggtcttgac atcccgatgc
+     1021 tattcttaga gataggaagt tacttcggta catcggagac aggtggtgca tggttgtcgt
+     1081 cagctcgtgt cgtgagatgt tgggttaagt cccgcaacga gcgcaaccct tattgttagt
+     1141 tgccatcatt aagttgggca ctctagcgag actgccggta ataaaccgga ggaaggtggg
+     1201 gatgacgtca aatcatcatg ccccttatga cctgggctac acacgtgcta caatggtcgg
+     1261 tacaacgagt tgcgagccgg tgacggcaag ctaatctctg aaagccgatc tcagttcgga
+     1321 ttggaggctg caactcgcct ccatgaagtc ggaatcgcta gtaatcgcgg atcagcacgc
+     1381 cgcggtgaat acgttcccgg gccttgtaca caccgcccgt cacaccacga gagtttgtaa
+     1441 cacccgaagt cggtgaggta accttttagg ggccagccgc ctaaggtggg atggatgatt
+     1501 ggggtgaagt cgtaacaagg tagccgtatc ggaaggtgcg gctggatcac ctccttt
+//

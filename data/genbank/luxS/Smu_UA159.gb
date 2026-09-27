@@ -1,0 +1,40 @@
+LOCUS       Smu_UA159_luxS           483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_UA159 luxS SMU_RS02285 region of NC_004350.2.
+ACCESSION   NC_004350.2:443205-443687
+VERSION     NC_004350.2:443205-443687
+KEYWORDS    .
+SOURCE      Streptococcus mutans UA159
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..483)
+                     /locus_tag="SMU_RS02285"
+                     /old_locus_tag="SMU.474"
+                     /old_locus_tag="SMU_474"
+     CDS             complement(1..483)
+                     /locus_tag="SMU_RS02285"
+                     /old_locus_tag="SMU.474"
+                     /old_locus_tag="SMU_474"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002286460.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_002263047.1"
+                     /translation="MTKEVTVESFELDHIAVKAPYVRLISEEFGPKGDLITNFDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAKLIRQRIDGMIDCSPFGCRTGFHLIMWGKHTTTQIATVIK
+                     ASLEEIANTISWKDVPGTTIESCGNYKDHSLFSAKEWAKLILKQGISDDPFERHLV"
+ORIGIN
+        1 ttacactaga tgacgctcaa aaggatcatc tgaaatgcct tgttttaaaa tcagctttgc
+       61 ccattcttta gctgaaaaaa ggctatgatc tttgtaattc ccacaggact caatagttgt
+      121 tccagggaca tctttccatg agattgtatt agcaatttct tctaaacttg ctttgatgac
+      181 tgtggctatt tgggttgttg tatgcttacc ccacatgatg agatgaaaac cagtacgaca
+      241 gccaaaaggg gaacagtcaa tcatcccgtc aatacgctga cgaatcagct tagccagtaa
+      301 atgttcaata gtatgaaggc ctgcagtcgg aatagagtct tcattaggct gtactaagcg
+      361 aatatcaaaa ttggtaataa gatcgccttt aggtccaaac tcttctgaaa taagacggac
+      421 ataaggggct tttacagcaa tgtgatcaag ttcaaagctt tcaacagtaa cttcttttgt
+      481 cat
+//

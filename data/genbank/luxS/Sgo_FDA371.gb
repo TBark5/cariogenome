@@ -1,0 +1,38 @@
+LOCUS       Sgo_FDA371_luxS          483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_FDA371 luxS CO687_RS00230 region of NZ_CP023511.1.
+ACCESSION   NZ_CP023511.1:37358-37840
+VERSION     NZ_CP023511.1:37358-37840
+KEYWORDS    .
+SOURCE      Streptococcus gordonii
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            1..483
+                     /locus_tag="CO687_RS00230"
+                     /old_locus_tag="CO687_00230"
+     CDS             1..483
+                     /locus_tag="CO687_RS00230"
+                     /old_locus_tag="CO687_00230"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002893508.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_008808586.1"
+                     /translation="MSKEVIVESFELDHTIVKAPYVRLIGEESGPKGDVISNFDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAMLIRKRIDGMIDCSPFGCRTGFHMIMWGRHTPSEIAQVIK
+                     SCLEEIAETTTWEDVPGTTIESCGNYKDHSLFSAKEWAKLILKQGISDNAFERHVI"
+ORIGIN
+        1 atgtctaaag aagttattgt tgaaagtttc gagcttgatc acacaatcgt taaggcccct
+       61 tatgtacgac tcattggaga agaaagcgga ccaaaaggag atgtcatttc caattttgat
+      121 atccgacttg tccagcccaa tgaagattcc attccaactg caggtctcca taccattgaa
+      181 cacctgctgg ccatgcttat ccgtaaacgc attgatggaa tgattgattg ctctcctttt
+      241 ggttgtcgaa ctggtttcca tatgatcatg tggggacgtc ataccccatc cgaaatcgcc
+      301 caagtgatca aatcatgcct tgaagaaatc gctgaaacca ctacttggga ggacgtccct
+      361 ggaactacga ttgagtcttg cggaaactat aaagatcaca gccttttttc tgccaaggag
+      421 tgggctaaat taatcctcaa acaagggatc tcagataacg ctttcgaacg ccatgtcatt
+      481 tga
+//

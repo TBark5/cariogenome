@@ -1,0 +1,83 @@
+LOCUS       Smu_T8_ftf              2388 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_T8 ftf FSA31_RS09210 region of NZ_CP044492.1.
+ACCESSION   NZ_CP044492.1:1827769-1830156
+VERSION     NZ_CP044492.1:1827769-1830156
+KEYWORDS    .
+SOURCE      Streptococcus mutans
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..2388)
+                     /locus_tag="FSA31_RS09210"
+                     /old_locus_tag="FSA31_1822"
+     CDS             complement(1..2388)
+                     /locus_tag="FSA31_RS09210"
+                     /old_locus_tag="FSA31_1822"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_019314943.1"
+                     /GO_function="GO:0050053 - levansucrase activity [Evidence
+                     IEA]"
+                     /GO_process="GO:0009758 - carbohydrate utilization
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="glycoside hydrolase family 68 protein"
+                     /protein_id="WP_002284909.1"
+                     /translation="METKVRKKMYKKGKFWVVATIATAMLTGIGLSSVQADEANSTQVS
+                     SELAERSQVQENTTASSSAAENQAKTEVQETPSTNPAAATVENTDQTTKVITDNAAVES
+                     KASKTKDQAATVTKTAASTPEVGQTNEKAKATKEADITTPKNTIDEYGLTEQARKIATE
+                     AGINLSSLTQKQVEALNKVKLTSDAQTGHQMTYQEFDKIAQTLIAQDERYAIPYFNAKA
+                     IKNMKAATTRDAQTGQIADLDVWDSWPVQDAKTGEVINWNGYQLVVAMMGIPNTNDNHI
+                     YLLYNKYGDNNFDHWKNAGSIFGYNETPLTQEWSGSATVNEDGSLQLFYTKVDTSDKNS
+                     NNQRLATATVNLGFDDQDVRILSVENDKVLTPEGGDGYHYQSYQQWRSTFTGADNIAMR
+                     DPHVIEDENGDRYLVFEASTGTENYQGEDQIYNFTNYGGSSAYNVKSLFRFLDDQDMYN
+                     RASWANAAIGILKLKGDKKTPEVDQFYTPLLSSTMVSDELERPNVVKLGDKYYLFTASR
+                     LNHGSNNDAWNKANEVVGDNVVMLGYVSDQLTNGYKPLNNSGVVLTASVPADWRTATYS
+                     YYAVPVAGSSDTLLMTAYMTNRNEVAGKGKNSTWAPSFLIQVLPDGTTKVLAEMTQQGD
+                     WIWDEPSRTTDTVGTLDTAYLPGENDGYIDWNVIGGYGLKPHTPGQYQPTVPSTPIHTD
+                     DIISFEVSFDGHLVIKPVKVNNDSAGRIDQSRNSGGSLNVAFNVSAGGNISVKPSQKSI
+                     NNTKETKKAHHVSTEKKQKKGNSFFAALLALFSAFCVSIGFK"
+ORIGIN
+        1 ttatttaaaa ccaatgctta cacagaaagc actgaaaaga gctaataaag ctgcaaagaa
+       61 agaatttcct tttttctgtt tcttttctgt tgaaacatga tgagctttct ttgtttcttt
+      121 tgtgttatta atcgattttt gagaaggttt gacagaaata tttccgcccg cagagacatt
+      181 aaaggcaaca ttaagagacc cacctgaatt ccttgattgg tcaattcgac cagcggagtc
+      241 attatttact ttgacaggtt taataacgag atgaccatca aaagagactt caaaagaaat
+      301 aatgtcatct gtatgaattg gtgttgatgg aacagttggt tgatattgtc ccggtgtatg
+      361 tggcttcaaa ccgtagccac caataacatt ccaatcaata taaccatcat tttcacctgg
+      421 aagataggct gtatccagcg tgccaacagt gtctgtcgtg cgacttggtt catcccaaat
+      481 ccaatcaccc tgttgtgtca tttctgctaa gacttttgta gtcccatctg gtaaaacctg
+      541 aatcagaaaa ctaggtgccc aggttgaatt cttaccttta cctgcgactt cattacgatt
+      601 ggtcatataa gccgtcatta acagggtatc agatgatcca gctactggaa cagcataata
+      661 agagtaagtc gccgttcgcc aatctgctgg aactgaagct gttaaaacca caccactatt
+      721 atttaagggt ttgtagccgt tagtcaattg atcagaaaca taacctagca taacgacatt
+      781 atcaccaaca acttcatttg ctttattcca agcatcgttg ttacttccgt gattaagacg
+      841 tgaagctgta aaaagatagt acttatctcc taatttaacc acattgggtc gctcgagttc
+      901 atccgaaacc attgttgaac ttagtaaagg cgtgtaaaat tgatctacct caggtgtttt
+      961 tttatcgccc ttaagtttta aaataccaat agctgcattg gcccagcttg cacggttata
+     1021 catatcttga tcatctaaaa atctaaaaag acttttaaca ttataagcag agctgccgcc
+     1081 atagttagta aagttgtaaa tctgatcttc accttgataa ttctctgtac ctgtactagc
+     1141 ctcaaagaca agatagcgat ctccattctc atcttcaatg acatgtggat cacgcatagc
+     1201 aatattatca gcacctgtaa aggttgaacg ccattgttga taactttgat aatgatagcc
+     1261 atcaccgcct tcaggcgtta aaactttatc attttcaaca gaaagaattc taacatcttg
+     1321 gtcatcaaag ccaagattta cagtcgctgt tgctaaacgt tgattgttac tgtttttgtc
+     1381 actagtatca accttggtgt agaataactg caaacttcca tcttcattta cggtagctga
+     1441 acctgaccat tcttgagtta ggggtgtttc attataacca aagatagaac ctgcattttt
+     1501 ccaatgatca aaattattat ctccatattt attataaaga agataaatat gattatcatt
+     1561 agtatttgga atgcccatca tagcaacaac aagctgataa ccattccaat taataacttc
+     1621 accagtctta gcatcctgaa ctggccaaga atcccaaaca tccaaatcag ctatttgacc
+     1681 cgtttgggca tcacgcgttg tagccgcctt catatttttg attgcttttg cattaaaata
+     1741 agggatagca tagcgttcat cttgagctat caacgtttga gcaatcttgt caaattcttg
+     1801 ataggtcatt tgatgacccg tttgagcatc actcgttaat ttaactttat ttaatgcttc
+     1861 aacttgcttt tgtgtcaaac tgcttaaatt aataccagct tcagtagcaa tcttacgagc
+     1921 ctgttctgtt aggccgtatt catctattgt attctttggc gtagttatgt cagcttcttt
+     1981 agttgcctta gccttttcat ttgtttgacc tacttccggt gtactagctg ctgttttagt
+     2041 tacggtagct gcttgatcct tagttttact tgcttttgat tcaacagcag cattatctgt
+     2101 tatcacctta gttgtttgat cagtgttctc aacagtagca gctgcgggat ttgttgatgg
+     2161 tgtttcttga acttcagtct tagcctgatt ttctgctgct gatgatgaag cagttgtatt
+     2221 ttcttgaacc tgacttcttt cagccaattc tgaagaaact tgagttgaat tggcttcatc
+     2281 tgcctgaaca gaagagagcc caattccagt cagcatagca gtcgcgatgg tggctaccac
+     2341 ccaaaatttc cctttcttat acatcttttt tctaacttta gtttccat
+//

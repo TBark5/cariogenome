@@ -1,0 +1,59 @@
+LOCUS       Smu_NN2025_tuf          1197 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_NN2025 tuf SMUNN2025_RS06625 region of NC_013928.1.
+ACCESSION   NC_013928.1:1358611-1359807
+VERSION     NC_013928.1:1358611-1359807
+KEYWORDS    .
+SOURCE      Streptococcus mutans NN2025
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1197)
+                     /gene="tuf"
+                     /locus_tag="SMUNN2025_RS06625"
+                     /old_locus_tag="SmuNN2025_1288"
+     CDS             complement(1..1197)
+                     /gene="tuf"
+                     /locus_tag="SMUNN2025_RS06625"
+                     /old_locus_tag="SmuNN2025_1288"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_014335040.1"
+                     /GO_function="GO:0005525 - GTP binding [Evidence IEA];
+                     GO:0003746 - translation elongation factor activity
+                     [Evidence IEA]"
+                     /GO_process="GO:0006414 - translational elongation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="elongation factor Tu"
+                     /protein_id="WP_002263314.1"
+                     /translation="MAKEKYDRSKPHVNIGTIGHVDHGKTTLTAAITTVLARRLPSAVN
+                     QPKDYSSIDAAPEERERGITINTAHVEYETEKRHYAHIDAPGHADYVKNMITGAAQMDG
+                     AILVVASTDGPMPQTREHILLSRQVGVKYLIVFMNKVDLVDDEELLELVEMEIRDLLSE
+                     YDFPGDDIPVIQGSALKALEGDTAQEDIIMELMHTVDDYIPDPERDTDKPLLLPVEDVF
+                     SITGRGTVASGRIDRGTVKVNDEVEIVGIRDDIQKAVVTGVEMFRKQLDEGIAGDNVGV
+                     LLRGIQRDEIERGQVLAKPGSIHPHTKFKGEVYILTKEEGGRHTPFFNNYRPQFYFRTT
+                     DVTGSIELPAGTEMVMPGDNVTIDVELIHPIAVEQGTTFSIREGGRTVGSGIVSEIEA"
+ORIGIN
+        1 ttaagcttcg atttctgaaa cgatacctga accaacagta cgtccacctt cacgaataga
+       61 gaaagtagta ccttgttcaa cagcgattgg atggatcaat tcaacgtcaa tagtaacgtt
+      121 atcaccaggc ataaccattt cagtacctgc tggcaactca attgaaccag ttacgtcagt
+      181 tgtacggaag tagaattgtg gacgatagtt attgaagaat ggtgtatgac gtccaccttc
+      241 ttctttagta aggatataaa cttcaccttt gaatttagta tgtgggtgaa ttgaacctgg
+      301 tttagcaaga acttgaccac gttcgatttc atcacgttgg ataccacgaa ggagaacacc
+      361 aacattatcc cctgcaatac cttcatccaa ttgtttacgg aacatttcaa caccagtaac
+      421 aacagctttt tgaatgtcat cacggatacc aacgatttca acttcatcgt taactttaac
+      481 agtaccacga tcaatacgtc ctgaagcaac agtaccacga ccagtgattg agaaaacatc
+      541 ttcgactgga agaaggagcg gcttgtcagt atcacgttct ggatctggaa tgtagtcatc
+      601 aacagtatgc attaattcca tgatgatatc ttcttgagca gtatcgcctt caagagcttt
+      661 aagagctgaa ccttgaataa ctggaatatc atcacctggg aaatcatatt ctgaaagaag
+      721 atcacggatt tccatttcaa ccaattcaag caattcttca tcgtcaacca aatcaacttt
+      781 attcatgaag acaatgaggt atttaacacc aacttgacgt gaaagaagaa tgtgttcacg
+      841 agtttgtggc attggtccat cagttgaagc tactacaagg atagcaccat ccatttgggc
+      901 agcaccagtg atcatgtttt taacatagtc cgcgtgtcct ggagcatcaa tgtgagcata
+      961 gtgacgtttt tcagtttcat actcaacgtg cgcagtattg atagtaatac cgcgttcgcg
+     1021 ttcttcagga gcagcatcaa tagatgaata atcttttggt tggtttactg cacttggaag
+     1081 acgacgtgcc agtacagttg tgatagctgc agttaaggta gttttaccat ggtcaacgtg
+     1141 tccgatagta ccaatgttaa cgtgtggttt actacgatcg tatttttctt ttgccat
+//

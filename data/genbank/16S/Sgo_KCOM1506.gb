@@ -1,0 +1,50 @@
+LOCUS       Sgo_KCOM1506_16S        1557 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_KCOM1506 16S RN86_RS00065 region of NZ_CP012648.1.
+ACCESSION   NZ_CP012648.1:4168-5724
+VERSION     NZ_CP012648.1:4168-5724
+KEYWORDS    .
+SOURCE      Streptococcus gordonii
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1557)
+                     /locus_tag="RN86_RS00065"
+                     /old_locus_tag="RN86_00065"
+     rRNA            complement(1..1557)
+                     /locus_tag="RN86_RS00065"
+                     /old_locus_tag="RN86_00065"
+                     /product="16S ribosomal RNA"
+                     /inference="COORDINATES: nucleotide
+                     motif:Rfam:15.0:RF00177"
+                     /inference="COORDINATES: profile:INFERNAL:1.1.5"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: cmsearch."
+                     /db_xref="RFAM:RF00177"
+ORIGIN
+        1 aaaggaggtg atccagccgc accttccgat acggctacct tgttacgact tcaccccaat
+       61 catctatccc accttaggcg gctggctcct aaaaggttac ctcaccgact tcgggtgtta
+      121 caaactctcg tggtgtgacg ggcggtgtgt acaaggcccg ggaacgtatt caccgcggcg
+      181 tgctgatccg cgattactag cgattccgac ttcatgtagg cgagttgcag cctacaatcc
+      241 gaactgagac tggctttaag agattagctt gccgtcaccg acttgcgact cgttgtacca
+      301 gccattgtag cacgtgtgta gcccaggtca taaggggcat gatgatttga cgtcatcccc
+      361 accttcctcc ggtttattac cggcagtctc gctagagtgc ccaactgaat gatggcaact
+      421 aacaataagg gttgcgctcg ttgcgggact taacccaaca tctcacgaca cgagctgacg
+      481 acaaccatgc accacctgtc accgatgtac cgaagtaaaa ctctatctct agagcgggca
+      541 tcgggatgtc aagacctggt aaggttcttc gcgttgcttc gaattaaacc acatgctcca
+      601 ccgcttgtgc gggcccccgt caattccttt gagtttcaac cttgcggtcg tactccccag
+      661 gcggagtgct taatgcgtta gctgcggcac taagccccgg aaagggccta acacctagca
+      721 ctcatcgttt acggcgtgga ctaccagggt atctaatcct gttcgctccc cacgctttcg
+      781 agcctcagcg tcagttacag accagagagc cgctttcgcc accggtgttc ctccatatat
+      841 ctacgcattt caccgctaca catggaattc cactctcccc ttctgcactc aagttaaaca
+      901 gtttccaaag cgtactatgg ttaagccaca gcctttaact tcagacttat ctaaccgcct
+      961 gcgctcgctt tacgcccaat aaatccggac aacgctcggg acctacgtat taccgcggct
+     1021 gctggcacgt agttagccgt ccctttctgg taagataccg tcacagtgtg aactttccac
+     1081 tctcacaccc gttcttctct tacaacagag ctttacgatc cgaaaacctt cttcactcac
+     1141 gcggcgttgc tcggtcagac tttcgtccat tgccgaagat tccctactgc tgcctcccgt
+     1201 aggagtctgg gccgtgtctc agtcccagtg tggccgatca ccctctcagg tcggctatgt
+     1261 atcgtcgcct aggtgagccg ttacctcacc tactagctaa tacaacgcag gtccatctgg
+     1321 tagtgatgca gttgcatctt tcaatcaatt atcatgcaat aatcaatatt atgcggtatt
+     1381 agctatcgtt tccaatagtt atcccccgct accaggcagg ttacctacgc gttactcacc
+     1441 cgttcgcaac tcacagtcta tggtgtagca agctacggta taaactgtgc gttctacttg
+     1501 catgtattag gcacgccgcc agcgttcgtc ctgagccagg atcaaactct catttaa
+//

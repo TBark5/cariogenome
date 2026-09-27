@@ -1,0 +1,60 @@
+LOCUS       Ssl_JIM8777_recA        1140 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_JIM8777 recA SALIVA_RS00365 region of NC_017595.1.
+ACCESSION   NC_017595.1:63892-65031
+VERSION     NC_017595.1:63892-65031
+KEYWORDS    .
+SOURCE      Streptococcus salivarius JIM8777
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1140
+                     /gene="recA"
+                     /locus_tag="SALIVA_RS00365"
+                     /old_locus_tag="SALIVA_0071"
+                     /db_xref="GeneID:93791266"
+     CDS             1..1140
+                     /gene="recA"
+                     /locus_tag="SALIVA_RS00365"
+                     /old_locus_tag="SALIVA_0071"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_001085741.1"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0008094 - ATP-dependent activity, acting on DNA
+                     [Evidence IEA]; GO:0003677 - DNA binding [Evidence IEA];
+                     GO:0003697 - single-stranded DNA binding [Evidence IEA]"
+                     /GO_process="GO:0006281 - DNA repair [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="recombinase RecA"
+                     /protein_id="WP_002886327.1"
+                     /db_xref="GeneID:93791266"
+                     /translation="MAKKTKKTEEITKKFGDERRKALDDALKNIEKDFGKGAVMRLGER
+                     AEQKVQVMSSGSLALDIALGAGGYPKGRIIEIYGPESSGKTTVALHAVAQTQKEGGIAA
+                     FIDAEHALDPAYAAALGVNIDELLLSQPDSGEQGLEIAGKLIDSGAVDLVVVDSVAALV
+                     PRAEIDGDIGDSHVGLQARMMSQAMRKLSASINKTKTIAIFINQLREKVGIMFGNPETT
+                     PGGRALKFYASVRLDVRGNTQIKGTGDKKDQNVGKETKIKVVKNKVAPPFKEAFVEIMY
+                     GEGISQTGELVKIASDLGIIQKAGAWFSYNGEKIGQGSENAKKYLADHPDIFEEIDHKV
+                     RVHYGLIEPDEEDIVEEAQVEETSDELVLDLDSTIEIEE"
+ORIGIN
+        1 gtggctaaga aaacaaagaa aacagaagaa attacaaaga aatttggaga tgagcgtcgt
+       61 aaagcacttg acgatgcttt gaagaatatt gaaaaagatt ttggtaaggg tgcggttatg
+      121 cgtcttggtg agcgtgcaga gcagaaagtt caagttatga gctcaggctc gctagctttg
+      181 gatattgctc ttggtgcagg tggttatcct aaaggtcgta ttatcgaaat ttacggacca
+      241 gaatcatcag gtaaaacaac tgtagccctc catgctgttg ctcagacaca aaaagaaggc
+      301 ggaattgctg cctttatcga tgcagagcat gcccttgacc ctgcttatgc ggcagcccta
+      361 ggtgttaata ttgatgagct tcttttgtca caacctgatt caggtgaaca aggtctcgaa
+      421 attgctggta agctgattga ctctggtgca gttgatttgg ttgttgttga ctcagttgca
+      481 gccttggtac ctcgagcaga aattgatgga gatattggtg acagccatgt cggacttcaa
+      541 gcgcgtatga tgagtcaagc catgcgtaag ctttctgctt ctatcaataa aacaaaaaca
+      601 attgctatct tcattaacca attgcgtgaa aaagttggca ttatgtttgg taatccagaa
+      661 acaacccctg gtggacgtgc tctaaaattc tatgcatcag tacgtcttga tgtacgtgga
+      721 aatacgcaaa tcaaagggac tggtgataaa aaagaccaaa atgttggtaa ggaaactaaa
+      781 attaaggttg tcaaaaacaa ggttgctcca ccatttaaag aagcctttgt tgaaattatg
+      841 tatggtgaag ggatttccca aacaggtgag cttgtaaaaa tcgctagtga cttaggcatt
+      901 attcaaaaag ctggagcatg gttctcatat aatggtgaga agattggtca agggtctgaa
+      961 aatgctaaaa aatatttggc agatcatcca gatatttttg aagaaattga tcataaagta
+     1021 cgtgtacact atggtttaat tgaaccagat gaagaggata ttgttgaaga agcacaagtt
+     1081 gaagaaacat ctgatgaact tgttttagac ctcgattcaa ccattgaaat tgaggaataa
+//

@@ -1,0 +1,46 @@
+LOCUS       Sgo_FDA371_sodA          606 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_FDA371 sodA CO687_RS05770 region of NZ_CP023511.1.
+ACCESSION   NZ_CP023511.1:1171908-1172513
+VERSION     NZ_CP023511.1:1171908-1172513
+KEYWORDS    .
+SOURCE      Streptococcus gordonii
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            1..606
+                     /locus_tag="CO687_RS05770"
+                     /old_locus_tag="CO687_05770"
+     CDS             1..606
+                     /locus_tag="CO687_RS05770"
+                     /old_locus_tag="CO687_05770"
+                     /EC_number="1.15.1.1"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_007519814.1"
+                     /GO_function="GO:0046872 - metal ion binding [Evidence
+                     IEA]; GO:0004784 - superoxide dismutase activity [Evidence
+                     IEA]"
+                     /GO_process="GO:0006801 - superoxide metabolic process
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="superoxide dismutase"
+                     /protein_id="WP_045773124.1"
+                     /translation="MAIILPDLPYAYDALEPYIDEETMHLHHDKHHNTYVTNVNAALAK
+                     HPEIGEDLEKLLADVESIPADIRQAVINNGGGHLNHALFWELMTAEETAPSAELAADID
+                     ATFGSFEEFQAAFTAAATTRFGSGWAWLVVNKEGKLEVVSTANQDTPISEGKTPILGLD
+                     VWEHAYYVKYRNVRPDYIKAFFSVINWNKVNELYAAAK"
+ORIGIN
+        1 atggcaatta ttttacctga tcttccttac gcttatgatg cattggagcc atatatcgat
+       61 gaagaaacta tgcacttgca ccatgacaaa caccataata cttatgtaac aaatgtcaat
+      121 gcggcacttg caaaacaccc tgaaattggc gaagatttag aaaaattatt ggctgatgtc
+      181 gagtctattc cagctgatat ccgtcaagca gttatcaaca atggtggtgg acaccttaac
+      241 cacgctcttt tctgggaatt gatgacagca gaagagactg ctccttctgc agaattggca
+      301 gctgacattg atgctacttt tggttcattt gaagagttcc aagcagcttt cacagctgca
+      361 gcaacaactc gttttggatc aggctgggct tggttggttg ttaataaaga aggaaaatta
+      421 gaagtagttt caactgcaaa ccaagatact ccaatctcag aaggtaagac tccaatcttg
+      481 ggcttggatg tttgggaaca tgcttattat gttaaatacc gtaatgttcg tcctgattac
+      541 atcaaggctt tcttttcagt gatcaactgg aataaagtta acgaacttta tgcagcagct
+      601 aaataa
+//

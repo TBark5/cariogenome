@@ -1,0 +1,61 @@
+LOCUS       Smu_UA159_recA          1152 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_UA159 recA SMU_RS09530 region of NC_004350.2.
+ACCESSION   NC_004350.2:1956459-1957610
+VERSION     NC_004350.2:1956459-1957610
+KEYWORDS    .
+SOURCE      Streptococcus mutans UA159
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1152)
+                     /gene="recA"
+                     /locus_tag="SMU_RS09530"
+                     /old_locus_tag="SMU.2085"
+                     /old_locus_tag="SMU_2085"
+     CDS             complement(1..1152)
+                     /gene="recA"
+                     /locus_tag="SMU_RS09530"
+                     /old_locus_tag="SMU.2085"
+                     /old_locus_tag="SMU_2085"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_019318527.1"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0008094 - ATP-dependent activity, acting on DNA
+                     [Evidence IEA]; GO:0003677 - DNA binding [Evidence IEA];
+                     GO:0003697 - single-stranded DNA binding [Evidence IEA]"
+                     /GO_process="GO:0006281 - DNA repair [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="recombinase RecA"
+                     /protein_id="WP_002262392.1"
+                     /translation="MAKRIKKTEEITKKFGDERKKALDDALKNIEKDFGKGAVMRLGER
+                     AEQKVQVMSSGSLALDIALGAGGYPKGRIVEIYGPESSGKTTVALHAVAQAQKDGGIAA
+                     FIDAEHALDPAYAAALGVNIDELLLSQPDSGEQGLEIAGKLIDSGAVDLVVVDSVAALV
+                     PRAEIDGDIGDSHVGLQARMMSQAMRKLSASINKTKTIAIFINQLREKVGIMFGNPETT
+                     PGGRALKFYSSVRLDVRGNTQIKGTGEQKDSNIGKETKIKVVKNKVAPPFKEAFVEIIY
+                     GEGISRTGELVKIASDLGIIQKAGAWYSYNGEKIGQGSENAKKFLADNPEIFDDIDHKV
+                     RVQYGLIEEDNTEEKQSSKEKETDEKADKNLVLELDDTIELED"
+ORIGIN
+        1 ttaatcttca agctcaattg tatcatccag ctctaaaaca aggtttttgt cagctttctc
+       61 atcagtttct ttttctttag aagactgttt ttcttcagta ttatcttcct caattaaacc
+      121 atattgaaca cgcactttat gatcgatgtc atcaaaaatt tctggattat cagctaggaa
+      181 ttttttagca ttttcagaac cttgcccaat tttttcacca ttataagagt accaagctcc
+      241 agctttttgg ataattccca aatcactggc aatcttaact aattcacctg tacgagaaat
+      301 gccttcacca tatataattt ctacaaaagc ttccttaaat ggtggagcaa ctttattttt
+      361 aacaacttta attttggtct ctttaccaat attgctgtct ttttgttccc cggttccttt
+      421 aatttgagta ttgccacgga catcaagacg cacagaagaa taaaacttca aggcacgccc
+      481 gccaggggtt gtttctggat taccaaacat aataccaact ttttcccgca attgattaat
+      541 aaaaatggca atggtttttg ttttatttat tgaagctgat aatttacgca tcgcttgact
+      601 catcatgcgt gcttgtaagc caacatgact atcaccaata tctccgtcaa tctccgcacg
+      661 tggtactaaa gctgccactg agtcaacaac aactaaatca acagcgccag aatcaatcaa
+      721 tttccctgca atttcaagac cctgttctcc tgaatctggt tgtgaaagca aaagctcatc
+      781 aatattaaca ccaagagcag cagcataggc tggatcaagg gcatgttctg catcaatgaa
+      841 agcggcaata ccgccatctt tttgcgcctg agcaacagca tgaagagcga cagttgtctt
+      901 accagaagat tctggcccgt aaatctcaac gatacgccct tttggataac cgcctgcccc
+      961 aagagcaata tcaagagcca gacttcctga actcatcacc tgaacctttt gttcagcgcg
+     1021 ttcacccaga cgcataactg cacctttacc aaaatctttt tcgatgtttt tcaaagcatc
+     1081 atcaagagct ttcttacgct catcaccaaa ttttttcgtt atttcttctg tcttttttat
+     1141 tcttttggcc aa
+//

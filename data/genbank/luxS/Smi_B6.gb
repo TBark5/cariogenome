@@ -1,0 +1,38 @@
+LOCUS       Smi_B6_luxS              483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smi_B6 luxS SMI_RS08950 region of NC_013853.1.
+ACCESSION   NC_013853.1:1821772-1822254
+VERSION     NC_013853.1:1821772-1822254
+KEYWORDS    .
+SOURCE      Streptococcus mitis B6
+  ORGANISM  S. mitis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..483
+                     /locus_tag="SMI_RS08950"
+                     /old_locus_tag="smi_1763"
+     CDS             1..483
+                     /locus_tag="SMI_RS08950"
+                     /old_locus_tag="smi_1763"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002893508.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_000032547.1"
+                     /translation="MSKEVIVESFELDHTIVKAPYVRLIGEETGPKGDIISNYDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAKLIRTRIDGMIDCSPFGCRTGFHMIMWGRHTSAEIAAVIK
+                     DSLKEIAETTTWEDVPGTTIESCGNYKDHSLFSAKEWAKLILEQGISDDAFERHVI"
+ORIGIN
+        1 atgtcaaaag aagttattgt cgaaagtttt gaacttgacc acaccattgt taaagcaccc
+       61 tatgttcgct tgattgggga agaaacagga ccaaagggtg acatcatctc caattatgat
+      121 attcgtttag tgcaacccaa tgaagactct atccctaccg ccggccttca cactattgag
+      181 cacctcttgg ccaaactcat ccgtactcgc attgacggca tgattgactg ttcaccattt
+      241 ggttgccgta caggcttcca catgattatg tggggacgtc atactagcgc tgagattgca
+      301 gcagttatca aggattcgct caaagaaatc gctgaaacta ctacttggga agacgtccct
+      361 ggaacaacca tcgaatcttg cggtaactac aaggatcaca gcctcttttc tgctaaagaa
+      421 tgggcaaaac ttattctaga acaagggatt tcagatgatg cctttgaacg ccatgtcatc
+      481 taa
+//

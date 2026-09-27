@@ -1,0 +1,61 @@
+LOCUS       Ssl_JIM8777_pheS        1044 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_JIM8777 pheS SALIVA_RS06295 region of NC_017595.1.
+ACCESSION   NC_017595.1:1315521-1316564
+VERSION     NC_017595.1:1315521-1316564
+KEYWORDS    .
+SOURCE      Streptococcus salivarius JIM8777
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1044)
+                     /gene="pheS"
+                     /locus_tag="SALIVA_RS06295"
+                     /old_locus_tag="SALIVA_1287"
+                     /db_xref="GeneID:93792430"
+     CDS             complement(1..1044)
+                     /gene="pheS"
+                     /locus_tag="SALIVA_RS06295"
+                     /old_locus_tag="SALIVA_1287"
+                     /EC_number="6.1.1.20"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_013642932.1"
+                     /GO_component="GO:0005737 - cytoplasm [Evidence IEA]"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0000166 - nucleotide binding [Evidence IEA]; GO:0004826
+                     - phenylalanine-tRNA ligase activity [Evidence IEA]"
+                     /GO_process="GO:0006432 - phenylalanyl-tRNA aminoacylation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="phenylalanine--tRNA ligase subunit alpha"
+                     /protein_id="WP_004182138.1"
+                     /db_xref="GeneID:93792430"
+                     /translation="MDLQTQLQELKTSTQAKLAEMRGEHSKELQELRVAVLGKKGSLTD
+                     LLKGLKDLPNEERPKVGKMVNEVRDVLTEAFDEAAKVVEAAKIQAQLDSESLDVTLPGR
+                     QVKLGNRHILSQTAEEIEDIFLGMGFQIVDGFEVETDYYNFERMNLPKDHPARDMQDTF
+                     YITEEILLRTHTSPVQARTLDKHDFSKGPLKMISPGRVFRRDTDDATHSHQFHQIEGLV
+                     VGKNISMGDLKGTLEMIIQKMFGAERQIRLRPSYFPFTEPSVEVDVSCFKCGGKGCNVC
+                     KKTGWIEILGAGMVHPQVLEMSGVDSEEYSGFAFGLGQERIAMLRYGINDIRGFYQGDV
+                     RFSEQFK"
+ORIGIN
+        1 ttatttaaac tgttctgaga agcgaacatc cccttggtag aaaccacgaa tatcgttgat
+       61 accataacga agcatggcaa tacgttcttg accaagaccg aaggcgaaac ctgagtattc
+      121 ttcagaatca acgcctgaca tctcaagcac ttgtgggtga accataccag caccgaggat
+      181 ctcgatccaa cctgtcttct tacatacgtt acatccttta ccaccacact taaagcatga
+      241 cacgtcaact tcaactgaag gctcagtgaa tgggaagtaa gatggacgca aacggatttg
+      301 acgttctgca ccaaacattt tttggataat catttcaagc gttcccttaa gatcacccat
+      361 tgagatgttt ttaccaacga ccaaaccttc gatttggtgg aactggtgac tgtgagtcgc
+      421 atcatctgta tcacgacgga aaacacgtcc tggtgagatc atcttaagtg gacctttaga
+      481 aaaatcgtgt ttatcaagtg tacgagcttg gacaggactt gtgtgtgtac gaagcaaaat
+      541 ttcttccgta atatagaagg tatcttgcat gtcacgggct gggtgatcct taggcaagtt
+      601 catacgttca aagttataat agtcagtctc aacttcaaaa ccatcaacga tttggaagcc
+      661 catccccaag aaaatgtctt cgatttcttc agctgtttgg ctaagaatat gacgattacc
+      721 gagtttaact tggcgtcctg gaagggttac gtcaagactt tcagagtcaa gttgggcttg
+      781 aattttagca gcttcaacaa ctttagctgc ttcgtcaaaa gcttcagtca aaacgtcacg
+      841 aacttcgttg accattttac caactttagg gcgttcttca tttggaaggt ctttaagtcc
+      901 cttcaaaaga tctgtcaaag atcctttttt acctaaaact gcaacacgca attcctgtaa
+      961 ttctttagag tgttcaccac gcatttcagc caatttagcc tgcgttgatg ttttcaactc
+     1021 ttgcaattgt gtttgtaaat ccat
+//

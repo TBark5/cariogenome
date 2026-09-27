@@ -1,0 +1,61 @@
+LOCUS       Ssl_JIM8777_tuf         1197 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_JIM8777 tuf SALIVA_RS02330 region of NC_017595.1.
+ACCESSION   NC_017595.1:462960-464156
+VERSION     NC_017595.1:462960-464156
+KEYWORDS    .
+SOURCE      Streptococcus salivarius JIM8777
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1197
+                     /gene="tuf"
+                     /locus_tag="SALIVA_RS02330"
+                     /old_locus_tag="SALIVA_0471"
+                     /db_xref="GeneID:93791658"
+     CDS             1..1197
+                     /gene="tuf"
+                     /locus_tag="SALIVA_RS02330"
+                     /old_locus_tag="SALIVA_0471"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_014335040.1"
+                     /GO_function="GO:0005525 - GTP binding [Evidence IEA];
+                     GO:0003746 - translation elongation factor activity
+                     [Evidence IEA]"
+                     /GO_process="GO:0006414 - translational elongation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="elongation factor Tu"
+                     /protein_id="WP_002886182.1"
+                     /db_xref="GeneID:93791658"
+                     /translation="MAKEKYDRSKPHVNIGTIGHVDHGKTTLTAAITTVLARRLPSAVN
+                     TPKDYASIDAAPEERERGITINTAHVEYETEKRHYAHIDAPGHADYVKNMITGAAQMDG
+                     AILVVASTDGPMPQTREHILLSRQVGVKHLIVFMNKVDLVDDEELLELVEMEIRDLLSE
+                     YDFPGDDIPVIQGSALKALEGDSKYEDIIMDLMNTVDEYIPEPERDTDKPLLLPVEDVF
+                     SITGRGTVASGRIDRGVVRVNDEVEIVGLKEDIQKAVVTGVEMFRKQLDEGIAGDNVGV
+                     LLRGIQRDEIERGQVLAAPGSINPHTKFKGEVYILSKEEGGRHTPFFNNYRPQFYFRTT
+                     DVTGSIELPAGTEMVMPGDNVTIDVELIHPIAVEQGTTFSIREGGRTVGSGIVSEIEA"
+ORIGIN
+        1 atggcaaaag aaaaatacga tcgtagtaaa ccacacgtta acattggtac aatcggacac
+       61 gttgaccacg gtaaaactac tttgacagct gctatcacaa ctgtattggc tcgtcgtctt
+      121 cctagcgcag ttaacacacc aaaagactac gcttcaatcg acgctgctcc agaagaacgt
+      181 gaacgcggta tcacaatcaa cactgcacac gttgagtacg aaactgaaaa acgtcactac
+      241 gctcacatcg atgcaccagg acacgcggac tacgttaaaa acatgatcac tggtgccgct
+      301 caaatggacg gtgcgatcct tgtagtagca tctactgacg gaccaatgcc acaaactcgt
+      361 gagcacatcc ttctttcacg tcaggttggt gttaaacacc ttatcgtctt catgaacaaa
+      421 gttgacttgg ttgacgatga agaattgctt gaattggttg aaatggaaat ccgtgacctt
+      481 ctttcagaat acgatttccc aggtgatgac attccagtta tccaaggttc agctcttaaa
+      541 gctcttgaag gtgattctaa atacgaagac atcatcatgg acttgatgaa cactgttgac
+      601 gaatacattc cagaaccaga acgtgacact gacaaaccat tgttgcttcc agtcgaagac
+      661 gtattctcaa tcactggtcg tggtactgtt gcttcaggac gtatcgaccg tggtgttgtt
+      721 cgtgttaatg acgaagttga aatcgttggt cttaaagaag atatccaaaa agcagttgtt
+      781 actggtgttg aaatgttccg taaacaactt gacgaaggta ttgccggaga taacgtcggt
+      841 gttcttcttc gtggtatcca acgtgatgaa atcgaacgtg gtcaagtatt ggctgcacct
+      901 ggttcaatca acccacacac taaattcaaa ggtgaagttt acatcctttc taaagaagaa
+      961 ggtggacgtc acactccatt cttcaacaac taccgtccac agttctactt ccgtacaact
+     1021 gacgtaacag gttcaatcga acttcctgca ggtactgaaa tggttatgcc tggtgataac
+     1081 gtgactatcg acgttgagtt gatccaccca atcgccgttg aacaaggtac aacattctct
+     1141 atccgtgaag gtggacgtac tgttggttca ggtatcgtat ctgaaatcga agcttaa
+//

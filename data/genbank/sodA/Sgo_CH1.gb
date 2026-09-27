@@ -1,0 +1,46 @@
+LOCUS       Sgo_CH1_sodA             606 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_CH1 sodA SGO_RS07835 region of NC_009785.1.
+ACCESSION   NC_009785.1:1653714-1654319
+VERSION     NC_009785.1:1653714-1654319
+KEYWORDS    .
+SOURCE      Streptococcus gordonii str. Challis substr. CH1
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..606)
+                     /locus_tag="SGO_RS07835"
+                     /old_locus_tag="SGO_1599"
+     CDS             complement(1..606)
+                     /locus_tag="SGO_RS07835"
+                     /old_locus_tag="SGO_1599"
+                     /EC_number="1.15.1.1"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_007519814.1"
+                     /GO_function="GO:0046872 - metal ion binding [Evidence
+                     IEA]; GO:0004784 - superoxide dismutase activity [Evidence
+                     IEA]"
+                     /GO_process="GO:0006801 - superoxide metabolic process
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="superoxide dismutase"
+                     /protein_id="WP_012130663.1"
+                     /translation="MAIILPDLPYAYDALEPYIDEETMHLHHDKHHNTYVTNVNVALAK
+                     HPEIGEDLEKLLADVESIPADIRQAVINNGGGHLNHALFWELMTAEETAPSAELAADID
+                     ATFGSFEDFQAAFTTAATTRFGSGWAWLVVNKEGKLEVVSTANQDTPISEGKTPILGLD
+                     VWEHAYYVKYRNVRPDYIKAFFSVINWNKVNELYAAAK"
+ORIGIN
+        1 ttatttagct gctgcataaa gttcgttaac tttattccag ttgatcactg agaagaaagc
+       61 cttgatgtaa tcaggacgaa cattacggta tttaacataa taagcatgtt cccaaacatc
+      121 caagcccaag attggagttt taccttctga gattggagta tcttggtttg cagttgaaac
+      181 cacttctaat ttgccttctt tattgacaac caaccaagcc cagcctgatc caaaacgagt
+      241 tgttgctgca gttgtgaaag ctgcttggaa atcttcaaag gaaccaaaag tagcatcaat
+      301 gtcagccgct aattctgcag aaggtgctgt ctcttctgct gtcatcaatt cccagaaaag
+      361 agcgtggtta aggtgtccac caccattgtt gataactgct tgacggatat cagctggaat
+      421 agactcgaca tcagccaaca atttttctaa atcttcgcca atttcagggt gttttgcaag
+      481 tgctacattg acatttgtta cataagtatt atggtgttta tcatggtgca agtgcatagt
+      541 ttcttcatca atatatggct ccaatgcatc ataagcgtaa ggaagatcag gtaaaataat
+      601 tgccat
+//

@@ -1,0 +1,67 @@
+LOCUS       Ssa_SK1058_atpD         1407 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_SK1058 atpD J1C83_RS03835 region of NZ_CP071422.1.
+ACCESSION   NZ_CP071422.1:765142-766548
+VERSION     NZ_CP071422.1:765142-766548
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1407
+                     /gene="atpD"
+                     /locus_tag="J1C83_RS03835"
+                     /old_locus_tag="J1C83_03785"
+     CDS             1..1407
+                     /gene="atpD"
+                     /locus_tag="J1C83_RS03835"
+                     /old_locus_tag="J1C83_03785"
+                     /EC_number="7.1.2.2"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_016398931.1"
+                     /GO_component="GO:0045259 - proton-transporting ATP
+                     synthase complex [Evidence IEA]"
+                     /GO_function="GO:0046933 - proton-transporting ATP synthase
+                     activity, rotational mechanism [Evidence IEA]"
+                     /GO_process="GO:0015986 - proton motive force-driven ATP
+                     synthesis [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="F0F1 ATP synthase subunit beta"
+                     /protein_id="WP_002902710.1"
+                     /translation="MSSGKIAQVIGPVVDVAFAAGDKLPEINNALVVYKNDEKKSKIVL
+                     EVALELGDGVVRTIAMESTDGLTRGLEVLDTGRPISVPVGKETLGRVFNVLGDTIDLDT
+                     PFPADAERQPIHKKAPTFDELSTSSEILETGIKVIDLLAPYLKGGKVGLFGGAGVGKTV
+                     LIQELIHNIAQEHGGISVFTGVGERTREGNDLYWEMKESGVIEKTAMVFGQMNEPPGAR
+                     MRVALTGLTIAEYFRDVEGQDVLLFIDNIFRFTQAGSEVSALLGRMPSAVGYQPTLATE
+                     MGQLQERITSTKKGSVTSIQAIYVPADDYTDPAPATAFAHLDSTTNLERKLVQLGIYPA
+                     VDPLASSSRALSPEIVGEEHYAVAAEVKRVLQRYHELQDIIAILGMDELSDDEKTLVAR
+                     ARRIQFFLSQNFNVAEQFTGQPGSYVPVAETVRGFKEILEGKHDKLPEDAFRGVGSIED
+                     VLAKAEKMGF"
+ORIGIN
+        1 atgagctcag gcaaaattgc tcaggttatc gggccggtcg tagacgttgc gtttgctgcc
+       61 ggagacaaac tacctgagat aaataatgca cttgtagtct ataaaaatga tgagaaaaaa
+      121 tcaaaaatcg tccttgaagt agctcttgag cttggtgacg gtgtggtgcg gaccattgcc
+      181 atggagtcga ccgatggttt gacacgtggt ttggaggtct tggatactgg tcgtccgatt
+      241 tctgtgccgg tcggcaagga aactctgggc cgggtcttca atgtcctagg agacactatc
+      301 gacttggata cgccatttcc tgctgatgca gagcgccagc cgattcataa gaaggcacca
+      361 acctttgatg aactatcaac ttcatcagaa atcctggaaa cagggatcaa ggttatcgac
+      421 ctcctagctc cttatctgaa aggtgggaaa gttggtctct ttggtggtgc cggagttggg
+      481 aagactgtcc tgattcagga attgatccac aacattgccc aagagcacgg tgggatttct
+      541 gtctttacag gtgttggtga acggacgcgt gaagggaatg acctctactg ggaaatgaaa
+      601 gagtctggcg ttatcgaaaa gaccgctatg gtctttggtc agatgaatga accgccagga
+      661 gctcggatgc gggttgctct taccggactg actatcgcgg aatatttccg tgatgtggaa
+      721 ggtcaggatg tgttgctctt tattgacaac atcttccgct ttacgcaggc tggttcggaa
+      781 gtgtctgccc ttttgggccg catgccgtca gccgttggtt accaaccgac acttgcgacg
+      841 gaaatgggac agttacaaga aaggatcaca tcgaccaaga aaggttccgt tacttccatc
+      901 caggctattt atgtgccagc ggatgactat actgaccctg cgccagcgac agcttttgct
+      961 cacttagact ctacgaccaa cctagaacgg aaattggttc agttagggat ttatccagcc
+     1021 gtggatccac tggcttccag ctctcgtgcc ctttcaccag agattgtcgg agaagagcac
+     1081 tatgcagtgg cagcagaggt taagcgggtc ttgcaacgtt atcatgaatt gcaggatatc
+     1141 attgctatcc ttggtatgga tgagttgtct gacgatgaga agactttggt tgcacgtgcg
+     1201 cggcggattc agttcttcct gtcacagaac ttcaatgtgg cggagcaatt taccggtcag
+     1261 ccaggttctt atgtaccagt agctgaaacg gttcgtggtt tcaaggaaat ccttgaaggt
+     1321 aagcacgata agctgccaga agacgctttc cgtggtgtgg gctccatcga ggatgtattg
+     1381 gccaaggctg agaaaatggg attctaa
+//

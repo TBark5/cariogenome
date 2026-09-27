@@ -1,0 +1,59 @@
+LOCUS       Sgo_CH1_recA            1152 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_CH1 recA SGO_RS09990 region of NC_009785.1.
+ACCESSION   NC_009785.1:2107552-2108703
+VERSION     NC_009785.1:2107552-2108703
+KEYWORDS    .
+SOURCE      Streptococcus gordonii str. Challis substr. CH1
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1152)
+                     /gene="recA"
+                     /locus_tag="SGO_RS09990"
+                     /old_locus_tag="SGO_2045"
+     CDS             complement(1..1152)
+                     /gene="recA"
+                     /locus_tag="SGO_RS09990"
+                     /old_locus_tag="SGO_2045"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002907738.1"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0008094 - ATP-dependent activity, acting on DNA
+                     [Evidence IEA]; GO:0003677 - DNA binding [Evidence IEA];
+                     GO:0003697 - single-stranded DNA binding [Evidence IEA]"
+                     /GO_process="GO:0006281 - DNA repair [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="recombinase RecA"
+                     /protein_id="WP_012131014.1"
+                     /translation="MAKKQKNLDDITKKFGDERQKALDNALKNIEKDFGKGAIMRLGER
+                     AEQKVQVMSSGSLALDIALGAGGYPKGRIIEIYGPESSGKTTVALHAVAQAQKEGGIAA
+                     FIDAEHALDPSYAAALGVNIDELLLSQPDSGEQGLEIAGKLIDSGAVDLVVIDSVAALV
+                     PRAEIDGDIGDSHVGLQARMMSQAMRKLSASINKTKTIAIFINQLREKVGVMFGNPETT
+                     PGGRALKFYASVRLDVRGNTQIKGTGDAKDTNVGKETKIKVVKNKVAPPFKEAFVEIMY
+                     GEGISKTGELIKIATDLNIIKKAGAWYSYNDEKIGQGSENAKKYLADHPEVFDEIDRQV
+                     RVRFGLIEDDQEGEATAAETTGKITENIEEVTLELDDAIEIEE"
+ORIGIN
+        1 ttattcctcg atctctatag catcgtctag ttcaagagtc acttcttcaa tgttttcagt
+       61 gattttccct gttgtttcag ccgcagttgc ttccccttct tgatcatctt caatcaagcc
+      121 aaaacggaca cggacttgac ggtcgatttc gtcaaagact tctgggtgat cagccaaata
+      181 tttcttggca ttttcagaac cttgaccaat cttctcatca ttataagaat accaagcacc
+      241 tgcttttttg atgatattca agtctgttgc aatcttgata agttcaccag tcttagaaat
+      301 tccttctccg tacatgattt ccacaaaggc ttctttaaat ggcggagcta ccttgttttt
+      361 cacgacctta atcttggttt ccttaccaac gtttgtatcc ttagcgtcac cagttccttt
+      421 aatttgagta tttccacgaa catccaaacg tacagaagca tagaatttca aggcacggcc
+      481 acctggtgtt gtttcaggat ttccgaacat aaccccaact ttttcgcgga gttggttgat
+      541 aaagatggca attgtttttg ttttgttgat agaagcagac agtttacgca tggcctgact
+      601 catcatccga gcttgcaaac caacgtggct atcaccgata tctccatcga tttccgcacg
+      661 tggtacaaga gctgcaacag agtcgatgac aactaaatca actgccccag agtcaatcaa
+      721 ttttcctgca atttctaaac cttgctcacc agaatctggt tgagatagca acagctcatc
+      781 aatatttaca cctagagcag ccgcgtaaga tggatccaaa gcatgctctg catcaataaa
+      841 ggctgcaata ccaccctctt tttgcgcttg agcaacagca tgaagggcaa cagtcgtctt
+      901 accagaagac tctggtccgt agatttcaat gatacgtccc ttaggataac caccagcacc
+      961 aagggcgata tccaaggcca aagatcctga gctcatgact tgaacctttt gttctgctcg
+     1021 ctcgcccaga cgcataatcg ctcccttacc gaagtccttt tcaatgttct tcagggcgtt
+     1081 gtccaaagct ttttggcgct cgtctccaaa tttttttgta atatcatcta gattcttttg
+     1141 tttctttgcc at
+//

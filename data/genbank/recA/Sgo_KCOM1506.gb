@@ -1,0 +1,59 @@
+LOCUS       Sgo_KCOM1506_rec        1152 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_KCOM1506 recA RN86_RS03560 region of NZ_CP012648.1.
+ACCESSION   NZ_CP012648.1:726255-727406
+VERSION     NZ_CP012648.1:726255-727406
+KEYWORDS    .
+SOURCE      Streptococcus gordonii
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1152
+                     /gene="recA"
+                     /locus_tag="RN86_RS03560"
+                     /old_locus_tag="RN86_03555"
+     CDS             1..1152
+                     /gene="recA"
+                     /locus_tag="RN86_RS03560"
+                     /old_locus_tag="RN86_03555"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002907738.1"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0008094 - ATP-dependent activity, acting on DNA
+                     [Evidence IEA]; GO:0003677 - DNA binding [Evidence IEA];
+                     GO:0003697 - single-stranded DNA binding [Evidence IEA]"
+                     /GO_process="GO:0006281 - DNA repair [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="recombinase RecA"
+                     /protein_id="WP_046164526.1"
+                     /translation="MAKKQKNLDDITKKFGDERQKALDNALKNIEKDFGKGAIMRLGER
+                     AEQKVQVMSSGSLALDIALGAGGYPKGRIIEIYGPESSGKTTVALHAVAQAQKEGGIAA
+                     FIDAEHALDPSYAAALGVNIDELLLSQPDSGEQGLEIAGKLIDSGAVDLVVIDSVAALV
+                     PRAEIDGDIGDSHVGLQARMMSQAMRKLSASINKTKTIAIFINQLREKVGVMFGNPETT
+                     PGGRALKFYASVRLDVRGNTQIKGTGDAKDTNVGKETKIKVVKNKVAPPFKEAFVEIMY
+                     GEGISKTGELIKIATDLNIIKKAGAWYSYNDEKIGQGSENAKKYLADHPEVFDEIDRQV
+                     RVRFGLIEDDQEGEATVAETTGKITENIEEVTLELDDAIEIEE"
+ORIGIN
+        1 atggcaaaga aacaaaagaa tctagatgat attacaaaaa aattcggaga tgagcgccaa
+       61 aaggctttgg acaacgccct gaagaacatt gaaaaggact tcggtaaggg agcgattatg
+      121 cgtctgggcg agcgagcaga acaaaaggtt caagtcatga gctcaggatc tttggccttg
+      181 gatatcgccc ttggtgccgg tggttatcct aagggacgta tcattgaaat ctacggacca
+      241 gagtcttctg gtaagacgac tgttgccctt catgctgttg ctcaagccca aaaagagggt
+      301 ggtattgcag cctttattga tgcagagcac gctttggatc catcttacgc ggctgctcta
+      361 ggtgtcaata ttgatgagct gttgctatct caaccagatt ctggtgagca aggtttggaa
+      421 attgcaggaa aattgattga ctctggtgca gttgatttag ttgtcatcga ctccgttgca
+      481 gctcttgtac cacgtgcaga aatcgatggc gatattggag atagccacgt tggtttgcag
+      541 gctcggatga tgagtcaggc catgcgtaaa ctgtctgctt ctatcaacaa aacaaaaaca
+      601 attgccatct ttatcaacca actccgcgaa aaagttgggg ttatgttcgg aaatcctgaa
+      661 acaacaccag gtggacgagc cctcaaattc tatgcttctg tccgtttgga tgttcgtgga
+      721 aatactcaaa ttaaaggaac tggtgacgct aaggatacaa acgttggtaa ggaaaccaag
+      781 attaaggtcg tgaaaaacaa ggtagctccg ccatttaaag aagcctttgt ggaaatcatg
+      841 tacggagaag gaatttctaa gactggtgaa ctgatcaaga ttgcaacaga cttgaatatc
+      901 atcaaaaaag caggtgcttg gtattcttat aatgacgaga agattggtca aggttctgaa
+      961 aatgccaaga aatatttggc agatcaccca gaagtctttg acgaaatcga ccgtcaagtc
+     1021 cgtgtccgtt ttggcttgat tgaagatgat caagaagggg aagcaactgt ggctgaaaca
+     1081 acagggaaaa tcactgaaaa cattgaagaa gtaactcttg aactagacga tgctatagag
+     1141 attgaggaat aa
+//

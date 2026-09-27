@@ -1,0 +1,38 @@
+LOCUS       Smu_B04Sm5_luxS          483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_B04Sm5 luxS IBL27_RS07545 region of NZ_CP061071.1.
+ACCESSION   NZ_CP061071.1:1544091-1544573
+VERSION     NZ_CP061071.1:1544091-1544573
+KEYWORDS    .
+SOURCE      Streptococcus mutans B04Sm5
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            1..483
+                     /locus_tag="IBL27_RS07545"
+                     /old_locus_tag="IBL27_07545"
+     CDS             1..483
+                     /locus_tag="IBL27_RS07545"
+                     /old_locus_tag="IBL27_07545"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002286460.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_002278778.1"
+                     /translation="MTKEVTVESFELDHTAVKAPYVRLISEEFGPKGDLITNFDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAKLIRQRIDGMIDCSPFGCRTGFHLIMWGKHTTTQIATVIK
+                     ASLEEITNTISWKDVPGTTIESCGNYKDHSLFSAKEWAKLILKQGISDDPFERHLV"
+ORIGIN
+        1 atgacaaaag aagttactgt tgaaagcttt gaacttgacc acactgctgt aaaagcccct
+       61 tatgtccgtc ttatttcaga agagtttgga cctaaaggcg atcttattac caattttgat
+      121 attcgcttag tacagcctaa tgaagactct attccgactg caggccttca tactattgaa
+      181 catttactgg ctaagctgat tcgtcagcgt attgacggga tgattgactg ttcccctttt
+      241 ggctgtcgta ctggttttca tctcatcatg tggggtaagc atacaacaac ccaaatagcc
+      301 acagtcatca aagcaagttt agaagaaatt actaatacaa tctcatggaa agatgtccct
+      361 ggaacaacta ttgagtcctg tgggaattac aaagatcata gccttttttc agctaaagaa
+      421 tgggcaaagc tgattttaaa acaaggcatt tcagatgatc cttttgagcg tcatctagtg
+      481 taa
+//

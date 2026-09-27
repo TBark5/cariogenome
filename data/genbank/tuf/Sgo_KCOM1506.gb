@@ -1,0 +1,59 @@
+LOCUS       Sgo_KCOM1506_tuf        1197 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_KCOM1506 tuf RN86_RS10430 region of NZ_CP012648.1.
+ACCESSION   NZ_CP012648.1:2144501-2145697
+VERSION     NZ_CP012648.1:2144501-2145697
+KEYWORDS    .
+SOURCE      Streptococcus gordonii
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1197)
+                     /gene="tuf"
+                     /locus_tag="RN86_RS10430"
+                     /old_locus_tag="RN86_10435"
+     CDS             complement(1..1197)
+                     /gene="tuf"
+                     /locus_tag="RN86_RS10430"
+                     /old_locus_tag="RN86_10435"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_014335040.1"
+                     /GO_function="GO:0005525 - GTP binding [Evidence IEA];
+                     GO:0003746 - translation elongation factor activity
+                     [Evidence IEA]"
+                     /GO_process="GO:0006414 - translational elongation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="elongation factor Tu"
+                     /protein_id="WP_020992675.1"
+                     /translation="MAKEKYDRSKPHVNIGTIGHVDHGKTTLTAAITTVLARRLPSAVN
+                     QPKDYASIDAAPEERERGITINTAHVEYETEKRHYAHIDAPGHADYVKNMITGAAQMDG
+                     AILVVASTDGPMPQTREHILLSRQVGVKHLIVFMNKVDLVDDEELLELVEMEIRDLLSE
+                     YDFPGDDLPVIQGSALKALEGDSKYEDIIMELMNTVDEYIPEPERDTDKPLLLPVEDVF
+                     SITGRGTVASGRIDRGIVKVNDEIEIVGIKEEIQKAVVTGVEMFRKQLDEGLAGDNVGV
+                     LLRGIQRDEIERGQVIAKPGSINPHTKFKGEVYILTKEEGGRHTPFFNNYRPQFYFRTT
+                     DVTGSIELPAGTEMVMPGDNVTIEVELIHPIAVEQGTTFSIREGGRTVGSGMVTEIEA"
+ORIGIN
+        1 ttaagcttcg atttctgtaa ccatacctga accaacagta cgtccacctt cacggataga
+       61 gaaagtagta ccttgttcaa cggcgattgg gtggatcaat tcaacttcga tagttacgtt
+      121 atcaccaggc attaccattt cagtacctgc tggaagttcg attgaacctg taacgtcagt
+      181 tgtacggaag tagaactgtg gacggtagtt gttgaagaat ggagtgtgac gtccaccttc
+      241 ttctttagta aggatataaa cttcaccttt gaatttagtg tgtgggttga ttgaacctgg
+      301 tttagcaata acttgtccac gttcgatttc atcacgttgg ataccacgga gaagcacacc
+      361 tacgttgtcc cctgcaagac cttcgtcaag ctgtttacgg aacatttcaa caccagtaac
+      421 aactgctttt tggatttctt ctttgatacc aacgatttcg atttcgtcgt tgactttaac
+      481 gataccacgg tcgatacgtc ctgaagcaac tgtaccacgt ccagtgattg agaatacgtc
+      541 ttcgactgga agaagcaatg gtttgtcagt gtcgcgttct ggttctggaa tgtattcatc
+      601 aacagtgttc atcaattcca tgatgatatc ttcgtattta gagtcacctt caagagcttt
+      661 aagagctgaa ccttggataa ctggaagatc gtcacctggg aagtcgtatt ctgacaagag
+      721 gtcacggatt tccatttcaa ctaattcaag caattcttca tcgtcaacca agtcaacttt
+      781 gttcatgaac acgatcaagt gtttaacacc aacttggcga gaaagaagga tgtgctcacg
+      841 agtttgtggc ataggaccat cagttgaagc tactacaagg atagctccgt ccatttgagc
+      901 ggcaccagtg atcatgtttt taacgtagtc cgcgtgtcct ggagcgtcga tgtgagcgta
+      961 gtgacgtttt tcagtttcgt actcaacgtg cgcagtgttg atagtgatac cgcgttcgcg
+     1021 ttcttctgga gcagcatcga tagacgcata gtcttttggt tggttaactg ctgaaggcaa
+     1081 gcgacgtgcc aatacagttg tgatagctgc tgtcaaagta gttttaccgt ggtcaacgtg
+     1141 tccgatagta ccaatgttaa cgtgtggttt actacgatcg tatttttctt ttgccat
+//

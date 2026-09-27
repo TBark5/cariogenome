@@ -1,0 +1,60 @@
+LOCUS       Ssa_SK36_recA           1149 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_SK36 recA SSA_RS10975 region of NC_009009.1.
+ACCESSION   NC_009009.1:2240051-2241199
+VERSION     NC_009009.1:2240051-2241199
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis SK36
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1149)
+                     /gene="recA"
+                     /locus_tag="SSA_RS10975"
+                     /old_locus_tag="SSA_2245"
+     CDS             complement(1..1149)
+                     /gene="recA"
+                     /locus_tag="SSA_RS10975"
+                     /old_locus_tag="SSA_2245"
+                     /function="DNA replication, recombination, and repair"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002907738.1"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0008094 - ATP-dependent activity, acting on DNA
+                     [Evidence IEA]; GO:0003677 - DNA binding [Evidence IEA];
+                     GO:0003697 - single-stranded DNA binding [Evidence IEA]"
+                     /GO_process="GO:0006281 - DNA repair [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="recombinase RecA"
+                     /protein_id="WP_011837638.1"
+                     /translation="MAKKQKKLDEISKKFGDERQKALDNALKNIEKDFGKGAIMRLGER
+                     AEQKVQVMSSGSLALDIALGAGGYPKGRIIEIYGPESSGKTTVALHAVAQAQKEGGIAA
+                     FIDAEHALDPSYAAALGVNIDELLLSQPDSGEQGLEIAGKLIDSGAVDLVVVDSVAALV
+                     PRAEIDGDIGDSHVGLQARMMSQAMRKLSASINKTKTIAIFINQLREKVGVMFGNPETT
+                     PGGRALKFYASVRLDVRGNTQIKGTGDEKDTNVGKETKIKVVKNKVAPPFKEAFVEIMY
+                     GEGISKTGELIKIATDLDIIKKAGAWYSYNDEKIGQGSENAKKYLADHPEVFGEIDRQV
+                     RVRYGLIDGDDMAEAVGNKAESPVETLEEVTLDLDDAIEIEE"
+ORIGIN
+        1 ttactcttca atttcaatgg catcgtccaa atctagagtc acttcttcca gcgtttctac
+       61 aggactctca gccttattgc caaccgcttc tgccatatcg tctccatcaa tcaaaccgta
+      121 gcggacacga acctgacggt caatttcacc aaagacttct ggatgatcag ctaagtactt
+      181 cttagcattt tcagaacctt ggccgatttt ttcatcattg taggagtacc aagcgccagc
+      241 tttcttgatg atgtccaaat cagtcgcaat cttaatcagc tcacctgtct tagaaatacc
+      301 ttctccgtac atgatttcca cgaaggcttc tttgaatggc ggagctacct tatttttaac
+      361 gaccttgatc ttggtttctt taccaacatt ggtatccttc tcatcaccag ttcctttgat
+      421 ttgtgtatta ccacggacat ccagacggac agaagcatag aacttgagtg cacggccgcc
+      481 tggtgtcgtt tcaggattac caaacataac cccaactttt tcacgcagct ggttaatgaa
+      541 aatcgcaatt gtcttagttt tgttgataga agcagacagt ttgcgcatag cctggctcat
+      601 catccgagcc tgcaagccga catggctgtc accgatatcg ccatcgattt ccgcacgagg
+      661 tacaagggct gcaactgagt ccacaaccac caaatccacc gcacctgagt caatcagctt
+      721 accagcaatt tccagtccct gttccccaga gtcaggttga gacagtagca actcatcaat
+      781 attaacaccc agagcagccg cgtatgacgg atccaaagca tgctcagcat cgataaaggc
+      841 tgcgatacca ccttcttttt gcgcttgagc aacggcgtga agagcaacgg ttgtcttacc
+      901 agaagactct ggtccgtaaa tctcaataat ccgtccctta gggtaaccac cagcaccaag
+      961 agcaatatcc aaagctaaag agccagaact catgacttga accttttgct ctgctcgctc
+     1021 gccaagacgc ataatggctc ccttaccaaa gtccttttca atgtttttaa gagcattatc
+     1081 caaggctttt tggcgctcat cgccgaattt ctttgagatt tcatctaatt ttttttgttt
+     1141 ctttgccat
+//

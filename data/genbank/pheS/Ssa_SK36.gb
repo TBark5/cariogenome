@@ -1,0 +1,59 @@
+LOCUS       Ssa_SK36_pheS           1050 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_SK36 pheS SSA_RS04525 region of NC_009009.1.
+ACCESSION   NC_009009.1:923240-924289
+VERSION     NC_009009.1:923240-924289
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis SK36
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1050
+                     /gene="pheS"
+                     /locus_tag="SSA_RS04525"
+                     /old_locus_tag="SSA_0912"
+     CDS             1..1050
+                     /gene="pheS"
+                     /locus_tag="SSA_RS04525"
+                     /old_locus_tag="SSA_0912"
+                     /EC_number="6.1.1.20"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_009443186.1"
+                     /GO_component="GO:0005737 - cytoplasm [Evidence IEA]"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0000166 - nucleotide binding [Evidence IEA]; GO:0004826
+                     - phenylalanine-tRNA ligase activity [Evidence IEA]"
+                     /GO_process="GO:0006432 - phenylalanyl-tRNA aminoacylation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="phenylalanine--tRNA ligase subunit alpha"
+                     /protein_id="WP_002900605.1"
+                     /translation="MTKTIEEQLKSLREETLASLKQLKAENQKELQDLRVAVLGKKGSL
+                     TEVLKGMKDISAEMRPIIGKHVNEARDILTAAFEKTAQEMEEQLVALKLAEESLDVTLP
+                     GRQIPVGNRHILSQTSEEIEDIFIGMGYQVVDGFEVEKDYYNFERMNLPKDHPARDMQD
+                     TFYITEEILLRTHTSPVQARAMDAHDFSKGPLKMISPGRVFRRDTDDATHSHQFHQIEG
+                     LVVGENISMANLQGTLQLIVQKMFGEDRSIRLRPSYFPFTEPSVEVDVSCFKCGGAGCN
+                     VCKKTGWIEIMGAGMVHPRVLEMSGIDAEKYSGFAFGLGQERVAMLRYGINDIRGFYQG
+                     DIRFSQQFK"
+ORIGIN
+        1 atgacgaaaa cgattgaaga acaactaaaa agcctgcgtg aagagacttt agcttctctc
+       61 aagcaactca aggcggagaa tcaaaaagaa ctgcaggact tgcgtgtagc tgtcttaggt
+      121 aagaagggtt cgctgactga agttctgaaa gggatgaagg atatttcagc tgaaatgcgg
+      181 ccgattatcg ggaaacatgt caatgaagcg cgtgacattc tgacagcagc ctttgaaaag
+      241 actgcacaag agatggaaga gcaattagtc gctctgaaac tggctgagga atccttggat
+      301 gtgaccctgc caggtcgtca aattccggta ggaaaccgtc atattcttag tcagactagt
+      361 gaggaaatcg aagatatttt catcgggatg ggctatcagg tcgtggacgg ctttgaagtg
+      421 gagaaggact attacaactt tgagcggatg aatctgccta aggatcaccc agcacgggat
+      481 atgcaagaca ctttctacat tactgaggag atcctgctca gaacccacac cagtccggta
+      541 caggcccgag ctatggatgc tcatgacttt tctaaagggc cactcaagat gatatcacca
+      601 ggacgcgtct tccgccggga taccgatgat gcgactcact cccaccagtt tcatcagatt
+      661 gaaggcttgg tcgttggaga aaatatttcc atggccaacc tgcaaggcac gctgcagctg
+      721 attgtccaga agatgtttgg tgaagaccgc agtatccgtc tgcgtccatc ttacttccca
+      781 ttcacagagc cgtctgttga agtggatgtt tcctgcttta agtgtggcgg tgcaggctgt
+      841 aatgtctgca agaagactgg ctggattgag attatgggag ctggtatggt gcatccgcga
+      901 gtactggaaa tgagcggcat tgatgcagag aaatactctg gatttgcctt tggtctcggt
+      961 caagagcggg tagctatgct ccgctacggt atcaacgata tccgtggctt ctaccaagga
+     1021 gatattcgtt tttctcagca gtttaagtag
+//

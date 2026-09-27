@@ -1,0 +1,287 @@
+gene,label,species,accession,row_index,locus_tag,old_locus_tag,protein_id,annotation_gene,product,start,end,strand,pseudo,identity_to_query,query_coverage,hit_coverage,reciprocal_best_hit,ortholog_call,nt_length,length_ratio_to_UA159,flags,included,class
+gtfB,Smu_UA159,S. mutans,NC_004350.2,897,SMU_RS04620,SMU.1004,WP_002352268.1,gtfB,glucosyltransferase GtfB,951112,955542,+,False,1.0,1.0,1.0,True,True,4431,1.0,,True,virulence
+gtfC,Smu_UA159,S. mutans,NC_004350.2,898,SMU_RS04625,SMU.1005,WP_002352269.1,gtfC,glucosyltransferase GtfC,955738,960105,+,False,1.0,1.0,1.0,True,True,4368,1.0,,True,virulence
+gtfD,Smu_UA159,S. mutans,NC_004350.2,814,SMU_RS04210,SMU.910,WP_002352262.1,gtfD,glucosyltransferase-S,864064,868452,+,False,1.0,1.0,1.0,True,True,4389,1.0,,True,virulence
+spaP,Smu_UA159,S. mutans,NC_004350.2,549,SMU_RS02900,SMU.610,WP_002352221.1,spaP,cell surface antigen I/II,569317,574005,+,False,1.0,1.0,1.0,True,True,4689,1.0,,True,virulence
+ftf,Smu_UA159,S. mutans,NC_004350.2,1820,SMU_RS09270,SMU.2028,WP_002262343.1,,glycoside hydrolase family 68 protein,1896529,1898916,-,False,1.0,1.0,1.0,True,True,2388,1.0,,True,virulence
+luxS,Smu_UA159,S. mutans,NC_004350.2,425,SMU_RS02285,SMU.474,WP_002263047.1,,S-ribosylhomocysteine lyase,443205,443687,-,False,1.0,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smu_UA159,S. mutans,NC_004350.2,1870,SMU_RS09530,SMU.2085,WP_002262392.1,recA,recombinase RecA,1956459,1957610,-,False,1.0,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Smu_UA159,S. mutans,NC_004350.2,1778,SMU_RS09050,SMU.1990,WP_002263432.1,rpoB,DNA-directed RNA polymerase subunit beta,1860672,1864235,-,False,1.0,1.0,1.0,True,True,3564,1.0,,True,control
+gyrB,Smu_UA159,S. mutans,NC_004350.2,1149,SMU_RS05880,SMU.1277,WP_002263167.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,1205637,1207589,-,False,1.0,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Smu_UA159,S. mutans,NC_004350.2,999,SMU_RS05125,SMU.1114,WP_002262229.1,gyrA,DNA gyrase subunit A,1053761,1056223,-,False,1.0,1.0,1.0,True,True,2463,1.0,,True,control
+sodA,Smu_UA159,S. mutans,NC_004350.2,563,SMU_RS02970,SMU.629,WP_002261912.1,sodA,superoxide dismutase SodA,588268,588879,+,False,1.0,1.0,1.0,True,True,612,1.0,,True,control
+pheS,Smu_UA159,S. mutans,NC_004350.2,1349,SMU_RS06860,SMU.1512,WP_002262925.1,pheS,phenylalanine--tRNA ligase subunit alpha,1438234,1439277,-,False,1.0,1.0,1.0,True,True,1044,1.0,,True,control
+atpD,Smu_UA159,S. mutans,NC_004350.2,1364,SMU_RS06935,SMU.1528,WP_002262940.1,atpD,F0F1 ATP synthase subunit beta,1453694,1455100,-,False,1.0,1.0,1.0,True,True,1407,1.0,,True,control
+tuf,Smu_UA159,S. mutans,NC_004350.2,642,SMU_RS03365,SMU.714,WP_002263314.1,tuf,elongation factor Tu,672868,674064,+,False,1.0,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smu_UA159,S. mutans,NC_004350.2,14,SMU_RS00075,SMU_r01,,,16S ribosomal RNA,16870,18426,+,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfB,Smu_NN2025,S. mutans,NC_013928.1,1022,SMUNN2025_RS05270,SmuNN2025_1018,WP_012997788.1,gtfB,glucosyltransferase GtfB,1062844,1067274,-,False,0.9885,1.0,1.0,True,True,4431,1.0,,True,virulence
+gtfC,Smu_NN2025,S. mutans,NC_013928.1,1021,SMUNN2025_RS05265,SmuNN2025_1017,WP_012997787.1,gtfC,glucosyltransferase GtfC,1058281,1062648,-,False,0.9938,1.0,1.0,True,True,4368,1.0,,True,virulence
+gtfD,Smu_NN2025,S. mutans,NC_013928.1,1116,SMUNN2025_RS05745,SmuNN2025_1113,WP_012997822.1,gtfD,glucosyltransferase-S,1163316,1167704,-,False,0.9932,1.0,1.0,True,True,4389,1.0,,True,virulence
+spaP,Smu_NN2025,S. mutans,NC_013928.1,1379,SMUNN2025_RS07045,SmuNN2025_1372,WP_012997877.1,spaP,cell surface antigen I/II,1448180,1452880,-,False,0.9738,1.0,1.0,True,True,4701,1.0026,,True,virulence
+ftf,Smu_NN2025,S. mutans,NC_013928.1,1776,SMUNN2025_RS09090,SmuNN2025_1766,WP_012997960.1,,glycoside hydrolase family 68 protein,1858699,1861086,-,False,0.9849,1.0,1.0,True,True,2388,1.0,,True,virulence
+luxS,Smu_NN2025,S. mutans,NC_013928.1,1503,SMUNN2025_RS07665,SmuNN2025_1495,WP_002264383.1,,S-ribosylhomocysteine lyase,1579630,1580112,+,False,0.9938,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smu_NN2025,S. mutans,NC_013928.1,1836,SMUNN2025_RS09390,SmuNN2025_1824,WP_002262392.1,recA,recombinase RecA,1932375,1933526,-,False,1.0,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Smu_NN2025,S. mutans,NC_013928.1,168,SMUNN2025_RS00945,SmuNN2025_0168,WP_002263432.1,rpoB,DNA-directed RNA polymerase subunit beta,195652,199215,+,False,1.0,1.0,1.0,True,True,3564,1.0,,True,control
+gyrB,Smu_NN2025,S. mutans,NC_013928.1,780,SMUNN2025_RS04045,SmuNN2025_0779,WP_002263167.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,816030,817982,+,False,1.0,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Smu_NN2025,S. mutans,NC_013928.1,929,SMUNN2025_RS04805,SmuNN2025_0927,WP_002275143.1,gyrA,DNA gyrase subunit A,967899,970361,+,False,0.9976,1.0,1.0,True,True,2463,1.0,,True,control
+sodA,Smu_NN2025,S. mutans,NC_013928.1,1366,SMUNN2025_RS06975,SmuNN2025_1358,WP_041160327.1,sodA,superoxide dismutase SodA,1433490,1434101,-,False,0.9803,1.0,1.0,True,True,612,1.0,,True,control
+pheS,Smu_NN2025,S. mutans,NC_013928.1,604,SMUNN2025_RS03170,SmuNN2025_0592,WP_002270579.1,pheS,phenylalanine--tRNA ligase subunit alpha,623391,624434,+,False,0.9942,1.0,1.0,True,True,1044,1.0,,True,control
+atpD,Smu_NN2025,S. mutans,NC_013928.1,589,SMUNN2025_RS03095,SmuNN2025_0577,WP_002264827.1,atpD,F0F1 ATP synthase subunit beta,607570,608976,+,False,0.9979,1.0,1.0,True,True,1407,1.0,,True,control
+tuf,Smu_NN2025,S. mutans,NC_013928.1,1294,SMUNN2025_RS06625,SmuNN2025_1288,WP_002263314.1,tuf,elongation factor Tu,1358611,1359807,-,False,1.0,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smu_NN2025,S. mutans,NC_013928.1,14,SMUNN2025_RS00075,SmuNN2025_rRNA0001,,,16S ribosomal RNA,16880,18436,+,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfB,Smu_GS-5,S. mutans,NC_018089.1,883,SMUGS5_RS04520,SMUGS5_04450,WP_014834957.1,gtfB,glucosyltransferase GtfB,940803,945233,+,False,0.9892,1.0,1.0,True,True,4431,1.0,,True,virulence
+gtfC,Smu_GS-5,S. mutans,NC_018089.1,884,SMUGS5_RS04525,SMUGS5_04455,WP_014834958.1,gtfC,glucosyltransferase GtfC,945429,949796,+,False,0.9924,1.0,1.0,True,True,4368,1.0,,True,virulence
+gtfD,Smu_GS-5,S. mutans,NC_018089.1,800,SMUGS5_RS04100,SMUGS5_04025,WP_014834943.1,gtfD,glucosyltransferase-S,853641,858029,+,False,0.9959,1.0,1.0,True,True,4389,1.0,,True,virulence
+spaP,Smu_GS-5,S. mutans,NC_018089.1,532,SMUGS5_RS02775,SMUGS5_02680,WP_014834885.1,spaP,cell surface antigen I/II,559932,564620,+,False,0.9949,1.0,1.0,True,True,4689,1.0,,True,virulence
+ftf,Smu_GS-5,S. mutans,NC_018089.1,1803,SMUGS5_RS09195,SMUGS5_09145,WP_002279993.1,,glycoside hydrolase family 68 protein,1890325,1892712,-,False,0.9937,1.0,1.0,True,True,2388,1.0,,True,virulence
+luxS,Smu_GS-5,S. mutans,NC_018089.1,405,SMUGS5_RS02145,SMUGS5_02045,WP_002264383.1,,S-ribosylhomocysteine lyase,432040,432522,-,False,0.9938,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smu_GS-5,S. mutans,NC_018089.1,1854,SMUGS5_RS09450,SMUGS5_09390,WP_002262392.1,recA,recombinase RecA,1950235,1951386,-,False,1.0,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Smu_GS-5,S. mutans,NC_018089.1,1761,SMUGS5_RS08975,SMUGS5_08950,WP_002263432.1,rpoB,DNA-directed RNA polymerase subunit beta,1854526,1858089,-,False,1.0,1.0,1.0,True,True,3564,1.0,,True,control
+gyrB,Smu_GS-5,S. mutans,NC_018089.1,1130,SMUGS5_RS05770,SMUGS5_05715,WP_002263167.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,1195496,1197448,-,False,1.0,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Smu_GS-5,S. mutans,NC_018089.1,976,SMUGS5_RS04985,SMUGS5_04935,WP_002262229.1,gyrA,DNA gyrase subunit A,1037561,1040023,-,False,1.0,1.0,1.0,True,True,2463,1.0,,True,control
+sodA,Smu_GS-5,S. mutans,NC_018089.1,546,SMUGS5_RS02845,SMUGS5_02755,WP_002261912.1,sodA,superoxide dismutase SodA,578906,579517,+,False,1.0,1.0,1.0,True,True,612,1.0,,True,control
+pheS,Smu_GS-5,S. mutans,NC_018089.1,1338,SMUGS5_RS06800,SMUGS5_06805,WP_002273872.1,pheS,phenylalanine--tRNA ligase subunit alpha,1440585,1441628,-,False,0.9942,1.0,1.0,True,True,1044,1.0,,True,control
+atpD,Smu_GS-5,S. mutans,NC_018089.1,1353,SMUGS5_RS06875,SMUGS5_06880,WP_002264827.1,atpD,F0F1 ATP synthase subunit beta,1456042,1457448,-,False,0.9979,1.0,1.0,True,True,1407,1.0,,True,control
+tuf,Smu_GS-5,S. mutans,NC_018089.1,624,SMUGS5_RS03230,SMUGS5_03145,WP_002263314.1,tuf,elongation factor Tu,663337,664533,+,False,1.0,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smu_GS-5,S. mutans,NC_018089.1,14,SMUGS5_RS00075,SMUGS5_r09892,,,16S ribosomal RNA,16886,18442,+,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfB,Smu_LJ23,S. mutans,NC_017768.1,1036,SMULJ23_RS05315,SMULJ23_1027,WP_014678014.1,gtfB,glucosyltransferase GtfB,1081688,1086121,-,False,0.9892,1.0,1.0,True,True,4434,1.0007,,True,virulence
+gtfC,Smu_LJ23,S. mutans,NC_017768.1,1035,SMULJ23_RS05310,SMULJ23_1026,WP_014678013.1,gtfC,glucosyltransferase GtfC,1077125,1081492,-,False,0.9876,1.0,1.0,True,True,4368,1.0,,True,virulence
+gtfD,Smu_LJ23,S. mutans,NC_017768.1,1119,SMULJ23_RS05735,SMULJ23_1111,WP_014678045.1,gtfD,glucosyltransferase-S,1168921,1173309,-,False,0.9938,1.0,1.0,True,True,4389,1.0,,True,virulence
+spaP,Smu_LJ23,S. mutans,NC_017768.1,1386,SMULJ23_RS07050,SMULJ23_1377,WP_014678139.1,spaP,cell surface antigen I/II,1455273,1459973,-,False,0.9713,1.0,1.0,True,True,4701,1.0026,,True,virulence
+ftf,Smu_LJ23,S. mutans,NC_017768.1,1783,SMULJ23_RS09095,SMULJ23_1776,WP_014678260.1,,glycoside hydrolase family 68 protein,1857940,1860327,-,False,0.9912,1.0,1.0,True,True,2388,1.0,,True,virulence
+luxS,Smu_LJ23,S. mutans,NC_017768.1,1523,SMULJ23_RS07735,SMULJ23_1514,WP_002291126.1,,S-ribosylhomocysteine lyase,1598060,1598542,+,False,0.9875,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smu_LJ23,S. mutans,NC_017768.1,1838,SMULJ23_RS09365,SMULJ23_1828,WP_002262392.1,recA,recombinase RecA,1922980,1924131,-,False,1.0,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Smu_LJ23,S. mutans,NC_017768.1,192,SMULJ23_RS01050,SMULJ23_0190,WP_014677739.1,rpoB,DNA-directed RNA polymerase subunit beta,241097,244660,+,False,0.9992,1.0,1.0,True,True,3564,1.0,,True,control
+gyrB,Smu_LJ23,S. mutans,NC_017768.1,782,SMULJ23_RS04035,SMULJ23_0775,WP_002263167.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,826490,828442,+,False,1.0,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Smu_LJ23,S. mutans,NC_017768.1,933,SMULJ23_RS04805,SMULJ23_0925,WP_002280157.1,gyrA,DNA gyrase subunit A,979467,981929,+,False,0.9988,1.0,1.0,True,True,2463,1.0,,True,control
+sodA,Smu_LJ23,S. mutans,NC_017768.1,1370,SMULJ23_RS06970,SMULJ23_1361,WP_002261912.1,sodA,superoxide dismutase SodA,1438919,1439530,-,False,1.0,1.0,1.0,True,True,612,1.0,,True,control
+pheS,Smu_LJ23,S. mutans,NC_017768.1,612,SMULJ23_RS03200,SMULJ23_0607,WP_014677871.1,pheS,phenylalanine--tRNA ligase subunit alpha,647555,648598,+,False,0.9942,1.0,1.0,True,True,1044,1.0,,True,control
+atpD,Smu_LJ23,S. mutans,NC_017768.1,597,SMULJ23_RS03125,SMULJ23_0592,WP_002264827.1,atpD,F0F1 ATP synthase subunit beta,631731,633137,+,False,0.9979,1.0,1.0,True,True,1407,1.0,,True,control
+tuf,Smu_LJ23,S. mutans,NC_017768.1,1297,SMULJ23_RS06610,SMULJ23_1289,WP_002263314.1,tuf,elongation factor Tu,1362463,1363659,-,False,1.0,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smu_LJ23,S. mutans,NC_017768.1,14,SMULJ23_RS00075,SMULJ23_r0001,,,16S ribosomal RNA,16881,18437,+,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfB,Smu_UA140,S. mutans,NZ_CP044495.1,929,FSA28_RS05000,FSA28_0772,WP_151417137.1,gtfB,glucosyltransferase GtfB,1012013,1016443,+,False,0.9932,1.0,1.0,True,True,4431,1.0,,True,virulence
+gtfC,Smu_UA140,S. mutans,NZ_CP044495.1,930,FSA28_RS05005,FSA28_0773,WP_151417139.1,gtfC,glucosyltransferase GtfC,1016639,1021006,+,False,0.9869,1.0,1.0,True,True,4368,1.0,,True,virulence
+gtfD,Smu_UA140,S. mutans,NZ_CP044495.1,846,FSA28_RS04575,FSA28_0688,WP_088741842.1,gtfD,glucosyltransferase-S,924964,929352,+,False,0.9932,1.0,1.0,True,True,4389,1.0,,True,virulence
+spaP,Smu_UA140,S. mutans,NZ_CP044495.1,550,FSA28_RS03040,FSA28_0390,WP_151417135.1,spaP,cell surface antigen I/II,607666,612366,+,False,0.9738,1.0,1.0,True,True,4701,1.0026,,True,virulence
+ftf,Smu_UA140,S. mutans,NZ_CP044495.1,1814,FSA28_RS09645,FSA28_1690,WP_088741866.1,,glycoside hydrolase family 68 protein,1902284,1904671,-,False,0.9874,1.0,1.0,True,True,2388,1.0,,True,virulence
+luxS,Smu_UA140,S. mutans,NZ_CP044495.1,420,FSA28_RS02390,FSA28_0258,WP_002291126.1,,S-ribosylhomocysteine lyase,477184,477666,-,False,0.9875,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smu_UA140,S. mutans,NZ_CP044495.1,1867,FSA28_RS09935,FSA28_1743,WP_002262392.1,recA,recombinase RecA,1967131,1968282,-,False,1.0,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Smu_UA140,S. mutans,NZ_CP044495.1,1772,FSA28_RS09420,FSA28_1646,WP_002291654.1,rpoB,DNA-directed RNA polymerase subunit beta,1866448,1870011,-,False,0.9992,1.0,1.0,True,True,3564,1.0,,True,control
+gyrB,Smu_UA140,S. mutans,NZ_CP044495.1,1184,FSA28_RS06310,FSA28_1032,WP_002263167.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,1275550,1277502,-,False,1.0,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Smu_UA140,S. mutans,NZ_CP044495.1,1030,FSA28_RS05525,FSA28_0872,WP_002291153.1,gyrA,DNA gyrase subunit A,1117165,1119627,-,False,0.9976,1.0,1.0,True,True,2463,1.0,,True,control
+sodA,Smu_UA140,S. mutans,NZ_CP044495.1,566,FSA28_RS03130,FSA28_0407,WP_002261912.1,sodA,superoxide dismutase SodA,627940,628551,+,False,1.0,1.0,1.0,True,True,612,1.0,,True,control
+pheS,Smu_UA140,S. mutans,NZ_CP044495.1,1363,FSA28_RS07230,FSA28_1214,WP_002268116.1,pheS,phenylalanine--tRNA ligase subunit alpha,1464813,1465856,-,False,0.9942,1.0,1.0,True,True,1044,1.0,,True,control
+atpD,Smu_UA140,S. mutans,NZ_CP044495.1,1378,FSA28_RS07305,FSA28_1229,WP_002264827.1,atpD,F0F1 ATP synthase subunit beta,1480273,1481679,-,False,0.9979,1.0,1.0,True,True,1407,1.0,,True,control
+tuf,Smu_UA140,S. mutans,NZ_CP044495.1,647,FSA28_RS03545,FSA28_0488,WP_002263314.1,tuf,elongation factor Tu,712940,714136,+,False,1.0,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smu_UA140,S. mutans,NZ_CP044495.1,14,FSA28_RS00080,FSA28_1842,,,16S ribosomal RNA,16884,18440,+,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfB,Smu_NG8,S. mutans,NZ_CP013237.1,638,APQ13_RS03205,APQ13_03200,WP_061046379.1,gtfB,glucosyltransferase GtfB,660525,664955,-,False,0.9885,1.0,1.0,True,True,4431,1.0,,True,virulence
+gtfC,Smu_NG8,S. mutans,NZ_CP013237.1,637,APQ13_RS03200,APQ13_03195,WP_061046378.1,gtfC,glucosyltransferase GtfC,655962,660329,-,False,0.9952,1.0,1.0,True,True,4368,1.0,,True,virulence
+gtfD,Smu_NG8,S. mutans,NZ_CP013237.1,721,APQ13_RS03625,APQ13_03620,WP_002289671.1,gtfD,glucosyltransferase-S,747742,752130,-,False,0.9959,1.0,1.0,True,True,4389,1.0,,True,virulence
+spaP,Smu_NG8,S. mutans,NZ_CP013237.1,987,APQ13_RS04955,APQ13_04950,WP_024781655.1,spaP,cell surface antigen I/II,1043235,1047935,-,False,0.9745,1.0,1.0,True,True,4701,1.0026,,True,virulence
+ftf,Smu_NG8,S. mutans,NZ_CP013237.1,1638,APQ13_RS08385,APQ13_08365,WP_002268484.1,,glycoside hydrolase family 68 protein,1744626,1747013,+,False,0.9987,1.0,1.0,True,True,2388,1.0,,True,virulence
+luxS,Smu_NG8,S. mutans,NZ_CP013237.1,1116,APQ13_RS05600,APQ13_05595,WP_002263047.1,,S-ribosylhomocysteine lyase,1178384,1178866,+,False,1.0,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smu_NG8,S. mutans,NZ_CP013237.1,1570,APQ13_RS08030,APQ13_08015,WP_002262392.1,recA,recombinase RecA,1666286,1667437,+,False,1.0,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Smu_NG8,S. mutans,NZ_CP013237.1,1680,APQ13_RS08605,APQ13_08585,WP_002263432.1,rpoB,DNA-directed RNA polymerase subunit beta,1779288,1782851,+,False,1.0,1.0,1.0,True,True,3564,1.0,,True,control
+gyrB,Smu_NG8,S. mutans,NZ_CP013237.1,391,APQ13_RS01955,APQ13_01955,WP_002263167.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,411626,413578,+,False,1.0,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Smu_NG8,S. mutans,NZ_CP013237.1,544,APQ13_RS02740,APQ13_02735,WP_002266779.1,gyrA,DNA gyrase subunit A,565748,568210,+,False,0.9976,1.0,1.0,True,True,2463,1.0,,True,control
+sodA,Smu_NG8,S. mutans,NZ_CP013237.1,973,APQ13_RS04885,APQ13_04880,WP_002261912.1,sodA,superoxide dismutase SodA,1028337,1028948,-,False,1.0,1.0,1.0,True,True,612,1.0,,True,control
+pheS,Smu_NG8,S. mutans,NZ_CP013237.1,201,APQ13_RS00995,APQ13_00995,WP_002351163.1,pheS,phenylalanine--tRNA ligase subunit alpha,187269,188312,+,False,0.9914,1.0,1.0,True,True,1044,1.0,,True,control
+atpD,Smu_NG8,S. mutans,NZ_CP013237.1,186,APQ13_RS00920,APQ13_00920,WP_002264827.1,atpD,F0F1 ATP synthase subunit beta,171446,172852,+,False,0.9979,1.0,1.0,True,True,1407,1.0,,True,control
+tuf,Smu_NG8,S. mutans,NZ_CP013237.1,895,APQ13_RS04495,APQ13_04490,WP_002263314.1,tuf,elongation factor Tu,943465,944661,-,False,1.0,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smu_NG8,S. mutans,NZ_CP013237.1,1354,APQ13_RS06840,APQ13_06825,,,16S ribosomal RNA,1419180,1420736,-,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfB,Smu_LAR01,S. mutans,NZ_CP023477.1,1040,CO204_RS05560,CO204_05545,WP_106006745.1,gtfB,glucosyltransferase GtfB,1065676,1070106,-,False,0.9925,1.0,1.0,True,True,4431,1.0,,True,virulence
+gtfC,Smu_LAR01,S. mutans,NZ_CP023477.1,1039,CO204_RS05555,CO204_05540,WP_106006744.1,gtfC,glucosyltransferase GtfC,1061113,1065480,-,False,0.9911,1.0,1.0,True,True,4368,1.0,,True,virulence
+gtfD,Smu_LAR01,S. mutans,NZ_CP023477.1,1123,CO204_RS05985,CO204_05970,WP_019313202.1,gtfD,glucosyltransferase-S,1152928,1157316,-,False,0.9938,1.0,1.0,True,True,4389,1.0,,True,virulence
+spaP,Smu_LAR01,S. mutans,NZ_CP023477.1,1399,CO204_RS07395,CO204_07360,WP_106006797.1,spaP,cell surface antigen I/II,1452920,1457608,-,False,0.9962,1.0,1.0,True,True,4689,1.0,,True,virulence
+ftf,Smu_LAR01,S. mutans,NZ_CP023477.1,1831,CO204_RS09680,CO204_09630,WP_002293225.1,,glycoside hydrolase family 68 protein,1893389,1895776,-,False,0.9925,1.0,1.0,True,True,2388,1.0,,True,virulence
+luxS,Smu_LAR01,S. mutans,NZ_CP023477.1,1529,CO204_RS08045,CO204_08010,WP_002264383.1,,S-ribosylhomocysteine lyase,1587531,1588013,+,False,0.9938,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smu_LAR01,S. mutans,NZ_CP023477.1,1941,CO204_RS10240,CO204_10185,WP_002262392.1,recA,recombinase RecA,2012588,2013739,-,False,1.0,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Smu_LAR01,S. mutans,NZ_CP023477.1,200,CO204_RS01165,CO204_01165,WP_002263432.1,rpoB,DNA-directed RNA polymerase subunit beta,220687,224250,+,False,1.0,1.0,1.0,True,True,3564,1.0,,True,control
+gyrB,Smu_LAR01,S. mutans,NZ_CP023477.1,796,CO204_RS04310,CO204_04290,WP_002308831.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,822091,824043,+,False,0.9969,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Smu_LAR01,S. mutans,NZ_CP023477.1,946,CO204_RS05085,CO204_05075,WP_002262229.1,gyrA,DNA gyrase subunit A,970715,973177,+,False,1.0,1.0,1.0,True,True,2463,1.0,,True,control
+sodA,Smu_LAR01,S. mutans,NZ_CP023477.1,1387,CO204_RS07330,CO204_07295,WP_106006796.1,sodA,superoxide dismutase SodA,1439581,1440192,-,False,0.9951,1.0,1.0,True,True,612,1.0,,True,control
+pheS,Smu_LAR01,S. mutans,NZ_CP023477.1,616,CO204_RS03380,CO204_03370,WP_002268116.1,pheS,phenylalanine--tRNA ligase subunit alpha,631633,632676,+,False,0.9942,1.0,1.0,True,True,1044,1.0,,True,control
+atpD,Smu_LAR01,S. mutans,NZ_CP023477.1,601,CO204_RS03305,CO204_03295,WP_002262940.1,atpD,F0F1 ATP synthase subunit beta,615812,617218,+,False,1.0,1.0,1.0,True,True,1407,1.0,,True,control
+tuf,Smu_LAR01,S. mutans,NZ_CP023477.1,1307,CO204_RS06915,CO204_06885,WP_002263314.1,tuf,elongation factor Tu,1354213,1355409,-,False,1.0,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smu_LAR01,S. mutans,NZ_CP023477.1,14,CO204_RS00080,CO204_00080,,,16S ribosomal RNA,16879,18435,+,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfB,Smu_LP13,S. mutans,NZ_AP014571.1,906,SMUNUM_RS04730,SMNUM_0889,WP_286217630.1,gtfB,glucosyltransferase GtfB,955849,960279,+,False,0.9953,1.0,1.0,True,True,4431,1.0,ambiguous_bases,False,virulence
+gtfC,Smu_LP13,S. mutans,NZ_AP014571.1,907,SMUNUM_RS04735,SMNUM_0890,WP_286217633.1,gtfC,glucosyltransferase GtfC,960475,964842,+,False,0.9959,1.0,1.0,True,True,4368,1.0,,True,virulence
+gtfD,Smu_LP13,S. mutans,NZ_AP014571.1,823,SMUNUM_RS04315,SMNUM_0805,WP_168749693.1,gtfD,glucosyltransferase-S,868785,873173,+,False,0.9973,1.0,1.0,True,True,4389,1.0,,True,virulence
+spaP,Smu_LP13,S. mutans,NZ_AP014571.1,565,SMUNUM_RS03025,SMNUM_0552,WP_019314323.1,spaP,cell surface antigen I/II,587306,591994,+,False,0.9923,1.0,1.0,True,True,4689,1.0,,True,virulence
+ftf,Smu_LP13,S. mutans,NZ_AP014571.1,1853,SMUNUM_RS09575,SMNUM_1816,WP_002266893.1,,glycoside hydrolase family 68 protein,1926588,1928975,-,False,0.995,1.0,1.0,True,True,2388,1.0,,True,virulence
+luxS,Smu_LP13,S. mutans,NZ_AP014571.1,432,SMUNUM_RS02360,SMNUM_0420,WP_002263047.1,,S-ribosylhomocysteine lyase,453549,454031,-,False,1.0,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smu_LP13,S. mutans,NZ_AP014571.1,1937,SMUNUM_RS10010,SMNUM_1898,WP_002262392.1,recA,recombinase RecA,2018126,2019277,-,False,1.0,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Smu_LP13,S. mutans,NZ_AP014571.1,1811,SMUNUM_RS09355,SMNUM_1778,WP_002263432.1,rpoB,DNA-directed RNA polymerase subunit beta,1890791,1894354,-,False,1.0,1.0,1.0,True,True,3564,1.0,,True,control
+gyrB,Smu_LP13,S. mutans,NZ_AP014571.1,1162,SMUNUM_RS06025,SMNUM_1142,WP_002263167.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,1213268,1215220,-,False,1.0,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Smu_LP13,S. mutans,NZ_AP014571.1,1008,SMUNUM_RS05240,SMNUM_0988,WP_002262229.1,gyrA,DNA gyrase subunit A,1058618,1061080,-,False,1.0,1.0,1.0,True,True,2463,1.0,,True,control
+sodA,Smu_LP13,S. mutans,NZ_AP014571.1,579,SMUNUM_RS03095,SMNUM_0564,WP_002261912.1,sodA,superoxide dismutase SodA,606270,606881,+,False,1.0,1.0,1.0,True,True,612,1.0,,True,control
+pheS,Smu_LP13,S. mutans,NZ_AP014571.1,1360,SMUNUM_RS07015,SMNUM_1342,WP_002264817.1,pheS,phenylalanine--tRNA ligase subunit alpha,1447226,1448269,-,False,0.9971,1.0,1.0,True,True,1044,1.0,,True,control
+atpD,Smu_LP13,S. mutans,NZ_AP014571.1,1375,SMUNUM_RS07090,SMNUM_1357,WP_002262940.1,atpD,F0F1 ATP synthase subunit beta,1462684,1464090,-,False,1.0,1.0,1.0,True,True,1407,1.0,,True,control
+tuf,Smu_LP13,S. mutans,NZ_AP014571.1,654,SMUNUM_RS03470,SMNUM_0639,WP_002263314.1,tuf,elongation factor Tu,684010,685206,+,False,1.0,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smu_LP13,S. mutans,NZ_AP014571.1,14,SMUNUM_RS00075,SMNUM_r001,,,16S ribosomal RNA,16881,18437,+,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfB,Smu_B04Sm5,S. mutans,NZ_CP061071.1,1018,IBL27_RS05260,IBL27_05260,WP_188318733.1,gtfB,glucosyltransferase GtfB,1049030,1053460,-,False,0.9953,1.0,1.0,True,True,4431,1.0,,True,virulence
+gtfC,Smu_B04Sm5,S. mutans,NZ_CP061071.1,1017,IBL27_RS05255,IBL27_05255,WP_188318732.1,gtfC,glucosyltransferase GtfC,1044467,1048834,-,False,0.9924,1.0,1.0,True,True,4368,1.0,,True,virulence
+gtfD,Smu_B04Sm5,S. mutans,NZ_CP061071.1,1101,IBL27_RS05675,IBL27_05675,WP_002307999.1,gtfD,glucosyltransferase-S,1136263,1140651,-,False,0.9952,1.0,1.0,True,True,4389,1.0,,True,virulence
+spaP,Smu_B04Sm5,S. mutans,NZ_CP061071.1,1359,IBL27_RS06955,IBL27_06955,WP_168744662.1,spaP,cell surface antigen I/II,1418129,1422829,-,False,0.9732,1.0,1.0,True,True,4701,1.0026,,True,virulence
+ftf,Smu_B04Sm5,S. mutans,NZ_CP061071.1,1762,IBL27_RS09050,IBL27_09050,WP_019806146.1,,glycoside hydrolase family 68 protein,1838161,1840548,-,False,0.9912,1.0,1.0,True,True,2388,1.0,,True,virulence
+luxS,Smu_B04Sm5,S. mutans,NZ_CP061071.1,1477,IBL27_RS07545,IBL27_07545,WP_002278778.1,,S-ribosylhomocysteine lyase,1544091,1544573,+,False,0.9875,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smu_B04Sm5,S. mutans,NZ_CP061071.1,1844,IBL27_RS09460,IBL27_09460,WP_002262392.1,recA,recombinase RecA,1935558,1936709,-,False,1.0,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Smu_B04Sm5,S. mutans,NZ_CP061071.1,169,IBL27_RS00955,IBL27_00955,WP_002263432.1,rpoB,DNA-directed RNA polymerase subunit beta,194894,198457,+,False,1.0,1.0,1.0,True,True,3564,1.0,,True,control
+gyrB,Smu_B04Sm5,S. mutans,NZ_CP061071.1,769,IBL27_RS04020,IBL27_04020,WP_002308831.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,796845,798797,+,False,0.9969,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Smu_B04Sm5,S. mutans,NZ_CP061071.1,916,IBL27_RS04760,IBL27_04760,WP_002308174.1,gyrA,DNA gyrase subunit A,946265,948727,+,False,0.9963,1.0,1.0,True,True,2463,1.0,,True,control
+sodA,Smu_B04Sm5,S. mutans,NZ_CP061071.1,1344,IBL27_RS06880,IBL27_06880,WP_002261912.1,sodA,superoxide dismutase SodA,1401870,1402481,-,False,1.0,1.0,1.0,True,True,612,1.0,,True,control
+pheS,Smu_B04Sm5,S. mutans,NZ_CP061071.1,596,IBL27_RS03175,IBL27_03175,WP_002264817.1,pheS,phenylalanine--tRNA ligase subunit alpha,612967,614010,+,False,0.9971,1.0,1.0,True,True,1044,1.0,,True,control
+atpD,Smu_B04Sm5,S. mutans,NZ_CP061071.1,581,IBL27_RS03100,IBL27_03100,WP_002264827.1,atpD,F0F1 ATP synthase subunit beta,597145,598551,+,False,0.9979,1.0,1.0,True,True,1407,1.0,,True,control
+tuf,Smu_B04Sm5,S. mutans,NZ_CP061071.1,1270,IBL27_RS06510,IBL27_06510,WP_002263314.1,tuf,elongation factor Tu,1324968,1326164,-,False,1.0,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smu_B04Sm5,S. mutans,NZ_CP061071.1,14,IBL27_RS00075,IBL27_00075,,,16S ribosomal RNA,16685,18241,+,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfB,Smu_T8,S. mutans,NZ_CP044492.1,879,FSA31_RS04695,FSA31_0929,WP_151416630.1,gtfB,glucosyltransferase GtfB,957442,961872,+,False,0.9925,1.0,1.0,True,True,4431,1.0,,True,virulence
+gtfC,Smu_T8,S. mutans,NZ_CP044492.1,880,FSA31_RS04700,FSA31_0930,WP_151416632.1,gtfC,glucosyltransferase GtfC,962068,966435,+,False,0.9938,1.0,1.0,True,True,4368,1.0,,True,virulence
+gtfD,Smu_T8,S. mutans,NZ_CP044492.1,798,FSA31_RS04280,FSA31_0848,WP_151416628.1,gtfD,glucosyltransferase-S,875005,879393,+,False,0.9932,1.0,1.0,True,True,4389,1.0,,True,virulence
+spaP,Smu_T8,S. mutans,NZ_CP044492.1,533,FSA31_RS02920,FSA31_0579,WP_151416616.1,spaP,cell surface antigen I/II,587917,592617,+,False,0.9732,1.0,1.0,True,True,4701,1.0026,,True,virulence
+ftf,Smu_T8,S. mutans,NZ_CP044492.1,1743,FSA31_RS09210,FSA31_1822,WP_002284909.1,,glycoside hydrolase family 68 protein,1827769,1830156,-,False,0.9925,1.0,1.0,True,True,2388,1.0,,True,virulence
+luxS,Smu_T8,S. mutans,NZ_CP044492.1,408,FSA31_RS02290,FSA31_0450,WP_002284350.1,,S-ribosylhomocysteine lyase,461320,461802,-,False,0.9812,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smu_T8,S. mutans,NZ_CP044492.1,1796,FSA31_RS09510,FSA31_1874,WP_002262392.1,recA,recombinase RecA,1891188,1892339,-,False,1.0,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Smu_T8,S. mutans,NZ_CP044492.1,1701,FSA31_RS08990,FSA31_1779,WP_002263432.1,rpoB,DNA-directed RNA polymerase subunit beta,1791940,1795503,-,False,1.0,1.0,1.0,True,True,3564,1.0,,True,control
+gyrB,Smu_T8,S. mutans,NZ_CP044492.1,1124,FSA31_RS05965,FSA31_1180,WP_002263167.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,1209295,1211247,-,False,1.0,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Smu_T8,S. mutans,NZ_CP044492.1,974,FSA31_RS05175,FSA31_1023,WP_002284413.1,gyrA,DNA gyrase subunit A,1054624,1057086,-,False,0.9988,1.0,1.0,True,True,2463,1.0,,True,control
+sodA,Smu_T8,S. mutans,NZ_CP044492.1,546,FSA31_RS03000,FSA31_0593,WP_002261912.1,sodA,superoxide dismutase SodA,606604,607215,+,False,1.0,1.0,1.0,True,True,612,1.0,,True,control
+pheS,Smu_T8,S. mutans,NZ_CP044492.1,1287,FSA31_RS06795,FSA31_1347,WP_002284494.1,pheS,phenylalanine--tRNA ligase subunit alpha,1381981,1383024,-,False,0.9942,1.0,1.0,True,True,1044,1.0,,True,control
+atpD,Smu_T8,S. mutans,NZ_CP044492.1,1302,FSA31_RS06870,FSA31_1362,WP_002264827.1,atpD,F0F1 ATP synthase subunit beta,1397447,1398853,-,False,0.9979,1.0,1.0,True,True,1407,1.0,,True,control
+tuf,Smu_T8,S. mutans,NZ_CP044492.1,619,FSA31_RS03375,FSA31_0668,WP_002263314.1,tuf,elongation factor Tu,681878,683074,+,False,1.0,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smu_T8,S. mutans,NZ_CP044492.1,15,FSA31_RS00080,FSA31_0017,,,16S ribosomal RNA,17844,19400,+,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfD,Ssa_SK36,S. sanguinis,NC_009009.1,591,SSA_RS03130,SSA_0613,WP_011836622.1,,glycoside hydrolase family 70 protein,601987,606693,+,False,0.5935,0.9979,0.9547,True,True,4707,1.0725,,True,virulence
+spaP,Ssa_SK36,S. sanguinis,NC_009009.1,294,SSA_RS01645,SSA_0303,WP_033179110.1,,antigen I/II family LPXTG-anchored adhesin,296546,301111,+,False,0.556,1.0,0.9901,True,True,4566,0.9738,,True,virulence
+luxS,Ssa_SK36,S. sanguinis,NC_009009.1,1769,SSA_RS09080,SSA_1853,WP_002905191.1,,S-ribosylhomocysteine lyase,1848938,1849420,+,False,0.8375,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Ssa_SK36,S. sanguinis,NC_009009.1,2146,SSA_RS10975,SSA_2245,WP_011837638.1,recA,recombinase RecA,2240051,2241199,-,False,0.8512,1.0,1.0,True,True,1149,0.9974,,True,control
+rpoB,Ssa_SK36,S. sanguinis,NC_009009.1,175,SSA_RS01040,SSA_0176,WP_033179096.1,rpoB,DNA-directed RNA polymerase subunit beta,174938,178504,+,False,0.9244,0.9924,0.9916,True,True,3567,1.0008,,True,control
+gyrB,Ssa_SK36,S. sanguinis,NC_009009.1,839,SSA_RS04370,SSA_0878,WP_002895870.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,871736,873685,+,False,0.8754,1.0,1.0,True,True,1950,0.9985,,True,control
+gyrA,Ssa_SK36,S. sanguinis,NC_009009.1,1161,SSA_RS05980,SSA_1220,WP_033179265.1,gyrA,DNA gyrase subunit A,1241442,1243901,-,False,0.8437,0.9988,1.0,True,True,2460,0.9988,,True,control
+sodA,Ssa_SK36,S. sanguinis,NC_009009.1,691,SSA_RS03635,SSA_0721,WP_002896081.1,sodA,superoxide dismutase SodA,706355,706960,+,False,0.805,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Ssa_SK36,S. sanguinis,NC_009009.1,871,SSA_RS04525,SSA_0912,WP_002900605.1,pheS,phenylalanine--tRNA ligase subunit alpha,923240,924289,+,False,0.7762,0.9914,0.9857,True,True,1050,1.0057,,True,control
+atpD,Ssa_SK36,S. sanguinis,NC_009009.1,754,SSA_RS03940,SSA_0788,WP_002897903.1,atpD,F0F1 ATP synthase subunit beta,771177,772583,+,False,0.9186,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Ssa_SK36,S. sanguinis,NC_009009.1,1450,SSA_RS07440,SSA_1520,WP_002895003.1,tuf,elongation factor Tu,1526475,1527671,-,False,0.9497,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Ssa_SK36,S. sanguinis,NC_009009.1,15,SSA_RS00085,SSA_2400,,,16S ribosomal RNA,16379,17926,+,False,1.0,1.0,1.0,True,True,1548,0.9942,,True,rRNA control
+gtfD,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,577,J1C83_RS03025,J1C83_02990,WP_002902580.1,,glycoside hydrolase family 70 protein,597845,602557,+,False,0.5877,0.9979,0.9548,True,True,4713,1.0738,,True,virulence
+spaP,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,1925,J1C83_RS09860,J1C83_09760,WP_002903434.1,,antigen I/II family LPXTG-anchored adhesin,2026311,2030876,-,False,0.5511,1.0,0.9901,True,True,4566,0.9738,,True,virulence
+luxS,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,1714,J1C83_RS08800,J1C83_08710,WP_002893508.1,,S-ribosylhomocysteine lyase,1804597,1805079,+,False,0.8375,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,104,J1C83_RS00625,J1C83_00620,WP_002902034.1,recA,recombinase RecA,114483,115631,+,False,0.8564,1.0,1.0,True,True,1149,0.9974,,True,control
+rpoB,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,2027,J1C83_RS10375,J1C83_10275,WP_002903503.1,rpoB,DNA-directed RNA polymerase subunit beta,2130323,2133889,-,False,0.9261,0.9924,0.9916,True,True,3567,1.0008,,True,control
+gyrB,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,834,J1C83_RS04320,J1C83_04270,WP_002895870.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,874480,876429,+,False,0.8754,1.0,1.0,True,True,1950,0.9985,,True,control
+gyrA,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,1139,J1C83_RS05845,J1C83_05790,WP_032909547.1,gyrA,DNA gyrase subunit A,1221483,1223942,-,False,0.8449,0.9988,1.0,True,True,2460,0.9988,,True,control
+sodA,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,675,J1C83_RS03515,J1C83_03465,WP_002902648.1,,superoxide dismutase,698563,699168,+,False,0.79,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,863,J1C83_RS04465,J1C83_04410,WP_002900605.1,pheS,phenylalanine--tRNA ligase subunit alpha,925799,926848,+,False,0.7762,0.9914,0.9857,True,True,1050,1.0057,,True,control
+atpD,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,739,J1C83_RS03835,J1C83_03785,WP_002902710.1,atpD,F0F1 ATP synthase subunit beta,765142,766548,+,False,0.9186,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,1407,J1C83_RS07205,J1C83_07140,WP_002903123.1,tuf,elongation factor Tu,1497739,1498935,-,False,0.9472,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,15,J1C83_RS00090,J1C83_00085,,,16S ribosomal RNA,16167,17714,+,False,1.0,1.0,1.0,True,True,1548,0.9942,,True,rRNA control
+spaP,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,1920,FDP16_RS09700,FDP16_10130,WP_305727994.1,,antigen I/II family LPXTG-anchored adhesin,1962154,1966719,-,False,0.5591,1.0,0.9901,True,True,4566,0.9738,,True,virulence
+luxS,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,492,FDP16_RS02575,FDP16_02680,WP_002893508.1,,S-ribosylhomocysteine lyase,511608,512090,-,False,0.8375,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,126,FDP16_RS00725,FDP16_00750,WP_176798206.1,recA,recombinase RecA,133189,134337,+,False,0.8616,1.0,1.0,True,True,1149,0.9974,,True,control
+rpoB,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,2057,FDP16_RS10385,FDP16_10850,WP_176799592.1,rpoB,DNA-directed RNA polymerase subunit beta,2102285,2105851,-,False,0.9253,0.9924,0.9916,True,True,3567,1.0008,,True,control
+gyrA,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,1110,FDP16_RS05680,FDP16_05910,WP_256254475.1,gyrA,DNA gyrase subunit A,1102816,1105260,+,False,0.8488,0.9841,0.9914,True,True,2445,0.9927,,True,control
+sodA,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,1600,FDP16_RS08115,FDP16_08445,WP_002906995.1,sodA,superoxide dismutase SodA,1631124,1631729,-,False,0.805,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,1395,FDP16_RS07105,FDP16_07405,WP_176799123.1,pheS,phenylalanine--tRNA ligase subunit alpha,1399030,1400076,-,False,0.7733,0.9914,0.9885,True,True,1047,1.0029,,True,control
+atpD,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,1526,FDP16_RS07750,FDP16_08065,WP_176799214.1,atpD,F0F1 ATP synthase subunit beta,1554647,1556053,-,False,0.9208,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,809,FDP16_RS04175,FDP16_04330,WP_002912857.1,tuf,elongation factor Tu,808744,809940,+,False,0.9497,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,17,FDP16_RS00095,FDP16_00100,,,16S ribosomal RNA,18569,20116,+,False,1.0,1.0,1.0,True,True,1548,0.9942,,True,rRNA control
+gtfD,Sgo_CH1,S. gordonii,NC_009785.1,495,SGO_RS02460,SGO_0497,WP_041789547.1,,glycoside hydrolase family 70 protein,537501,542234,+,False,0.592,0.9979,0.955,True,True,4734,1.0786,,True,virulence
+spaP,Sgo_CH1,S. gordonii,NC_009785.1,208,SGO_RS01030,SGO_0210,WP_011999747.1,,cell wall-anchored adhesin SspA,219788,224515,+,False,0.6897,0.9994,0.9968,True,True,4728,1.0083,,True,virulence
+luxS,Sgo_CH1,S. gordonii,NC_009785.1,587,SGO_RS02915,SGO_0592,WP_008808586.1,,S-ribosylhomocysteine lyase,641386,641868,-,False,0.8375,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Sgo_CH1,S. gordonii,NC_009785.1,1983,SGO_RS09990,SGO_2045,WP_012131014.1,recA,recombinase RecA,2107552,2108703,-,False,0.8497,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Sgo_CH1,S. gordonii,NC_009785.1,1881,SGO_RS09435,SGO_1927,WP_012130944.1,rpoB,DNA-directed RNA polymerase subunit beta,1997060,2000626,-,False,0.9304,0.9924,0.9916,True,True,3567,1.0008,,True,control
+gyrB,Sgo_CH1,S. gordonii,NC_009785.1,1396,SGO_RS07025,SGO_1432,WP_012130513.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,1482474,1484423,-,False,0.88,1.0,1.0,True,True,1950,0.9985,,True,control
+gyrA,Sgo_CH1,S. gordonii,NC_009785.1,1201,SGO_RS06045,SGO_1231,WP_012000631.1,gyrA,DNA gyrase subunit A,1276191,1278644,-,False,0.8513,0.9841,0.9878,True,True,2454,0.9963,,True,control
+sodA,Sgo_CH1,S. gordonii,NC_009785.1,1563,SGO_RS07835,SGO_1599,WP_012130663.1,,superoxide dismutase,1653714,1654319,-,False,0.79,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Sgo_CH1,S. gordonii,NC_009785.1,839,SGO_RS04215,SGO_0859,WP_012000314.1,pheS,phenylalanine--tRNA ligase subunit alpha,910329,911378,+,False,0.7674,0.9914,0.9857,True,True,1050,1.0057,,True,control
+atpD,Sgo_CH1,S. gordonii,NC_009785.1,1507,SGO_RS07555,SGO_1542,WP_012130613.1,atpD,F0F1 ATP synthase subunit beta,1593748,1595154,-,False,0.9143,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Sgo_CH1,S. gordonii,NC_009785.1,742,SGO_RS03740,SGO_0761,WP_009754926.1,tuf,elongation factor Tu,801466,802662,+,False,0.9447,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Sgo_CH1,S. gordonii,NC_009785.1,606,SGO_RS03010,SGO_0611,,,16S ribosomal RNA,661151,662707,+,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfD,Sgo_FDA371,S. gordonii,NZ_CP023511.1,119,CO687_RS00660,CO687_00660,WP_096754725.1,,glycoside hydrolase family 70 protein,126509,131242,-,False,0.5979,0.9979,0.955,True,True,4734,1.0786,,True,virulence
+spaP,Sgo_FDA371,S. gordonii,NZ_CP023511.1,386,CO687_RS02010,CO687_02010,WP_096754851.1,sspA,cell wall-anchored adhesin SspA,420362,425098,-,False,0.6909,0.9994,0.9981,True,True,4737,1.0102,,True,virulence
+luxS,Sgo_FDA371,S. gordonii,NZ_CP023511.1,35,CO687_RS00230,CO687_00230,WP_008808586.1,,S-ribosylhomocysteine lyase,37358,37840,+,False,0.8375,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Sgo_FDA371,S. gordonii,NZ_CP023511.1,670,CO687_RS03570,CO687_03570,WP_012131014.1,recA,recombinase RecA,721798,722949,+,False,0.8497,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Sgo_FDA371,S. gordonii,NZ_CP023511.1,770,CO687_RS04140,CO687_04140,WP_045634166.1,rpoB,DNA-directed RNA polymerase subunit beta,829199,832765,+,False,0.9312,0.9924,0.9916,True,True,3567,1.0008,,True,control
+gyrB,Sgo_FDA371,S. gordonii,NZ_CP023511.1,1242,CO687_RS06540,CO687_06540,WP_096755103.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,1333289,1335238,+,False,0.88,1.0,1.0,True,True,1950,0.9985,,True,control
+gyrA,Sgo_FDA371,S. gordonii,NZ_CP023511.1,1428,CO687_RS07515,CO687_07515,WP_012000631.1,gyrA,DNA gyrase subunit A,1525221,1527674,+,False,0.8513,0.9841,0.9878,True,True,2454,0.9963,,True,control
+sodA,Sgo_FDA371,S. gordonii,NZ_CP023511.1,1083,CO687_RS05770,CO687_05770,WP_045773124.1,,superoxide dismutase,1171908,1172513,+,False,0.795,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Sgo_FDA371,S. gordonii,NZ_CP023511.1,1789,CO687_RS09325,CO687_09325,WP_096755321.1,pheS,phenylalanine--tRNA ligase subunit alpha,1887231,1888280,-,False,0.7733,0.9914,0.9857,True,True,1050,1.0057,,True,control
+atpD,Sgo_FDA371,S. gordonii,NZ_CP023511.1,1132,CO687_RS06015,CO687_06015,WP_008809477.1,atpD,F0F1 ATP synthase subunit beta,1223851,1225257,+,False,0.9165,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Sgo_FDA371,S. gordonii,NZ_CP023511.1,1899,CO687_RS09885,CO687_09885,WP_020992675.1,tuf,elongation factor Tu,2005672,2006868,-,False,0.9497,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Sgo_FDA371,S. gordonii,NZ_CP023511.1,18,CO687_RS00145,CO687_00145,,,16S ribosomal RNA,20252,21808,-,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+gtfD,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,114,RN86_RS00620,RN86_00615,WP_053794110.1,,glycoside hydrolase family 70 protein,121944,126482,-,False,0.5938,1.0,0.9974,True,True,4539,1.0342,,True,virulence
+spaP,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,391,RN86_RS02005,RN86_02000,WP_053794237.1,,antigen I/II family LPXTG-anchored adhesin,422929,427548,-,False,0.6625,0.9994,0.9981,True,True,4620,0.9853,,True,virulence
+luxS,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,21,RN86_RS00160,RN86_00160,WP_053794069.1,,S-ribosylhomocysteine lyase,25002,25484,+,False,0.8438,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,672,RN86_RS03560,RN86_03555,WP_046164526.1,recA,recombinase RecA,726255,727406,+,False,0.8497,1.0,1.0,True,True,1152,1.0,,True,control
+rpoB,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,776,RN86_RS04135,RN86_04130,WP_046164738.1,rpoB,DNA-directed RNA polymerase subunit beta,834246,837812,+,False,0.9304,0.9924,0.9916,True,True,3567,1.0008,,True,control
+gyrB,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,1313,RN86_RS06805,RN86_06800,WP_008809371.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,1394928,1396877,+,False,0.88,1.0,1.0,True,True,1950,0.9985,,True,control
+gyrA,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,1506,RN86_RS07795,RN86_07790,WP_046165514.1,gyrA,DNA gyrase subunit A,1597532,1599985,+,False,0.8513,0.9841,0.9878,True,True,2454,0.9963,,True,control
+sodA,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,1153,RN86_RS06025,RN86_06020,WP_045773124.1,,superoxide dismutase,1234057,1234662,+,False,0.795,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,1893,RN86_RS09695,RN86_09700,WP_053794723.1,pheS,phenylalanine--tRNA ligase subunit alpha,2000642,2001691,-,False,0.7733,0.9914,0.9857,True,True,1050,1.0057,,True,control
+atpD,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,1210,RN86_RS06310,RN86_06305,WP_012130613.1,atpD,F0F1 ATP synthase subunit beta,1293123,1294529,+,False,0.9143,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,2045,RN86_RS10430,RN86_10435,WP_020992675.1,tuf,elongation factor Tu,2144501,2145697,-,False,0.9497,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,2,RN86_RS00065,RN86_00065,,,16S ribosomal RNA,4168,5724,-,False,1.0,1.0,1.0,True,True,1557,1.0,,True,rRNA control
+luxS,Smi_B6,S. mitis,NC_013853.1,1749,SMI_RS08950,smi_1763,WP_000032547.1,,S-ribosylhomocysteine lyase,1821772,1822254,+,False,0.8375,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smi_B6,S. mitis,NC_013853.1,1826,SMI_RS09330,smi_1839,WP_001085455.1,recA,recombinase RecA,1901488,1902642,-,False,0.8403,0.9974,0.9922,True,True,1155,1.0026,,True,control
+rpoB,Smi_B6,S. mitis,NC_013853.1,1834,SMI_RS09370,smi_1847,WP_000907176.1,rpoB,DNA-directed RNA polymerase subunit beta,1911144,1914752,-,False,0.9224,0.9992,0.9867,True,True,3609,1.0126,,True,control
+gyrB,Smi_B6,S. mitis,NC_013853.1,833,SMI_RS04340,smi_0860,WP_000134035.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,815204,817150,+,False,0.8785,1.0,1.0,True,True,1947,0.9969,,True,control
+gyrA,Smi_B6,S. mitis,NC_013853.1,979,SMI_RS05080,smi_1007,WP_001154041.1,gyrA,DNA gyrase subunit A,980940,983408,+,False,0.8447,1.0,0.9988,True,True,2469,1.0024,,True,control
+sodA,Smi_B6,S. mitis,NC_013853.1,787,SMI_RS04115,smi_0817,WP_000974750.1,sodA,superoxide dismutase SodA,774350,774955,+,False,0.82,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Smi_B6,S. mitis,NC_013853.1,1790,SMI_RS09150,smi_1803,WP_164925532.1,pheS,phenylalanine--tRNA ligase subunit alpha,1860490,1861536,-,False,0.782,0.9914,0.9885,True,True,1047,1.0029,,True,control
+atpD,Smi_B6,S. mitis,NC_013853.1,1288,SMI_RS06640,smi_1309,WP_000094352.1,atpD,F0F1 ATP synthase subunit beta,1309578,1310984,-,False,0.9058,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Smi_B6,S. mitis,NC_013853.1,893,SMI_RS04655,smi_0922,WP_001040725.1,tuf,elongation factor Tu,875794,876990,+,False,0.9472,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smi_B6,S. mitis,NC_013853.1,15,SMI_RS00080,smi_0016,,,16S ribosomal RNA,16691,18236,+,False,1.0,1.0,1.0,True,True,1546,0.9929,,True,rRNA control
+luxS,Smi_NCTC12261,S. mitis,NZ_CP028414.1,1437,SM12261_RS07865,SM12261_1520,WP_000032563.1,,S-ribosylhomocysteine lyase,1555793,1556275,+,False,0.8375,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smi_NCTC12261,S. mitis,NZ_CP028414.1,1524,SM12261_RS08315,SM12261_1604,WP_078228268.1,recA,recombinase RecA,1646694,1647848,-,False,0.8429,0.9974,0.9922,True,True,1155,1.0026,,True,control
+rpoB,Smi_NCTC12261,S. mitis,NZ_CP028414.1,1532,SM12261_RS08355,SM12261_1612,WP_000907164.1,rpoB,DNA-directed RNA polymerase subunit beta,1656553,1660158,-,False,0.9241,0.9992,0.9875,True,True,3606,1.0118,,True,control
+gyrB,Smi_NCTC12261,S. mitis,NZ_CP028414.1,687,SM12261_RS03890,SM12261_0755,WP_000134056.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,718346,720292,+,False,0.8815,1.0,1.0,True,True,1947,0.9969,,True,control
+gyrA,Smi_NCTC12261,S. mitis,NZ_CP028414.1,813,SM12261_RS04540,SM12261_0882,WP_135781822.1,gyrA,DNA gyrase subunit A,861991,864459,+,False,0.8459,1.0,0.9988,True,True,2469,1.0024,,True,control
+sodA,Smi_NCTC12261,S. mitis,NZ_CP028414.1,648,SM12261_RS03700,SM12261_0714,WP_000974733.1,sodA,superoxide dismutase SodA,684241,684846,+,False,0.84,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Smi_NCTC12261,S. mitis,NZ_CP028414.1,1490,SM12261_RS08140,SM12261_1569,WP_004239141.1,pheS,phenylalanine--tRNA ligase subunit alpha,1608663,1609709,-,False,0.7849,0.9914,0.9885,True,True,1047,1.0029,,True,control
+atpD,Smi_NCTC12261,S. mitis,NZ_CP028414.1,1072,SM12261_RS05875,SM12261_1148,WP_000094357.1,atpD,F0F1 ATP synthase subunit beta,1130531,1131937,-,False,0.9079,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Smi_NCTC12261,S. mitis,NZ_CP028414.1,737,SM12261_RS04160,SM12261_0808,WP_001040721.1,tuf,elongation factor Tu,770951,772147,+,False,0.9472,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smi_NCTC12261,S. mitis,NZ_CP028414.1,14,SM12261_RS00075,SM12261_0016,,,16S ribosomal RNA,15255,16801,+,False,1.0,1.0,1.0,True,True,1547,0.9936,,True,rRNA control
+luxS,Smi_SK637,S. mitis,NZ_CP028415.1,1539,SK637_RS08170,SK637_01597,WP_033689369.1,,S-ribosylhomocysteine lyase,1640007,1640489,+,False,0.8438,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Smi_SK637,S. mitis,NZ_CP028415.1,1600,SK637_RS08490,SK637_01659,WP_033689411.1,recA,recombinase RecA,1704484,1705620,-,False,0.848,0.9713,0.9921,True,True,1137,0.987,no_start_codon,False,control
+rpoB,Smi_SK637,S. mitis,NZ_CP028415.1,1608,SK637_RS08530,SK637_01667,WP_033689417.1,rpoB,DNA-directed RNA polymerase subunit beta,1714304,1717912,-,False,0.9241,0.9992,0.9867,True,True,3609,1.0126,,True,control
+gyrB,Smi_SK637,S. mitis,NZ_CP028415.1,702,SK637_RS03880,SK637_00755,WP_033688619.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,705986,707932,+,False,0.8815,1.0,1.0,True,True,1947,0.9969,,True,control
+gyrA,Smi_SK637,S. mitis,NZ_CP028415.1,834,SK637_RS04545,SK637_00886,WP_033688744.1,gyrA,DNA gyrase subunit A,849670,852138,+,False,0.8495,1.0,0.9988,True,True,2469,1.0024,,True,control
+sodA,Smi_SK637,S. mitis,NZ_CP028415.1,663,SK637_RS03675,SK637_00714,WP_000974733.1,sodA,superoxide dismutase SodA,671118,671723,+,False,0.84,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Smi_SK637,S. mitis,NZ_CP028415.1,1566,SK637_RS08310,SK637_01623,WP_000103743.1,pheS,phenylalanine--tRNA ligase subunit alpha,1666794,1667840,-,False,0.7878,0.9914,0.9885,True,True,1047,1.0029,,True,control
+atpD,Smi_SK637,S. mitis,NZ_CP028415.1,1128,SK637_RS06050,SK637_01181,WP_000094357.1,atpD,F0F1 ATP synthase subunit beta,1167239,1168645,-,False,0.9079,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Smi_SK637,S. mitis,NZ_CP028415.1,757,SK637_RS04170,SK637_00814,WP_001040724.1,tuf,elongation factor Tu,762546,763742,+,False,0.9422,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Smi_SK637,S. mitis,NZ_CP028415.1,14,SK637_RS00075,SK637_00016,,,16S ribosomal RNA,15254,16759,+,False,1.0,1.0,1.0,True,True,1506,0.9672,,True,rRNA control
+gtfD,Ssl_JIM8777,S. salivarius,NC_017595.1,1356,SALIVA_RS07005,SALIVA_1432,WP_014634754.1,,glycoside hydrolase family 70 protein,1473991,1478688,-,False,0.5117,0.9904,0.9636,True,True,4698,1.0704,,True,virulence
+ftf,Ssl_JIM8777,S. salivarius,NC_017595.1,293,SALIVA_RS01670,SALIVA_0330,WP_014633921.1,,glycoside hydrolase family 68 protein,322433,325348,+,False,0.4612,0.9635,0.8074,True,True,2916,1.2211,extended,True,virulence
+luxS,Ssl_JIM8777,S. salivarius,NC_017595.1,333,SALIVA_RS01905,SALIVA_0379,WP_002885585.1,,S-ribosylhomocysteine lyase,362170,362652,-,False,0.8313,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Ssl_JIM8777,S. salivarius,NC_017595.1,55,SALIVA_RS00365,SALIVA_0071,WP_002886327.1,recA,recombinase RecA,63892,65031,+,False,0.893,1.0,1.0,True,True,1140,0.9896,,True,control
+rpoB,Ssl_JIM8777,S. salivarius,NC_017595.1,1838,SALIVA_RS09465,SALIVA_1936,WP_014635122.1,rpoB,DNA-directed RNA polymerase subunit beta,2068395,2071976,-,False,0.9368,1.0,0.995,True,True,3582,1.0051,,True,control
+gyrB,Ssl_JIM8777,S. salivarius,NC_017595.1,1489,SALIVA_RS07685,SALIVA_1568,WP_014634864.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,1718312,1720264,-,False,0.8908,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Ssl_JIM8777,S. salivarius,NC_017595.1,1204,SALIVA_RS06230,SALIVA_1274,WP_014634627.1,gyrA,DNA gyrase subunit A,1300003,1302471,-,False,0.8464,0.9915,0.9903,True,True,2469,1.0024,,True,control
+sodA,Ssl_JIM8777,S. salivarius,NC_017595.1,712,SALIVA_RS03795,SALIVA_0774,WP_004182735.1,sodA,superoxide dismutase SodA,771048,771653,+,False,0.9,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Ssl_JIM8777,S. salivarius,NC_017595.1,1217,SALIVA_RS06295,SALIVA_1287,WP_004182138.1,pheS,phenylalanine--tRNA ligase subunit alpha,1315521,1316564,-,False,0.8844,0.9971,0.9971,True,True,1044,1.0,,True,control
+atpD,Ssl_JIM8777,S. salivarius,NC_017595.1,415,SALIVA_RS02315,SALIVA_0468,WP_002885994.1,atpD,F0F1 ATP synthase subunit beta,459348,460754,+,False,0.9422,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Ssl_JIM8777,S. salivarius,NC_017595.1,418,SALIVA_RS02330,SALIVA_0471,WP_002886182.1,tuf,elongation factor Tu,462960,464156,+,False,0.9548,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Ssl_JIM8777,S. salivarius,NC_017595.1,13,SALIVA_RS00070,SALIVA_r0001,,,16S ribosomal RNA,14954,16501,+,False,1.0,1.0,1.0,True,True,1548,0.9942,,True,rRNA control
+gtfD,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,45,NX99_RS00225,NX99_00235,WP_084914322.1,,glycoside hydrolase family 70 protein,128375,133108,+,False,0.5026,0.9904,0.9639,True,True,4734,1.0786,,True,virulence
+ftf,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,1034,NX99_RS05260,NX99_05175,WP_084915018.1,,glycoside hydrolase family 68 protein,1205816,1208731,-,False,0.485,0.8616,0.7353,True,True,2916,1.2211,extended,True,virulence
+luxS,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,994,NX99_RS05025,NX99_04940,WP_002885585.1,,S-ribosylhomocysteine lyase,1168412,1168894,+,False,0.8313,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,1258,NX99_RS06505,NX99_06375,WP_002886327.1,recA,recombinase RecA,1453338,1454477,-,False,0.893,1.0,1.0,True,True,1140,0.9896,,True,control
+rpoB,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,1445,NX99_RS07555,NX99_07415,WP_002885744.1,rpoB,DNA-directed RNA polymerase subunit beta,1646285,1649866,+,False,0.936,1.0,0.995,True,True,3582,1.0051,,True,control
+gyrB,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,1793,NX99_RS09355,NX99_09205,WP_037601635.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,1998156,2000108,+,False,0.8923,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,192,NX99_RS00980,NX99_00970,WP_014634627.1,gyrA,DNA gyrase subunit A,307089,309557,+,False,0.8464,0.9915,0.9903,True,True,2469,1.0024,,True,control
+sodA,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,627,NX99_RS03170,NX99_03125,WP_004182735.1,sodA,superoxide dismutase SodA,795201,795806,-,False,0.9,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,179,NX99_RS00915,NX99_00905,WP_004182138.1,pheS,phenylalanine--tRNA ligase subunit alpha,292966,294009,+,False,0.8844,0.9971,0.9971,True,True,1044,1.0,,True,control
+atpD,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,908,NX99_RS04585,NX99_04505,WP_002890209.1,atpD,F0F1 ATP synthase subunit beta,1068950,1070356,-,False,0.9443,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,905,NX99_RS04570,NX99_04490,WP_002890213.1,tuf,elongation factor Tu,1065550,1066746,-,False,0.9523,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,1018,NX99_RS05180,NX99_05095,,,16S ribosomal RNA,1191601,1193148,-,False,1.0,1.0,1.0,True,True,1548,0.9942,,True,rRNA control
+gtfD,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,1278,HSISS4_RS06520,HSISS4_01269,WP_021143889.1,,glycoside hydrolase family 70 protein,1381872,1386557,-,False,0.5117,0.9904,0.9635,True,True,4686,1.0677,,True,virulence
+ftf,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,292,HSISS4_RS01610,HSISS4_00282,WP_021143580.1,,glycoside hydrolase family 68 protein,316230,319145,+,False,0.4567,0.9635,0.8074,True,True,2916,1.2211,extended,True,virulence
+luxS,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,332,HSISS4_RS01845,HSISS4_00320,WP_002885585.1,,S-ribosylhomocysteine lyase,356036,356518,-,False,0.8313,1.0,1.0,True,True,483,1.0,,True,virulence
+recA,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,52,HSISS4_RS00345,HSISS4_00048,WP_002886327.1,recA,recombinase RecA,61838,62977,+,False,0.893,1.0,1.0,True,True,1140,0.9896,,True,control
+rpoB,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,1774,HSISS4_RS09090,HSISS4_01770,WP_002885744.1,rpoB,DNA-directed RNA polymerase subunit beta,1970152,1973733,-,False,0.936,1.0,0.995,True,True,3582,1.0051,,True,control
+gyrB,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,1427,HSISS4_RS07270,HSISS4_01419,WP_014634864.1,gyrB,DNA topoisomerase (ATP-hydrolyzing) subunit B,1615275,1617227,-,False,0.8908,1.0,1.0,True,True,1953,1.0,,True,control
+gyrA,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,1144,HSISS4_RS05855,HSISS4_01134,WP_021144006.1,gyrA,DNA gyrase subunit A,1227829,1230297,-,False,0.8459,0.9878,0.9866,True,True,2469,1.0024,,True,control
+sodA,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,684,HSISS4_RS03580,HSISS4_00674,WP_004182735.1,sodA,superoxide dismutase SodA,724432,725037,+,False,0.9,0.9852,0.995,True,True,606,0.9902,,True,control
+pheS,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,1157,HSISS4_RS05920,HSISS4_01147,WP_014633009.1,pheS,phenylalanine--tRNA ligase subunit alpha,1243285,1244328,-,False,0.8873,0.9971,0.9971,True,True,1044,1.0,,True,control
+atpD,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,418,HSISS4_RS02270,HSISS4_00405,WP_002885994.1,atpD,F0F1 ATP synthase subunit beta,454592,455998,+,False,0.9422,0.9979,0.9979,True,True,1407,1.0,,True,control
+tuf,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,421,HSISS4_RS02285,HSISS4_00408,WP_002886182.1,tuf,elongation factor Tu,458207,459403,+,False,0.9548,1.0,1.0,True,True,1197,1.0,,True,control
+16S,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,13,HSISS4_RS00070,HSISS4_r00001,,,16S ribosomal RNA,14954,16501,+,False,1.0,1.0,1.0,True,True,1548,0.9942,,True,rRNA control

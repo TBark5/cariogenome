@@ -1,0 +1,38 @@
+LOCUS       Smu_GS-5_luxS            483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_GS-5 luxS SMUGS5_RS02145 region of NC_018089.1.
+ACCESSION   NC_018089.1:432040-432522
+VERSION     NC_018089.1:432040-432522
+KEYWORDS    .
+SOURCE      Streptococcus mutans GS-5
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..483)
+                     /locus_tag="SMUGS5_RS02145"
+                     /old_locus_tag="SMUGS5_02045"
+     CDS             complement(1..483)
+                     /locus_tag="SMUGS5_RS02145"
+                     /old_locus_tag="SMUGS5_02045"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002286460.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_002264383.1"
+                     /translation="MTKEVTVESFELDHTAVKAPYVRLISEEFGPKGDLITNFDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAKLIRQRIDGMIDCSPFGCRTGFHLIMWGKHTTTQIATVIK
+                     ASLEEIANTISWKDVPGTTIESCGNYKDHSLFSAKEWAKLILKQGISDDPFERHLV"
+ORIGIN
+        1 ttacactaga tgacgctcaa aaggatcatc tgaaatgcct tgttttaaaa tcagctttgc
+       61 ccattcttta gctgaaaaaa ggctatgatc tttgtaattc ccacaggact caatagttgt
+      121 tccagggaca tctttccatg agattgtatt agcaatttct tctaaacttg ctttgatgac
+      181 tgtggctatt tgggttgttg tatgcttacc ccacatgatg agatgaaaac cagtacgaca
+      241 gccaaaaggg gaacagtcaa tcatcccgtc aatacgctga cgaatcagct tagccagtaa
+      301 atgttcaata gtatgaaggc ctgcagtcgg aatagagtct tcattaggct gtactaagcg
+      361 aatatcaaaa ttggtaataa gatcgccttt aggtccaaac tcttctgaaa taagacggac
+      421 ataaggggct tttacagcag tgtggtcaag ttcaaagctt tcaacagtaa cttcttttgt
+      481 cat
+//

@@ -1,0 +1,59 @@
+LOCUS       Ssl_ATCC27945_tu        1197 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_ATCC27945 tuf NX99_RS04570 region of NZ_CP015282.1.
+ACCESSION   NZ_CP015282.1:1065550-1066746
+VERSION     NZ_CP015282.1:1065550-1066746
+KEYWORDS    .
+SOURCE      Streptococcus salivarius
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1197)
+                     /gene="tuf"
+                     /locus_tag="NX99_RS04570"
+                     /old_locus_tag="NX99_04490"
+     CDS             complement(1..1197)
+                     /gene="tuf"
+                     /locus_tag="NX99_RS04570"
+                     /old_locus_tag="NX99_04490"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_014335040.1"
+                     /GO_function="GO:0005525 - GTP binding [Evidence IEA];
+                     GO:0003746 - translation elongation factor activity
+                     [Evidence IEA]"
+                     /GO_process="GO:0006414 - translational elongation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="elongation factor Tu"
+                     /protein_id="WP_002890213.1"
+                     /translation="MAKEKYDRSKPHVNIGTIGHVDHGKTTLTAAITTVLARRLPSAVN
+                     TPKDYASIDAAPEERERGITINTAHVEYETEKRHYAHIDAPGHADYVKNMITGAAQMDG
+                     AILVVASTDGPMPQTREHILLSRQVGVKHLIVFMNKVDLVDDEELLELVEMEIRDLLSE
+                     YDFPGDDIPVIQGSALKALEGDSKYEDIIMDLMNTVDEYIPEPERDTDKPLLLPVEDVF
+                     SITGRGTVASGRIDRGVVRVNDEVEIVGLKEEIQKAVVTGVEMFRKQLDEGIAGDNVGV
+                     LLRGIQRDEIERGQVLAAPGSINPHTKFKGEVYILSKEEGGRHTPFFNNYRPQFYFRTT
+                     DVTGSIELPAGTEMVMPGDNVTIDVELIHPIAVEQGTTFSIREGGRTVGSGIVSEIEA"
+ORIGIN
+        1 ttaagcttcg atttcagata cgatacctga accaacagta cgtccacctt cacggataga
+       61 gaatgttgta ccttgttcaa cggcgattgg gtggatcaac tcaacgtcga tagtcacgtt
+      121 atcaccaggc ataaccattt cagtacctgc aggaagttcg attgaacctg ttacgtcagt
+      181 tgtacggaag tagaactgtg gacggtagtt gttgaagaat ggagtgtgac gtccaccttc
+      241 ttctttagaa aggatgtaaa cttcaccttt gaatttagtg tgtgggttga ttgaaccagg
+      301 tgcagccaat acttgaccac gttcgatttc atcacgttgg ataccacgaa gaaggacacc
+      361 gacgttatct ccggcaatac cttcgtcaag ttgtttacgg aacatttcaa caccagtaac
+      421 aactgctttt tggatttctt ctttaagacc aacgatttca acttcgtcat tgacacgaac
+      481 aacaccacgg tcgatacgtc ctgaagcaac agtaccacga ccagtgattg agaatacgtc
+      541 ttcgactgga agcaacaatg gtttgtcagt gtcacgttct ggttctggaa tgtattcgtc
+      601 aacagtgttc atcaagtcca tgatgatgtc ttcgtattta gaatcacctt caagagcttt
+      661 aagagctgaa ccttggataa ctggaatgtc atcacctggg aaatcgtatt ctgaaagaag
+      721 gtcacggatt tccatttcaa ccaattcaag caattcttca tcgtcaacca agtcaacttt
+      781 gttcatgaag acgataaggt gtttaacacc aacctgacgt gaaagaagga tgtgctcacg
+      841 agtttgtggc attggtccgt cagtagatgc tactacaagg atcgcaccgt ccatttgagc
+      901 ggcaccagtg atcatgtttt taacgtagtc cgcgtgtcct ggcgcgtcga tgtgagcgta
+      961 gtgacgtttt tcagtttcat actcaacgtg tgcagtgttg attgtgatac cgcgttcacg
+     1021 ttcttctggt gcagcgtcga ttgaagcgta gtcttttggt gtgttaactg cgctaggaag
+     1081 acgacgagcc aatacagttg tgatagcagc tgtcaaagta gttttaccgt ggtcaacgtg
+     1141 tccgattgta ccaatgttaa cgtgtggttt actacgatcg tatttttctt ttgccat
+//

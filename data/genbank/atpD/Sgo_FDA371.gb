@@ -1,0 +1,67 @@
+LOCUS       Sgo_FDA371_atpD         1407 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_FDA371 atpD CO687_RS06015 region of NZ_CP023511.1.
+ACCESSION   NZ_CP023511.1:1223851-1225257
+VERSION     NZ_CP023511.1:1223851-1225257
+KEYWORDS    .
+SOURCE      Streptococcus gordonii
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1407
+                     /gene="atpD"
+                     /locus_tag="CO687_RS06015"
+                     /old_locus_tag="CO687_06015"
+     CDS             1..1407
+                     /gene="atpD"
+                     /locus_tag="CO687_RS06015"
+                     /old_locus_tag="CO687_06015"
+                     /EC_number="7.1.2.2"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_016398931.1"
+                     /GO_component="GO:0045259 - proton-transporting ATP
+                     synthase complex [Evidence IEA]"
+                     /GO_function="GO:0046933 - proton-transporting ATP synthase
+                     activity, rotational mechanism [Evidence IEA]"
+                     /GO_process="GO:0015986 - proton motive force-driven ATP
+                     synthesis [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="F0F1 ATP synthase subunit beta"
+                     /protein_id="WP_008809477.1"
+                     /translation="MSSGKITQVIGPVVDVAFAAGDKLPEINNALVVYKNDEKKSKIVL
+                     EVALELGDGVVRTIAMESTDGLTRGLEVLDTGRPISVPVGKETLGRVFNVLGDTIDLDA
+                     PFGDDAERQPIHKKAPTFDELSTSSEILETGIKVIDLLAPYLKGGKVGLFGGAGVGKTV
+                     LIQELIHNIAQEHGGISVFTGVGERTREGNDLYWEMKESGVIEKTAMVFGQMNEPPGAR
+                     MRVALTGLTIAEYFRDVEGQDVLLFIDNIFRFTQAGSEVSALLGRMPSAVGYQPTLATE
+                     MGQLQERITSTKKGSVTSIQAIYVPADDYTDPAPATAFAHLDSTTNLERKLVQLGIYPA
+                     VDPLASSSRALAPEIVGEEHYAVAAEVKRVLQRYHELQDIIAILGMDELSDEEKTLVAR
+                     ARRIQFFLSQNFNVAEQFTGQPGSYVPVAETVRGFKEILEGKHDKLPEDAFRGVGSIED
+                     VLAKAEKMGF"
+ORIGIN
+        1 atgagctcag gcaaaattac tcaggtaatc gggccagtcg tagacgttgc gtttgcagct
+       61 ggagataagc tacctgagat aaataatgca cttgtagtct ataaaaatga tgagaaaaaa
+      121 tcaaaaatcg tccttgaagt agctcttgag cttggtgacg gtgtagttcg gactattgcc
+      181 atggagtcaa cagatggttt gacacgtggt ttggaggttc ttgacacagg tcgtccgatt
+      241 tctgtaccgg ttggtaaaga aaccttgggt cgggtcttca atgttcttgg agacactatt
+      301 gacttggatg caccgtttgg ggatgatgca gaacgtcaac caattcataa gaaagcaccg
+      361 acctttgatg agttatcaac ttcatctgaa atcctggaaa caggaatcaa ggttatcgac
+      421 cttctagcac cttatctaaa aggtgggaag gttggactct tcggtggtgc cggagttggt
+      481 aaaaccgtct tgatccaaga attgattcac aacattgccc aagaacacgg tggtatctca
+      541 gtatttactg gtgttggaga acggactcgt gaagggaacg acctttactg ggaaatgaaa
+      601 gaatctggcg ttattgagaa aactgccatg gtctttggtc agatgaatga accaccagga
+      661 gcacgtatgc gtgttgccct aactggtttg acaattgctg aatacttccg tgatgtagaa
+      721 ggccaagacg tgctgctctt tatcgataac atcttccgct ttactcaagc tggttctgaa
+      781 gtatctgccc ttttgggtcg tatgccttca gcagttggtt accaaccaac acttgcaaca
+      841 gaaatggggc aactccaaga gcgtatcaca tcaactaaaa agggttctgt aacctctatc
+      901 caggctatct atgtgccagc ggatgactat actgaccctg cgccagcaac agccttcgct
+      961 cacttggatt caacgacaaa cttggaacgt aagttggtac aattggggat ttacccagcc
+     1021 gttgatccac tcgcttcaag ctctcgtgcc ttggcacctg agattgtcgg agaagagcac
+     1081 tacgcggtag ctgctgaagt taagcgagtc ttacaacgct atcacgaatt gcaagatatc
+     1141 attgccatcc taggtatgga cgaattgtct gatgaagaaa agactttggt tgcacgtgca
+     1201 cgtcggatcc aattcttctt atcacaaaac tttaatgtgg ctgagcagtt tacaggtcaa
+     1261 cctggttctt atgtaccagt tgctgaaact gttcgtggct tcaaagaaat tcttgaagga
+     1321 aaacacgaca agttaccaga agatgccttc cgtggagttg gttctattga ggatgttctg
+     1381 gctaaagcag aaaaaatggg attctaa
+//

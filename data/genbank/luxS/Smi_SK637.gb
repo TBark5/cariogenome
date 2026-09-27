@@ -1,0 +1,38 @@
+LOCUS       Smi_SK637_luxS           483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smi_SK637 luxS SK637_RS08170 region of NZ_CP028415.1.
+ACCESSION   NZ_CP028415.1:1640007-1640489
+VERSION     NZ_CP028415.1:1640007-1640489
+KEYWORDS    .
+SOURCE      Streptococcus mitis
+  ORGANISM  S. mitis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..483
+                     /locus_tag="SK637_RS08170"
+                     /old_locus_tag="SK637_01597"
+     CDS             1..483
+                     /locus_tag="SK637_RS08170"
+                     /old_locus_tag="SK637_01597"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002893508.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_033689369.1"
+                     /translation="MSKEVIVESFELDHTIVKAPYVRLIGEETGPKGDVISNYDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAKLIRTRIDGMIDCSPFGCRTGFHMIMWGRHTSAEIATVIK
+                     DSLKEIAETTTWEDVPGTTIESCGNYKDHSLFSAKEWAKLILEQGISDDAFERHVI"
+ORIGIN
+        1 atgtcaaaag aagttattgt cgaaagtttt gaacttgacc acaccattgt taaagcaccc
+       61 tatgttcgct taatcgggga agaaacaggg ccaaagggag atgtcatctc caattatgat
+      121 attcgtttag tgcaacccaa tgaagactct atccctactg ctggccttca cactatcgag
+      181 cacctcttag ccaaactcat ccgtacccgc atcgacggca tgattgactg ttcaccattt
+      241 ggttgccgca caggcttcca catgattatg tgggggcgcc acaccagcgc tgaaatcgcg
+      301 actgttatca aggattcgct caaagaaatc gctgagacta ctacttggga agatgtccct
+      361 ggaacaacca tcgaatcttg cggaaactac aaagatcaca gcctcttctc tgctaaagaa
+      421 tgggcaaaac tcatcctaga acaagggatt tcagatgatg cctttgagcg tcatgtgatt
+      481 taa
+//

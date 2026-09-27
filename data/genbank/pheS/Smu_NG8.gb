@@ -1,0 +1,59 @@
+LOCUS       Smu_NG8_pheS            1044 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_NG8 pheS APQ13_RS00995 region of NZ_CP013237.1.
+ACCESSION   NZ_CP013237.1:187269-188312
+VERSION     NZ_CP013237.1:187269-188312
+KEYWORDS    .
+SOURCE      Streptococcus mutans
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1044
+                     /gene="pheS"
+                     /locus_tag="APQ13_RS00995"
+                     /old_locus_tag="APQ13_00995"
+     CDS             1..1044
+                     /gene="pheS"
+                     /locus_tag="APQ13_RS00995"
+                     /old_locus_tag="APQ13_00995"
+                     /EC_number="6.1.1.20"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_019314825.1"
+                     /GO_component="GO:0005737 - cytoplasm [Evidence IEA]"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0000166 - nucleotide binding [Evidence IEA]; GO:0004826
+                     - phenylalanine-tRNA ligase activity [Evidence IEA]"
+                     /GO_process="GO:0006432 - phenylalanyl-tRNA aminoacylation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="phenylalanine--tRNA ligase subunit alpha"
+                     /protein_id="WP_002351163.1"
+                     /translation="MDLQAQLEELRKSTQATLKEMSGNHSKELQDLRVKVLGKKGSLTE
+                     LLKGLKDLPNELRPVVGKQVNEVRDVLTKAFEEQAKIVEAAKIQAQLESETLDVTLPGC
+                     QIHLGNRHVLSQISEEIEDIFLGMGFQVVDGYEVEQDYYNFERMNLPKDHPARDMQDTF
+                     YISEDILLRTHTSPVQARTLDKHDFSKGPLKMISPGRVFRRDTDDATHSHQFHQIEGLV
+                     VGKNISMGDLKGTLEMISKKIFGEDRKIRLRPSYFPFTEPSVEVDVSCFKCGGKGCNVC
+                     KKTGWIEILGAGMVHPSVLEMSGVDSEEYSGFAFGLGQERMAMLRYGINDIRGFYQGDS
+                     RFTEQFN"
+ORIGIN
+        1 atggatttac aagcacaatt agaagagctg agaaaatcaa ctcaagcaac attaaaggaa
+       61 atgagcggca atcacagcaa agaattacaa gatttgcgtg ttaaggtttt gggtaagaaa
+      121 ggttccttga cagaactttt aaaaggtcta aaggacttac caaatgagtt gcgtcctgtt
+      181 gttggaaaac aagtcaatga agtccgtgat gtcttaacaa aggcttttga agaacaagct
+      241 aaaatcgttg aagccgccaa aattcaagcg caattagaat cagaaacatt agatgtcact
+      301 cttccgggat gccaaataca tctaggcaat cgccatgttc tcagtcagat aagtgaagaa
+      361 attgaagata tattcctagg aatgggtttt caagtggttg atggctatga agttgaacaa
+      421 gactattaca atttcgaacg catgaatttg cccaaagatc acccggcacg tgatatgcag
+      481 gacacttttt atatttctga agacattttg cttcggacac ataccagtcc tgtgcaggca
+      541 cgtactttag ataaacatga tttttctaaa ggaccgctta agatgatttc acccgggcgc
+      601 gtttttcgcc gcgatacaga tgatgcgacg cattcccatc aattccatca aattgaaggc
+      661 ttggtcgttg gtaaaaacat ttctatgggt gacctcaaag gaacattgga aatgattagt
+      721 aaaaaaatat ttggtgaaga tcgtaagatt cgtctacgtc cttcttattt cccatttacg
+      781 gagccttctg ttgaagtgga tgtttcgtgt tttaaatgcg gcggcaaagg ctgtaatgtt
+      841 tgtaagaaaa caggttggat tgaaattctt ggtgctggta tggttcatcc aagtgttctt
+      901 gagatgtctg gcgttgactc tgaagaatat tctggttttg cctttggctt aggccaagaa
+      961 cgtatggcta tgctgcgcta tggaatcaat gatattcgag gtttctatca aggtgacagc
+     1021 cgttttacag aacaattcaa ttaa
+//

@@ -1,0 +1,67 @@
+LOCUS       Smu_GS-5_atpD           1407 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_GS-5 atpD SMUGS5_RS06875 region of NC_018089.1.
+ACCESSION   NC_018089.1:1456042-1457448
+VERSION     NC_018089.1:1456042-1457448
+KEYWORDS    .
+SOURCE      Streptococcus mutans GS-5
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1407)
+                     /gene="atpD"
+                     /locus_tag="SMUGS5_RS06875"
+                     /old_locus_tag="SMUGS5_06880"
+     CDS             complement(1..1407)
+                     /gene="atpD"
+                     /locus_tag="SMUGS5_RS06875"
+                     /old_locus_tag="SMUGS5_06880"
+                     /EC_number="7.1.2.2"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002264827.1"
+                     /GO_component="GO:0045259 - proton-transporting ATP
+                     synthase complex [Evidence IEA]"
+                     /GO_function="GO:0046933 - proton-transporting ATP synthase
+                     activity, rotational mechanism [Evidence IEA]"
+                     /GO_process="GO:0015986 - proton motive force-driven ATP
+                     synthesis [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="F0F1 ATP synthase subunit beta"
+                     /protein_id="WP_002264827.1"
+                     /translation="MSTGKIAQVVGPVVDVAFATDDKLPEINNALVVYKDGDKSQRIVL
+                     EVALELGDGLVRTIAMESTDGLTRGLEVFDTGRAISVPVGKETLGRVFNVLGDTIDLDK
+                     PFAEDAERQPIHKKAPSFDDLSTSTEILETGIKVIDLLAPYLKGGKVGLFGGAGVGKTV
+                     LIQELIHNIAQEHGGISVFTGVGERTREGNDLYWEMKESGVIEKTAMVFGQMNEPPGAR
+                     MRVALTGLTIAEYFRDVEGQDVLLFIDNIFRFTQAGSEVSALLGRMPSAVGYQPTLATE
+                     MGQLQERITSTKKGSVTSIQAIYVPADDYTDPAPATAFAHLDSTTNLERRLTQMGIYPA
+                     VDPLASSSRALSPEIVGQEHYDVATEVQHVLQRYRELQDIIAILGMDELSDEEKTLVGR
+                     ARRIQFFLSQNFNVAEQFTGQPGSYVPVAETVRGFKEILEGKYDELPEDAFRSVGAIED
+                     VVEKAKKMGV"
+ORIGIN
+        1 ttaaacaccc atcttcttgg ctttttcaac aacatcctca atagctccaa cacttcggaa
+       61 agcatcttct ggaagttcat catattttcc ttcgagaatt tctttaaatc cacggacagt
+      121 ttcagcaaca ggaacataag aacccggctg tcctgtaaat tgttctgcaa cattgaaatt
+      181 ttgtgaaagg aagaactgaa tccgacgcgc acggccaacc agagtctttt cttcatcaga
+      241 taactcatcc ataccaagaa tagctataat atcttgtaac tcacgataac gctgcaagac
+      301 atgctgtact tctgtagcaa catcgtagtg ctcttgacca actatttcag gcgagagagc
+      361 acgtgaactt gaagctaaag gatccaccgc tgggtaaatc cccatttgtg tcagacggcg
+      421 ttcaaggtta gtggttgaat ctaagtgagc aaaggctgta gctggcgcag ggtcagtata
+      481 gtcatcggct ggcacataga tggcctgaat tgaggtaaca gaaccttttt tcgtcgatgt
+      541 aatccgttct tgtaattgcc ccatttcagt tgccaaggtt ggctgataac caacggctga
+      601 tggcatacgg ccaagaagag ctgaaacttc agaacctgct tgggtaaagc ggaaaatgtt
+      661 atcaatgaaa agaagcacat cctgaccttc tacatcacgg aagtattcag cgatggtaag
+      721 accagtaaga gcaacacgca tccgtgctcc aggcggttca ttcatctgac caaagaccat
+      781 agctgtcttt tcaataacac cagattcttt catttcccaa taaaggtcat ttccttcacg
+      841 tgtccgttca ccaacaccag taaataccga aatcccgcca tgctcttgag caatattatg
+      901 aattaactcc tgaatcaaaa cggtctttcc gacaccggca ccaccaaaaa ggccgacttt
+      961 accaccttta agataagggg caagaaggtc aataacttta attcctgttt ctaaaatctc
+     1021 agttgaagtt gatagatcat caaatgatgg tgccttttta tgaattggct gacgttcagc
+     1081 atcttctgca aaaggtttat caaggtcaat cgtatctcca agaacattaa agacacgacc
+     1141 tagtgtttct tttccaaccg gaacactgat agcacggccc gtatcaaaga cttcaagccc
+     1201 acgtgttaaa ccatcagttg actccatagc aatggtacga actagtccat caccgagttc
+     1261 aagggcaact tcaagaacaa ttctttgaga cttgtcgcca tctttataaa cgaccaatgc
+     1321 attattaatc tcaggaagtt tatcatctgt cgcaaatgca acatcaacaa caggaccaac
+     1381 tacctgagca attttgcctg tgctcat
+//

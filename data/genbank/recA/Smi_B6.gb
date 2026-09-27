@@ -1,0 +1,59 @@
+LOCUS       Smi_B6_recA             1155 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smi_B6 recA SMI_RS09330 region of NC_013853.1.
+ACCESSION   NC_013853.1:1901488-1902642
+VERSION     NC_013853.1:1901488-1902642
+KEYWORDS    .
+SOURCE      Streptococcus mitis B6
+  ORGANISM  S. mitis
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1155)
+                     /gene="recA"
+                     /locus_tag="SMI_RS09330"
+                     /old_locus_tag="smi_1839"
+     CDS             complement(1..1155)
+                     /gene="recA"
+                     /locus_tag="SMI_RS09330"
+                     /old_locus_tag="smi_1839"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_016397020.1"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0008094 - ATP-dependent activity, acting on DNA
+                     [Evidence IEA]; GO:0003677 - DNA binding [Evidence IEA];
+                     GO:0003697 - single-stranded DNA binding [Evidence IEA]"
+                     /GO_process="GO:0006281 - DNA repair [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="recombinase RecA"
+                     /protein_id="WP_001085455.1"
+                     /translation="MAKKPKKLDEISKKFGAEREKALNDALKLIEKDFGKGSIMRLGER
+                     AEQKVQVMSSGSLALDIALGSGGYPKGRIIEIYGPESSGKTTVALHAVAQAQKEGGIAA
+                     FIDAEHALDPAYAAALGVNIDELLLSQPDSGEQGLEIAGKLIDSGAVDLVVVDSVAALV
+                     PRAEIDGDIGDSHVGLQARMMSQAMRKLGASINKTKTIAIFINQLREKVGVMFGNPETT
+                     PGGRALKFYASVRLDVRGSTQIKGTGDQKDTNVGKETKIKVVKNKVAPPFKEAFVEIMY
+                     GEGISKTGELLKIASDLDIIKKAGAWYSYKDEKIGQGSENAKKYLADNPEVFDEIDHQV
+                     RVQFGLIDGEEAAENKKDEAAQVDSVNEEVTLDLGDELEIEIEE"
+ORIGIN
+        1 ttattcttca atttcgattt caagctcatc gcctaggtca agagttactt cttcattcac
+       61 agagtctact tgagctgctt catctttttt gttttcagca gcttcttctc catcaatcaa
+      121 accaaattga acacggactt gatggtcaat ctcatcaaag acttctgggt tatctgccaa
+      181 gtatttctta gcattttcag aaccttgccc gattttctca tccttgtaag agtaccaagc
+      241 tcctgctttt ttgatgatat ccaaatcgct tgcgattttc aagagttcac cagtcttaga
+      301 aatcccttct ccgtacatga tttcaacgaa ggcttcctta aatggtggag ccaccttgtt
+      361 tttcacgacc ttgattttgg tttctttacc gacattggta tctttttggt caccagttcc
+      421 cttgatttgt gtgcttccac gaacatccaa acggactgat gcgtagaatt tcagagcacg
+      481 tccaccagga gttgtttctg gattcccaaa catgacccca actttttcac gcaattggtt
+      541 gataaagatg gcaattgttt tggttttatt gatagaagca ccaagcttac gcatggcctg
+      601 gctcatcata cgagcctgca aaccaacgtg actatctcca atatcgccat caatttccgc
+      661 acgaggtaca agggcagcaa ctgaatcgac cacaacaaga tccacagcac ctgagtcaat
+      721 caattttcct gcaatctcaa gaccttgctc tcctgagtct ggttgtgaca agagcaattc
+      781 gtcaatattg acaccaaggg ccgcagcata agctggatcg agtgcatgtt ccgcatcgat
+      841 aaaggcagca atcccacctt ctttttgcgc ttgcgcaact gcatgaaggg caaccgttgt
+      901 cttaccagat gattctggtc catagatttc gatgatacgt cctttaggat aaccacctga
+      961 accgagggca atgtcaagag ccaaagaacc tgagctcatc acttgcacct tttgctcggc
+     1021 acgttcaccc aaacgcatga ttgaaccctt accaaagtct ttctcaatca atttaagagc
+     1081 gtcattcaag gctttttcac gttcagcccc gaattttttt gaaatttcat ctaatttttt
+     1141 tggttttttc gccat
+//

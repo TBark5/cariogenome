@@ -1,0 +1,38 @@
+LOCUS       Ssl_ATCC27945_lu         483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_ATCC27945 luxS NX99_RS05025 region of NZ_CP015282.1.
+ACCESSION   NZ_CP015282.1:1168412-1168894
+VERSION     NZ_CP015282.1:1168412-1168894
+KEYWORDS    .
+SOURCE      Streptococcus salivarius
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            1..483
+                     /locus_tag="NX99_RS05025"
+                     /old_locus_tag="NX99_04940"
+     CDS             1..483
+                     /locus_tag="NX99_RS05025"
+                     /old_locus_tag="NX99_04940"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002885585.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_002885585.1"
+                     /translation="MPKDVTVESFELDHTIVKAPYVRLISEEVGPKGDIITNFDIRLIQ
+                     PNENSIDTGGLHTIEHLLAKLIRQRIDGLIDCSPFGCRTGFHMIMWGKQDPTEIAKVIK
+                     SSLEAIANEITWEDVPGTTIESCGNYKDHSLHSAKEWAKLILEQGISDQAFERHTV"
+ORIGIN
+        1 atgccaaaag acgttactgt tgaaagtttt gaacttgatc ataccattgt aaaagcacct
+       61 tatgtccgtc ttatttcaga ggaagttgga cctaaaggag atatcatcac aaacttcgat
+      121 atccgtttga ttcaacctaa tgaaaatagt attgatacag gtggtcttca cactatcgaa
+      181 cacctactcg ctaaactgat ccgtcaacgt atcgatggac ttattgattg ctcaccattt
+      241 ggttgccgta caggcttcca tatgattatg tggggtaaac aagatcctac agaaattgct
+      301 aaagttatca aatctagtct tgaagctatt gctaacgaga ttacatggga agatgttcca
+      361 ggaactacca ttgaatcttg tggtaactac aaggatcaca gtcttcattc agctaaggaa
+      421 tgggctaaac ttatcctcga acaaggtatc tcagaccaag ccttcgaacg tcataccgtt
+      481 taa
+//

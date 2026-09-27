@@ -1,0 +1,45 @@
+LOCUS       Ssl_HSISS4_sodA          606 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_HSISS4 sodA HSISS4_RS03580 region of NZ_CP013216.1.
+ACCESSION   NZ_CP013216.1:724432-725037
+VERSION     NZ_CP013216.1:724432-725037
+KEYWORDS    .
+SOURCE      Streptococcus salivarius
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            1..606
+                     /gene="sodA"
+                     /locus_tag="HSISS4_RS03580"
+                     /old_locus_tag="HSISS4_00674"
+     CDS             1..606
+                     /gene="sodA"
+                     /locus_tag="HSISS4_RS03580"
+                     /old_locus_tag="HSISS4_00674"
+                     /EC_number="1.15.1.1"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_018378422.1"
+                     /GO_function="GO:0004784 - superoxide dismutase activity
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="superoxide dismutase SodA"
+                     /protein_id="WP_004182735.1"
+                     /translation="MAIILPDLPYAYDALEPYIDAETMTLHHDKHHATYVANANAALEK
+                     HPEIGEDLEALLADVEQIPADIRQALINNGGGHLNHALFWELLSPEKQEPTAEVAAAIN
+                     EAFGSFEAFQEAFTAAATTRFGSGWAWLVVNAEGKLEVVSTANQDTPISDGKKPILALD
+                     VWEHAYYLNYRNVRPNYIKAFFEIINWNKVAELYAAAK"
+ORIGIN
+        1 atggcaatta tccttccaga ccttccttac gcttacgacg ctttggaacc atacattgat
+       61 gctgaaacaa tgactcttca ccacgataaa caccacgcaa cttatgtagc aaatgctaat
+      121 gctgctcttg aaaaacaccc agaaattggt gaagatctcg aagcactttt ggctgacgtg
+      181 gaacaaattc cagcagatat tcgtcaagca cttattaaca atggtggtgg acaccttaat
+      241 cacgcacttt tctgggaact cttgtctcct gaaaaacaag aaccaactgc agaagtagca
+      301 gctgctatta acgaagcttt cggctcattt gaagctttcc aagaagcttt cacagcagca
+      361 gcaacaactc gttttggttc aggttgggca tggcttgttg ttaacgctga aggtaagctt
+      421 gaagtcgttt caactgctaa ccaagatact cctatctcag acggtaagaa accaatcttg
+      481 gcacttgatg tttgggaaca tgcatactac ctaaactacc gtaacgtacg tccaaactac
+      541 atcaaagctt tctttgaaat cattaactgg aataaagttg ctgagcttta tgcagcagct
+      601 aaataa
+//

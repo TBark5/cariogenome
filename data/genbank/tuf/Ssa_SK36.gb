@@ -1,0 +1,59 @@
+LOCUS       Ssa_SK36_tuf            1197 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_SK36 tuf SSA_RS07440 region of NC_009009.1.
+ACCESSION   NC_009009.1:1526475-1527671
+VERSION     NC_009009.1:1526475-1527671
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis SK36
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1197)
+                     /gene="tuf"
+                     /locus_tag="SSA_RS07440"
+                     /old_locus_tag="SSA_1520"
+     CDS             complement(1..1197)
+                     /gene="tuf"
+                     /locus_tag="SSA_RS07440"
+                     /old_locus_tag="SSA_1520"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_014335040.1"
+                     /GO_function="GO:0005525 - GTP binding [Evidence IEA];
+                     GO:0003746 - translation elongation factor activity
+                     [Evidence IEA]"
+                     /GO_process="GO:0006414 - translational elongation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="elongation factor Tu"
+                     /protein_id="WP_002895003.1"
+                     /translation="MAKEKYDRSKPHVNIGTIGHVDHGKTTLTAAITTVLARRLPSAVN
+                     QPKDYASIDAAPEERERGITINTAHVEYETAKRHYAHIDAPGHADYVKNMITGAAQMDG
+                     AILVVASTDGPMPQTREHILLSRQVGVKHLIVFMNKVDLVDDEELLELVEMEIRDLLSE
+                     YDFPGDDLPVIQGSALKALEGDSKYEDIIMELMDTVDEYIPEPERDTDKPLLLPVEDVF
+                     SITGRGTVASGRIDRGIVKVNDEIEIVGIKEEIQKAVVTGVEMFRKQLDEGLAGDNVGV
+                     LLRGIQRDEIERGQVIAKPGSINPHTKFKGEVYILTKEEGGRHTPFFNNYRPQFYFRTT
+                     DVTGSIELPAGTEMVMPGDNVTIDVELIHPIAVEQGTTFSIREGGRTVGSGMVTEIEA"
+ORIGIN
+        1 ttaagcttcg atttctgtaa ccatacctga accaacggta cgtccacctt cacggataga
+       61 gaaagtagta ccttgttcaa cggcgattgg gtggatcaac tcaacgtcga ttgttacgtt
+      121 atcaccaggc attaccattt cagtacctgc tggaagttcg attgaacctg taacgtcagt
+      181 tgtacggaag tagaactgtg gacggtagtt gttgaagaat ggagtgtgac gtccgccttc
+      241 ttctttagta aggatataaa cttcaccctt gaatttagtg tgtgggttga ttgaacctgg
+      301 tttagcgata acttgtccac gttcgatttc atcacgttgg ataccacgga gaagcacacc
+      361 tacattgtcc cctgcaagac cttcgtcaag ctgtttacgg aacatttcaa caccagtaac
+      421 aactgctttt tggatttctt ctttgatacc aacgatttcg atttcgtcgt tgactttaac
+      481 gataccacgg tcgatacgtc ctgaagcaac tgtaccacga ccagtgattg agaatacgtc
+      541 ttcgactgga agaagcaatg gcttgtcagt atcgcgttct ggttctggga tgtactcatc
+      601 aacagtgtcc atcaattcca tgatgatgtc ttcatattta gagtcacctt caagagcttt
+      661 aagagctgaa ccttggataa ctggaagatc gtcacctggg aagtcgtatt ctgacaagag
+      721 gtcacggatt tccatttcaa ccaattcaag caattcttca tcgtcaacta agtcaacttt
+      781 gttcatgaag acgatcaagt gtttaacacc aacctgacgt gaaagcaaga tgtgctcacg
+      841 agtttgtggc attggtccgt cagttgaagc tactacaagg attgctccgt ccatttgagc
+      901 ggcaccagtg atcatgtttt taacgtagtc cgcgtgtcct ggagcgtcga tgtgagcgta
+      961 gtgacgctta gcagtttcat actcaacgtg cgcagtgttg atagtgattc cgcgttcgcg
+     1021 ttcttctgga gcagcatcga tagacgcata gtctttaggt tggttaactg ctgaaggcaa
+     1081 gcgacgtgcc aatacagttg tgatagctgc tgtcaaagta gttttaccgt ggtcaacgtg
+     1141 tccgatagta ccaatgttaa cgtgtggttt actacgatcg tatttttctt ttgccat
+//

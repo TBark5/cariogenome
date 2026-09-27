@@ -1,0 +1,38 @@
+LOCUS       Smu_NN2025_luxS          483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_NN2025 luxS SMUNN2025_RS07665 region of NC_013928.1.
+ACCESSION   NC_013928.1:1579630-1580112
+VERSION     NC_013928.1:1579630-1580112
+KEYWORDS    .
+SOURCE      Streptococcus mutans NN2025
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            1..483
+                     /locus_tag="SMUNN2025_RS07665"
+                     /old_locus_tag="SmuNN2025_1495"
+     CDS             1..483
+                     /locus_tag="SMUNN2025_RS07665"
+                     /old_locus_tag="SmuNN2025_1495"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002286460.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_002264383.1"
+                     /translation="MTKEVTVESFELDHTAVKAPYVRLISEEFGPKGDLITNFDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAKLIRQRIDGMIDCSPFGCRTGFHLIMWGKHTTTQIATVIK
+                     ASLEEIANTISWKDVPGTTIESCGNYKDHSLFSAKEWAKLILKQGISDDPFERHLV"
+ORIGIN
+        1 atgacaaaag aagttactgt tgaaagcttt gaacttgatc acactgctgt aaaagcccct
+       61 tatgtccgtc ttatttcaga agagtttgga cctaaaggcg atcttattac caattttgat
+      121 attcgcttag tacagcctaa tgaagactct atcccgactg caggccttca tactattgaa
+      181 catttactgg ctaagctgat tcgtcagcgt attgacggga tgattgactg ttcccctttt
+      241 ggctgtcgta ctggttttca tctcatcatg tggggtaagc atacaacaac ccaaatagcc
+      301 acagtcatca aagcaagttt agaagaaatt gctaatacaa tctcatggaa agatgtccct
+      361 ggaacaacta ttgagtcctg tgggaattac aaagatcata gccttttttc agctaaagaa
+      421 tgggcaaagc tgattttaaa acaaggcatt tcagatgatc cttttgagcg tcatctagtg
+      481 taa
+//

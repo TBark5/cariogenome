@@ -1,0 +1,59 @@
+LOCUS       Sgo_CH1_tuf             1197 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_CH1 tuf SGO_RS03740 region of NC_009785.1.
+ACCESSION   NC_009785.1:801466-802662
+VERSION     NC_009785.1:801466-802662
+KEYWORDS    .
+SOURCE      Streptococcus gordonii str. Challis substr. CH1
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1197
+                     /gene="tuf"
+                     /locus_tag="SGO_RS03740"
+                     /old_locus_tag="SGO_0761"
+     CDS             1..1197
+                     /gene="tuf"
+                     /locus_tag="SGO_RS03740"
+                     /old_locus_tag="SGO_0761"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_014335040.1"
+                     /GO_function="GO:0005525 - GTP binding [Evidence IEA];
+                     GO:0003746 - translation elongation factor activity
+                     [Evidence IEA]"
+                     /GO_process="GO:0006414 - translational elongation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="elongation factor Tu"
+                     /protein_id="WP_009754926.1"
+                     /translation="MAKEKYDRSKPHVNIGTIGHVDHGKTTLTAAITTVLARRLPSSVN
+                     QPKDYASIDAAPEERERGITINTAHVEYETEKRHYAHIDAPGHADYVKNMITGAAQMDG
+                     AILVVASTDGPMPQTREHILLSRQVGVKHLIVFMNKVDLVDDEELLELVEMEIRDLLSE
+                     YDFPGDDLPVIQGSALKALEGDSKYEDIIMDLMNTVDEYIPEPERDTDKPLLLPVEDVF
+                     SITGRGTVASGRIDRGIVKVNDEIEIVGIKEEIQKAVVTGVEMFRKQLDEGLAGDNVGV
+                     LLRGIQRDEIERGQVIAKPGSINPHTKFKGEVYILTKEEGGRHTPFFNNYRPQFYFRTT
+                     DVTGSIELPAGTEMVMPGDNVTIEVELIHPIAVEQGTTFSIREGGRTVGSGMVTEIEA"
+ORIGIN
+        1 atggcaaaag aaaaatacga tcgtagtaaa ccacacgtta acattggtac tatcggacac
+       61 gttgaccacg gtaaaactac tttgacagca gctatcacaa ctgtattggc acgtcgcttg
+      121 ccttcatcag ttaaccaacc aaaagactat gcgtctatcg atgctgctcc agaagaacgc
+      181 gaacgcggta tcactatcaa cactgcgcac gttgagtatg aaactgaaaa acgtcactac
+      241 gctcacatcg acgctccagg acacgcggac tacgttaaaa acatgatcac tggtgccgct
+      301 caaatggacg gagctatcct tgtagtagct tcaactgatg gtcctatgcc acaaactcgt
+      361 gagcacatcc ttctttctcg ccaagttggt gttaaacact tgatcgtgtt catgaacaaa
+      421 gttgacttgg ttgacgatga agaattgctt gaattggttg aaatggaaat ccgtgacctc
+      481 ttgtcagaat acgacttccc aggtgacgat cttccagtta tccaaggttc agctcttaag
+      541 gctcttgaag gtgactctaa atacgaagat atcatcatgg acttgatgaa cactgttgat
+      601 gagtacattc cagaaccaga acgcgacact gacaaaccat tgcttcttcc agtcgaagac
+      661 gtattctcaa tcactggacg tggtacagtt gcttcaggac gtatcgaccg tggtatcgtt
+      721 aaagtcaacg acgaaatcga aatcgttggt atcaaagaag aaatccaaaa agcagttgtt
+      781 actggtgttg aaatgttccg taaacagctt gacgaaggtc ttgcagggga caacgtaggt
+      841 gtgcttctcc gtggtatcca acgtgatgaa atcgaacgtg gacaagttat tgctaaacca
+      901 ggttcaatca acccacacac taaattcaaa ggtgaagttt atatccttac taaagaagaa
+      961 ggtggacgtc acactccatt cttcaacaac taccgtccac agttctactt ccgtacaact
+     1021 gacgttacag gttcaatcga acttccagca ggtactgaaa tggtaatgcc tggtgataac
+     1081 gtaactatcg aagttgaatt gatccaccca atcgccgttg aacaaggtac tactttctct
+     1141 atccgtgaag gtggacgtac tgttggttca ggtatggtta cagaaatcga agcttaa
+//

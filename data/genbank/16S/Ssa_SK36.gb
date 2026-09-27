@@ -1,0 +1,50 @@
+LOCUS       Ssa_SK36_16S            1548 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_SK36 16S SSA_RS00085 region of NC_009009.1.
+ACCESSION   NC_009009.1:16379-17926
+VERSION     NC_009009.1:16379-17926
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis SK36
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1548
+                     /locus_tag="SSA_RS00085"
+                     /old_locus_tag="SSA_2400"
+     rRNA            1..1548
+                     /locus_tag="SSA_RS00085"
+                     /old_locus_tag="SSA_2400"
+                     /product="16S ribosomal RNA"
+                     /inference="COORDINATES: nucleotide
+                     motif:Rfam:15.0:RF00177"
+                     /inference="COORDINATES: profile:INFERNAL:1.1.5"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: cmsearch."
+                     /db_xref="RFAM:RF00177"
+ORIGIN
+        1 tttaatgaga gtttgatcct ggctcaggac gaacgctggc ggcgtgccta atacatgcaa
+       61 gtagaacgct gaagagagga gcttgctctt cttggatgag ttgcgaacgg gtgagtaacg
+      121 cgtaggtaac ctgcctggta gcgggggata actattggaa acgatagcta ataccgcata
+      181 aaattgatta ttgcatgata attgattgaa agatgcaatt gcatcactac cagatggacc
+      241 tgcgttgtat tagctagttg gtgaggtaac ggctcaccaa ggcgacgata catagccgac
+      301 ctgagagggt gatcggccac actgggactg agacacggcc cagactccta cgggaggcag
+      361 cagtagggaa tcttcggcaa tggggggaac cctgaccgag caacgccgcg tgagtgaaga
+      421 aggttttcgg atcgtaaagc tctgttgtaa gagaagaacg ggtgtgagag tggaaagttc
+      481 acactgtgac ggtatcttac cagaaaggga cggctaacta cgtgccagca gccgcggtaa
+      541 tacgtaggtc ccgagcgttg tccggattta ttgggcgtaa agcgagcgca ggcggttaga
+      601 taagtctgaa gttaaaggct gtggcttaac catagtatgc tttggaaact gtttaacttg
+      661 agtgcagaag gggagagtgg aattccatgt gtagcggtga aatgcgtaga tatatggagg
+      721 aacaccggtg gcgaaagcgg ctctctggtc tgtaactgac gctgaggctc gaaagcgtgg
+      781 ggagcaaaca ggattagata ccctggtagt ccacgccgta aacgatgagt gctaggtgtt
+      841 aggccctttc cggggcttag tgccgcagct aacgcattaa gcactccgcc tggggagtac
+      901 gaccgcaagg ttgaaactca aaggaattga cgggggcccg cacaagcggt ggagcatgtg
+      961 gtttaattcg aagcaacgcg aagaacctta ccaggtcttg acatccctct gaccgctcta
+     1021 gagatagagt tttccttcgg gacagaggtg acaggtggtg catggttgtc gtcagctcgt
+     1081 gtcgtgagat gttgggttaa gtcccgcaac gagcgcaacc cctattgtta gttgccatca
+     1141 ttgagttggg cactctagcg agactgccgg taataaaccg gaggaaggtg gggatgacgt
+     1201 caaatcatca tgccccttat gacctgggct acacacgtgt tacaatggct ggtacaacga
+     1261 gtcgcaagcc ggtgacggca agctaatctc tgaaagccag tctcagttcg gattgtaggc
+     1321 tgcaactcgc ttacatgaag tcggaatcgc tagtaatcgc ggatcagcac gccgcggtga
+     1381 atacgttccc gggcattgta cactccgccc gtcacaccac gagagtttgt aacacccgaa
+     1441 gtcggtgagg taaccgtaag gagccagccg cctaaggtgg gatagatgat tggggtgaag
+     1501 tcgtaacaag gtagccgtat cggaaggtgc ggctggatca cctccttt
+//

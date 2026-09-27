@@ -1,6 +1,7 @@
 """Project paths, configuration loading and seeded random number generators."""
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
@@ -10,14 +11,16 @@ import numpy as np
 import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA = ROOT / "data"
-RAW = DATA / "raw"
+# Outputs can be redirected (used to test the SYNTHETIC mode without touching real results).
+OUT = Path(os.environ.get("CARIOGENOME_OUT", str(ROOT)))
+DATA = OUT / "data"
+RAW = ROOT / "data" / "raw"  # the download cache is always shared
 GENES_DIR = DATA / "genes"
 GENBANK_DIR = DATA / "genbank"
 GENOMES_DIR = DATA / "genomes"
 STRUCT_DIR = DATA / "structure"
-RESULTS = ROOT / "results"
-FIGURES = ROOT / "figures"
+RESULTS = OUT / "results"
+FIGURES = OUT / "figures"
 
 
 @dataclass(frozen=True)

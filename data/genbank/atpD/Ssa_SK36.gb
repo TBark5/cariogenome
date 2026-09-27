@@ -1,0 +1,67 @@
+LOCUS       Ssa_SK36_atpD           1407 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_SK36 atpD SSA_RS03940 region of NC_009009.1.
+ACCESSION   NC_009009.1:771177-772583
+VERSION     NC_009009.1:771177-772583
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis SK36
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1407
+                     /gene="atpD"
+                     /locus_tag="SSA_RS03940"
+                     /old_locus_tag="SSA_0788"
+     CDS             1..1407
+                     /gene="atpD"
+                     /locus_tag="SSA_RS03940"
+                     /old_locus_tag="SSA_0788"
+                     /EC_number="7.1.2.2"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_016398931.1"
+                     /GO_component="GO:0045259 - proton-transporting ATP
+                     synthase complex [Evidence IEA]"
+                     /GO_function="GO:0046933 - proton-transporting ATP synthase
+                     activity, rotational mechanism [Evidence IEA]"
+                     /GO_process="GO:0015986 - proton motive force-driven ATP
+                     synthesis [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="F0F1 ATP synthase subunit beta"
+                     /protein_id="WP_002897903.1"
+                     /translation="MSSGKIAQVIGPVVDVAFAAGDKLPEINNALVVYKNDEKKSKIVL
+                     EVALELGDGVVRTIAMESTDGLTRGLEVLDTGRPISVPVGKETLGRVFNVLGDTIDLDA
+                     PFPADAERQPIHKKAPTFDELSTSSEILETGIKVIDLLAPYLKGGKVGLFGGAGVGKTV
+                     LIQELIHNIAQEHGGISVFTGVGERTREGNDLYWEMKESGVIEKTAMVFGQMNEPPGAR
+                     MRVALTGLTIAEYFRDVEGQDVLLFIDNIFRFTQAGSEVSALLGRMPSAVGYQPTLATE
+                     MGQLQERITSTKKGSVTSIQAIYVPADDYTDPAPATAFAHLDSTTNLERKLVQLGIYPA
+                     VDPLASSSRALSPEIVGEEHYAVAAEVKRVLQRYHELQDIIAILGMDELSDDEKTLVAR
+                     ARRIQFFLSQNFNVAEQFTGQPGSYVPVAETVRGFKEILEGKHDKLPEDAFRGVGSIED
+                     VLAKAEKMGF"
+ORIGIN
+        1 atgagctcag gcaaaattgc tcaggttatc gggccggtcg tagacgttgc gtttgctgcc
+       61 ggagacaagc tacctgagat aaataatgca cttgtagtct ataaaaatga tgagaaaaaa
+      121 tcaaaaatcg tccttgaagt agctcttgag cttggtgacg gtgtggtgcg gaccattgcc
+      181 atggagtcga ccgatggttt gacgcgtggt ttagaggtct tggatactgg tcgtcctatt
+      241 tctgtgccag tcggcaagga aactctgggg cgggtgttca atgtccttgg ggatactatt
+      301 gacttggatg cgccatttcc tgctgatgca gagcgccagc cgattcataa gaaggcaccg
+      361 acctttgatg aactatcgac ttcatcagaa atcttggaaa cagggatcaa ggttatcgac
+      421 cttctagctc cttatctgaa aggtgggaaa gttggtctct ttggtggtgc cggagttggg
+      481 aagactgtcc tgattcagga attgatccac aatattgccc aagaacacgg ggggatttct
+      541 gtctttacgg gtgttggtga acggacgcgt gaagggaatg acctctactg ggaaatgaaa
+      601 gagtctggcg ttatcgaaaa gaccgctatg gtctttggtc agatgaatga accgccagga
+      661 gctcggatgc gggttgctct taccggactg accatcgcgg aatatttccg cgatgtggaa
+      721 ggtcaggacg tgctgctttt tattgacaac atcttccgct ttacacaggc tggttcggaa
+      781 gtgtctgccc ttttgggccg catgccgtca gccgttggtt accaaccaac acttgcgaca
+      841 gaaatgggac agttacaaga acggattacc tcaaccaaga aaggttccgt tacttccatc
+      901 caggctattt atgtaccagc ggatgactat actgaccctg cgccagcgac agcttttgct
+      961 cacttggact ctacaaccaa cctagagcgg aaattggttc agcttgggat ttatccagcc
+     1021 gtggatccac tcgcttccag ctctcgtgcc ctttcaccag agattgtcgg agaagagcac
+     1081 tatgcagtgg cagcagaggt taagcgggtc ttgcaacgtt atcatgaatt gcaggacatc
+     1141 attgctatcc ttggtatgga tgagttgtca gatgatgaga agactttggt tgcacgtgcg
+     1201 cggcggattc agttcttcct gtcacagaac ttcaatgtgg cggagcaatt taccggccag
+     1261 ccaggttcct atgtgccagt agctgaaacg gttcgtggct tcaaggaaat cctagaaggt
+     1321 aaacacgata agctgccaga agatgccttc cgtggtgtgg gctccatcga ggatgtattg
+     1381 gccaaggctg agaaaatggg attctaa
+//

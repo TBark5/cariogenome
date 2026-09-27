@@ -1,0 +1,45 @@
+LOCUS       Ssa_SK36_sodA            606 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_SK36 sodA SSA_RS03635 region of NC_009009.1.
+ACCESSION   NC_009009.1:706355-706960
+VERSION     NC_009009.1:706355-706960
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis SK36
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..606
+                     /gene="sodA"
+                     /locus_tag="SSA_RS03635"
+                     /old_locus_tag="SSA_0721"
+     CDS             1..606
+                     /gene="sodA"
+                     /locus_tag="SSA_RS03635"
+                     /old_locus_tag="SSA_0721"
+                     /EC_number="1.15.1.1"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_007519814.1"
+                     /GO_function="GO:0004784 - superoxide dismutase activity
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="superoxide dismutase SodA"
+                     /protein_id="WP_002896081.1"
+                     /translation="MAIILPDLPYAYDALEPYIDEETMHLHHDKHHNTYVTNVNAALEK
+                     HPEIGEDLEKLLADVESIPADIRQAVINNGGGHLNHALFWELMTPAETSPSAELAADIE
+                     ATFGSFEDFKAAFTAAATTRFGSGWAWLVVNKEGKLEVTSTANQDTPISEGKTPILGLD
+                     VWEHAYYVKYRNLRPNYIQAFFSVINWKKVDELYAAAK"
+ORIGIN
+        1 atggcaatta tcttacctga tcttccttac gcttacgatg ctttggagcc ttacattgat
+       61 gaagaaacaa tgcacttgca tcatgacaag caccacaata cctatgtaac gaatgttaat
+      121 gctgcgcttg aaaaacatcc tgaaatcggt gaggatttgg aaaaattatt ggctgatgtg
+      181 gagtctattc ctgctgatat ccgtcaggca gtcatcaaca acggtggtgg tcatcttaac
+      241 cacgctcttt tctgggaatt gatgacacca gcagaaacat caccatctgc agagttggca
+      301 gcggatatcg aagctacttt tggatcattt gaagacttta aagcagcttt cactgcagcg
+      361 gctacaactc gttttggttc tggctgggct tggttggttg tcaacaaaga aggcaagttg
+      421 gaagtaactt caacagcaaa tcaggatact cctatttcag aaggtaaaac tccaatcttg
+      481 ggactggatg tttgggaaca tgcttactat gtgaaatacc gcaatcttcg tccgaactac
+      541 atccaagctt tcttctcagt tattaactgg aaaaaggttg acgaacttta cgctgctgcg
+      601 aaataa
+//

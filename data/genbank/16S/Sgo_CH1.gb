@@ -1,0 +1,50 @@
+LOCUS       Sgo_CH1_16S             1557 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_CH1 16S SGO_RS03010 region of NC_009785.1.
+ACCESSION   NC_009785.1:661151-662707
+VERSION     NC_009785.1:661151-662707
+KEYWORDS    .
+SOURCE      Streptococcus gordonii str. Challis substr. CH1
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1557
+                     /locus_tag="SGO_RS03010"
+                     /old_locus_tag="SGO_0611"
+     rRNA            1..1557
+                     /locus_tag="SGO_RS03010"
+                     /old_locus_tag="SGO_0611"
+                     /product="16S ribosomal RNA"
+                     /inference="COORDINATES: nucleotide
+                     motif:Rfam:15.0:RF00177"
+                     /inference="COORDINATES: profile:INFERNAL:1.1.5"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: cmsearch."
+                     /db_xref="RFAM:RF00177"
+ORIGIN
+        1 ttaaatgaga gtttgatcct ggctcaggac gaacgctggc ggcgtgccta atacatgcaa
+       61 gtagaacgca cagtttatac cgtagcttgc tacaccatag actgtgagtt gcgaacgggt
+      121 gagtaacgcg taggtaacct gcctggtagc gggggataac tattggaaac gatagctaat
+      181 accgcataat attaattatt gcatgataat tgattgaaag atgcaactgc atcactacca
+      241 gatggacctg cgttgtatta gctagtaggt gaggtaacgg ctcacctagg cgacgataca
+      301 tagccgacct gagagggtga tcggccacac tgggactgag acacggccca gactcctacg
+      361 ggaggcagca gtagggaatc ttcggcaatg gacgaaagtc tgaccgagca acgccgcgtg
+      421 agtgaagaag gttttcggat cgtaaagctc tgttgtaaga gaagaacggg tgtgagagtg
+      481 gaaagttcac actgtgacgg tatcttacca gaaagggacg gctaactacg tgccagcagc
+      541 cgcggtaata cgtaggtccc gagcgttgtc cggatttatt gggcgtaaag cgagcgcagg
+      601 cggttagata agtctgaagt taaaggctgt ggcttaacca tagtacgctt tggaaactgt
+      661 ttaacttgag tgcagaaggg gagagtggaa ttccatgtgt agcggtgaaa tgcgtagata
+      721 tatggaggaa caccggtggc gaaagcggct ctctggtctg taactgacgc tgaggctcga
+      781 aagcgtgggg agcgaacagg attagatacc ctggtagtcc acgccgtaaa cgatgagtgc
+      841 taggtgttag gccctttccg gggcttagtg ccgcagctaa cgcattaagc actccgcctg
+      901 gggagtacga ccgcaaggtt gaaactcaaa ggaattgacg ggggcccgca caagcggtgg
+      961 agcatgtggt ttaattcgaa gcaacgcgaa gaaccttacc aggtcttgac atcccgatgc
+     1021 ccgctctaga gatagagttt tacttcggta catcggtgac aggtggtgca tggttgtcgt
+     1081 cagctcgtgt cgtgagatgt tgggttaagt cccgcaacga gcgcaaccct tattgttagt
+     1141 tgccatcatt cagttgggca ctctagcgag actgccggta ataaaccgga ggaaggtggg
+     1201 gatgacgtca aatcatcatg ccccttatga cctgggctac acacgtgcta caatggctgg
+     1261 tacaacgagt cgcaagtcgg tgacggcaag ctaatctctt aaagccagtc tcagttcgga
+     1321 ttgtaggctg caactcgcct acatgaagtc ggaatcgcta gtaatcgcgg atcagcacgc
+     1381 cgcggtgaat acgttcccgg gccttgtaca caccgcccgt cacaccacga gagtttgtaa
+     1441 cacccgaagt cggtgaggta accttttagg agccagccgc ctaaggtggg atagatgatt
+     1501 ggggtgaagt cgtaacaagg tagccgtatc ggaaggtgcg gctggatcac ctccttt
+//

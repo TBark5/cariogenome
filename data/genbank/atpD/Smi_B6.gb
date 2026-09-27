@@ -1,0 +1,67 @@
+LOCUS       Smi_B6_atpD             1407 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smi_B6 atpD SMI_RS06640 region of NC_013853.1.
+ACCESSION   NC_013853.1:1309578-1310984
+VERSION     NC_013853.1:1309578-1310984
+KEYWORDS    .
+SOURCE      Streptococcus mitis B6
+  ORGANISM  S. mitis
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1407)
+                     /gene="atpD"
+                     /locus_tag="SMI_RS06640"
+                     /old_locus_tag="smi_1309"
+     CDS             complement(1..1407)
+                     /gene="atpD"
+                     /locus_tag="SMI_RS06640"
+                     /old_locus_tag="smi_1309"
+                     /EC_number="7.1.2.2"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_016398931.1"
+                     /GO_component="GO:0045259 - proton-transporting ATP
+                     synthase complex [Evidence IEA]"
+                     /GO_function="GO:0046933 - proton-transporting ATP synthase
+                     activity, rotational mechanism [Evidence IEA]"
+                     /GO_process="GO:0015986 - proton motive force-driven ATP
+                     synthesis [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="F0F1 ATP synthase subunit beta"
+                     /protein_id="WP_000094352.1"
+                     /translation="MSSGKIAQVIGPVVDVLFAAGEELPEINNALVVYKNDERKTKIVL
+                     EVALELGDGMVRTIAMESTDGLTRGMEVLDTGRPISVPVGKETLGRVFNVLGDTIDLEA
+                     PFTEDAERQPIHKKAPTFDELSTSSEILETGIKVIDLLAPYLKGGKVGLFGGAGVGKTV
+                     LIQELIHNIAQEHGGISVFTGVGERTREGNDLYWEMKESGVIEKTAMVFGQMNEPPGAR
+                     MRVALTGLTIAEYFRDVEGQDVLLFIDNIFRFTQAGSEVSALLGRMPSAVGYQPTLATE
+                     MGQLQERITSTKKGSVTSIQAIYVPADDYTDPAPATAFAHLDSTTNLERKLVQLGIYPA
+                     VDPLASSSRALAPEIVGEEHYAVAAEVKRVLQRYHELQDIIAILGMDELSDEEKTLVAR
+                     ARRIQFFLSQNFNVAEQFTGQPGSYVPVAETVRGFKEILDGKHDHLPEDAFRGVGSIED
+                     VIAKAEKMGF"
+ORIGIN
+        1 ttaaaatccc attttttcag cttttgcaat tacatcttcg atagaaccta caccacggaa
+       61 ggcatcttct ggcaagtggt catgtttacc atcaaggatt tccttaaagc cacgtacagt
+      121 ttcagcaact ggaacataag aaccaggctg accagtaaat tgttccgcaa cgttgaagtt
+      181 ttgtgacaag aagaactgga tacgacgggc acgagcaacc aaagtctttt cttcatcaga
+      241 aagctcatcc ataccaagga tagcaatgat atcttgcaac tcatggtaac gttgaaggac
+      301 acgttttact tcagcagcaa ctgcatagtg ctcttctcca acgatttcag gtgccaaggc
+      361 acgtgagctt gaagcaagtg gatcaacggc tgggtagata cccaattgta ccaacttacg
+      421 ttccaagttg gttgttgaat ccaagtgagc gaaagctgtt gctggcgctg ggtcagtata
+      481 gtcatccgct ggcacataga tagcctggat agaggttaca gaccccttct tggttgatgt
+      541 gatacgctct tgcaattgac ccatttccgt agcaagtgtt ggttggtaac caacggctga
+      601 tggcatacga cccaaaaggg cagatacttc tgaaccagcc tgagtgaaac ggaagatatt
+      661 atcgataaag agaagcacgt cttggccttc tacatcacgg aagtattcag cgattgtcaa
+      721 accagtaagg gcaacacgca tacgtgctcc aggtggctca ttcatctgac caaataccat
+      781 ggctgttttc tcgataacgc ctgattcttt catttcccag taaaggtcgt tcccttcacg
+      841 agtacgttcc ccaacaccgg taaatactga aataccaccg tgttcttggg caatgttgtg
+      901 aatcaattct tgaattaaga cggttttacc aactccggca ccaccgaaaa gtccaacttt
+      961 accaccttta aggtaagggg caagaaggtc gataacctta atccctgttt caaggatttc
+     1021 agaagaggta gacaactcat caaaagttgg agctttttta tgaattggct gacgctctgc
+     1081 atcttctgta aaaggagctt ccaagtcaat ggtatctccc aaaacattga agacacgtcc
+     1141 caaagtttct ttacctactg gcacagagat tggacgacct gtgtccaata cttccattcc
+     1201 acgagtcaaa ccatctgttg attccatggc gatagtacgg accataccat ctcccaactc
+     1261 caaggctact tcaaggacga tttttgtttt tctttcgtca tttttgtaga cgacaagtgc
+     1321 attgttaatc tcaggaagtt cttcccctgc tgcaaacaag acgtctacaa cgggaccgat
+     1381 aacctgagca attttacctg aactcat
+//

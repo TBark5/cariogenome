@@ -1,0 +1,59 @@
+LOCUS       Sgo_CH1_pheS            1050 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_CH1 pheS SGO_RS04215 region of NC_009785.1.
+ACCESSION   NC_009785.1:910329-911378
+VERSION     NC_009785.1:910329-911378
+KEYWORDS    .
+SOURCE      Streptococcus gordonii str. Challis substr. CH1
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1050
+                     /gene="pheS"
+                     /locus_tag="SGO_RS04215"
+                     /old_locus_tag="SGO_0859"
+     CDS             1..1050
+                     /gene="pheS"
+                     /locus_tag="SGO_RS04215"
+                     /old_locus_tag="SGO_0859"
+                     /EC_number="6.1.1.20"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_009443186.1"
+                     /GO_component="GO:0005737 - cytoplasm [Evidence IEA]"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0000166 - nucleotide binding [Evidence IEA]; GO:0004826
+                     - phenylalanine-tRNA ligase activity [Evidence IEA]"
+                     /GO_process="GO:0006432 - phenylalanyl-tRNA aminoacylation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="phenylalanine--tRNA ligase subunit alpha"
+                     /protein_id="WP_012000314.1"
+                     /translation="MTKTIEEQLKSLREETLASLKQLKAENQKELQDLRVAVLGKKGSL
+                     TEVLKGMKDISAEMRPIIGKHVNEARDILTAAFEKTAQEMEEQLVALKLAEESLDVTLP
+                     GCHIPLGSRHILSQTSEEIEDIFIGMGYQVVDGFEVEKDYYNFERMNLPKDHPARDMQD
+                     TFYITEEILLRTHTSPVQARAMDAHDFSKGPLKMISPGRVFRRDTDDATHSHQFHQIEG
+                     LVVGENISMANLQGTLQLIVQKMFGQDRSIRLRPSYFPFTEPSVEVDVSCFKCGGAGCN
+                     VCKKTGWIEIMGAGMVHPRVLEMSGIDAEKYSGFAFGLGQERVAMLRYGINDIRGFYQG
+                     DIRFSQQFK"
+ORIGIN
+        1 atgacgaaaa cgattgaaga acaactaaaa agcctgcgcg aagagactct agcttctctc
+       61 aagcagctca aggctgagaa tcaaaaggaa ctgcaggatt tgcgtgtagc tgtcttgggt
+      121 aagaagggtt cgctgactga agtcctgaaa ggaatgaagg atatttcagc tgaaatgcga
+      181 ccgattattg gaaaacacgt caatgaagcg cgagacattc tgacagcagc ctttgaaaag
+      241 accgctcaag agatggaaga gcaattagtc gctctgaaac tggctgagga atccttagat
+      301 gtgaccctgc caggctgtca cattccgtta ggaagccgac atattctcag ccaaaccagc
+      361 gaggaaatcg aagatatttt catcgggatg ggctatcagg tcgtggacgg ctttgaagtg
+      421 gagaaggatt attacaactt tgagcggatg aatctgccta aggaccaccc agcacgggat
+      481 atgcaggaca ctttctacat tacagaggaa atcctgctca gaacccacac cagtccggtg
+      541 caggcgcgag ctatggatgc ccatgacttt tctaaagggc cactcaagat gatttcacca
+      601 gggcgcgttt ttcgtcggga taccgatgat gcgactcact cccaccaatt ccatcagatt
+      661 gaaggcttgg tggttggaga aaatatttct atggccaacc tgcaaggaac actgcagctg
+      721 attgtccaga agatgttcgg ccaagaccgc agtatccgtc tgcgtccgtc ttacttccca
+      781 ttcacagagc cgtctgttga agtggatgtt tcctgcttta agtgtggtgg tgccggctgt
+      841 aatgtctgca agaagaccgg ctggattgag attatgggag ctggtatggt gcatccgcgc
+      901 gtgttggaaa tgagtggcat tgatgcagag aaatactctg gatttgcctt tggtcttggc
+      961 caagagcggg tagctatgct ccgctacggt atcaacgaca ttcgtggatt ctaccaagga
+     1021 gatattcgtt tttctcagca gtttaagtag
+//

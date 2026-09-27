@@ -1,0 +1,40 @@
+LOCUS       Ssl_JIM8777_luxS         483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_JIM8777 luxS SALIVA_RS01905 region of NC_017595.1.
+ACCESSION   NC_017595.1:362170-362652
+VERSION     NC_017595.1:362170-362652
+KEYWORDS    .
+SOURCE      Streptococcus salivarius JIM8777
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..483)
+                     /locus_tag="SALIVA_RS01905"
+                     /old_locus_tag="SALIVA_0379"
+                     /db_xref="GeneID:93791573"
+     CDS             complement(1..483)
+                     /locus_tag="SALIVA_RS01905"
+                     /old_locus_tag="SALIVA_0379"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002885585.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_002885585.1"
+                     /db_xref="GeneID:93791573"
+                     /translation="MPKDVTVESFELDHTIVKAPYVRLISEEVGPKGDIITNFDIRLIQ
+                     PNENSIDTGGLHTIEHLLAKLIRQRIDGLIDCSPFGCRTGFHMIMWGKQDPTEIAKVIK
+                     SSLEAIANEITWEDVPGTTIESCGNYKDHSLHSAKEWAKLILEQGISDQAFERHTV"
+ORIGIN
+        1 ttaaacggta tggcgttcga aggcttggtc tgagatacct tgttcaagga taagtttagc
+       61 ccattcctta gctgaatgaa gactgtgatc cttgtagtta ccacaagatt caatggtagt
+      121 tcctggaaca tcttcccatg taatctcgtt agcaatagct tcaagactag atttgataac
+      181 tttagcaatt tctgtaggat cttgtttacc ccacataatc atatggaaac ctgtacggca
+      241 accaaatggt gagcaatcaa taagtccatc gatacgttga cggatcagtt tagcgagtag
+      301 gtgttcgata gtgtgaagac cacctgtgtc aatactattt tcattaggtt gaatcaaacg
+      361 gatatcaaag tttgtaatga tatctccttt aggtccaact tcctctgaaa taagacggac
+      421 ataaggtgct tttacaatgg tatgatcaag ttcaaaactc tcaacagtaa cgtcttttgg
+      481 cat
+//

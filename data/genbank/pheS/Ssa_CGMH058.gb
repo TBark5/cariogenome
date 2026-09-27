@@ -1,0 +1,59 @@
+LOCUS       Ssa_CGMH058_pheS        1047 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_CGMH058 pheS FDP16_RS07105 region of NZ_CP040798.1.
+ACCESSION   NZ_CP040798.1:1399030-1400076
+VERSION     NZ_CP040798.1:1399030-1400076
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1047)
+                     /gene="pheS"
+                     /locus_tag="FDP16_RS07105"
+                     /old_locus_tag="FDP16_07405"
+     CDS             complement(1..1047)
+                     /gene="pheS"
+                     /locus_tag="FDP16_RS07105"
+                     /old_locus_tag="FDP16_07405"
+                     /EC_number="6.1.1.20"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_009443186.1"
+                     /GO_component="GO:0005737 - cytoplasm [Evidence IEA]"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0000166 - nucleotide binding [Evidence IEA]; GO:0004826
+                     - phenylalanine-tRNA ligase activity [Evidence IEA]"
+                     /GO_process="GO:0006432 - phenylalanyl-tRNA aminoacylation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="phenylalanine--tRNA ligase subunit alpha"
+                     /protein_id="WP_176799123.1"
+                     /translation="MTKTIEEQLKSLREETLASLKQLKAENQKELQDLRVAVLGKKGSL
+                     TEVLKGMKDISAEMRPIIGKHVNEARDILTAAFEKAAQEMEEQLVALKLAEESLDVTLP
+                     GRQIPVGNRHILSQTSEEIEDIFIGMGYQVVDGFEVEKDYYNFERMNLPKDHPARDMQD
+                     TFYITEEILLRTHTSPVQARAMDAHDFSKGPLKMISPGRVFRRDTDDATHSHQFHQIEG
+                     LVVGENISMANLQGTLQLIVQKMFGEDRSIRLRPSYFPFTEPSVEVDVSCFKCGGAGCN
+                     VCKRTGWIEIMGAGMVHPRVLEMSGIDAEKYSGFAFGLGQERVAMLRYGINDIRGFYQG
+                     DIRFSQQF"
+ORIGIN
+        1 ttaaaactgc tgagaaaaac gaatatctcc ttggtagaat ccacgaatgt cgttgatgcc
+       61 gtagcggagc atagctaccc gctcttggcc aagaccaaag gcaaatccag agtatttctc
+      121 tgcatcaata ccgctcattt ccaacacgcg cggatgcacc ataccagctc ccataatctc
+      181 aatccaaccg gtcctcttgc agacattaca gccggcaccg ccacacttaa agcaggaaac
+      241 atccacttca acagacggct ctgtgaatgg gaagtaagac ggacgcagac ggatactgcg
+      301 atcttcgcca aacatcttct ggacgatcag ctgcagcgtt ccttgcaggt ttgccatgga
+      361 aatattttct ccaactacca agccttcaat ctgatggaac tggtgggagt gagtcgcatc
+      421 atcagtatcc cgacggaaga cacgtcctgg tgagatcatc ttgagtggcc ctttagaaaa
+      481 gtcatgagcg tccatagctc gcgcctgtac cggactggtg tgggttctga gcagaatctc
+      541 ctctgtaatg tagaaagtgt cctgcatatc ccgtgctggg tggtccttag gcagattcat
+      601 ccgctcaaag ttgtaatagt ccttttccac ttcaaagccg tccacgacct gatagcccat
+      661 cccgatgaag atatcttcaa tttcttcact agtttggcta agaatatgac ggttcccaac
+      721 cggaatttga cggcctggca gggtcacatc taaggattcc tcagccagtt tcagagctac
+      781 taattgctct tccatctctt gagcagcctt ctcaaaggct gctgtcagga tatcacgcgc
+      841 ttcattgacg tgctttccga taatcggccg catttcagct gagatatcct tcattccttt
+      901 caggacttca gtcagcgaac ccttcttacc caagactgct acacgcaagt cctgcagttc
+      961 cttttgattc tcagccttga gctgcttgag agaagctaga gtctcttcac gcaggctttt
+     1021 cagttgttct tcaatcgttt tcgtcat
+//

@@ -1,0 +1,45 @@
+LOCUS       Ssl_ATCC27945_so         606 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_ATCC27945 sodA NX99_RS03170 region of NZ_CP015282.1.
+ACCESSION   NZ_CP015282.1:795201-795806
+VERSION     NZ_CP015282.1:795201-795806
+KEYWORDS    .
+SOURCE      Streptococcus salivarius
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..606)
+                     /gene="sodA"
+                     /locus_tag="NX99_RS03170"
+                     /old_locus_tag="NX99_03125"
+     CDS             complement(1..606)
+                     /gene="sodA"
+                     /locus_tag="NX99_RS03170"
+                     /old_locus_tag="NX99_03125"
+                     /EC_number="1.15.1.1"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_018378422.1"
+                     /GO_function="GO:0004784 - superoxide dismutase activity
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="superoxide dismutase SodA"
+                     /protein_id="WP_004182735.1"
+                     /translation="MAIILPDLPYAYDALEPYIDAETMTLHHDKHHATYVANANAALEK
+                     HPEIGEDLEALLADVEQIPADIRQALINNGGGHLNHALFWELLSPEKQEPTAEVAAAIN
+                     EAFGSFEAFQEAFTAAATTRFGSGWAWLVVNAEGKLEVVSTANQDTPISDGKKPILALD
+                     VWEHAYYLNYRNVRPNYIKAFFEIINWNKVAELYAAAK"
+ORIGIN
+        1 ttatttagct gctgcataaa gctcagcaac tttattccag ttaatgattt caaagaaagc
+       61 tttgatgtag tttggacgta cgttacggta gtttaggtag taagcgtgtt cccaaacatc
+      121 aagtgccaag attggtttct taccgtctga gataggagtg tcttggttag ctgttgaaac
+      181 gacttcaagc ttaccttcag cgttaacaac aagccatgcc caacctgaac caaaacgagt
+      241 tgttgctgct gctgtgaaag cttcttggaa ggcttcaaat gagccgaaag cttcgttaat
+      301 agcagctgct acttctgcag ttggttcttg tttttcagga gacaagagtt cccagaaaag
+      361 tgcgtgatta aggtgtccac caccattgtt aataagtgct tgacgaatat ctgctggaat
+      421 ctgttccacg tcagccaaaa gtgcttcgag atcttcacca atttctgggt gtttttcaag
+      481 agcagcatta gcatttgcta cataagttgc gtggtgttta tcgtggtgaa gagtcattgt
+      541 ttcagcatca atgtatggtt ccaaagcatc gtaagcgtaa ggaaggtctg gaaggataat
+      601 tgccat
+//

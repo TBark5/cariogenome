@@ -1,0 +1,61 @@
+LOCUS       Smu_UA159_tuf           1197 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_UA159 tuf SMU_RS03365 region of NC_004350.2.
+ACCESSION   NC_004350.2:672868-674064
+VERSION     NC_004350.2:672868-674064
+KEYWORDS    .
+SOURCE      Streptococcus mutans UA159
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1197
+                     /gene="tuf"
+                     /locus_tag="SMU_RS03365"
+                     /old_locus_tag="SMU.714"
+                     /old_locus_tag="SMU_714"
+     CDS             1..1197
+                     /gene="tuf"
+                     /locus_tag="SMU_RS03365"
+                     /old_locus_tag="SMU.714"
+                     /old_locus_tag="SMU_714"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_014335040.1"
+                     /GO_function="GO:0005525 - GTP binding [Evidence IEA];
+                     GO:0003746 - translation elongation factor activity
+                     [Evidence IEA]"
+                     /GO_process="GO:0006414 - translational elongation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="elongation factor Tu"
+                     /protein_id="WP_002263314.1"
+                     /translation="MAKEKYDRSKPHVNIGTIGHVDHGKTTLTAAITTVLARRLPSAVN
+                     QPKDYSSIDAAPEERERGITINTAHVEYETEKRHYAHIDAPGHADYVKNMITGAAQMDG
+                     AILVVASTDGPMPQTREHILLSRQVGVKYLIVFMNKVDLVDDEELLELVEMEIRDLLSE
+                     YDFPGDDIPVIQGSALKALEGDTAQEDIIMELMHTVDDYIPDPERDTDKPLLLPVEDVF
+                     SITGRGTVASGRIDRGTVKVNDEVEIVGIRDDIQKAVVTGVEMFRKQLDEGIAGDNVGV
+                     LLRGIQRDEIERGQVLAKPGSIHPHTKFKGEVYILTKEEGGRHTPFFNNYRPQFYFRTT
+                     DVTGSIELPAGTEMVMPGDNVTIDVELIHPIAVEQGTTFSIREGGRTVGSGIVSEIEA"
+ORIGIN
+        1 atggcaaaag aaaaatacga tcgtagtaaa ccacacgtta acattggtac tatcggacac
+       61 gttgaccatg gtaaaactac cttaactgca gctatcacaa ctgtactggc acgtcgtctt
+      121 ccaagtgcag taaaccaacc aaaagattat tcatctattg atgctgctcc tgaagaacgc
+      181 gaacgcggta tcactatcaa tactgcgcac gttgagtatg aaactgaaaa acgtcactat
+      241 gctcacattg atgctccagg acacgcggac tatgttaaaa acatgatcac tggtgctgcc
+      301 caaatggatg gtgctatcct tgtagtagct tcaactgatg gaccaatgcc acaaactcgt
+      361 gaacacattc ttctttcacg tcaagttggt gttaaatacc tcattgtctt catgaataaa
+      421 gttgatttgg ttgacgatga agaattgctt gaattggttg aaatggaaat ccgtgatctt
+      481 ctttcagaat atgatttccc aggtgatgat attccagtta ttcaaggttc agctcttaaa
+      541 gctcttgaag gcgatactgc tcaagaagat atcatcatgg aattaatgca tactgttgat
+      601 gactacattc cagatccaga acgtgatact gacaagccgc tccttcttcc agtcgaagat
+      661 gttttctcaa tcactggtcg tggtactgtt gcttcaggac gtattgatcg tggtactgtt
+      721 aaagttaacg atgaagttga aatcgttggt atccgtgatg acattcaaaa agctgttgtt
+      781 actggtgttg aaatgttccg taaacaattg gatgaaggta ttgcagggga taatgttggt
+      841 gttctccttc gtggtatcca acgtgatgaa atcgaacgtg gtcaagttct tgctaaacca
+      901 ggttcaattc acccacatac taaattcaaa ggtgaagttt atatccttac taaagaggaa
+      961 ggtggacgtc atacaccatt cttcaataac tatcgtccac aattctactt ccgtacaact
+     1021 gacgtaactg gttcaattga gttgccagca ggtactgaaa tggttatgcc tggtgataac
+     1081 gttactattg acgttgaatt gatccatcca atcgctgttg aacaaggtac tactttctct
+     1141 attcgtgaag gtggacgtac tgttggttct ggtatcgttt cagaaatcga agcttaa
+//

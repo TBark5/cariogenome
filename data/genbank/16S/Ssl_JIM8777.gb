@@ -1,0 +1,52 @@
+LOCUS       Ssl_JIM8777_16S         1548 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_JIM8777 16S SALIVA_RS00070 region of NC_017595.1.
+ACCESSION   NC_017595.1:14954-16501
+VERSION     NC_017595.1:14954-16501
+KEYWORDS    .
+SOURCE      Streptococcus salivarius JIM8777
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1548
+                     /locus_tag="SALIVA_RS00070"
+                     /old_locus_tag="SALIVA_r0001"
+                     /db_xref="GeneID:93791207"
+     rRNA            1..1548
+                     /locus_tag="SALIVA_RS00070"
+                     /old_locus_tag="SALIVA_r0001"
+                     /product="16S ribosomal RNA"
+                     /inference="COORDINATES: nucleotide
+                     motif:Rfam:15.0:RF00177"
+                     /inference="COORDINATES: profile:INFERNAL:1.1.5"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: cmsearch."
+                     /db_xref="RFAM:RF00177"
+                     /db_xref="GeneID:93791207"
+ORIGIN
+        1 tttaatgaga gtttgatcct ggctcaggac gaacgctggc ggcgtgccta atacatgcaa
+       61 gtagaacgct gaagagagga gcttgctctt cttggatgag ttgcgaacgg gtgagtaacg
+      121 cgtaggtaac ctgccttgta gcgggggata actattggaa acgatagcta ataccgcata
+      181 acaatggatg acacatgtca tttatttgaa aggggcaatt gctccactac aagatggacc
+      241 tgcgttgtat tagctagtag gtgaggtaac ggctcaccta ggcgacgata catagccgac
+      301 ctgagagggt gatcggccac actgggactg agacacggcc cagactccta cgggaggcag
+      361 cagtagggaa tcttcggcaa tgggggcaac cctgaccgag caacgccgcg tgagtgaaga
+      421 aggttttcgg atcgtaaagc tctgttgtaa gtcaagaacg agtgtgagag tggaaagttc
+      481 acactgtgac ggtagcttac cagaaaggga cggctaacta cgtgccagca gccgcggtaa
+      541 tacgtaggtc ccgagcgttg tccggattta ttgggcgtaa agcgagcgca ggcggtttga
+      601 taagtctgaa gttaaaggct gtggctcaac catagttcgc tttggaaact gtcaaacttg
+      661 agtgcagaag gggagagtgg aattccatgt gtagcggtga aatgcgtaga tatatggagg
+      721 aacaccggtg gcgaaagcgg ctctctggtc tgtaactgac gctgaggctc gaaagcgtgg
+      781 ggagcgaaca ggattagata ccctggtagt ccacgccgta aacgatgagt gctaggtgtt
+      841 ggatcctttc cgggattcag tgccgcagct aacgcattaa gcactccgcc tggggagtac
+      901 gaccgcaagg ttgaaactca aaggaattga cgggggcccg cacaagcggt ggagcatgtg
+      961 gtttaattcg aagcaacgcg aagaacctta ccaggtcttg acatcccgat gctatttcta
+     1021 gagatagaaa gttacttcgg tacatcggtg acaggtggtg catggttgtc gtcagctcgt
+     1081 gtcgtgagat gttgggttaa gtcccgcaac gagcgcaacc cctattgtta gttgccatca
+     1141 ttcagttggg cactctagcg agactgccgg taataaaccg gaggaaggtg gggatgacgt
+     1201 caaatcatca tgccccttat gacctgggct acacacgtgc tacaatggtt ggtacaacga
+     1261 gttgcgagtc ggtgacggca agctaatctc ttaaagccaa tctcagttcg gattgtaggc
+     1321 tgcaactcgc ctacatgaag tcggaatcgc tagtaatcgc ggatcagcac gccgcggtga
+     1381 atacgttccc gggccttgta cacaccgccc gtcacaccac gagagtttgt aacacccgaa
+     1441 gtcggtgagg taaccttttg gagccagccg cctaaggtgg gatagatgat tggggtgaag
+     1501 tcgtaacaag gtagccgtat cggaaggtgc ggctggatca cctccttt
+//

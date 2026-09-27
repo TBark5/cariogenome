@@ -1,0 +1,38 @@
+LOCUS       Smu_LJ23_luxS            483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smu_LJ23 luxS SMULJ23_RS07735 region of NC_017768.1.
+ACCESSION   NC_017768.1:1598060-1598542
+VERSION     NC_017768.1:1598060-1598542
+KEYWORDS    .
+SOURCE      Streptococcus mutans LJ23
+  ORGANISM  S. mutans
+            .
+FEATURES             Location/Qualifiers
+     gene            1..483
+                     /locus_tag="SMULJ23_RS07735"
+                     /old_locus_tag="SMULJ23_1514"
+     CDS             1..483
+                     /locus_tag="SMULJ23_RS07735"
+                     /old_locus_tag="SMULJ23_1514"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002286460.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_002291126.1"
+                     /translation="MTKEVTVESFELDHTAVKAPYVRLISEEFGPKGDLITNFDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAKLIRQRTDGMIDCSPFGCRTGFHLIMWGKHTTTQIATVIK
+                     ASLEEIANTISWKDVPGTTIESCGNYKDHSLFSAKEWAKLILKQGISDDPFERHLV"
+ORIGIN
+        1 atgacaaaag aagttactgt tgaaagcttt gaacttgacc acactgctgt aaaagcccct
+       61 tatgtccgtc ttatttcaga agagtttgga cctaaaggcg atcttattac caattttgat
+      121 attcgcttag tacagcctaa tgaagactct attccgactg caggccttca tactattgaa
+      181 catttactgg ctaagctgat tcgtcagcgt actgacggga tgattgactg ttcccctttt
+      241 ggatgtcgta ctggttttca tctcatcatg tggggtaagc atacaacaac ccaaatagcc
+      301 acagtcatca aagcaagttt agaagaaatt gctaatacaa tctcatggaa agatgtccct
+      361 ggaacaacta ttgagtcctg tgggaattac aaagatcata gccttttttc agctaaagaa
+      421 tgggcaaagc tgattttaaa acaaggcatt tcagatgatc cttttgagcg tcatctagtg
+      481 taa
+//

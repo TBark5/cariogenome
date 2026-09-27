@@ -1,0 +1,59 @@
+LOCUS       Ssl_ATCC27945_ph        1044 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_ATCC27945 pheS NX99_RS00915 region of NZ_CP015282.1.
+ACCESSION   NZ_CP015282.1:292966-294009
+VERSION     NZ_CP015282.1:292966-294009
+KEYWORDS    .
+SOURCE      Streptococcus salivarius
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1044
+                     /gene="pheS"
+                     /locus_tag="NX99_RS00915"
+                     /old_locus_tag="NX99_00905"
+     CDS             1..1044
+                     /gene="pheS"
+                     /locus_tag="NX99_RS00915"
+                     /old_locus_tag="NX99_00905"
+                     /EC_number="6.1.1.20"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_013642932.1"
+                     /GO_component="GO:0005737 - cytoplasm [Evidence IEA]"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0000166 - nucleotide binding [Evidence IEA]; GO:0004826
+                     - phenylalanine-tRNA ligase activity [Evidence IEA]"
+                     /GO_process="GO:0006432 - phenylalanyl-tRNA aminoacylation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="phenylalanine--tRNA ligase subunit alpha"
+                     /protein_id="WP_004182138.1"
+                     /translation="MDLQTQLQELKTSTQAKLAEMRGEHSKELQELRVAVLGKKGSLTD
+                     LLKGLKDLPNEERPKVGKMVNEVRDVLTEAFDEAAKVVEAAKIQAQLDSESLDVTLPGR
+                     QVKLGNRHILSQTAEEIEDIFLGMGFQIVDGFEVETDYYNFERMNLPKDHPARDMQDTF
+                     YITEEILLRTHTSPVQARTLDKHDFSKGPLKMISPGRVFRRDTDDATHSHQFHQIEGLV
+                     VGKNISMGDLKGTLEMIIQKMFGAERQIRLRPSYFPFTEPSVEVDVSCFKCGGKGCNVC
+                     KKTGWIEILGAGMVHPQVLEMSGVDSEEYSGFAFGLGQERIAMLRYGINDIRGFYQGDV
+                     RFSEQFK"
+ORIGIN
+        1 atggatttac aaacacaatt gcaagagttg aaaacatcaa cgcaggctaa attggctgaa
+       61 atgcgtggtg aacactctaa agaattacaa gaattgcgtg ttgcagtttt gggtaaaaaa
+      121 ggctctttga cagatctttt gaaggggctt aaagaccttc ctaatgaaga acgtcctaaa
+      181 gttggtaaaa tggtcaacga agttcgtgac gttttgactg aagcttttga cgaagcagct
+      241 aaagttgttg aagcggctaa aattcaagca caacttgact ctgaaagtct tgacgtaacc
+      301 cttccaggac gccaagtcaa acttggaaac cgtcatattc ttagccaaac agctgaagaa
+      361 atcgaagaca ttttcttggg gatgggcttc caaatcgttg atggttttga agttgagact
+      421 gactattata actttgaacg tatgaacttg cctaaggacc acccagcgcg tgacatgcaa
+      481 gataccttct acattactga agaaattttg cttcgtactc acacaagtcc tgttcaagct
+      541 cgtacacttg ataaacacga tttttctaaa ggtccactta agatgatctc accaggacgt
+      601 gttttccgtc gtgatacaga tgatgcgact cacagtcacc agttccacca aatcgaaggt
+      661 ttggtcgttg gtaaaaacat ctcaatgggt gatcttaagg gaacgcttga aatgattatc
+      721 caaaaaatgt ttggtgcaga acgtcaaatc cgtttgcgtc catcttactt cccattcact
+      781 gagccttcag ttgaggttga cgtgtcatgc ttcaagtgtg gtggtaaagg atgtaacgta
+      841 tgtaagaaga cgggttggat tgaaatcctc ggtgcaggta tggttcaccc acaagtgctt
+      901 gagatgtctg gtgtcgattc tgaagaatat tcaggtttcg cctttggtct tggtcaagaa
+      961 cgtattgcca tgcttcgtta tggtatcaac gacattcgtg gtttctacca aggagatgtt
+     1021 cgtttctcag aacagtttaa ataa
+//

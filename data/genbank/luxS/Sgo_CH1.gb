@@ -1,0 +1,38 @@
+LOCUS       Sgo_CH1_luxS             483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_CH1 luxS SGO_RS02915 region of NC_009785.1.
+ACCESSION   NC_009785.1:641386-641868
+VERSION     NC_009785.1:641386-641868
+KEYWORDS    .
+SOURCE      Streptococcus gordonii str. Challis substr. CH1
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..483)
+                     /locus_tag="SGO_RS02915"
+                     /old_locus_tag="SGO_0592"
+     CDS             complement(1..483)
+                     /locus_tag="SGO_RS02915"
+                     /old_locus_tag="SGO_0592"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002893508.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_008808586.1"
+                     /translation="MSKEVIVESFELDHTIVKAPYVRLIGEESGPKGDVISNFDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAMLIRKRIDGMIDCSPFGCRTGFHMIMWGRHTPSEIAQVIK
+                     SCLEEIAETTTWEDVPGTTIESCGNYKDHSLFSAKEWAKLILKQGISDNAFERHVI"
+ORIGIN
+        1 tcaaatgaca tggcgttcga aagcattatc tgagatgcct tgtttgagga ttaactttgc
+       61 ccactccttg gcagaaaaga ggctgtgatc tttatagttt ccgcaagact caattgtagt
+      121 tcctgggacg tcctcccaag tggtggtttc ggcgatctct tcgaggcatg atttgatcac
+      181 ttgagcaatt tcagatgggg tatgacgtcc ccacatgatc atatggaaac cagttcggca
+      241 gccaaaaggg gagcaatcaa tcattccatc aatgcgttta cggataagca tagctagcag
+      301 gtgttcaatg gtatggagtc ctgcagttgg aatggaatct tcattgggct ggacaagtcg
+      361 gatatcaaaa ttagaaataa catctccttt tggtccgctt tcttctccaa tgagtcgtac
+      421 ataaggggcc ttaacgatgg tgtgatcaag ctcgaaactt tcaacaataa cttctttaga
+      481 cat
+//

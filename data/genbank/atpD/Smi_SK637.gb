@@ -1,0 +1,67 @@
+LOCUS       Smi_SK637_atpD          1407 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smi_SK637 atpD SK637_RS06050 region of NZ_CP028415.1.
+ACCESSION   NZ_CP028415.1:1167239-1168645
+VERSION     NZ_CP028415.1:1167239-1168645
+KEYWORDS    .
+SOURCE      Streptococcus mitis
+  ORGANISM  S. mitis
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1407)
+                     /gene="atpD"
+                     /locus_tag="SK637_RS06050"
+                     /old_locus_tag="SK637_01181"
+     CDS             complement(1..1407)
+                     /gene="atpD"
+                     /locus_tag="SK637_RS06050"
+                     /old_locus_tag="SK637_01181"
+                     /EC_number="7.1.2.2"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_016398931.1"
+                     /GO_component="GO:0045259 - proton-transporting ATP
+                     synthase complex [Evidence IEA]"
+                     /GO_function="GO:0046933 - proton-transporting ATP synthase
+                     activity, rotational mechanism [Evidence IEA]"
+                     /GO_process="GO:0015986 - proton motive force-driven ATP
+                     synthesis [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="F0F1 ATP synthase subunit beta"
+                     /protein_id="WP_000094357.1"
+                     /translation="MSSGKIAQVIGPVVDVLFAAGEKLPEINNALVVYKNDERKTKIVL
+                     EVALELGDGMVRTIAMESTDGLTRGMEVLDTGRPISVPVGKETLGRVFNVLGDTIDLEA
+                     PFTEDAERQPIHKKAPTFDELSTSSEILETGIKVIDLLAPYLKGGKVGLFGGAGVGKTV
+                     LIQELIHNIAQEHGGISVFTGVGERTREGNDLYWEMKESGVIEKTAMVFGQMNEPPGAR
+                     MRVALTGLTIAEYFRDVEGQDVLLFIDNIFRFTQAGSEVSALLGRMPSAVGYQPTLATE
+                     MGQLQERITSTKKGSVTSIQAIYVPADDYTDPAPATAFAHLDSTTNLERKLVQLGIYPA
+                     VDPLASSSRALAPEIVGEEHYAVAAEVKRVLQRYHELQDIIAILGMDELSDEEKTLVAR
+                     ARRIQFFLSQNFNVAEQFTGQPGSYVPVAETVRGFKEILDGKHDHLPEDAFRGVGSIED
+                     VIAKAEKMGF"
+ORIGIN
+        1 ttaaaatccc attttttcag cttttgcaat cacatcttcg atagaaccta caccacggaa
+       61 ggcatcttct ggcaagtggt cgtgtttacc atcaaggatt tccttaaatc cacgaacagt
+      121 ttcagcaact gggacataag aacctggctg accagtaaat tgttccgcaa cattaaagtt
+      181 ttgtgacaag aagaactgga tacgacgggc acgtgcaacc aaggtctttt cttcatcaga
+      241 aagctcatcc ataccaagga tagcaatgat atcttgcaac tcatggtaac gttgaagaac
+      301 acgttttacc tcagcagcaa ctgcatagtg ctcttctcca acgatttcag gtgccaaggc
+      361 acgtgagctt gaagcaagtg ggtcaacggc tgggtagata cccaattgta ccaacttacg
+      421 ttccaagtta gttgttgaat ccaagtgagc aaaggctgtt gctggcgctg ggtcagtata
+      481 gtcatccgct ggcacataga tagcctggat agaggttaca gaacccttct tggttgatgt
+      541 gatacgctct tgcaattgac ccatttccgt agcaagtgtt ggttggtaac caacggctga
+      601 tggcatacga cccaaaaggg cagatacttc tgaaccagcc tgagtgaaac ggaagatatt
+      661 atcgataaag agaagaacgt cttggccttc tacatcacgg aagtattcag cgattgtcaa
+      721 accagtaagg gcaacacgca tacgtgctcc tggtggctca ttcatctgac caaataccat
+      781 ggctgttttc tcgataacgc ctgattcttt catttcccag taaaggtcat tcccctcacg
+      841 agtacgttca ccaacaccgg taaatactga aataccaccg tgttcttggg caatgttgtg
+      901 aatcaattct tgaattaaga cggttttacc aactccggca ccaccgaaaa gtccaacctt
+      961 accaccttta aggtaagggg caagaaggtc gataacctta atccctgttt caaggatttc
+     1021 agaagaggta gacaactcat caaaagttgg agctttttta tgaattggct gacgctctgc
+     1081 atcttctgta aaaggagctt ccaagtcaat ggtatctccc aaaacattga agacacgtcc
+     1141 caaagtttct ttacctactg gtacagagat tggacgacct gtgtccaata cttccattcc
+     1201 acgagtcaaa ccatctgttg attccatggc gatagtacga accataccat ctcccaactc
+     1261 caaggctact tcaaggacga tttttgtttt tctttcgtca tttttgtaga cgacaagtgc
+     1321 attgttaatc tcaggaagtt tttcccctgc cgcaaataag acgtctacaa caggaccgat
+     1381 aacctgagca attttacctg aactcat
+//

@@ -1,0 +1,45 @@
+LOCUS       Smi_NCTC12261_so         606 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smi_NCTC12261 sodA SM12261_RS03700 region of NZ_CP028414.1.
+ACCESSION   NZ_CP028414.1:684241-684846
+VERSION     NZ_CP028414.1:684241-684846
+KEYWORDS    .
+SOURCE      Streptococcus mitis NCTC 12261
+  ORGANISM  S. mitis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..606
+                     /gene="sodA"
+                     /locus_tag="SM12261_RS03700"
+                     /old_locus_tag="SM12261_0714"
+     CDS             1..606
+                     /gene="sodA"
+                     /locus_tag="SM12261_RS03700"
+                     /old_locus_tag="SM12261_0714"
+                     /EC_number="1.15.1.1"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_007519814.1"
+                     /GO_function="GO:0004784 - superoxide dismutase activity
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="superoxide dismutase SodA"
+                     /protein_id="WP_000974733.1"
+                     /translation="MAIILPDLPYAYDALEPYIDAETMHLHHDKHHQTYVNNANAALEK
+                     HPEIGEDLEALLADVESIPADIRQALINNGGGHLNHALFWELMTPEKTAPSAELAAAID
+                     ATFGSFEEFQAAFTAAATTRFGSGWAWLVVNKEGKLEVTSTANQDTPISEGKKPILGLD
+                     VWEHAYYVKYRNVRPDYIKAFFSVINWNKVDELYAAAK"
+ORIGIN
+        1 atggctatta tcttaccaga tcttccatat gcatacgacg ctttggaacc atacatcgat
+       61 gcggaaacaa tgcacttgca ccatgacaaa caccatcaaa cttatgtcaa caatgccaat
+      121 gcagctctag aaaaacaccc tgaaatcggt gaagatcttg aagccttgct tgctgatgta
+      181 gaatctattc cagctgatat ccgtcaagca cttattaaca acggcggtgg acacttgaac
+      241 cacgctcttt tctgggaatt gatgactcct gagaaaacag ctccatcagc agaacttgca
+      301 gcagcaatcg atgcaacatt tggttcattt gaagaattcc aagcagcctt cactgcagca
+      361 gcaacaactc gtttcggttc tggctgggca tggttggttg tcaacaaaga aggtaaactt
+      421 gaagtgactt caacagcaaa ccaagacaca ccaatctcag aaggtaaaaa accaatcttg
+      481 ggcttggacg tttgggaaca tgcttactac gtgaaatacc gcaacgtgcg tcctgactac
+      541 atcaaagctt tcttctcagt gatcaactgg aacaaagtag atgaattgta cgcagctgct
+      601 aaataa
+//

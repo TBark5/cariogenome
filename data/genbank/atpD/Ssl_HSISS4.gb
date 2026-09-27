@@ -1,0 +1,67 @@
+LOCUS       Ssl_HSISS4_atpD         1407 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_HSISS4 atpD HSISS4_RS02270 region of NZ_CP013216.1.
+ACCESSION   NZ_CP013216.1:454592-455998
+VERSION     NZ_CP013216.1:454592-455998
+KEYWORDS    .
+SOURCE      Streptococcus salivarius
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1407
+                     /gene="atpD"
+                     /locus_tag="HSISS4_RS02270"
+                     /old_locus_tag="HSISS4_00405"
+     CDS             1..1407
+                     /gene="atpD"
+                     /locus_tag="HSISS4_RS02270"
+                     /old_locus_tag="HSISS4_00405"
+                     /EC_number="7.1.2.2"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_012658190.1"
+                     /GO_component="GO:0045259 - proton-transporting ATP
+                     synthase complex [Evidence IEA]"
+                     /GO_function="GO:0046933 - proton-transporting ATP synthase
+                     activity, rotational mechanism [Evidence IEA]"
+                     /GO_process="GO:0015986 - proton motive force-driven ATP
+                     synthesis [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="F0F1 ATP synthase subunit beta"
+                     /protein_id="WP_002885994.1"
+                     /translation="MSSGKIAQVVGPVVDVAFAAGDKLPEINNALVVYTDEQKSKRIVL
+                     EVALELGEGVVRTIAMESTDGLTRGLEVLDTGRPISVPVGKDTLGRVFNVLGDTIDLEA
+                     PFADDAEREPIHKKAPTFDELSTSTEILETGIKVIDLLAPYLKGGKVGLFGGAGVGKTV
+                     LIQELIHNIAQEHGGISVFTGVGERTREGNDLYWEMKESGVIEKTAMVFGQMNEPPGAR
+                     MRVALTGLTIAEYFRDVEGQDVLLFIDNIFRFTQAGSEVSALLGRMPSAVGYQPTLATE
+                     MGQLQERITSTKKGSVTSIQAIYVPADDYTDPAPATAFAHLDSTTNLERKLTQMGIYPA
+                     VDPLASSSRALSPEIVGEEHYAVATEVQRVLQRYRELQDIIAILGMDELSDEEKTLVGR
+                     ARRIQFFLSQNFNVAEQFTGQPGSYVPVAETVRSFKEILEGKYDNLPEDAFRSVGPIED
+                     VVAKAKAMGY"
+ORIGIN
+        1 atgagctcag gcaaaattgc tcaggttgtt ggtcctgttg tagacgtagc gtttgcagct
+       61 ggtgataaac ttcctgagat taacaatgca ttggtcgttt atactgatga acaaaagtct
+      121 aaacgtatcg tgctcgaagt agctcttgaa cttggagaag gtgtggttcg taccattgcc
+      181 atggaatcta ctgatggatt gactcgtgga ctagaagttc tggacactgg tcgtccaatc
+      241 agcgttcctg ttggtaaaga tacccttggg cgtgtcttta acgttcttgg tgataccatt
+      301 gacttggaag caccttttgc agacgatgca gagcgtgaac caattcacaa aaaagcacca
+      361 actttcgatg aattgtcaac atctactgaa atccttgaaa cagggattaa agttatcgac
+      421 ttgcttgccc cttaccttaa gggtggtaaa gtcggactct tcggtggtgc cggtgttggt
+      481 aaaaccgttc ttattcaaga gttgattcac aacattgccc aagagcacgg tggtatttcc
+      541 gtgtttacag gtgttggtga acgtacacgt gaaggtaatg acctttactg ggaaatgaaa
+      601 gaatctggcg ttatcgagaa aacagccatg gtcttcggtc aaatgaacga accacctgga
+      661 gcacgtatgc gtgttgccct tactggtttg acaattgcgg aatacttccg tgatgtcgaa
+      721 ggtcaagacg tgcttctctt catcgataac atcttccgtt tcactcaagc aggttctgag
+      781 gtttctgccc ttcttggtcg tatgccatca gccgttggtt accaacctac acttgctact
+      841 gaaatgggtc aattgcaaga acgtatcaca tcaactaaaa aaggttctgt tacatcaatc
+      901 caagccatct acgttccagc tgatgactat actgacccag cgccagctac agcatttgct
+      961 cacttggatt caacaaccaa ccttgaacgt aagttgacac aaatgggtat ttacccagcc
+     1021 gttgacccat tggcatcaag ctcacgtgcc ctttcacctg aaattgttgg tgaagaacac
+     1081 tatgctgttg cgactgaagt tcaacgtgtg cttcaacgtt accgtgaatt gcaagatatt
+     1141 atcgctatcc ttggtatgga tgaattgtca gacgaagaaa aaacattggt tggacgtgct
+     1201 cgtcgtatcc aattcttctt gtcacaaaac ttcaacgttg ctgaacagtt tacaggtcaa
+     1261 ccaggttctt atgttccagt tgctgaaacc gttcgtagct ttaaggaaat ccttgaaggt
+     1321 aaatatgaca atcttccaga agatgccttc cgtagcgtag gtccaattga ggatgtagta
+     1381 gctaaagcta aagctatggg ctactaa
+//

@@ -1,0 +1,50 @@
+LOCUS       Smi_SK637_16S           1506 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smi_SK637 16S SK637_RS00075 region of NZ_CP028415.1.
+ACCESSION   NZ_CP028415.1:15254-16759
+VERSION     NZ_CP028415.1:15254-16759
+KEYWORDS    .
+SOURCE      Streptococcus mitis
+  ORGANISM  S. mitis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1506
+                     /locus_tag="SK637_RS00075"
+                     /old_locus_tag="SK637_00016"
+     rRNA            1..1506
+                     /locus_tag="SK637_RS00075"
+                     /old_locus_tag="SK637_00016"
+                     /product="16S ribosomal RNA"
+                     /inference="COORDINATES: nucleotide
+                     motif:Rfam:15.0:RF00177"
+                     /inference="COORDINATES: profile:INFERNAL:1.1.5"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: cmsearch."
+                     /db_xref="RFAM:RF00177"
+ORIGIN
+        1 tttaatgaga gtttgatcct ggctcaggac gaacgctggc ggcgtgccta atacatgcaa
+       61 gtagaacgct gaaggaggag cttgcttctc tggatgagtt gcgaacgggt gagtaacgcg
+      121 taggtaacct gcctggtagc gggggataac tattggaaac gatagctaat accgcataag
+      181 agtagatgtt gcatgacatt tacttaaaag gtgcaattgc atcactacca gatggacctg
+      241 cgttgtatta gctagttggt ggggtaacgg ctcaccaagg caacgataca tagccgacct
+      301 gagagggtga tcggccacac tgggactgag acacggccca gactcctacg ggaggcagca
+      361 gtagggaatc ttcggcaatg gacggaagtc tgaccgagca acgccgcgtg agtgaagaag
+      421 gttttcggat cgtaaagctc tgttgtaaga gaagaacgag tgtgagagtg gaaagttcac
+      481 actgtgacgg tatcttacca gaaactacgt gccagcagcc gcggtaatac gtaggtcccg
+      541 agcgttgtcc ggatttattg ggcgtaaagc gagcgcaggc ggttagataa gtctgaagtt
+      601 aaaggctgtg gcttaaccat agtacgcttt ggaaactgtt taacttgagt gcaagagggg
+      661 agagtggaat tccatgtgta gcggtgaaat gcgtagatat atggaggaac accggtggcg
+      721 aaagcggctc tctggcttgt aactgacgct gaggctcgaa agcgtgggga gcaaacagga
+      781 ttagataccc tggtagtcca cgccgtaaac gatgagtgct aggtgttaga ccctttccgg
+      841 ggtttagtgc cgtagctaac gcattaagca ctccgcctgg ggagtacgac cgcaaggttg
+      901 aaactcaaag gaattgacgg gggcccgcac aagcggtgga gcatgtggtt taattcgaag
+      961 caacgcgaag aaccttacca ggtcttgaca tccctctgac cgctctagag atagagcttt
+     1021 ccttcgggac agaggtgaca ggtggtgcat ggttgtcgtc agctcgtgtc gtgagatgtt
+     1081 gggttaagtc ccgcaacgag cgcaacccct attgttagtt gccatcattc agttgggcac
+     1141 tctagcgaga ctgccggtaa taaaccggag gaaggtgggg atgacgtcaa atcatcatgc
+     1201 cccttatgac ctgggctaca cacgtgctac aatggctggt acaacgagtc gcaagccggt
+     1261 gacggcaagc taatctctta aagccagtct cagttcggat tgtaggctgc aactcgccta
+     1321 catgaagtcg gaatcgctag taatcgcgga tcagcacgcc gcggtgaata cgttcccggt
+     1381 acacaggtca caccacgaga gtttgtaaca cccgaagtcg gtgaggtaac cgtaaggagt
+     1441 tggtcttgtt tagtcttgag aggtcttgtg gggccttagc tcagctggaa attgaatatc
+     1501 tatatc
+//

@@ -1,0 +1,59 @@
+LOCUS       Ssa_CGMH058_tuf         1197 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_CGMH058 tuf FDP16_RS04175 region of NZ_CP040798.1.
+ACCESSION   NZ_CP040798.1:808744-809940
+VERSION     NZ_CP040798.1:808744-809940
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1197
+                     /gene="tuf"
+                     /locus_tag="FDP16_RS04175"
+                     /old_locus_tag="FDP16_04330"
+     CDS             1..1197
+                     /gene="tuf"
+                     /locus_tag="FDP16_RS04175"
+                     /old_locus_tag="FDP16_04330"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_014335040.1"
+                     /GO_function="GO:0005525 - GTP binding [Evidence IEA];
+                     GO:0003746 - translation elongation factor activity
+                     [Evidence IEA]"
+                     /GO_process="GO:0006414 - translational elongation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="elongation factor Tu"
+                     /protein_id="WP_002912857.1"
+                     /translation="MAKEKYDRSKPHVNIGTIGHVDHGKTTLTAAITTVLARRLPSAVN
+                     QPKDYASIDAAPEERERGITINTAHVEYETAKRHYAHIDAPGHADYVKNMITGAAQMDG
+                     AILVVASTDGPMPQTREHILLSRQVGVKHLIVFMNKVDLVDDEELLELVEMEIRDLLSE
+                     YDFPGDDLPVIQGSALKALEGDSKFEDIIMELMDTVDEYIPEPERDTDKPLLLPVEDVF
+                     SITGRGTVASGRIDRGIVKVNDEIEIVGIKEEIQKAVVTGVEMFRKQLDEGLAGDNVGV
+                     LLRGIQRDEIERGQVIAKPGSINPHTKFKGEVYILTKEEGGRHTPFFNNYRPQFYFRTT
+                     DVTGSIELPAGTEMVMPGDNVTIDVELIHPIAVEQGTTFSIREGGRTVGSGMVTEIEA"
+ORIGIN
+        1 atggcaaaag aaaaatacga tcgtagtaaa ccacacgtta acattggtac cattggacac
+       61 gttgaccacg gtaaaactac tttgactgca gctatcacaa ctgtattggc acgtcgcttg
+      121 ccttcagcag ttaaccaacc taaagactat gcgtctatcg atgctgctcc agaagaacgc
+      181 gaacgcggaa tcactatcaa cactgcgcac gttgagtatg aaactgctaa gcgtcactac
+      241 gctcacatcg acgctccagg acacgcggac tacgttaaaa acatgatcac tggtgccgct
+      301 caaatggacg gagctatcct tgtagtagct tcaactgacg gaccaatgcc acaaactcgt
+      361 gagcacatct tgctttcacg tcaggttggt gttaagcact tgatcgtctt catgaacaaa
+      421 gttgacttgg ttgacgatga agaattgctt gaattggttg aaatggaaat ccgtgacctc
+      481 ttgtcagaat acgacttccc aggtgacgat cttccagtta tccaaggttc agctcttaaa
+      541 gctcttgaag gtgactctaa atttgaagac atcatcatgg aattgatgga cactgttgat
+      601 gagtacattc cagaaccaga acgcgatact gacaagccat tgcttcttcc agtcgaagac
+      661 gtattctcaa tcactggtcg tggtacagtt gcttcaggac gtatcgaccg tggtatcgtt
+      721 aaagtcaacg acgaaatcga aatcgttggt atcaaagaag aaatccaaaa agcagttgtt
+      781 actggtgttg aaatgttccg taaacagctt gacgaaggtc ttgcagggga caacgtaggt
+      841 gtgcttctcc gtggtatcca acgtgatgaa atcgaacgtg gacaagttat cgctaaacca
+      901 ggttcaatca acccacacac taaattcaag ggtgaagttt atatccttac taaagaagaa
+      961 ggtggacgtc acactccatt cttcaacaac taccgtccac agttctactt ccgtacaact
+     1021 gacgttacag gttcaatcga acttccagca ggtactgaaa tggtaatgcc tggtgataac
+     1081 gtaacaatcg acgttgagtt gatccaccca atcgccgttg aacaaggtac tactttctct
+     1141 atccgtgaag gtggacgtac cgttggttca ggtatggtta cagaaatcga agcttaa
+//

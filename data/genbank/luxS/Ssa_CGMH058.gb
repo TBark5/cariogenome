@@ -1,0 +1,38 @@
+LOCUS       Ssa_CGMH058_luxS         483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_CGMH058 luxS FDP16_RS02575 region of NZ_CP040798.1.
+ACCESSION   NZ_CP040798.1:511608-512090
+VERSION     NZ_CP040798.1:511608-512090
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..483)
+                     /locus_tag="FDP16_RS02575"
+                     /old_locus_tag="FDP16_02680"
+     CDS             complement(1..483)
+                     /locus_tag="FDP16_RS02575"
+                     /old_locus_tag="FDP16_02680"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002893508.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_002893508.1"
+                     /translation="MSKEVIVESFELDHTIVKAPYVRLIGEETGPKGDIISNFDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAMLIRKRIDGMIDCSPFGCRTGFHMIMWGQHSSSQIAQVIK
+                     SCLEEIAESTSWEDVPGTTIESCGNYKDHSLFSAKEWAKLILSQGISDDAFERHVI"
+ORIGIN
+        1 ttaaatcaca tggcgttcaa aggcatcatc tgagattcct tggctgagaa taagtttggc
+       61 ccattcttta gctgagaaaa ggctgtgatc cttgtagttt ccacaggatt caatggttgt
+      121 tccagggaca tcttcccagc tagttgactc agcgatttct tctagacagg atttgatgac
+      181 ttgagcaatt tggctggaac tatgttggcc ccacataatc atatgaaaac cagttcggca
+      241 gccaaaaggt gagcagtcaa tcataccatc aatgcgcttg cggatcaaca tagccagcaa
+      301 atgctcaata gtatgcaggc cagcagtcgg aatggaatct tcatttggct gaaccagacg
+      361 gatatcaaaa ttggaaatga tgtcgccttt aggaccagtt tcctctccga tgaggcggac
+      421 gtaaggcgct ttgacaatgg tgtgatccag ctcaaagctt tcaacgataa cttctttaga
+      481 cat
+//

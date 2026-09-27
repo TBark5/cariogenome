@@ -1,0 +1,58 @@
+LOCUS       Ssl_ATCC27945_re        1140 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssl_ATCC27945 recA NX99_RS06505 region of NZ_CP015282.1.
+ACCESSION   NZ_CP015282.1:1453338-1454477
+VERSION     NZ_CP015282.1:1453338-1454477
+KEYWORDS    .
+SOURCE      Streptococcus salivarius
+  ORGANISM  S. salivarius
+            .
+FEATURES             Location/Qualifiers
+     gene            complement(1..1140)
+                     /gene="recA"
+                     /locus_tag="NX99_RS06505"
+                     /old_locus_tag="NX99_06375"
+     CDS             complement(1..1140)
+                     /gene="recA"
+                     /locus_tag="NX99_RS06505"
+                     /old_locus_tag="NX99_06375"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_001085741.1"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0008094 - ATP-dependent activity, acting on DNA
+                     [Evidence IEA]; GO:0003677 - DNA binding [Evidence IEA];
+                     GO:0003697 - single-stranded DNA binding [Evidence IEA]"
+                     /GO_process="GO:0006281 - DNA repair [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="recombinase RecA"
+                     /protein_id="WP_002886327.1"
+                     /translation="MAKKTKKTEEITKKFGDERRKALDDALKNIEKDFGKGAVMRLGER
+                     AEQKVQVMSSGSLALDIALGAGGYPKGRIIEIYGPESSGKTTVALHAVAQTQKEGGIAA
+                     FIDAEHALDPAYAAALGVNIDELLLSQPDSGEQGLEIAGKLIDSGAVDLVVVDSVAALV
+                     PRAEIDGDIGDSHVGLQARMMSQAMRKLSASINKTKTIAIFINQLREKVGIMFGNPETT
+                     PGGRALKFYASVRLDVRGNTQIKGTGDKKDQNVGKETKIKVVKNKVAPPFKEAFVEIMY
+                     GEGISQTGELVKIASDLGIIQKAGAWFSYNGEKIGQGSENAKKYLADHPDIFEEIDHKV
+                     RVHYGLIEPDEEDIVEEAQVEETSDELVLDLDSTIEIEE"
+ORIGIN
+        1 ttattcttca atttcaatgg ttgaatctag gtctaaaaca agttcatcag atgtttcttc
+       61 aacttgtgct tcttcaacaa tatcctcttc atctggttca atcaaaccat agtgtacacg
+      121 tactttatga tcaatttctt caaaaatatc tggatgatct gccaaatatt ttttagcatt
+      181 ttcagaccct tgaccaatct tctctccatt atatgagaac catgctccag ctttttgaat
+      241 aatgcctaag tcactagcga tttttacaag ctcacctgtt tgtgaaatcc cttcaccata
+      301 cataatttca acaaaggctt ctttaaatgg tggagcaacc ttgtttttga ctaccttaat
+      361 tttagtttcc ttaccaacat tttggtcttt tttatcacca gtccctttga tttgcgtatt
+      421 tccacgtaca tcaagacgta ctgatgcata gaattttaga gcacgtccac caggagttgt
+      481 ttctggatta ccaaacataa taccaacttt ttcacgcaat tggttaatga agatagcaat
+      541 tgtttttgtt ttattgatag aagcagaaag ttttcgcatg gcttgactca tcatacgcgc
+      601 ttgaagtccg acatggctat caccaatatc tccatcaatt tctgcacgag gtaccaaggc
+      661 tgcaactgag tcaacaacaa ccaaatcaac tgcaccagag tcaatcagct taccagcaat
+      721 ttcaagacct tgttcacctg aatcaggttg tgacaaaaga agttcatcga tattaacacc
+      781 tagggctgcc gcataagcag ggtcaagggc atgctctgca tcgataaagg cagcaattcc
+      841 gccttctttt tgtgtctgag caacagcatg gagggctaca gttgttttac ctgatgattc
+      901 tggtccgtaa atttcgataa tacgaccttt aggataacca cctgcaccaa gagcaatatc
+      961 caaagccagc gagcctgaac tcataacttg aactttctgt tctgcacgct caccaagacg
+     1021 catcactgca cctttaccaa aatctttttc aatattcttc aaagcatcgt caagtgcttt
+     1081 acgacgctca tctccaaatt tctttgtaat ttcttctgtt ttctttgttt tcttagccac
+//

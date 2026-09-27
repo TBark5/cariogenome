@@ -1,0 +1,45 @@
+gene,label,species,accession,row_index,locus_tag,old_locus_tag,protein_id,annotation_gene,product,start,end,strand,pseudo,identity_to_query,query_coverage,hit_coverage,reciprocal_best_hit,ortholog_call
+gtfB,Ssa_SK36,S. sanguinis,NC_009009.1,591,SSA_RS03130,SSA_0613,WP_011836622.1,,glycoside hydrolase family 70 protein,601987,606693,+,False,0.4871,0.9986,0.9828,False,False
+gtfC,Ssa_SK36,S. sanguinis,NC_009009.1,591,SSA_RS03130,SSA_0613,WP_011836622.1,,glycoside hydrolase family 70 protein,601987,606693,+,False,0.4939,0.9691,0.9247,False,False
+ftf,Ssa_SK36,S. sanguinis,NC_009009.1,862,SSA_RS04485,SSA_0904,WP_011836784.1,,CshA/CshB family fibrillar adhesin-related protein,894046,903018,+,False,0.2632,0.1698,0.0498,False,False
+gtfB,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,577,J1C83_RS03025,J1C83_02990,WP_002902580.1,,glycoside hydrolase family 70 protein,597845,602557,+,False,0.4871,0.9986,0.9828,False,False
+gtfC,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,577,J1C83_RS03025,J1C83_02990,WP_002902580.1,,glycoside hydrolase family 70 protein,597845,602557,+,False,0.4942,0.9691,0.9248,False,False
+ftf,Ssa_SK1058,S. sanguinis,NZ_CP071422.1,855,J1C83_RS04425,J1C83_04370,WP_002902782.1,,CshA/CshB family fibrillar adhesin-related protein,895395,905876,+,False,0.2727,0.1698,0.0427,False,False
+gtfB,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,461,FDP16_RS02415,FDP16_02515,WP_176798441.1,,S8 family serine peptidase,476422,480942,+,False,0.2566,0.0962,0.095,False,False
+gtfC,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,461,FDP16_RS02415,FDP16_02515,WP_176798441.1,,S8 family serine peptidase,476422,480942,+,False,0.2396,0.121,0.1195,True,False
+gtfD,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,461,FDP16_RS02415,FDP16_02515,WP_176798441.1,,S8 family serine peptidase,476422,480942,+,False,0.1929,0.2743,0.2643,False,False
+ftf,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,461,FDP16_RS02415,FDP16_02515,WP_176798441.1,,S8 family serine peptidase,476422,480942,+,False,0.233,0.2088,0.1149,False,False
+gyrB,Ssa_CGMH058,S. sanguinis,NZ_CP040798.1,1098,FDP16_RS05605,FDP16_05825,WP_176798896.1,parE,DNA topoisomerase IV subunit B,1088509,1090458,+,False,0.5109,0.9723,0.9707,False,False
+gtfB,Sgo_CH1,S. gordonii,NC_009785.1,495,SGO_RS02460,SGO_0497,WP_041789547.1,,glycoside hydrolase family 70 protein,537501,542234,+,False,0.4897,0.9986,0.9829,False,False
+gtfC,Sgo_CH1,S. gordonii,NC_009785.1,495,SGO_RS02460,SGO_0497,WP_041789547.1,,glycoside hydrolase family 70 protein,537501,542234,+,False,0.4932,0.9691,0.9252,False,False
+ftf,Sgo_CH1,S. gordonii,NC_009785.1,1452,SGO_RS07290,SGO_1486,WP_012130561.1,bgaA,LPXTG-anchored adhesin/beta-galactosidase BgaA,1535957,1543009,-,False,0.2617,0.1723,0.0583,False,False
+gtfB,Sgo_FDA371,S. gordonii,NZ_CP023511.1,119,CO687_RS00660,CO687_00660,WP_096754725.1,,glycoside hydrolase family 70 protein,126509,131242,-,False,0.4888,0.9986,0.9829,False,False
+gtfC,Sgo_FDA371,S. gordonii,NZ_CP023511.1,119,CO687_RS00660,CO687_00660,WP_096754725.1,,glycoside hydrolase family 70 protein,126509,131242,-,False,0.4929,0.9691,0.9252,False,False
+ftf,Sgo_FDA371,S. gordonii,NZ_CP023511.1,1794,CO687_RS09350,CO687_09350,WP_096755322.1,,CshA/CshB family fibrillar adhesin-related protein,1894197,1903277,-,False,0.2155,0.1899,0.0595,False,False
+gtfB,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,114,RN86_RS00620,RN86_00615,WP_053794110.1,,glycoside hydrolase family 70 protein,121944,126482,-,False,0.4884,0.9668,0.994,False,False
+gtfC,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,114,RN86_RS00620,RN86_00615,WP_053794110.1,,glycoside hydrolase family 70 protein,121944,126482,-,False,0.4936,0.9691,0.9649,False,False
+ftf,Sgo_KCOM1506,S. gordonii,NZ_CP012648.1,1898,RN86_RS09720,RN86_09725,WP_053794726.1,,CshA/CshB family fibrillar adhesin-related protein,2007619,2014881,-,False,0.2561,0.2,0.0653,False,False
+gtfB,Smi_B6,S. mitis,NC_013853.1,674,SMI_RS03560,smi_0705,WP_000750101.1,,S8 family serine peptidase,653394,659945,+,False,0.2303,0.1084,0.0733,False,False
+gtfC,Smi_B6,S. mitis,NC_013853.1,1518,SMI_RS07790,smi_1537,WP_000515824.1,,SIALI-17 repeat-containing surface protein,1565407,1573719,-,False,0.2191,0.1107,0.0596,False,False
+gtfD,Smi_B6,S. mitis,NC_013853.1,974,SMI_RS05055,smi_1002,WP_000278319.1,,mucin-binding protein,961132,973548,+,False,0.254,0.0855,0.0302,False,False
+spaP,Smi_B6,S. mitis,NC_013853.1,974,SMI_RS05055,smi_1002,WP_000278319.1,,mucin-binding protein,961132,973548,+,False,0.2151,0.4494,0.1585,True,False
+ftf,Smi_B6,S. mitis,NC_013853.1,974,SMI_RS05055,smi_1002,WP_000278319.1,,mucin-binding protein,961132,973548,+,False,0.2606,0.2289,0.0382,False,False
+gtfB,Smi_NCTC12261,S. mitis,NZ_CP028414.1,551,SM12261_RS03195,SM12261_0617,WP_001169031.1,,Ig-like domain-containing protein,580025,587260,+,False,0.3119,0.0725,0.044,False,False
+gtfC,Smi_NCTC12261,S. mitis,NZ_CP028414.1,551,SM12261_RS03195,SM12261_0617,WP_001169031.1,,Ig-like domain-containing protein,580025,587260,+,False,0.3529,0.068,0.0411,False,False
+gtfD,Smi_NCTC12261,S. mitis,NZ_CP028414.1,551,SM12261_RS03195,SM12261_0617,WP_001169031.1,,Ig-like domain-containing protein,580025,587260,+,False,0.315,0.0848,0.0494,False,False
+spaP,Smi_NCTC12261,S. mitis,NZ_CP028414.1,808,SM12261_RS04515,SM12261_0877,WP_115262376.1,,mucin-binding protein,841631,854605,+,False,0.2001,0.959,0.3414,True,False
+ftf,Smi_NCTC12261,S. mitis,NZ_CP028414.1,551,SM12261_RS03195,SM12261_0617,WP_001169031.1,,Ig-like domain-containing protein,580025,587260,+,False,0.25,0.3082,0.0975,False,False
+gtfB,Smi_SK637,S. mitis,NZ_CP028415.1,1119,SK637_RS06005,SK637_01172,WP_033688955.1,,Rib/alpha-like domain-containing protein,1149016,1158636,-,False,0.2198,0.1978,0.0951,False,False
+gtfC,Smi_SK637,S. mitis,NZ_CP028415.1,1119,SK637_RS06005,SK637_01172,WP_033688955.1,,Rib/alpha-like domain-containing protein,1149016,1158636,-,False,0.2119,0.2186,0.0951,False,False
+gtfD,Smi_SK637,S. mitis,NZ_CP028415.1,1119,SK637_RS06005,SK637_01172,WP_033688955.1,,Rib/alpha-like domain-containing protein,1149016,1158636,-,False,0.2201,0.3331,0.1319,False,False
+spaP,Smi_SK637,S. mitis,NZ_CP028415.1,1356,SK637_RS07230,,WP_033689165.1,,YSIRK-type signal peptide-containing protein,1431562,1439550,-,False,0.2139,0.8528,0.5113,True,False
+ftf,Smi_SK637,S. mitis,NZ_CP028415.1,1355,SK637_RS07225,SK637_01411,WP_033689164.1,,YSIRK-type signal peptide-containing protein,1422844,1430988,-,False,0.2403,0.2805,0.0833,False,False
+gtfB,Ssl_JIM8777,S. salivarius,NC_017595.1,1356,SALIVA_RS07005,SALIVA_1432,WP_014634754.1,,glycoside hydrolase family 70 protein,1473991,1478688,-,False,0.4741,0.9986,0.9987,False,False
+gtfC,Ssl_JIM8777,S. salivarius,NC_017595.1,1356,SALIVA_RS07005,SALIVA_1432,WP_014634754.1,,glycoside hydrolase family 70 protein,1473991,1478688,-,False,0.465,0.9911,1.0,False,False
+spaP,Ssl_JIM8777,S. salivarius,NC_017595.1,1398,SALIVA_RS07225,SALIVA_1475,WP_014634793.1,,SspB-related isopeptide-forming adhesin,1598780,1615006,-,False,0.2155,0.6088,0.1699,True,False
+gtfB,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,45,NX99_RS00225,NX99_00235,WP_084914322.1,,glycoside hydrolase family 70 protein,128375,133108,+,False,0.469,0.9986,0.9987,False,False
+gtfC,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,45,NX99_RS00225,NX99_00235,WP_084914322.1,,glycoside hydrolase family 70 protein,128375,133108,+,False,0.4572,0.9911,1.0,False,False
+spaP,Ssl_ATCC27945,S. salivarius,NZ_CP015282.1,20,NX99_RS10135,,WP_084914300.1,,accessory Sec-dependent serine-rich glycoprotein adhesin,55976,61927,+,False,0.1798,0.3419,0.2718,True,False
+gtfB,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,1278,HSISS4_RS06520,HSISS4_01269,WP_021143889.1,,glycoside hydrolase family 70 protein,1381872,1386557,-,False,0.474,0.9986,0.9987,False,False
+gtfC,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,1278,HSISS4_RS06520,HSISS4_01269,WP_021143889.1,,glycoside hydrolase family 70 protein,1381872,1386557,-,False,0.4611,0.9911,1.0,False,False
+spaP,Ssl_HSISS4,S. salivarius,NZ_CP013216.1,1333,HSISS4_RS06790,HSISS4_01325,WP_059749231.1,,streptococcal pilin isopeptide linkage domain-containing protein,1496542,1509507,-,False,0.2195,0.3169,0.1159,True,False

@@ -1,0 +1,91 @@
+LOCUS       Sgo_KCOM1506_gyr        2454 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Sgo_KCOM1506 gyrA RN86_RS07795 region of NZ_CP012648.1.
+ACCESSION   NZ_CP012648.1:1597532-1599985
+VERSION     NZ_CP012648.1:1597532-1599985
+KEYWORDS    .
+SOURCE      Streptococcus gordonii
+  ORGANISM  S. gordonii
+            .
+FEATURES             Location/Qualifiers
+     gene            1..2454
+                     /gene="gyrA"
+                     /locus_tag="RN86_RS07795"
+                     /old_locus_tag="RN86_07790"
+     CDS             1..2454
+                     /gene="gyrA"
+                     /locus_tag="RN86_RS07795"
+                     /old_locus_tag="RN86_07790"
+                     /EC_number="5.6.2.2"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_012000631.1"
+                     /GO_function="GO:0005524 - ATP binding [Evidence IEA];
+                     GO:0003677 - DNA binding [Evidence IEA]; GO:0003916 - DNA
+                     topoisomerase activity [Evidence IEA]; GO:0003918 - DNA
+                     topoisomerase type II (double strand cut, ATP-hydrolyzing)
+                     activity [Evidence IEA]"
+                     /GO_process="GO:0006259 - DNA metabolic process [Evidence
+                     IEA]; GO:0006265 - DNA topological change [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="DNA gyrase subunit A"
+                     /protein_id="WP_046165514.1"
+                     /translation="MQDKNLVNVNLTSEMKTSFIDYAMSVIVSRALPDVRDGLKPVHRR
+                     ILYGMNELGVTPDKPHKKSARITGDVMGKYHPHGDSSIYEAMVRMAQWWSYRYMLVDGH
+                     GNFGSMDGDGAAAQRYTEARMSKIALEMLRDINKNTVDFIDNYDANEREPIVLPARFPN
+                     LLVNGATGIAVGMATNIPPHNLAESIDAVKLVMDNPEATTRDIMEVLPGPDFPTGALVM
+                     GKSGIHRAYETGKGSIVLRSRTEIEEMKNGRERIVVTEFPYMVNKTKVHEHIVRLVQEK
+                     RIDGITAVRDESNREGVRFVIEVRRDASAHVILNNLFKLTQMQTNFSFNMLAIQGGVPK
+                     ILSLREILLAYIEHQKEVVTRRTAFDKDKAEARAHILAGLLIALDHIDEVIRIIRNSET
+                     DAEAQAELMAKFELSERQSQAILDMRLRRLTGLERDKIQSEYDELIALIADLADILAKP
+                     ERVLTIIREELDEVKRKFADERRTELMVGEVLSLEDEDLIEEADVLITLSNKGYIKRLN
+                     QDEFTAQKRGGRGVQGTGVKDDDFVKELVSTSTHDRLLFFTNKGRVYRLKGYEIPEYGR
+                     TAKGLPIVNLLKLDEGETIQTIINVEQDHSQDSYLFFTTRLGVVKRTSVADFANIRQNG
+                     LKALNLKDEDELINVFLTDGAADVIIGTKFGYSVRFNETAVRNMSRIATGVRGVNLRDG
+                     DQVVGAGVVSDNDEVLVITEKGYGKRTLASEYPTKGRGGKGIKTANITEKNGPLAGLMT
+                     VNGQEDLMIITNTGVIIRTSVANISQTGRSTMGVKVMRLDQNAQIVTFTTVEADDKEEL
+                     QDEKE"
+ORIGIN
+        1 atgcaagata agaatttagt aaatgtcaat ctaacgagtg aaatgaagac aagtttcatt
+       61 gactatgcta tgagtgttat cgtttctcgt gcacttccag atgttcgtga tggattaaaa
+      121 ccggttcatc gtcggattct ttatggaatg aatgagctgg gagttactcc tgataaacca
+      181 cataaaaaat cagcccgtat tacaggtgat gttatgggta aataccatcc gcatggtgac
+      241 tcatcaattt atgaagctat ggttcggatg gcgcaatggt ggagctatcg ctacatgctt
+      301 gttgatggcc atgggaactt tggttccatg gacggagatg gagctgctgc acagcgttat
+      361 acagaggcac gtatgagcaa aattgctctt gagatgcttc gtgatatcaa caagaatact
+      421 gttgacttta tcgataacta tgatgctaat gagcgagaac caatagtcct tcctgcacgt
+      481 tttccaaatc ttttggtcaa tggcgcaact ggtattgctg ttggtatggc gactaatatt
+      541 ccgcctcata atttagcgga gtctattgat gcagttaagc tagtcatgga taatcctgaa
+      601 gcaacaaccc gtgatattat ggaagttttg cctgggcctg attttccaac tggcgctcta
+      661 gttatgggca aatcaggtat tcaccgtgct tatgaaacgg ggaaaggctc gatcgtttta
+      721 cgttctcgga ctgaaatcga agaaatgaaa aatggtcgcg agcggattgt cgtaactgag
+      781 tttccttata tggttaataa gactaaggtt catgaacaca ttgttcgctt agtacaggaa
+      841 aaacgcatcg atggtattac agctgtccgt gatgagtcta atcgtgaggg tgtccgtttt
+      901 gtcattgagg ttcgtcggga tgcgtctgct catgtcattc taaataatct ctttaaattg
+      961 acacaaatgc agaccaattt cagctttaat atgttagcga ttcagggtgg tgttcctaaa
+     1021 atactctctc tccgtgagat ccttttagct tatatcgagc accaaaaaga agttgtgact
+     1081 cgtcgaacag cctttgataa agataaggcc gaggcgcgcg ctcatatttt agcaggttta
+     1141 ctaattgctc ttgaccacat cgatgaagtt attcgtatca ttcgtaacag cgagacagac
+     1201 gctgaagcac aggctgaatt aatggctaag tttgaattgt ctgaacgtca aagtcaggct
+     1261 attctcgata tgcgcttgcg tcgtttgact ggtttggaac gcgataaaat tcagtcagaa
+     1321 tatgatgaat tgattgctct aatagctgat ttggcggata tcttagctaa acctgaaaga
+     1381 gttcttacaa ttattagaga agaattggat gaagttaagc ggaaatttgc tgatgaacgt
+     1441 cgtacagagc ttatggtagg agaggttctc tctctagaag atgaagatct gattgaagaa
+     1501 gcggatgttt tgatcacctt gtcaaataaa ggctacatca aacgtttaaa ccaagatgag
+     1561 tttacagctc agaagcgtgg tggccgtggt gttcaaggaa ctggtgttaa agacgatgac
+     1621 ttcgtcaagg aacttgtttc aactagtacc catgatcgtc tactcttctt caccaataag
+     1681 gggcgcgttt atcgtctgaa aggatacgag atacccgaat atggccggac tgcaaaaggt
+     1741 ttaccaattg tgaatctcct gaaattggat gaaggagaaa caattcaaac tattatcaac
+     1801 gtggaacaag atcatagcca ggactcttat ctcttcttta caactcgtct tggggtagtc
+     1861 aagcgtacta gtgtggctga ttttgctaat attcgtcaga atggactcaa ggctttgaat
+     1921 ttgaaggatg aagacgagct gattaatgtt ttcctaactg atggagctgc tgatgttatt
+     1981 atcggaacaa aatttggtta ttctgttcgc ttcaatgaga cagctgttcg taacatgagt
+     2041 cgtattgcaa ctggtgtacg tggtgttaac ctaagagacg gtgaccaggt tgttggagca
+     2101 ggtgttgtgt ctgacaacga tgaagttctt gttattactg agaagggtta tggtaagcga
+     2161 actcttgcta gtgaatatcc gacaaaaggc cgtggtggta aagggattaa aacagctaat
+     2221 atcacagaaa aaaatggtcc tttagctggt ttaatgacag tcaatggtca agaagatctg
+     2281 atgatcataa ccaatactgg tgtaatcata cggaccagtg ttgcaaatat ttcacaaact
+     2341 ggtcgctcta caatgggtgt taaggttatg cgtcttgatc agaatgctca gattgttacc
+     2401 tttacaactg tagaagcaga tgataaagaa gagttgcaag acgagaagga gtaa
+//

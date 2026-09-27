@@ -1,0 +1,59 @@
+LOCUS       Smi_B6_tuf              1197 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Smi_B6 tuf SMI_RS04655 region of NC_013853.1.
+ACCESSION   NC_013853.1:875794-876990
+VERSION     NC_013853.1:875794-876990
+KEYWORDS    .
+SOURCE      Streptococcus mitis B6
+  ORGANISM  S. mitis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1197
+                     /gene="tuf"
+                     /locus_tag="SMI_RS04655"
+                     /old_locus_tag="smi_0922"
+     CDS             1..1197
+                     /gene="tuf"
+                     /locus_tag="SMI_RS04655"
+                     /old_locus_tag="smi_0922"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_014335040.1"
+                     /GO_function="GO:0005525 - GTP binding [Evidence IEA];
+                     GO:0003746 - translation elongation factor activity
+                     [Evidence IEA]"
+                     /GO_process="GO:0006414 - translational elongation
+                     [Evidence IEA]"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="elongation factor Tu"
+                     /protein_id="WP_001040725.1"
+                     /translation="MAKEKYDRSKPHVNIGTIGHVDHGKTTLTAAITTVLARRLPSSVN
+                     QPKDYASIDAAPEERERGITINTAHVEYETEKRHYAHIDAPGHADYVKNMITGAAQMDG
+                     AILVVASTDGPMPQTREHILLSRQVGVKHLIVFMNKVDLVDDEELLELVEMEIRDLLSE
+                     YDFPGDDLPVIQGSALKALEGDTKYEDIVMELMNTVDEYIPEPERDTDKPLLLPVEDVF
+                     SITGRGTVASGRIDRGIVKVNDEIEIVGIKEETQKAVVTGVEMFRKQLDEGLAGDNVGV
+                     LLRGIQRDEIERGQVIAKPGSINPHTKFKGEVYILTKEEGGRHTPFFNNYRPQFYFRTT
+                     DVTGSIELPAGTEMVMPGDNVTIDVELIHPIAVEQGTTFSIREGGRTVGSGMVTEIEA"
+ORIGIN
+        1 atggcaaaag aaaaatacga tcgtagtaaa ccacacgtta acattggtac tatcggacac
+       61 gttgaccacg gtaaaactac cctaactgca gctatcacaa ctgttttggc acgtcgcttg
+      121 ccttcatcag ttaaccaacc taaagactat gcgtctatcg atgctgctcc agaagaacgc
+      181 gaacgcggta tcactatcaa cactgcgcac gttgagtacg aaactgaaaa acgtcactac
+      241 gctcacatcg acgctccagg acacgcggac tacgttaaaa acatgatcac tggtgccgct
+      301 caaatggacg gtgctatcct tgtagtagct tcaactgacg gaccaatgcc acaaactcgt
+      361 gagcacatcc ttctttcacg tcaggttggt gttaaacacc ttatcgtctt catgaacaaa
+      421 gttgacttgg ttgacgacga agaattgctt gaattggttg aaatggaaat ccgtgaccta
+      481 ttgtcagaat atgacttccc aggtgacgat cttccagtta tccaaggttc agctcttaaa
+      541 gcccttgaag gtgacactaa atacgaagac atcgttatgg aattgatgaa cacagttgat
+      601 gagtacatcc cagaaccaga acgtgacact gacaaaccat tgcttcttcc agtcgaagac
+      661 gtattctcaa tcactggacg tggtacagtt gcttcaggac gtatcgaccg tggtatcgtt
+      721 aaagtcaacg acgaaatcga aatcgttggt atcaaagaag aaactcaaaa agcagttgtt
+      781 actggtgttg aaatgttccg taaacaactt gacgaaggtc ttgccggaga taacgtaggt
+      841 gtccttcttc gtggtattca acgtgacgaa atcgaacgtg gacaagttat cgctaaacca
+      901 ggttcaatca acccacacac taaattcaaa ggtgaagttt acatccttac taaagaagaa
+      961 ggtggacgtc acactccatt cttcaacaac taccgtccac aattctactt ccgtactact
+     1021 gacgttacag gttcaatcga acttccagca ggtactgaaa tggtaatgcc tggtgataac
+     1081 gtgacaatcg acgttgagtt gatccaccca atcgccgtag aacaaggtac tacattctct
+     1141 atccgtgaag gtggacgtac tgttggttca ggtatggtta cagaaatcga agcttaa
+//

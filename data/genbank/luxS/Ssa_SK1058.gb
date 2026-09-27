@@ -1,0 +1,38 @@
+LOCUS       Ssa_SK1058_luxS          483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_SK1058 luxS J1C83_RS08800 region of NZ_CP071422.1.
+ACCESSION   NZ_CP071422.1:1804597-1805079
+VERSION     NZ_CP071422.1:1804597-1805079
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..483
+                     /locus_tag="J1C83_RS08800"
+                     /old_locus_tag="J1C83_08710"
+     CDS             1..483
+                     /locus_tag="J1C83_RS08800"
+                     /old_locus_tag="J1C83_08710"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002893508.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_002893508.1"
+                     /translation="MSKEVIVESFELDHTIVKAPYVRLIGEETGPKGDIISNFDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAMLIRKRIDGMIDCSPFGCRTGFHMIMWGQHSSSQIAQVIK
+                     SCLEEIAESTSWEDVPGTTIESCGNYKDHSLFSAKEWAKLILSQGISDDAFERHVI"
+ORIGIN
+        1 atgtctaaag aagttatcgt tgaaagcttt gagctggatc acaccatcgt caaagcgcct
+       61 tatgtccgcc tcatcggaga ggaaactggc cctaaaggcg acatcatttc caattttgat
+      121 atccgtctgg ttcagccgaa tgaagattca atcccgacag ccggtctgca tactatcgag
+      181 catttgctgg ctatgttgat ccgcaagcgc attgatggta tgattgactg ctcgcctttt
+      241 ggctgccgca ctggttttca catgattatg tggggccaac acagctccag ccagattgct
+      301 caggtcatca aatcctgtct ggaagaaatc gctgagtcaa ctagctggga agatgtccct
+      361 ggaacaacca ttgaatcctg cggaaactac aaggatcaca gtctcttctc agccaaagaa
+      421 tgggctaagc tcattcttag ccaaggaatc tcagatgatg cctttgaacg ccatgtgatt
+      481 taa
+//

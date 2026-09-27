@@ -1,0 +1,38 @@
+LOCUS       Ssa_SK36_luxS            483 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Ssa_SK36 luxS SSA_RS09080 region of NC_009009.1.
+ACCESSION   NC_009009.1:1848938-1849420
+VERSION     NC_009009.1:1848938-1849420
+KEYWORDS    .
+SOURCE      Streptococcus sanguinis SK36
+  ORGANISM  S. sanguinis
+            .
+FEATURES             Location/Qualifiers
+     gene            1..483
+                     /locus_tag="SSA_RS09080"
+                     /old_locus_tag="SSA_1853"
+     CDS             1..483
+                     /locus_tag="SSA_RS09080"
+                     /old_locus_tag="SSA_1853"
+                     /EC_number="4.4.1.21"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_002893508.1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="S-ribosylhomocysteine lyase"
+                     /protein_id="WP_002905191.1"
+                     /translation="MSKEVVVESFELDHTIVKAPYVRLIGEETGPKGDIISNFDIRLVQ
+                     PNEDSIPTAGLHTIEHLLAMLIRKRIDGMIDCSPFGCRTGFHMIMWGQHSSSQIAQVIK
+                     SCLEEIAESTSWEDVPGTTIESCGNYKDHSLFSAKEWAKLILSQGISDDAFERHVI"
+ORIGIN
+        1 atgtctaaag aagttgtcgt tgaaagcttt gagctggatc acaccatcgt caaagcgcct
+       61 tacgttcgcc tcatcggaga ggaaactggc cctaaaggcg atatcatttc caattttgat
+      121 atccgtctgg ttcagcctaa tgaagattca atcccaactg ctggcctgca taccattgag
+      181 catttgctgg ccatgctgat tcgcaagcgc attgatggta tgattgactg ctcacctttt
+      241 ggctgccgca ctggttttca tatgattatg tgggggcaac acagctccag ccagattgct
+      301 caagtcatca aatcctgtct ggaagaaatc gctgagtcaa ctagctggga agatgtccct
+      361 ggaacaacca ttgaatcctg cggaaactac aaggatcaca gcctcttttc agccaaagaa
+      421 tgggctaaac ttattctcag ccaagggatc tctgacgatg cctttgaacg ccatgtgatt
+      481 taa
+//
