@@ -54,3 +54,21 @@ chosen and why.
   biological feature of levansucrases, not a data defect. "Extended" is now a warning
   only. The remaining exclusions (an ambiguous base in LP13 `gtfB`, a missing start codon
   in SK637 `recA`) are unchanged.
+
+## M2: composition
+
+- **Unit of replication = gene.** Per-strain values are averaged per gene within
+  *S. mutans* (9-10 strains), giving 6 virulence vs 8 control values. Treating strains as
+  independent observations would inflate the sample size (pseudo-replication).
+- **CAI reference set = ribosomal-protein genes of the same genome** (the classic Sharp &
+  Li choice of highly expressed genes), with a 0.5 pseudocount for codons absent from the
+  reference. CAI is computed with our own implementation (see `codon.py`, METHODS.md).
+- **16S rRNA is excluded from the coding comparisons** (codon metrics are undefined and
+  rRNA GC is not comparable with CDS GC). Its GC is reported in `m2_per_sequence.csv`.
+- **Per-gene GC skew is reported but interpreted cautiously.** Within a gene, GC skew mainly
+  reflects whether the gene lies on the leading or lagging replication strand, not the
+  gene's function.
+- **Multiple testing:** BH across the 4 primary metrics, and separately across the
+  20 amino acids.
+- **Other species** are tested the same way (`m2_tests_other_species.csv`) as a secondary
+  analysis. They have only 1-3 virulence orthologs each, so power is very low.

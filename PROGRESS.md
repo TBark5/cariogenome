@@ -1,6 +1,9 @@
 # PROGRESS
 
 ## Done
+- Phase 2 (M2): GC/GC3/GC skew/CAI per record, gene-level virulence vs control tests
+  (`results/m2_tests.csv`), amino-acid tests (BH over 20), RSCU table, genome
+  background, 5 figures `figures/m2_*.png`. Runtime ~17 s.
 - Phase 1 (M1): 22 complete genomes downloaded (cached in `data/raw`, git-ignored),
   RBH orthologs for the 14 coding genes + first 16S copy, QC (284/286 records pass),
   catalog `results/m1_catalog.csv`, presence matrix, GH70 family set, `ACCESSIONS.md`,
@@ -11,7 +14,7 @@
   (`src/cariogenome/plotting.py`).
 
 ## In progress
-- Phase 2 (M2 composition).
+- Phase 3 (M3 alignment and conservation).
 
 ## Next
 - Phases 2-10 as listed in the project brief.
