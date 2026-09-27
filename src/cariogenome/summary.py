@@ -6,7 +6,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 from .config import RESULTS
-from .plotting import CLASS_COLORS, OKABE_ITO, save
+from .plotting import (FS_ANNOT, LW_THICK, LW_THIN, NOT_SIGNIFICANT, SIGNIFICANT, W_PAIR,
+                       annotate_class_n, save)
 from .seqio import mode_tag
 
 TESTS = [
@@ -38,32 +39,36 @@ def effect_table() -> pd.DataFrame:
 
 
 def plot_forest(tab: pd.DataFrame) -> None:
-    fig, ax = plt.subplots(figsize=(10, 6.5))
+    """Every class comparison on one Cliff's delta axis."""
+    fig, ax = plt.subplots(figsize=(W_PAIR, 6.8))
     y = np.arange(len(tab))[::-1]
-    for yi, r in zip(y, tab.itertuples()):
+    for yi, r in zip(y, tab.itertuples(), strict=True):
         sig = r.q_bh < 0.05
-        col = OKABE_ITO["vermillion"] if sig else "#777777"
-        ax.plot([r.ci_low, r.ci_high], [yi, yi], color=col, lw=2)
+        col = SIGNIFICANT if sig else NOT_SIGNIFICANT
+        ax.plot([r.ci_low, r.ci_high], [yi, yi], color=col, lw=LW_THICK)
         ax.scatter(r.cliffs_delta, yi, color=col, s=45, zorder=3, marker="D" if sig else "o")
         ax.text(1.08, yi, f"q = {r.q_bh:.3f}" if np.isfinite(r.q_bh) else "q = n/a", va="center",
-                fontsize=8.5, color=col)
-    ax.axvline(0, color="black", lw=0.8)
-    ax.set_yticks(y, [f"{r.module}: {r.label}" for r in tab.itertuples()], fontsize=9)
+                fontsize=FS_ANNOT, color=col)
+    ax.axvline(0, color="black", lw=LW_THIN)
+    ax.set_yticks(y, [f"{r.module}: {r.label}" for r in tab.itertuples()])
     ax.set_xlim(-1.05, 1.05)
-    ax.set_xlabel("Cliff's delta (virulence vs housekeeping genes), 95% bootstrap CI")
-    ax.text(-1.0, len(tab) - 0.2, "lower in virulence genes", fontsize=8, color=CLASS_COLORS["control"])
-    ax.text(1.0, len(tab) - 0.2, "higher in virulence genes", fontsize=8, ha="right",
-            color=CLASS_COLORS["virulence"])
+    ax.set_xlabel("Cliff's delta, virulence-associated vs housekeeping (95% bootstrap CI)")
+    ax.text(-1.0, len(tab) - 0.2, "lower in virulence-associated genes", fontsize=FS_ANNOT)
+    ax.text(1.0, len(tab) - 0.2, "higher in virulence-associated genes", fontsize=FS_ANNOT,
+            ha="right")
     ax.set_ylim(-0.7, len(tab) + 0.2)
-    n = f"{int(tab['n_virulence'].iloc[0])} virulence vs {int(tab['n_control'].iloc[0])} control genes"
-    ax.set_title(f"All virulence-vs-control comparisons in S. mutans ({n})\n"
-                 "red diamond = BH q < 0.05 within its module; grey = not significant" + mode_tag(),
-                 fontsize=10.5)
+    ax.scatter([], [], marker="D", color=SIGNIFICANT, label="BH q < 0.05 (within its module)")
+    ax.scatter([], [], marker="o", color=NOT_SIGNIFICANT, label="not significant")
+    ax.legend(loc="lower left", bbox_to_anchor=(0, -0.2), ncol=2)
+    ax.set_title("All virulence-vs-housekeeping comparisons in S. mutans" + mode_tag())
+    annotate_class_n(fig, y=-0.06)
     save(fig, "summary_effect_sizes")
 
 
 def run() -> pd.DataFrame:
+    """Build the effect-size table and the forest plot."""
     tab = effect_table()
     plot_forest(tab)
-    print(tab[["module", "label", "cliffs_delta", "ci_low", "ci_high", "q_bh"]].round(3).to_string(index=False))
+    cols = ["module", "label", "cliffs_delta", "ci_low", "ci_high", "q_bh"]
+    print(tab[cols].round(3).to_string(index=False))
     return tab

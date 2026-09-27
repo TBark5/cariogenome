@@ -1,12 +1,12 @@
 step	seconds
-M1 retrieval and QC	74.7
-M2 composition	11.9
-M3 alignment and conservation	35.0
-M4 phylogenetics	21.9
+M1 retrieval and QC	78.1
+M2 composition	15.9
+M3 alignment and conservation	36.5
+M4 phylogenetics	21.8
 M5 selection (dN/dS)	9.0
 Synthetic recovery validation	3.8
-M6 motifs	2.3
-M7 structure	2.8
+M6 motifs	2.6
+M7 structure	3.5
 Summary	0.4
 Captions	0.0
-TOTAL	161.7
+TOTAL	171.5

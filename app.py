@@ -8,13 +8,17 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 
-from cariogenome.captions import CAPTIONS  # noqa: E402
-from cariogenome.config import FIGURES, RESULTS, all_genes, coding_genes, gene_class  # noqa: E402
+from cariogenome.captions import CAPTIONS
+from cariogenome.config import RESULTS, all_genes, gene_class
+from cariogenome.m4_figures import draw_tree
+from cariogenome.m4_phylogeny import load_tree
+from cariogenome.plotting import W_SINGLE, figure_path
 
 st.set_page_config(page_title="CARIOGENOME", page_icon=":material/biotech:", layout="wide")
 
@@ -26,16 +30,12 @@ def csv(name: str, index_col: int | None = None) -> pd.DataFrame:
 
 
 def figure(name: str) -> None:
-    """Show a saved figure with its caption."""
-    path = FIGURES / f"{name}.png"
+    """Show a registered figure (figures/NN_<name>.png) with its caption."""
+    path = figure_path(name)
     if path.exists():
-        st.image(str(path), caption=CAPTIONS.get(name, ""), width="stretch")
+        st.image(str(path), caption=CAPTIONS[name], width="stretch")
     else:
-        st.info(f"Figure {name}.png not found; run `python run_all.py`.")
-
-
-def pct(x: float) -> str:
-    return f"{x:.3f}"
+        st.info(f"Figure {path.name} not found; run `python run_all.py`.")
 
 
 if not (RESULTS / "m1_catalog.csv").exists():
@@ -119,9 +119,6 @@ with tabs[3]:
         figure(name)
 
 with tabs[4]:
-    import matplotlib.pyplot as plt
-    from cariogenome.m4_figures import draw_tree
-    from cariogenome.m4_phylogeny import load_tree
     disc = csv("m4_discordance.csv").set_index("gene")
     d = disc.loc[gene]
     with st.container(horizontal=True):
@@ -132,14 +129,15 @@ with tabs[4]:
         st.metric("Supported conflicting splits", int(d.n_supported_conflicts), border=True)
     method = st.segmented_control("Tree method", ["nj", "upgma"], default="nj", key="method",
                                   format_func=str.upper)
-    fig, ax = plt.subplots(figsize=(8, 0.32 * d.n_taxa + 1.5))
+    fig, ax = plt.subplots(figsize=(W_SINGLE, 0.32 * d.n_taxa + 1.5))
     draw_tree(ax, load_tree(f"{gene}_{method or 'nj'}"), f"{gene} {(method or 'nj').upper()} tree")
     st.pyplot(fig, width="content")
     plt.close(fig)
     conf = csv("m4_conflicts.csv")
     st.dataframe(conf[conf["gene"] == gene], hide_index=True)
     st.dataframe(csv("m4_tests.csv").round(4), hide_index=True)
-    for name in ["m4_reference_tree", "m4_discordance", "m4_tanglegrams"]:
+    for name in ["m4_reference_tree", "m4_gene_trees_virulence", "m4_gene_trees_controls",
+                 "m4_discordance", "m4_tanglegrams"]:
         figure(name)
 
 with tabs[5]:
@@ -178,7 +176,7 @@ with tabs[6]:
         st.info("M6 needs the real GtfC sequence and is skipped for synthetic data.")
 
 with tabs[7]:
-    html = FIGURES / "m7_structure_conservation.html"
+    html = figure_path("m7_structure_3d", "html")
     if html.exists():
         summ7 = csv("m7_summary.csv").iloc[0]
         with st.container(horizontal=True):
@@ -186,8 +184,10 @@ with tabs[7]:
             st.metric("Residues scored", int(summ7.n_residues_scored), border=True)
             st.metric("Spearman rho (conservation vs distance)",
                       f"{summ7.spearman_rho_conservation_vs_distance:.2f}", border=True)
-        st.caption(CAPTIONS["m7_structure_conservation"])
-        st.iframe(html, height=680)
+        st.caption("Interactive view (self-contained; works offline). "
+                   + CAPTIONS["m7_structure_3d"])
+        st.iframe(html, height=720)
+        figure("m7_structure_3d")
         figure("m7_structure_conservation_map")
         figure("m7_ramachandran")
     else:

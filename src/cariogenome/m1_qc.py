@@ -11,16 +11,12 @@ domains), not a broken record. See DECISIONS.md.
 """
 from __future__ import annotations
 
-import numpy as np
 import pandas as pd
 from Bio.Seq import Seq
-import matplotlib.pyplot as plt
-from matplotlib.colors import ListedColormap
 
 from .config import GENES_DIR, ROOT, RESULTS, all_genes, gene_class, genomes, load_config
 from .entrez_client import download_log
-from .plotting import CLASS_COLORS, OKABE_ITO, SPECIES_COLORS, save
-from .seqio import CATALOG, mode_tag, read_fasta
+from .seqio import CATALOG, read_fasta
 
 STARTS = {"ATG", "GTG", "TTG"}
 STOPS = {"TAA", "TAG", "TGA"}
@@ -107,59 +103,6 @@ def qc_summary(cat: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def plot_presence(mat: pd.DataFrame) -> None:
-    """Heatmap of ortholog presence (included / excluded / absent) across genomes."""
-    fig, ax = plt.subplots(figsize=(11, 5.2))
-    cmap = ListedColormap(["#F2F2F2", OKABE_ITO["yellow"], OKABE_ITO["blue"]])
-    ax.imshow(mat.values, cmap=cmap, vmin=0, vmax=2, aspect="auto")
-    ax.set_xticks(range(mat.shape[1]), mat.columns, rotation=60, ha="right", fontsize=8)
-    ax.set_yticks(range(mat.shape[0]), mat.index)
-    n_vir = len(load_config()["genes"]["virulence"])
-    ax.axhline(n_vir - 0.5, color="black", lw=1)
-    ax.set_xticks(np.arange(-0.5, mat.shape[1]), minor=True)
-    ax.set_yticks(np.arange(-0.5, mat.shape[0]), minor=True)
-    ax.grid(which="minor", color="white", lw=1)
-    ax.tick_params(which="minor", length=0)
-    for lab in ax.get_xticklabels():
-        sp = next(g.species for g in genomes() if g.label == lab.get_text())
-        lab.set_color(SPECIES_COLORS.get(sp, "black"))
-    handles = [plt.Rectangle((0, 0), 1, 1, color=c) for c in cmap.colors[::-1]]
-    ax.legend(handles, ["ortholog, passed QC", "ortholog, excluded by QC", "no ortholog (RBH)"],
-              loc="upper left", bbox_to_anchor=(1.01, 1))
-    ax.set_title("Reciprocal-best-hit orthologs of the UA159 gene panel\n(red labels = virulence-associated, blue = housekeeping controls)" + mode_tag())
-    for lab in ax.get_yticklabels():
-        cls = "virulence" if lab.get_text() in load_config()["genes"]["virulence"] else "control"
-        lab.set_color(CLASS_COLORS[cls])
-    save(fig, "m1_presence_absence")
-
-
-def plot_lengths(cat: pd.DataFrame) -> None:
-    """Length of every record relative to UA159, with the QC acceptance band."""
-    genes = [g for g in all_genes() if g in set(cat["gene"])]
-    fig, ax = plt.subplots(figsize=(11, 4.5))
-    cfg = load_config()["qc"]
-    ax.axhspan(cfg["min_length_fraction"], cfg["max_length_fraction"], color="#EEEEEE", zorder=0)
-    rng = np.random.default_rng(0)
-    for i, gene in enumerate(genes):
-        sub = cat[cat["gene"] == gene]
-        x = i + rng.uniform(-0.18, 0.18, len(sub))
-        colors = [SPECIES_COLORS.get(s, "grey") for s in sub["species"]]
-        ax.scatter(x, sub["length_ratio_to_UA159"], c=colors, s=22,
-                   marker="o", edgecolor="none", alpha=0.9)
-        bad = sub[~sub["included"]]
-        ax.scatter(x[~sub["included"].values], bad["length_ratio_to_UA159"], marker="x",
-                   color="black", s=40, lw=1.2)
-        ax.text(i, ax.get_ylim()[0], f"n={int(sub['included'].sum())}", ha="center",
-                va="bottom", fontsize=7)
-    ax.set_xticks(range(len(genes)), genes, rotation=45, ha="right")
-    ax.set_ylabel("Length / UA159 length")
-    ax.set_title("Record length QC (grey band = expected range; x = excluded)" + mode_tag())
-    for sp, c in SPECIES_COLORS.items():
-        ax.scatter([], [], color=c, label=sp)
-    ax.legend(loc="upper left", bbox_to_anchor=(1.01, 1))
-    save(fig, "m1_length_qc")
-
-
 def write_accessions(cat: pd.DataFrame, fam: pd.DataFrame | None = None) -> None:
     """Write ACCESSIONS.md: every genome, gene record and structure used, with access dates."""
     from .m1_retrieval import genome_meta
@@ -204,7 +147,7 @@ def run(force_synthetic: bool = False, offline: bool = False) -> pd.DataFrame:
     per-gene cache in data/genes (``offline``, or when NCBI is unreachable); (3) SYNTHETIC
     data if neither is available, so a failed download never blocks the project.
     """
-    from . import m1_retrieval, synthetic
+    from . import m1_figures, m1_retrieval, synthetic
     from .entrez_client import ncbi_reachable
     from .seqio import MODE_FILE
     RESULTS.mkdir(parents=True, exist_ok=True)
@@ -234,12 +177,13 @@ def run(force_synthetic: bool = False, offline: bool = False) -> pd.DataFrame:
         source = "simulation (synthetic.py)"
     print(f"  M1 data source: {source}")
     MODE_FILE.write_text(mode + "\n")
+    assert hits is not None and fam is not None  # every branch above sets both
     fam.to_csv(RESULTS / "m1_gtf_family.csv", index=False)
     cat = build_catalog(hits)
     mat = presence_matrix(cat)
     summary = qc_summary(cat)
-    plot_presence(mat)
-    plot_lengths(cat)
+    m1_figures.plot_presence(mat)
+    m1_figures.plot_lengths(cat)
     if source.startswith("raw"):  # ACCESSIONS.md needs the raw genome metadata
         write_accessions(cat, fam)
     print(f"  M1 [{mode}]: {int(cat['included'].sum())}/{len(cat)} records pass QC")
