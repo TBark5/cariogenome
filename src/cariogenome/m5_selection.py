@@ -18,7 +18,7 @@ import pandas as pd
 from .config import RESULTS, coding_genes, gene_class, housekeeping_genes, load_config, rng, virulence_genes
 from .dnds import PooledNG86, bootstrap_totals, omega_from_totals
 from .seqio import read_fasta, species_map
-from .stats import benjamini_hochberg, compare_table
+from .stats import benjamini_hochberg, compare_groups, compare_table
 
 ALN_DIR = RESULTS / "alignments"
 FOCAL = "S. mutans"
@@ -130,6 +130,19 @@ def sliding_windows(models: dict, n_boot: int = 200) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def replication(within: pd.DataFrame, n_boot: int) -> pd.DataFrame:
+    """Virulence-homolog vs control omega within each species (does the pattern replicate?)."""
+    rows = []
+    for i, (species, sub) in enumerate(within.groupby("species", sort=False)):
+        sub = sub.dropna(subset=["omega"])
+        vir, ctl = sub[sub["class"] == "virulence"], sub[sub["class"] == "control"]
+        if len(vir) < 2 or len(ctl) < 2:
+            continue
+        res = compare_groups(vir["omega"].values, ctl["omega"].values, rng(950 + i), n_boot)
+        rows.append({"species": species, "virulence_genes_present": ";".join(vir["gene"]), **res})
+    return pd.DataFrame(rows)
+
+
 def run() -> dict[str, pd.DataFrame]:
     """Run all selection analyses, tests and figures."""
     from . import m5_figures
@@ -144,6 +157,8 @@ def run() -> dict[str, pd.DataFrame]:
     smu.to_csv(RESULTS / "m5_dnds_Smutans.csv", index=False)
     tests = compare_table(smu, ["omega", "dN", "dS"], rng(7), n_boot=cfg["bootstrap"]["stats_replicates"])
     tests.to_csv(RESULTS / "m5_tests.csv", index=False)
+    rep = replication(within, cfg["bootstrap"]["stats_replicates"])
+    rep.to_csv(RESULTS / "m5_replication_by_species.csv", index=False)
     per_gene = gene_vs_controls(models, n_boot)
     per_gene.to_csv(RESULTS / "m5_gene_vs_controls.csv", index=False)
     windows = sliding_windows(models)
@@ -153,5 +168,7 @@ def run() -> dict[str, pd.DataFrame]:
     print(tests[["metric", "median_virulence", "median_control", "cliffs_delta", "delta_ci_low",
                  "delta_ci_high", "q_bh"]].round(4).to_string(index=False))
     print(per_gene.round(4).to_string(index=False))
+    print(rep[["species", "virulence_genes_present", "median_virulence", "median_control",
+               "cliffs_delta", "delta_ci_low", "delta_ci_high", "p_mannwhitney"]].round(3).to_string(index=False))
     print("between-species saturated:", int(between["saturated"].sum()), "of", len(between))
     return {"smutans": smu, "tests": tests, "per_gene": per_gene, "between": between}

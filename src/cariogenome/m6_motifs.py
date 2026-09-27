@@ -152,7 +152,8 @@ def run() -> dict[str, pd.DataFrame]:
                "fraction_invariant_columns": ranks.attrs["frac_invariant"],
                "p_all_three_invariant_by_chance": ranks.attrs["frac_invariant"] ** 3}
     pd.DataFrame([summary]).to_csv(RESULTS / "m6_summary.csv", index=False)
-    m6_figures.plot_all(cons, ranks, motifs, pwms, len(msa))
+    n_species = len({k.split("_")[0] for k in msa})
+    m6_figures.plot_all(cons, ranks, motifs, pwms, len(msa), n_species)
     print(check.to_string(index=False))
     print(ranks.round(3).to_string(index=False))
     print(motifs[["motif", "start", "end", "mean_conservation", "GtfC_sequence", "catalytic_residues_inside"]].to_string(index=False))

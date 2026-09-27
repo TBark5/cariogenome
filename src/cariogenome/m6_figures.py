@@ -47,29 +47,31 @@ def draw_logo(ax, freq: pd.DataFrame, title: str, highlight: int | None = None) 
     ax.set_title(title, fontsize=9)
 
 
-def plot_map(cons: pd.DataFrame, ranks: pd.DataFrame, motifs: pd.DataFrame, n: int) -> None:
+def plot_map(cons: pd.DataFrame, ranks: pd.DataFrame, motifs: pd.DataFrame, n: int,
+             n_species: int) -> None:
     c = cons.dropna(subset=["ref_position"])
     fig, ax = plt.subplots(figsize=(14, 4.2))
     ax.plot(c["ref_position"], c["conservation"], color="#BBBBBB", lw=0.5)
     sm = c.set_index("ref_position")["conservation"].rolling(15, center=True, min_periods=5).mean()
     ax.plot(sm.index, sm.values, color=OKABE_ITO["blue"], lw=1.3, label="15-residue running mean")
     ax.axvspan(250, 1050, color=OKABE_ITO["sky"], alpha=0.08, label="catalytic region (UniProt P13470, approx.)")
-    for m in motifs.itertuples():
+    for k, m in enumerate(motifs.sort_values("start").itertuples()):
         ax.axvspan(m.start, m.end, color=OKABE_ITO["green"], alpha=0.35, lw=0)
-        ax.text((m.start + m.end) / 2, 1.07, m.motif, ha="center", fontsize=7, color=OKABE_ITO["green"])
-    for r in ranks.itertuples():
-        ax.axvline(r.position, color=OKABE_ITO["vermillion"], lw=1)
-        ax.text(r.position, -0.12, f"{r.residue}{r.position}", ha="center", fontsize=7.5,
-                color=OKABE_ITO["vermillion"], rotation=0)
-    ax.set_ylim(-0.18, 1.12)
+        ax.text((m.start + m.end) / 2, 1.05 + 0.06 * (k % 2), m.motif, ha="center", fontsize=7,
+                color=OKABE_ITO["green"])
+    for k, r in enumerate(ranks.itertuples()):
+        ax.axvline(r.position, color=OKABE_ITO["vermillion"], lw=1, ymax=0.9)
+        ax.text(r.position, 0.02 + 0.08 * k, f" {r.residue}{r.position}", ha="left", fontsize=7.5,
+                color=OKABE_ITO["vermillion"], fontweight="bold")
+    ax.set_ylim(0, 1.16)
     ax.set_xlim(0, c["ref_position"].max())
     ax.set_xlabel("Residue position in S. mutans UA159 GtfC")
     ax.set_ylabel("conservation (1 - H / log2 20)")
     ax.plot([], [], color=OKABE_ITO["vermillion"], label="catalytic residues (Ito et al. 2011)")
     ax.fill_between([], [], color=OKABE_ITO["green"], alpha=0.35, label="top-6 conserved 10-residue motifs")
-    ax.legend(loc="lower left", fontsize=7.5, ncol=2)
-    ax.set_title(f"Glucansucrase (GH70) family conservation mapped on GtfC (n={n} sequences, 4 "
-                 "species)" + mode_tag(), fontsize=10.5)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.14), fontsize=7.5, ncol=4)
+    ax.set_title(f"Glucansucrase (GH70) family conservation mapped on GtfC (n={n} sequences, "
+                 f"{n_species} species)" + mode_tag(), fontsize=10.5)
     save(fig, "m6_gtf_family_conservation")
 
 
@@ -93,7 +95,7 @@ def plot_logos(pwms: dict[str, pd.DataFrame], n: int) -> None:
     save(fig, "m6_motif_logos")
 
 
-def plot_all(cons, ranks, motifs, pwms, n) -> None:
+def plot_all(cons, ranks, motifs, pwms, n, n_species) -> None:
     """Draw every M6 figure."""
-    plot_map(cons, ranks, motifs, n)
+    plot_map(cons, ranks, motifs, n, n_species)
     plot_logos(pwms, n)
