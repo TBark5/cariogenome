@@ -7,3 +7,5 @@ data/raw/
 .streamlit/secrets.toml
 *.log
 .fc/
+.mypy_cache/
+.ruff_cache/

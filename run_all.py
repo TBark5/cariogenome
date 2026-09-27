@@ -33,6 +33,8 @@ def main() -> int:
     args = parse_args()
     if args.out is not None:
         os.environ["CARIOGENOME_OUT"] = str(args.out.resolve())
+    if args.offline:
+        os.environ["CARIOGENOME_OFFLINE"] = "1"  # every network call now raises OfflineError
     sys.path.insert(0, str(ROOT / "src"))
     warnings.filterwarnings("ignore", category=RuntimeWarning)
     from cariogenome import (captions, m1_qc, m2_composition, m3_conservation, m4_phylogeny,

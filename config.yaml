@@ -1,9 +1,10 @@
 # CARIOGENOME configuration. All analysis parameters live here.
 
 ncbi:
-  # NCBI asks every E-utilities user to identify themselves with an email address.
-  # Replace with your own reachable address if you re-download the data.
-  email: "85648885+TBark5@users.noreply.github.com"
+  # NCBI requires every E-utilities user to give a contact email address.
+  # Leave this placeholder in git and set the NCBI_EMAIL environment variable instead,
+  # or replace it locally. Downloads stop with a clear error while the placeholder is set.
+  email: "REPLACE_WITH_YOUR_EMAIL"
   request_delay_s: 0.5     # >= 0.34 s keeps us under 3 requests/s without an API key
   max_retries: 5
 

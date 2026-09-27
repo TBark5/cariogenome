@@ -1,22 +1,56 @@
 """Polite, cached access to NCBI Entrez and to the RCSB/UniProt web services.
 
 Every download is written to ``data/raw`` and logged with its access date, so a second
-run never touches the network.
+run never touches the network. Setting ``CARIOGENOME_OFFLINE=1`` (``run_all.py --offline``)
+forbids all network access: cached files are still used, anything else raises
+``OfflineError``.
 """
 from __future__ import annotations
 
 import json
+import os
 import time
 import urllib.request
+from collections.abc import Callable
 from datetime import date
 from pathlib import Path
+from typing import TypeVar
 
 from Bio import Entrez
 
 from .config import RAW, load_config
 
 LOG_PATH = RAW / "download_log.json"
+EMAIL_PLACEHOLDER = "REPLACE_WITH_YOUR_EMAIL"
 _last_request = [0.0]
+T = TypeVar("T")
+
+
+class OfflineError(RuntimeError):
+    """Raised when a download is needed but offline mode is on."""
+
+
+def offline() -> bool:
+    """True if network access is disabled (``CARIOGENOME_OFFLINE=1``)."""
+    return os.environ.get("CARIOGENOME_OFFLINE", "") == "1"
+
+
+def contact_email() -> str:
+    """NCBI contact email: ``NCBI_EMAIL`` environment variable, else ``config.yaml``.
+
+    NCBI requires every E-utilities user to identify themselves. The committed config
+    holds a placeholder, so a real address must be supplied before downloading.
+    """
+    email = os.environ.get("NCBI_EMAIL") or load_config()["ncbi"]["email"]
+    if not email or email == EMAIL_PLACEHOLDER or "@" not in email:
+        raise ValueError(
+            "No NCBI contact email is set. NCBI requires one for downloads. Set the "
+            "environment variable NCBI_EMAIL (for example `set NCBI_EMAIL=you@example.org` "
+            "on Windows or `export NCBI_EMAIL=you@example.org` on macOS/Linux), or replace "
+            f"{EMAIL_PLACEHOLDER!r} in config.yaml. Alternatively run `python run_all.py "
+            "--offline` to use the committed sequence cache without downloading."
+        )
+    return email
 
 
 def _log(key: str, info: dict) -> None:
@@ -41,14 +75,18 @@ def _throttle() -> None:
     _last_request[0] = time.time()
 
 
-def _with_retries(func, *args, **kwargs):
+def _with_retries(func: Callable[[], T]) -> T:
     """Call ``func`` with exponential backoff on HTTP 429/5xx and network errors."""
+    if offline():
+        raise OfflineError("offline mode: network access is disabled")
     retries = load_config()["ncbi"]["max_retries"]
     for attempt in range(retries):
         try:
             _throttle()
-            return func(*args, **kwargs)
-        except Exception as exc:  # urllib raises several unrelated exception types
+            return func()
+        # urllib and http.client raise several unrelated types (URLError, HTTPError,
+        # IncompleteRead, timeouts); every failure is reported and retried, then re-raised.
+        except Exception as exc:
             if attempt == retries - 1:
                 raise
             pause = 2.0 * (attempt + 1)
@@ -59,17 +97,19 @@ def _with_retries(func, *args, **kwargs):
 
 def fetch_genome(accession: str) -> Path:
     """Download a complete GenBank record (with sequence) unless it is already cached."""
-    Entrez.email = load_config()["ncbi"]["email"]
     path = RAW / f"{accession}.gb"
     if path.exists() and path.stat().st_size > 1000:
         return path
+    if offline():
+        raise OfflineError(f"offline mode: {accession} is not in the local cache")
+    Entrez.email = contact_email()
 
     def _get() -> str:
         handle = Entrez.efetch(db="nuccore", id=accession, rettype="gbwithparts", retmode="text")
         text = handle.read()
         handle.close()
         if not text.startswith("LOCUS"):
-            raise IOError(f"unexpected response for {accession}")
+            raise OSError(f"unexpected response for {accession}")
         return text
 
     text = _with_retries(_get)
@@ -99,10 +139,12 @@ def fetch_url(url: str, filename: str, source: str) -> Path:
 
 
 def ncbi_reachable(timeout: float = 10.0) -> bool:
-    """True if the NCBI E-utilities endpoint answers."""
+    """True if the NCBI E-utilities endpoint answers (always False in offline mode)."""
+    if offline():
+        return False
     try:
         url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi"
         with urllib.request.urlopen(url, timeout=timeout) as resp:
-            return resp.status == 200
-    except Exception:
+            return bool(resp.status == 200)
+    except OSError:  # URLError, HTTPError and socket timeouts are all OSError subclasses
         return False

@@ -18,7 +18,7 @@ from Bio.SeqUtils import seq1
 from scipy.stats import spearmanr
 
 from .alignment import pairwise
-from .config import FIGURES, GENES_DIR, RESULTS, STRUCT_DIR, load_config, rng
+from .config import GENES_DIR, RESULTS, STRUCT_DIR, load_config, rng
 from .entrez_client import fetch_url
 from .m6_motifs import CATALYTIC, GTFC_ID
 from .seqio import read_fasta
@@ -40,7 +40,7 @@ def get_structure() -> tuple[str, object]:
         except Exception as exc:
             committed = STRUCT_DIR / f"{pid}_chainA.pdb"
             if committed.exists():  # offline: use the committed chain-A copy
-                print(f"  RCSB unreachable ({exc}); using committed {committed.name}")
+                print(f"  RCSB download not available ({exc}); using committed {committed.name}")
                 return pid, PDBParser(QUIET=True).get_structure(pid, str(committed))[0]["A"]
             print(f"  could not fetch {pid}: {exc}")
             continue
@@ -59,7 +59,7 @@ def residue_table(chain, cons: pd.DataFrame, gtfc: str) -> pd.DataFrame:
     seq = "".join(seq1(r.get_resname()) for r in res)
     g_chain, g_ref, _ = pairwise(seq, gtfc, "aa")
     mapping, i, j = {}, 0, 0
-    for a, b in zip(g_chain, g_ref):
+    for a, b in zip(g_chain, g_ref, strict=True):
         if a != "-" and b != "-":
             mapping[i] = j + 1
         i += a != "-"
@@ -85,7 +85,7 @@ def ramachandran(chain) -> pd.DataFrame:
     """phi/psi (degrees) for every residue with both angles defined."""
     rows = []
     for pp in PPBuilder().build_peptides(chain):
-        for r, (phi, psi) in zip(pp, pp.get_phi_psi_list()):
+        for r, (phi, psi) in zip(pp, pp.get_phi_psi_list(), strict=True):
             if phi is None or psi is None:
                 continue
             name = r.get_resname()
@@ -103,7 +103,7 @@ def ramachandran(chain) -> pd.DataFrame:
 def write_conservation_pdb(pid: str, table: pd.DataFrame) -> str:
     """Chain A with B-factor = conservation x 100 (-1 where unscored); returns PDB text."""
     struct = PDBParser(QUIET=True).get_structure(pid, str(STRUCT_DIR / f"{pid}_chainA.pdb"))
-    score = dict(zip(table["pdb_resnum"], table["conservation"]))
+    score = dict(zip(table["pdb_resnum"], table["conservation"], strict=True))
     for r in struct[0]["A"]:
         v = score.get(r.id[1], np.nan)
         for a in r:
