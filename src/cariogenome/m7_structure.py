@@ -38,6 +38,10 @@ def get_structure() -> tuple[str, object]:
         try:
             path = fetch_url(f"https://files.rcsb.org/download/{pid}.pdb", f"{pid}.pdb", "RCSB PDB")
         except Exception as exc:
+            committed = STRUCT_DIR / f"{pid}_chainA.pdb"
+            if committed.exists():  # offline: use the committed chain-A copy
+                print(f"  RCSB unreachable ({exc}); using committed {committed.name}")
+                return pid, PDBParser(QUIET=True).get_structure(pid, str(committed))[0]["A"]
             print(f"  could not fetch {pid}: {exc}")
             continue
         struct = PDBParser(QUIET=True).get_structure(pid, str(path))

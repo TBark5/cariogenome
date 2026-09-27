@@ -41,7 +41,8 @@ def build_view(pdb_text: str, width: int = 900, height: int = 600) -> py3Dmol.vi
 
 def write_html(pdb_text: str, pid: str) -> None:
     """Stand-alone interactive HTML page (open in any browser)."""
-    html = build_view(pdb_text)._make_html()
+    view = build_view(pdb_text)
+    html = view._make_html().replace(str(view.uniqueid), "cariogenome3d")  # deterministic file
     legend = (f"<p style='font-family:sans-serif'><b>{pid} chain A (S. mutans GtfC)</b>: cartoon "
               "colored by GH70-family conservation (viridis: purple = variable, yellow = "
               "invariant; grey = not scored). Magenta sticks = catalytic residues D477, E515, "

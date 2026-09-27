@@ -107,7 +107,7 @@ def plot_tanglegram(gene: str, ax_pair) -> None:
     y1 = draw_tree(ax_pair[0], ref, f"reference (housekeeping), n={len(keep)}", fontsize=6.5)
     y2 = draw_tree(ax_pair[1], gt, f"{gene} gene tree, n={len(keep)}", mirror=True, fontsize=6.5)
     fig = ax_pair[0].figure
-    for name in keep:
+    for name in sorted(keep):
         p1 = fig.transFigure.inverted().transform(ax_pair[0].transData.transform((ax_pair[0].get_xlim()[1], y1[name])))
         p2 = fig.transFigure.inverted().transform(ax_pair[1].transData.transform((ax_pair[1].get_xlim()[0], y2[name])))
         fig.add_artist(plt.Line2D([p1[0], p2[0]], [p1[1], p2[1]], transform=fig.transFigure,

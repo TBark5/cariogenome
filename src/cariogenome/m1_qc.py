@@ -197,25 +197,42 @@ def write_accessions(cat: pd.DataFrame, fam: pd.DataFrame | None = None) -> None
     (ROOT / "ACCESSIONS.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def run(force_synthetic: bool = False) -> pd.DataFrame:
-    """Run M1 end to end. Falls back to simulated data if NCBI cannot be used."""
+def run(force_synthetic: bool = False, offline: bool = False) -> pd.DataFrame:
+    """Run M1 end to end.
+
+    Order of preference: (1) raw genome cache or live NCBI download; (2) the committed
+    per-gene cache in data/genes (``offline``, or when NCBI is unreachable); (3) SYNTHETIC
+    data if neither is available, so a failed download never blocks the project.
+    """
     from . import m1_retrieval, synthetic
     from .entrez_client import ncbi_reachable
     from .seqio import MODE_FILE
     RESULTS.mkdir(parents=True, exist_ok=True)
-    mode, fam = "REAL", None
-    cached = all((m1_retrieval.PARSED / f"{g.accession}.pkl").exists() for g in genomes())
-    if force_synthetic or not (cached or ncbi_reachable()):
+    hits_file, fam_file = GENES_DIR / "panel_hits.csv", GENES_DIR / "gtf_family.csv"
+    raw_cached = all((m1_retrieval.PARSED / f"{g.accession}.pkl").exists() for g in genomes())
+    mode, source, hits, fam = "REAL", "", None, None
+    if force_synthetic:
         mode = "SYNTHETIC"
-    else:
+    elif not offline and (raw_cached or ncbi_reachable()):
         try:
             hits = m1_retrieval.extract_panel()
             fam = m1_retrieval.extract_gtf_family()
-        except Exception as exc:  # any network or parsing failure triggers the fallback
-            print(f"  NCBI retrieval failed ({exc}); switching to SYNTHETIC data")
+            hits.to_csv(hits_file, index=False)
+            fam.to_csv(fam_file, index=False)
+            source = "raw genome cache / NCBI"
+        except Exception as exc:  # any network or parsing failure falls through
+            print(f"  NCBI retrieval failed ({exc})")
+    if mode == "REAL" and hits is None:
+        if hits_file.exists() and fam_file.exists():
+            hits, fam = pd.read_csv(hits_file), pd.read_csv(fam_file)
+            source = "committed data/genes cache"
+        else:
+            print("  no NCBI access and no cached sequences; switching to SYNTHETIC data")
             mode = "SYNTHETIC"
     if mode == "SYNTHETIC":
         hits, fam = synthetic.generate_dataset()
+        source = "simulation (synthetic.py)"
+    print(f"  M1 data source: {source}")
     MODE_FILE.write_text(mode + "\n")
     fam.to_csv(RESULTS / "m1_gtf_family.csv", index=False)
     cat = build_catalog(hits)
@@ -223,7 +240,7 @@ def run(force_synthetic: bool = False) -> pd.DataFrame:
     summary = qc_summary(cat)
     plot_presence(mat)
     plot_lengths(cat)
-    if mode == "REAL":
+    if source.startswith("raw"):  # ACCESSIONS.md needs the raw genome metadata
         write_accessions(cat, fam)
     print(f"  M1 [{mode}]: {int(cat['included'].sum())}/{len(cat)} records pass QC")
     print(summary[["n_found", "n_included", "n_species"]].to_string())

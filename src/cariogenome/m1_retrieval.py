@@ -7,6 +7,7 @@ in ``data/genes`` (FASTA) and ``data/genbank`` (GenBank slice of the source reco
 from __future__ import annotations
 
 import gzip
+import io
 import json
 import re
 from pathlib import Path
@@ -178,7 +179,8 @@ def _save_genome_sets(g: Genome, df: pd.DataFrame, is_representative: bool) -> N
         for r in ribo.itertuples():
             fh.write(f">{r.locus_tag} {r.product}\n{r.nt}\n")
     if is_representative:
-        with gzip.open(GENOMES_DIR / f"{g.label}_cds.fna.gz", "wt") as fh:
+        gz = gzip.GzipFile(GENOMES_DIR / f"{g.label}_cds.fna.gz", "wb", mtime=0)  # no timestamp
+        with io.TextIOWrapper(gz, newline="\n") as fh:
             for r in cds.itertuples():
                 fh.write(f">{r.locus_tag} {r.product}\n{r.nt}\n")
 

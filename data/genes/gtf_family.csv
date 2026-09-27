@@ -1,0 +1,12 @@
+id,label,species,locus_tag,old_locus_tag,protein_id,product,length,best_identity_to_Smu_gtf
+Smu_UA159|SMU_RS04620,Smu_UA159,S. mutans,SMU_RS04620,SMU.1004,WP_002352268.1,glucosyltransferase GtfB,1476,1.0
+Smu_UA159|SMU_RS04625,Smu_UA159,S. mutans,SMU_RS04625,SMU.1005,WP_002352269.1,glucosyltransferase GtfC,1455,1.0
+Smu_UA159|SMU_RS04210,Smu_UA159,S. mutans,SMU_RS04210,SMU.910,WP_002352262.1,glucosyltransferase-S,1462,1.0
+Ssa_SK36|SSA_RS03130,Ssa_SK36,S. sanguinis,SSA_RS03130,SSA_0613,WP_011836622.1,glycoside hydrolase family 70 protein,1568,0.5935
+Sgo_CH1|SGO_RS02460,Sgo_CH1,S. gordonii,SGO_RS02460,SGO_0497,WP_041789547.1,glycoside hydrolase family 70 protein,1577,0.592
+Ssl_JIM8777|SALIVA_RS07005,Ssl_JIM8777,S. salivarius,SALIVA_RS07005,SALIVA_1432,WP_014634754.1,glycoside hydrolase family 70 protein,1565,0.5117
+Ssl_JIM8777|SALIVA_RS04175,Ssl_JIM8777,S. salivarius,SALIVA_RS04175,SALIVA_0856,WP_014634305.1,glycoside hydrolase family 70 protein,1518,0.4732
+Ssl_JIM8777|SALIVA_RS04170,Ssl_JIM8777,S. salivarius,SALIVA_RS04170,SALIVA_0855,WP_014634304.1,glycoside hydrolase family 70 protein,1493,0.4706
+Ssl_JIM8777|SALIVA_RS04180,Ssl_JIM8777,S. salivarius,SALIVA_RS04180,SALIVA_0857,WP_014634306.1,glycoside hydrolase family 70 protein,1599,0.4679
+Ssl_JIM8777|SALIVA_RS06990,Ssl_JIM8777,S. salivarius,SALIVA_RS06990,SALIVA_1429,WP_014634751.1,glycoside hydrolase family 70 protein,1579,0.4956
+Ssl_JIM8777|SALIVA_RS07110,Ssl_JIM8777,S. salivarius,SALIVA_RS07110,SALIVA_1454,WP_014634774.1,glycoside hydrolase family 70 protein,1450,0.5126

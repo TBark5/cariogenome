@@ -128,10 +128,11 @@ def run() -> dict[str, pd.DataFrame]:
     disc.to_csv(RESULTS / "m4_discordance.csv", index=False)
     pd.DataFrame(conflicts, columns=["gene", "gene_support", "category",
                                      "max_conflicting_reference_support",
-                                     "taxa_on_smaller_side"]).to_csv(RESULTS / "m4_conflicts.csv", index=False)
+                                     "taxa_on_smaller_side"]).sort_values(
+        ["gene", "taxa_on_smaller_side"]).to_csv(RESULTS / "m4_conflicts.csv", index=False)
     ref_sup = pd.DataFrame([{"method": m, "split": ";".join(sorted(s)), "support": v}
                             for m in ("nj", "upgma") for s, v in supports[f"reference_{m}"].items()])
-    ref_sup.to_csv(RESULTS / "m4_reference_supports.csv", index=False)
+    ref_sup.sort_values(["method", "split"]).to_csv(RESULTS / "m4_reference_supports.csv", index=False)
     coding = disc[disc["class"] != "rRNA control"]
     tests = compare_table(coding, ["nRF_within_Smutans", "n_supported_conflicts",
                                    "n_supported_conflicts_between_species", "mean_support"],

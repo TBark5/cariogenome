@@ -128,7 +128,8 @@ def generate_dataset(seed_offset: int = 7) -> tuple[pd.DataFrame, pd.DataFrame]:
         ribo = [simulate_codons("(a:0.01,b:0.01);", 150, 0.05, rng)["a"] for _ in range(20)]
         (GENOMES_DIR / f"{g.label}_ribosomal.fna").write_text(
             "".join(f">SYN_ribo_{i} SYNTHETIC ribosomal protein\n{s}\n" for i, s in enumerate(ribo)))
-        with gzip.open(GENOMES_DIR / f"{g.label}_cds.fna.gz", "wt") as fh:
+        gz = gzip.GzipFile(GENOMES_DIR / f"{g.label}_cds.fna.gz", "wb", mtime=0)  # no timestamp
+        with io.TextIOWrapper(gz, newline="\n") as fh:
             for i in range(200):
                 s = simulate_codons("(a:0.01,b:0.01);", int(rng.integers(100, 500)), 0.2, rng)["a"]
                 fh.write(f">SYN_cds_{i} SYNTHETIC\n{s}\n")
