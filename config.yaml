@@ -1,0 +1,83 @@
+# CARIOGENOME configuration. All analysis parameters live here.
+
+ncbi:
+  # NCBI asks every E-utilities user to identify themselves with an email address.
+  # Replace with your own reachable address if you re-download the data.
+  email: "85648885+TBark5@users.noreply.github.com"
+  request_delay_s: 0.5     # >= 0.34 s keeps us under 3 requests/s without an API key
+  max_retries: 5
+
+seed: 20240601
+
+# Complete RefSeq chromosomes. The first genome of each species is its representative.
+genomes:
+  - {label: Smu_UA159,   species: S. mutans,     accession: NC_004350.2}
+  - {label: Smu_NN2025,  species: S. mutans,     accession: NC_013928.1}
+  - {label: Smu_GS-5,    species: S. mutans,     accession: NC_018089.1}
+  - {label: Smu_LJ23,    species: S. mutans,     accession: NC_017768.1}
+  - {label: Smu_UA140,   species: S. mutans,     accession: NZ_CP044495.1}
+  - {label: Smu_NG8,     species: S. mutans,     accession: NZ_CP013237.1}
+  - {label: Smu_LAR01,   species: S. mutans,     accession: NZ_CP023477.1}
+  - {label: Smu_LP13,    species: S. mutans,     accession: NZ_AP014571.1}
+  - {label: Smu_B04Sm5,  species: S. mutans,     accession: NZ_CP061071.1}
+  - {label: Smu_T8,      species: S. mutans,     accession: NZ_CP044492.1}
+  - {label: Ssa_SK36,    species: S. sanguinis,  accession: NC_009009.1}
+  - {label: Ssa_SK1058,  species: S. sanguinis,  accession: NZ_CP071422.1}
+  - {label: Ssa_CGMH058, species: S. sanguinis,  accession: NZ_CP040798.1}
+  - {label: Sgo_CH1,     species: S. gordonii,   accession: NC_009785.1}
+  - {label: Sgo_FDA371,  species: S. gordonii,   accession: NZ_CP023511.1}
+  - {label: Sgo_KCOM1506, species: S. gordonii,  accession: NZ_CP012648.1}
+  - {label: Smi_B6,      species: S. mitis,      accession: NC_013853.1}
+  - {label: Smi_NCTC12261, species: S. mitis,    accession: NZ_CP028414.1}
+  - {label: Smi_SK637,   species: S. mitis,      accession: NZ_CP028415.1}
+  - {label: Ssl_JIM8777, species: S. salivarius, accession: NC_017595.1}
+  - {label: Ssl_ATCC27945, species: S. salivarius, accession: NZ_CP015282.1}
+  - {label: Ssl_HSISS4,  species: S. salivarius, accession: NZ_CP013216.1}
+
+# Query genes are defined by their original locus tag in S. mutans UA159 (NC_004350.2).
+genes:
+  virulence:
+    gtfB: SMU.1004
+    gtfC: SMU.1005
+    gtfD: SMU.910
+    spaP: SMU.610
+    ftf:  SMU.2028
+    luxS: SMU.474
+  housekeeping:
+    recA: SMU.2085
+    rpoB: SMU.1990
+    gyrB: SMU.1277
+    gyrA: SMU.1114
+    sodA: SMU.629
+    pheS: SMU.1512
+    atpD: SMU.1528
+    tuf:  SMU.714
+  rrna:
+    16S: "16S ribosomal RNA"
+
+homology:
+  kmer: 3
+  prefilter_top: 5          # candidates passed from the k-mer prefilter to Smith-Waterman
+  min_identity: 0.30        # fraction identical over the local alignment
+  min_coverage: 0.60        # of both query and hit length
+  gtf_family_min_identity: 0.30   # for the GH70 glucansucrase family set used in M6
+
+qc:
+  min_length_fraction: 0.80  # CDS shorter than 80% of the UA159 query is "truncated"
+  max_length_fraction: 1.20
+  max_ambiguous: 0           # any non-ACGT base excludes a record
+  min_16s_length: 1400
+
+bootstrap:
+  tree_replicates: 100
+  dnds_replicates: 1000
+  stats_replicates: 5000
+
+selection:
+  window_codons: 60
+  step_codons: 20
+  saturation_ps: 0.60       # pS above this is treated as saturated (JC correction unstable)
+
+pdb:
+  preferred: ["3AIE", "3AIC", "3AIB"]
+  uniprot_gtfc: P13470
