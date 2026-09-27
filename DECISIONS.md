@@ -148,3 +148,23 @@ chosen and why.
   the result, not its p-value.
 - **Ramachandran regions** are simple phi/psi boxes for description only. They are not a
   MolProbity-style validation.
+
+## Visual pass, app, quality, docs
+
+- **Synthesis forest plot** (`summary.py`) collects every virulence-vs-control test on one
+  axis (Cliff's delta with 95% CI). This is the README headline figure.
+- **Per-species replication of the dN/dS pattern is exploratory.** It was added after the
+  by-species dN/dS figure showed elevated omega in commensal homologs. It was not in
+  `HYPOTHESIS.md` and is labelled as exploratory in RESULTS_DISCUSSION.md.
+- **Dashboard** is a single Streamlit page with 8 tabs. It only reads `results/` and
+  `figures/` and does no heavy computation. The py3Dmol view is embedded with `st.iframe`
+  from our own generated HTML file.
+- **Reproducibility:** fixed seeds everywhere. Table rows that come from Python sets are
+  sorted, gzip files carry no timestamp, and the 3D viewer id is fixed. Two consecutive
+  runs, and a clean clone with a new venv running `--offline`, reproduce every results
+  file byte for byte (except `results/runtimes.tsv`).
+- **Rounding:** README and RESULTS_DISCUSSION numbers are Python-formatted from the CSVs
+  (for example, 0.625 prints as 0.62). `tests/test_readme_numbers.py` enforces this.
+- **Runtime cap:** every step runs in under 2 minutes (M1 about 74 s from cache, full run
+  about 160 s). The one-time genome download is network-bound (about 106 s for 22 genomes).
+  No bootstrap counts had to be reduced below the brief's minimums.

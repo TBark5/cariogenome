@@ -53,7 +53,7 @@ genes have a higher ω than housekeeping genes:
   windows has a CI entirely above 1 [`m5_sliding_windows.csv`]. 11 windows have a point
   estimate above 1, but their CIs include 1.
 
-**Replication in commensals** [`m5_replication_by_species.csv`]. The same direction
+**Replication in commensals** (exploratory: added after seeing the by-species figure, not pre-registered) [`m5_replication_by_species.csv`]. The same direction
 appears in every other species with at least two virulence homologs:
 - *S. gordonii*: median 0.138 vs 0.011
 - *S. salivarius*: 0.173 vs 0.009
