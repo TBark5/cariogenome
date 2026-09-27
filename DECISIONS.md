@@ -88,3 +88,30 @@ chosen and why.
   confounded by which species carry the gene (gtfB/gtfC are *S. mutans*-only).
 - **Region window** = about 10% of the protein length, clamped to 10-30 residues (30 for
   the large proteins, 16 for LuxS). Most- and least-conserved windows may not overlap.
+
+## M5: selection
+
+- **Own NG86 implementation**, cross-checked against `Bio.codonalign.cal_dn_ds`
+  (identical on luxS/recA pairs, within about 1% on gtfD/rpoB; see the test suite).
+  `Bio.codonalign` is labelled experimental by Biopython and does not provide pooled
+  estimates or a codon bootstrap, so it is used only as a check.
+- **Primary estimate = within *S. mutans*, pooled over all strain pairs** (45 pairs for
+  10 strains): pN = sum Nd / sum N, pS = sum Sd / sum S, then JC correction. Pooling avoids
+  undefined per-pair ratios when a pair has no synonymous differences.
+- **Between-species dN/dS is not used for inference.** The first run showed synonymous
+  p-distances of 0.66-0.76 between *S. mutans* and every commensal (37 of 42 comparisons
+  above the 0.60 threshold; 0.75 is the JC limit). These are reported and flagged
+  "saturated", with omega withheld.
+- **Interpretation caveat:** within-species omega measures polymorphism. Slightly
+  deleterious mutations inflate it relative to between-species divergence (Rocha et al.
+  2006), so omega is compared between gene classes measured the same way, not read as an
+  absolute measure of selection.
+- **CIs by codon bootstrap** (1000 replicates, codon columns resampled). This captures site
+  sampling, not phylogenetic non-independence of strain pairs. Genes with zero
+  nonsynonymous differences (recA, tuf) get a degenerate CI of [0, 0].
+- **Per-gene test:** ratio of each virulence gene's omega to the pooled control omega
+  (all 8 control genes' codons concatenated), with a bootstrap p-value (floor 1/1000) and
+  BH across the 6 virulence genes.
+- **Sliding window:** 60 codons, step 20, 200 bootstrap replicates per window.
+- **Synthetic validation runs every time** (not only in fallback mode): recovery of a
+  known 22-taxon topology and of known omega values (0.02-1.0) by the same code.

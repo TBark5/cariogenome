@@ -1,6 +1,10 @@
 # PROGRESS
 
 ## Done
+- Phase 5 (M5): pooled NG86 dN/dS within each species with codon-bootstrap CIs,
+  between-species saturation check, class test (`results/m5_tests.csv`), per-gene vs
+  controls, sliding windows, synthetic recovery validation (`validation.py`), 5 figures.
+  Runtime ~8 s + 5 s validation.
 - Phase 4 (M4): NJ + UPGMA trees with 100 bootstrap replicates for 15 genes and the
   concatenated housekeeping reference (`results/trees/*.nwk`), discordance table
   (`results/m4_discordance.csv`, `m4_conflicts.csv`), tests, 5 figures. Runtime ~50 s.
@@ -21,7 +25,7 @@
   (`src/cariogenome/plotting.py`).
 
 ## In progress
-- Phase 5 (M5 selection / dN/dS).
+- Phase 6 (M6 motifs, M7 structure).
 
 ## Next
 - Phases 2-10 as listed in the project brief.
