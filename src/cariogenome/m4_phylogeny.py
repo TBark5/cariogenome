@@ -80,7 +80,7 @@ def discordance(gene: str, gene_sup: dict, ref_sup: dict, sp: dict[str, str]) ->
     g_f = phylo.restrict(gene_sup, focal, taxa)
     r_f = phylo.restrict(ref_sup, focal, ref_all)
     _, nrf_focal = phylo.robinson_foulds(set(g_f), set(r_f))
-    species_sets = {}
+    species_sets: dict[str, set[str]] = {}
     for t in taxa:
         species_sets.setdefault(sp[t], set()).add(t)
     mono = [phylo.canonical(frozenset(v), taxa) in gene_sup or len(v) < 2 or len(taxa - v) < 2

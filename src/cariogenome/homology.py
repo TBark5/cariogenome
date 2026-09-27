@@ -72,9 +72,9 @@ def local_stats(query: str, target: str, index: int = -1) -> Hit:
     aln = LOCAL.align(query, target)[0]
     q_segs, t_segs = aln.aligned
     ident = aligned = gaps = 0
-    for (qs, qe), (ts, te) in zip(q_segs, t_segs):
+    for (qs, qe), (ts, te) in zip(q_segs, t_segs, strict=True):
         aligned += qe - qs
-        ident += sum(a == b for a, b in zip(query[qs:qe], target[ts:te]))
+        ident += sum(a == b for a, b in zip(query[qs:qe], target[ts:te], strict=True))
     for j in range(1, len(q_segs)):
         gaps += (q_segs[j][0] - q_segs[j - 1][1]) + (t_segs[j][0] - t_segs[j - 1][1])
     length = aligned + gaps

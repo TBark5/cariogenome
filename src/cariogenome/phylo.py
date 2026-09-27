@@ -5,9 +5,10 @@ NJ trees whose root position is arbitrary.
 """
 from __future__ import annotations
 
-from typing import Callable
+from collections.abc import Callable
 
 import numpy as np
+from numpy.typing import ArrayLike
 from Bio.Phylo.BaseTree import Tree
 from Bio.Phylo.TreeConstruction import DistanceMatrix, DistanceTreeConstructor
 
@@ -20,6 +21,11 @@ def encode(msa: dict[str, str]) -> np.ndarray:
     return np.array([[ENC.get(c, 4) for c in s] for s in msa.values()], dtype=np.uint8)
 
 
+def _is_purine(x: np.ndarray) -> np.ndarray:
+    """True for encoded A (0) and G (2)."""
+    return (x == 0) | (x == 2)
+
+
 class PairCounts:
     """Per-pair, per-column indicators so distances for any column weighting are fast."""
 
@@ -30,8 +36,7 @@ class PairCounts:
         a, b = arr[self.iu[0]], arr[self.iu[1]]
         valid = (a < 4) & (b < 4)
         diff = valid & (a != b)
-        purine = lambda x: (x == 0) | (x == 2)  # noqa: E731  A, G
-        transition = diff & (purine(a) == purine(b))
+        transition = diff & (_is_purine(a) == _is_purine(b))
         self.valid = valid.astype(np.float64)
         self.diff = diff.astype(np.float64)
         self.ts = transition.astype(np.float64)
@@ -52,14 +57,14 @@ class PairCounts:
         return mat + mat.T
 
 
-def jukes_cantor(p: np.ndarray) -> np.ndarray:
+def jukes_cantor(p: ArrayLike) -> np.ndarray:
     """JC69: d = -3/4 ln(1 - 4p/3)."""
     arg = 1 - 4 * np.asarray(p, float) / 3
     with np.errstate(invalid="ignore", divide="ignore"):
         return np.where(arg > 0, -0.75 * np.log(np.clip(arg, 1e-12, None)), MAX_DIST)
 
 
-def kimura_2p(P: np.ndarray, Q: np.ndarray) -> np.ndarray:
+def kimura_2p(P: ArrayLike, Q: ArrayLike) -> np.ndarray:
     """K2P: d = -1/2 ln(1 - 2P - Q) - 1/4 ln(1 - 2Q); P = transitions, Q = transversions."""
     a1 = 1 - 2 * np.asarray(P, float) - np.asarray(Q, float)
     a2 = 1 - 2 * np.asarray(Q, float)

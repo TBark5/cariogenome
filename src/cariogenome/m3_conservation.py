@@ -76,7 +76,8 @@ def extreme_regions(cons: pd.DataFrame, ref_seq: str, n: int = 3) -> list[dict]:
     if len(s) < window:
         return []
     sm = s.rolling(window, min_periods=int(window * 0.7)).mean().dropna()
-    found, used = [], []
+    found: list[dict] = []
+    used: list[int] = []
     for kind, order in (("most conserved", False), ("least conserved", True)):
         taken: list[int] = []
         for pos, val in sm.sort_values(ascending=order).items():

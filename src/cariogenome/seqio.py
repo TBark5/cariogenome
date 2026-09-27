@@ -35,7 +35,7 @@ def load_gene(gene: str, kind: str = "nt", included_only: bool = True) -> dict[s
 def species_map() -> dict[str, str]:
     """Strain label to species, from the catalog (works for real and synthetic data)."""
     cat = catalog()
-    return dict(zip(cat["label"], cat["species"]))
+    return dict(zip(cat["label"], cat["species"], strict=True))
 
 
 def data_mode() -> str:

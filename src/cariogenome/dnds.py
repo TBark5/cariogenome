@@ -15,7 +15,7 @@ a stop in either sequence are skipped for that pair (pairwise deletion).
 """
 from __future__ import annotations
 
-from functools import lru_cache
+from functools import cache
 from itertools import combinations, permutations
 
 import numpy as np
@@ -25,7 +25,7 @@ from .codon import CODE, STOP_CODONS
 BASES = "ACGT"
 
 
-@lru_cache(maxsize=None)
+@cache
 def codon_sites(codon: str) -> tuple[float, float]:
     """(synonymous sites, nonsynonymous sites) of one sense codon."""
     syn = 0.0
@@ -40,7 +40,7 @@ def codon_sites(codon: str) -> tuple[float, float]:
     return s, 3.0 - s
 
 
-@lru_cache(maxsize=None)
+@cache
 def codon_diffs(c1: str, c2: str) -> tuple[float, float]:
     """(synonymous, nonsynonymous) differences between two sense codons (NG86 pathways)."""
     pos = [i for i in range(3) if c1[i] != c2[i]]
@@ -94,7 +94,7 @@ class PooledNG86:
         self.S, self.N = np.zeros(shape), np.zeros(shape)
         self.Sd, self.Nd = np.zeros(shape), np.zeros(shape)
         for i, (a, b) in enumerate(pairs):
-            for j, (x, y) in enumerate(zip(cods[a], cods[b])):
+            for j, (x, y) in enumerate(zip(cods[a], cods[b], strict=True)):
                 if _valid(x) and _valid(y):
                     s1, n1 = codon_sites(x)
                     s2, n2 = codon_sites(y)

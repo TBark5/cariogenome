@@ -38,7 +38,7 @@ def pairwise(a: str, b: str, kind: str = "aa") -> tuple[str, str, float]:
 
 def identity(ga: str, gb: str) -> float:
     """Percent identity = identical pairs / aligned (non-gap) pairs x 100."""
-    pairs = [(x, y) for x, y in zip(ga, gb) if x != "-" and y != "-"]
+    pairs = [(x, y) for x, y in zip(ga, gb, strict=True) if x != "-" and y != "-"]
     return 100.0 * sum(x == y for x, y in pairs) / len(pairs) if pairs else float("nan")
 
 
@@ -79,7 +79,7 @@ def center_star(seqs: dict[str, str], kind: str = "aa",
         gc, gs = (center, center) if lab == c else pairwise(center, seqs[lab], kind)[:2]
         # ins[i] = residues of `lab` inserted before center position i (i == L: after end)
         slots, aligned, pos = [""] * (L + 1), ["-"] * L, 0
-        for x, y in zip(gc, gs):
+        for x, y in zip(gc, gs, strict=True):
             if x == "-":
                 slots[pos] += y
             else:
@@ -137,6 +137,6 @@ def henikoff_weights(msa: dict[str, str]) -> np.ndarray:
         col = rows[:, j]
         vals, counts = np.unique(col, return_counts=True)
         k = len(vals)
-        lookup = dict(zip(vals, counts))
+        lookup = dict(zip(vals, counts, strict=True))
         w += np.array([1.0 / (k * lookup[x]) for x in col])
     return w / w.sum()

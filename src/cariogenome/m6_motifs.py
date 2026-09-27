@@ -58,7 +58,7 @@ def catalytic_ranks(cons: pd.DataFrame) -> pd.DataFrame:
     n = len(vals)
     frac_invariant = float((vals >= 1 - 1e-9).mean())
     rows = []
-    for pos, (aa, role, region) in CATALYTIC.items():
+    for pos, (aa, role, _region) in CATALYTIC.items():
         r = cons[cons["ref_position"] == pos].iloc[0]
         v = r["conservation"]
         greater, equal = (vals > v + 1e-9).sum(), (np.abs(vals - v) <= 1e-9).sum()
@@ -79,7 +79,8 @@ def find_motifs(cons: pd.DataFrame, k: int = MOTIF_LEN, n: int = N_MOTIFS) -> pd
     ref = cons.dropna(subset=["ref_position"]).reset_index(drop=True)
     sm = ref["conservation"].rolling(k).mean()
     order = sm.sort_values(ascending=False).dropna().index
-    taken, rows = [], []
+    taken: list[int] = []
+    rows: list[dict] = []
     for end in order:
         start = end - k + 1
         if any(abs(start - t) < k for t in taken):

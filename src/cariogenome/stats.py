@@ -48,19 +48,23 @@ def bootstrap_ci(stat, a: np.ndarray, b: np.ndarray, rng: np.random.Generator,
     return float(lo), float(hi)
 
 
+def median_difference(x: np.ndarray, y: np.ndarray) -> float:
+    """Median of x minus median of y."""
+    return float(np.median(x) - np.median(y))
+
+
 def compare_groups(vir: np.ndarray, ctl: np.ndarray, rng: np.random.Generator,
                    n_boot: int = 5000) -> dict[str, float]:
     """Full virulence-vs-control comparison for one metric."""
     vir = np.asarray(vir, float)[~np.isnan(np.asarray(vir, float))]
     ctl = np.asarray(ctl, float)[~np.isnan(np.asarray(ctl, float))]
-    med = lambda x, y: np.median(x) - np.median(y)  # noqa: E731
-    d_lo, d_hi = bootstrap_ci(med, vir, ctl, rng, n_boot)
+    d_lo, d_hi = bootstrap_ci(median_difference, vir, ctl, rng, n_boot)
     c_lo, c_hi = bootstrap_ci(cliffs_delta, vir, ctl, rng, n_boot)
     p = mannwhitneyu(vir, ctl, alternative="two-sided").pvalue if len(vir) and len(ctl) else np.nan
     return {
         "n_virulence": len(vir), "n_control": len(ctl),
         "median_virulence": float(np.median(vir)), "median_control": float(np.median(ctl)),
-        "median_difference": med(vir, ctl), "diff_ci_low": d_lo, "diff_ci_high": d_hi,
+        "median_difference": median_difference(vir, ctl), "diff_ci_low": d_lo, "diff_ci_high": d_hi,
         "cliffs_delta": cliffs_delta(vir, ctl), "delta_ci_low": c_lo, "delta_ci_high": c_hi,
         "p_mannwhitney": float(p),
     }

@@ -133,8 +133,8 @@ def sliding_windows(models: dict, n_boot: int = 200) -> pd.DataFrame:
 def replication(within: pd.DataFrame, n_boot: int) -> pd.DataFrame:
     """Virulence-homolog vs control omega within each species (does the pattern replicate?)."""
     rows = []
-    for i, (species, sub) in enumerate(within.groupby("species", sort=False)):
-        sub = sub.dropna(subset=["omega"])
+    for i, (species, grp) in enumerate(within.groupby("species", sort=False)):
+        sub = grp.dropna(subset=["omega"])
         vir, ctl = sub[sub["class"] == "virulence"], sub[sub["class"] == "control"]
         if len(vir) < 2 or len(ctl) < 2:
             continue

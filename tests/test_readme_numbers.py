@@ -51,4 +51,5 @@ def test_headline_numbers_match_results():
             f"[{_fmt(m7.rho_ci_low, 2)}, {_fmt(m7.rho_ci_high, 2)}]") in text
     assert f"{100 * m6.fraction_invariant_columns:.1f}%" in text
     assert f"{int(cat['included'].sum())} of {len(cat)} records pass" in text
-    assert re.search(r"(\d+) complete genomes", text).group(1) == str(cat["label"].nunique())
+    genomes = re.search(r"(\d+) complete genomes", text)
+    assert genomes is not None and genomes.group(1) == str(cat["label"].nunique())

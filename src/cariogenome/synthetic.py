@@ -61,7 +61,7 @@ def simulate_codons(newick: str, n_codons: int, omega: float, rng: np.random.Gen
         for _ in range(rng.poisson(t * 3 * n_codons)):
             ci, pos = int(rng.integers(n_codons)), int(rng.integers(3))
             old = seq[ci]
-            new = old[:pos] + rng.choice([b for b in "ACGT" if b != old[pos]]) + old[pos + 1:]
+            new = old[:pos] + str(rng.choice([b for b in "ACGT" if b != old[pos]])) + old[pos + 1:]
             if CODE[new] == "*":
                 continue
             if CODE[new] == CODE[old] or rng.random() < omega:
@@ -86,7 +86,7 @@ def simulate_nucleotides(newick: str, length: int, rng: np.random.Generator,
         s = list(seq)
         for _ in range(rng.poisson((clade.branch_length or 0.0) * scale * length)):
             i = int(rng.integers(length))
-            s[i] = rng.choice([b for b in "ACGT" if b != s[i]])
+            s[i] = str(rng.choice([b for b in "ACGT" if b != s[i]]))
         if clade.is_terminal():
             out[clade.name] = "".join(s)
         for child in clade.clades:

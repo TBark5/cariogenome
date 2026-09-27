@@ -14,3 +14,19 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# pycodestyle, pyflakes, bugbear, pyupgrade, simplify, ruff-specific, pylint errors/warnings.
+# Pylint "refactor" (PLR: magic values, argument counts) and "convention" (PLC) rules are
+# style opinions, not defects, and are not selected (see DECISIONS.md).
+select = ["E", "W", "F", "B", "UP", "SIM", "RUF", "PLE", "PLW"]
+
+[tool.mypy]
+python_version = "3.14"
+ignore_missing_imports = true
+warn_unused_ignores = true
+check_untyped_defs = true

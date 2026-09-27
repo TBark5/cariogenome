@@ -63,14 +63,14 @@ def test_pooled_ng86_matches_biopython():
     rng = np.random.default_rng(1)
     sense = [c for c, a in CODE.items() if a != "*"]
     a = "".join(rng.choice(sense, 300))
-    b = list(a)
+    mutable = list(a)
     for i in rng.choice(len(a), 25, replace=False):
-        cand = b[:]
-        cand[i] = "ACGT"[(("ACGT".index(b[i])) + 1) % 4]
+        cand = mutable[:]
+        cand[i] = "ACGT"[(("ACGT".index(mutable[i])) + 1) % 4]
         cod = "".join(cand[i - i % 3: i - i % 3 + 3])
         if CODE[cod] != "*":
-            b = cand
-    b = "".join(b)
+            mutable = cand
+    b = "".join(mutable)
     ours = PooledNG86({"a": a, "b": b}, [("a", "b")]).estimate()
     dn, ds = cal_dn_ds(CodonSeq(a), CodonSeq(b), method="NG86")
     assert ours["dN"] == pytest.approx(dn, rel=0.02)
@@ -120,4 +120,5 @@ def test_qc_flags_rules():
 def test_homology_finds_itself():
     prots = ["MKVLAAGIVGLLLAASSQA", "MSTNPKPQRKTKRNTNRRPQDVKFPGG", "MAHHHHHHSSGLVPRGSHM"]
     hit = best_hit(prots[1], ProteinIndex(prots), top=3)
+    assert hit is not None
     assert hit.index == 1 and hit.identity == pytest.approx(1.0)

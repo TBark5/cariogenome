@@ -27,15 +27,20 @@ def gc_skew(seq: str) -> float:
     return (g - c) / (g + c) if g + c else float("nan")
 
 
+def gc_fraction(s: str) -> float:
+    """(G + C) / length; NaN for an empty string."""
+    return (s.count("G") + s.count("C")) / len(s) if s else float("nan")
+
+
 def sequence_metrics(nt: str, weights: dict[str, float] | None) -> dict[str, float]:
     """GC, GC at codon positions 1-3, GC skew and CAI of one sequence."""
-    gc = lambda s: (s.count("G") + s.count("C")) / len(s) if s else float("nan")  # noqa: E731
-    out = {"length": len(nt), "gc": gc(nt), "gc_skew": gc_skew(nt)}
+    out = {"length": len(nt), "gc": gc_fraction(nt), "gc_skew": gc_skew(nt)}
     if weights is None:  # non-coding (16S)
         out.update({"gc1": np.nan, "gc2": np.nan, "gc3": np.nan, "cai": np.nan})
         return out
     body = nt[: len(nt) - len(nt) % 3]
-    out.update({"gc1": gc(body[0::3]), "gc2": gc(body[1::3]), "gc3": gc(body[2::3]),
+    out.update({"gc1": gc_fraction(body[0::3]), "gc2": gc_fraction(body[1::3]),
+                "gc3": gc_fraction(body[2::3]),
                 "cai": cai(nt, weights)})
     return out
 
@@ -64,7 +69,7 @@ def per_sequence_table() -> pd.DataFrame:
 def gene_level(df: pd.DataFrame, species: str = FOCAL) -> pd.DataFrame:
     """Mean of each metric per gene within one species (coding genes only)."""
     sub = df[(df["species"] == species) & (df["gene"].isin(coding_genes()))]
-    out = sub.groupby("gene")[METRICS + ["gc1", "gc2", "length"]].mean()
+    out = sub.groupby("gene")[[*METRICS, "gc1", "gc2", "length"]].mean()
     out["n_sequences"] = sub.groupby("gene").size()
     out["class"] = [gene_class(g) for g in out.index]
     return out.reindex([g for g in coding_genes() if g in out.index])

@@ -37,10 +37,10 @@ def codon_counts(seqs: list[str]) -> Counter:
 def rscu(counts: Counter, pseudocount: float = 0.0) -> dict[str, float]:
     """Relative synonymous codon usage: observed / expected under equal synonymous use."""
     out = {}
-    for aa, cods in SYNONYMS.items():
+    for cods in SYNONYMS.values():
         vals = [counts.get(c, 0) + pseudocount for c in cods]
         total = sum(vals)
-        for c, v in zip(cods, vals):
+        for c, v in zip(cods, vals, strict=True):
             out[c] = v * len(cods) / total if total > 0 else float("nan")
     return out
 
