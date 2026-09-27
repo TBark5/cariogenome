@@ -72,3 +72,19 @@ chosen and why.
   20 amino acids.
 - **Other species** are tested the same way (`m2_tests_other_species.csv`) as a secondary
   analysis. They have only 1-3 virulence orthologs each, so power is very low.
+
+## M3: alignment and conservation
+
+- **Center-star progressive MSA** (Gusfield) built from Biopython global pairwise
+  alignments, since MUSCLE/MAFFT are not allowed. It is an approximation: gaps between
+  two non-center sequences are not optimised. Terminal gaps are free.
+- **Percent identity** = identical pairs / aligned non-gap pairs (gaps ignored), from true
+  pairwise global alignments (not read off the MSA).
+- **Conservation** = 1 - H/log2(K) with Henikoff position-based sequence weights, so ten
+  near-identical *S. mutans* strains do not outweigh one sequence from another species.
+  Columns with > 50% gaps are not scored.
+- **P2 test uses within-*S. mutans* values** (mean pairwise identity, mean entropy),
+  because only this taxon set is shared by every gene. Cross-species identity is
+  confounded by which species carry the gene (gtfB/gtfC are *S. mutans*-only).
+- **Region window** = about 10% of the protein length, clamped to 10-30 residues (30 for
+  the large proteins, 16 for LuxS). Most- and least-conserved windows may not overlap.

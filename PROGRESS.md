@@ -1,6 +1,10 @@
 # PROGRESS
 
 ## Done
+- Phase 3 (M3): pairwise identity matrices, center-star MSAs + codon alignments
+  (`results/alignments/`), Henikoff-weighted entropy per column (`results/conservation/`),
+  extreme regions, GH70 family alignment, P2 test (`results/m3_tests.csv`), 5 figures.
+  Runtime ~60 s.
 - Phase 2 (M2): GC/GC3/GC skew/CAI per record, gene-level virulence vs control tests
   (`results/m2_tests.csv`), amino-acid tests (BH over 20), RSCU table, genome
   background, 5 figures `figures/m2_*.png`. Runtime ~17 s.
@@ -14,7 +18,7 @@
   (`src/cariogenome/plotting.py`).
 
 ## In progress
-- Phase 3 (M3 alignment and conservation).
+- Phase 4 (M4 phylogenetics).
 
 ## Next
 - Phases 2-10 as listed in the project brief.
