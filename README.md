@@ -223,7 +223,7 @@ binaries. The package does **not** need to be installed: `run_all.py` and `app.p
 python -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
 .venv\Scripts\python run_all.py --offline
-.venv\Scripts\python -m pytest
+.venv\Scripts\python -m pytest          # 43 tests
 .venv\Scripts\streamlit run app.py
 ```
 
@@ -233,7 +233,7 @@ python -m venv .venv
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python run_all.py --offline
-.venv/bin/python -m pytest
+.venv/bin/python -m pytest            # 43 tests
 .venv/bin/streamlit run app.py
 ```
 

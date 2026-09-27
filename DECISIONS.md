@@ -173,3 +173,73 @@ chosen and why.
   (per-step timings are written to `results/runtimes.tsv` on every run). The one-time
   genome download is network-bound (about 106 s for 22 genomes). No bootstrap counts had
   to be reduced below the brief's minimums.
+
+## Polish pass (bug fixes, consistency, presentation)
+
+No scientific result changed in this pass. After every change the full pipeline was rerun
+from clean and all of `results/` was compared with the previous commit: the only file that
+differs is `results/runtimes.tsv` (wall-clock timings).
+
+- **Linting and typing.** ruff (pycodestyle, pyflakes, bugbear, pyupgrade, simplify,
+  ruff-specific, pylint errors/warnings) and mypy, pinned in `requirements-dev.txt`.
+  Pylint "refactor" rules (argument counts, magic-value comparisons) are not selected:
+  they are style opinions, and the scientific constants they flag (0.05, 70, 3) are
+  clearer inline. The only inline suppressions are: `E402` in `plotting.py` (the
+  matplotlib backend must be chosen before pyplot is imported), `RUF001` in the tests
+  (the README deliberately uses the typographic minus and ρ), and one `type: ignore` for
+  Biopython annotating `Entrez.email` as `None`.
+- **Strict zips.** Every `zip` over paired sequences, alignments or tables now uses
+  `strict=True`, so a length mismatch raises instead of silently truncating. Two grid
+  plots legitimately iterate over fewer items than panels and use `strict=False` with a
+  comment.
+- **Warnings.** Blanket `RuntimeWarning` filters in `run_all.py` and `m5_selection.py`
+  were removed. The warnings they hid were two all-gap cases (a sliding window with no
+  codons, a structure segment with no scored residue); both now produce NaN explicitly.
+  The suite passes with `-W error`, and the full pipeline runs with
+  `-W error::RuntimeWarning`.
+- **Float comparisons.** The audit found no floating-point `==` in decision logic; the
+  existing tolerances (`1e-9` for invariant columns and tie ranks) were kept.
+- **NCBI email.** `config.yaml` now holds the placeholder `REPLACE_WITH_YOUR_EMAIL`. The
+  `NCBI_EMAIL` environment variable overrides it, and a download attempted with the
+  placeholder stops with a readable message. A test keeps the placeholder in place.
+- **Offline mode is now strict.** `--offline` sets `CARIOGENOME_OFFLINE=1`, and every
+  network function raises `OfflineError` instead of trying the network. Verified in a
+  fresh clone with sockets patched to fail: the run completes, no connection is
+  attempted, and every results file matches byte for byte.
+- **Self-contained 3D view.** The py3Dmol page loaded 3Dmol.js from a CDN and broke
+  offline. The library (v2.5.5, BSD-3-Clause, license files included) is now vendored in
+  `data/vendor/` and inlined into `figures/26_m7_structure_3d.html`; the page also shows a
+  message if WebGL is unavailable. A static 300 dpi rendering of the same model and
+  coloring (`26_m7_structure_3d.png`) is written next to it so the README and dashboard
+  never depend on the network. Chosen over a failure message alone because the
+  interactive view is the most useful form of this result. Verified in headless Chrome
+  with all network requests refused.
+- **One figure style.** `plotting.py` fixes fonts, sizes, line widths, figure widths per
+  figure class, DPI (300) and an opaque white background (readable on GitHub's dark
+  theme; a test checks every PNG is opaque). No figure module sets rcParams or literal
+  font sizes.
+- **Color semantics.** Vermillion = virulence-associated and blue = housekeeping in every
+  figure. Previously *S. mutans* (species color) was also vermillion and *S. sanguinis*
+  blue, so strain labels could be misread as gene classes. Species now use black, sky
+  blue, green, purple and orange. Significance in the forest plot is black/grey instead of
+  vermillion, and diverging heatmaps use purple-orange instead of red-blue.
+- **Figure names** carry a zero-padded prefix in pipeline order (`01_` … `28_`), defined
+  by the order of the caption registry in `captions.py`, which also generates
+  `figures/CAPTIONS.md`. Tests enforce exactly one caption per file and that every figure
+  is referenced.
+- **Figure fixes found on visual review:** overlapping titles and statistics (statistics
+  now sit on a separate smaller line), legends covering data, an unreadable 22-strain
+  identity-heatmap axis (now labelled by species block), a floating species label, and a
+  3D colorbar overlapping axis labels. The class sample sizes (n = 6 and n = 8) are
+  printed on every class-comparison figure.
+- **Catalytic-residue provenance corrected.** See the M6 entry above.
+- **README.** Rebuilt around an honest headline, a prediction scorecard identical to
+  RESULTS_DISCUSSION.md (enforced by a test), a "what this project does not show"
+  section, and a literature paragraph citing only sources whose abstracts were fetched
+  from PubMed during this pass (PMIDs 22816041, 23228887, 16239014, 9089078, 21354427).
+- **Licensing.** MIT for code; LICENSE-DATA records NCBI's and wwPDB's terms (quoted
+  from their policy pages, fetched during this pass) and the primary citation of 3AIE as
+  recorded by RCSB.
+- **Rendering bugs found by the new tests:** ACCESSIONS.md printed `nan` for empty QC
+  flags, and its GH70 table had an unescaped `|` inside the IDs, which splits the cells on
+  GitHub. Both are fixed in the generator.

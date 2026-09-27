@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import re
 import subprocess
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -27,6 +28,10 @@ needs_results = pytest.mark.skipif(
 
 # Numbers that legitimately appear in the documents without being computed results:
 # design constants, thresholds, citation metadata, versions and screenshot geometry.
+# Measured wall-clock seconds quoted in MORNING_REPORT.md (they vary run to run, so they
+# are not in results/): full run, clean-clone offline run.
+MEASURED_RUNTIMES = {"164", "98"}
+
 DOC_CONSTANTS = {
     "0",
     "1",
@@ -111,18 +116,25 @@ def _result_numbers() -> set[str]:
             for d in range(5):
                 out.add(f"{v:.{d}f}")
                 out.add(f"{100 * v:.{d}f}")
-    tests = sum(
-        p.read_text(encoding="utf-8").count("\ndef test_")
-        for p in (ROOT / "tests").glob("test_*.py")
-    )
-    out.add(str(tests))
+    # The documents quote the number of tests pytest collects (parametrized tests count
+    # once per parameter), so ask pytest rather than counting "def test_" lines.
+    collected = subprocess.run(
+        [sys.executable, "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=True,
+    ).stdout
+    n_tests = re.search(r"(\d+) tests? collected", collected)
+    assert n_tests is not None, collected[-300:]
+    out.add(n_tests.group(1))
     return out
 
 
 @needs_results
 @pytest.mark.parametrize("doc", ["README.md", "MORNING_REPORT.md"])
 def test_every_number_in_docs_is_traceable(doc: str) -> None:
-    allowed = _result_numbers() | DOC_CONSTANTS
+    allowed = _result_numbers() | DOC_CONSTANTS | MEASURED_RUNTIMES
     nums = _markdown_numbers((ROOT / doc).read_text(encoding="utf-8"))
     unknown = sorted({n for n in nums if n not in allowed})
     assert not unknown, f"{doc}: numbers not found in results/ or constants: {unknown}"
