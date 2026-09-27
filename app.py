@@ -19,7 +19,7 @@ from cariogenome.captions import CAPTIONS
 from cariogenome.config import RESULTS, all_genes, gene_class
 from cariogenome.m4_figures import draw_tree
 from cariogenome.m4_phylogeny import load_tree
-from cariogenome.plotting import W_SINGLE, figure_path
+from cariogenome.plotting import CLASS_COLORS, GREY, W_SINGLE, figure_path
 
 st.set_page_config(page_title="CARIOGENOME", page_icon=":material/biotech:", layout="wide")
 
@@ -28,6 +28,11 @@ st.set_page_config(page_title="CARIOGENOME", page_icon=":material/biotech:", lay
 def csv(name: str, index_col: int | None = None) -> pd.DataFrame:
     """Read one results table (cached)."""
     return pd.read_csv(RESULTS / name, index_col=index_col)
+
+
+def gene_color(gene: str) -> str:
+    """The fixed figure color of a gene's class (16S counts as a control)."""
+    return CLASS_COLORS[gene_class(gene)]
 
 
 def figure(name: str) -> None:
@@ -152,12 +157,19 @@ with tabs[3]:
     cons = csv(f"conservation/{gene}.csv").dropna(subset=["conservation"])
     st.subheader("Per-column conservation (1 - H / log2 K)")
     st.line_chart(
-        cons.set_index("column")["conservation"], x_label="alignment column", y_label="conservation"
+        cons.set_index("column")["conservation"],
+        x_label="alignment column",
+        y_label="conservation",
+        color=gene_color(gene),
     )
     reg = csv("m3_extreme_regions.csv")
     st.dataframe(reg[reg["gene"] == gene], hide_index=True)
     st.subheader("Pairwise percent identity")
-    st.dataframe(csv(f"identity/{gene}.csv", index_col=0).style.background_gradient(cmap="viridis"))
+    st.dataframe(
+        csv(f"identity/{gene}.csv", index_col=0)
+        .style.background_gradient(cmap="viridis")
+        .format("{:.2f}")
+    )
     st.dataframe(csv("m3_tests.csv").round(4), hide_index=True)
     for name in [
         "m3_conservation_summary",
@@ -208,7 +220,9 @@ with tabs[5]:
         win = csv("m5_sliding_windows.csv")
         w = win[win["gene"] == gene].set_index("mid_codon")[["pN", "pS"]]
         st.subheader("Sliding window (60 codons) within S. mutans")
-        st.line_chart(w, x_label="codon position", y_label="p-distance")
+        st.line_chart(
+            w, x_label="codon position", y_label="p-distance", color=[gene_color(gene), GREY]
+        )
     else:
         st.info("dN/dS is defined for protein-coding genes only (16S is a non-coding control).")
     within = csv("m5_dnds_within_species.csv")

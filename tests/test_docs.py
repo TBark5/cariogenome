@@ -201,6 +201,7 @@ def test_no_absolute_paths_or_home_directories_in_tracked_files() -> None:
         if not p.exists() or p.suffix in (".png", ".gz", ".pkl") or p.stat().st_size > 5e6:
             continue
         text = p.read_text(encoding="utf-8", errors="ignore")
+        text = re.sub(r"https?://\S+", "", text)  # URLs are not local paths
         if pattern.search(text):
             offenders.append(f)
     assert not offenders, f"absolute/home paths in: {offenders}"
