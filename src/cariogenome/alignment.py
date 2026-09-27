@@ -7,6 +7,7 @@ inserted in the center is propagated to all rows ("once a gap, always a gap"). T
 faster and simpler than MUSCLE/MAFFT but can place gaps less well among non-center
 sequences; it is an approximation and is reported as such.
 """
+
 from __future__ import annotations
 
 import numpy as np
@@ -62,8 +63,9 @@ def all_pairs(seqs: dict[str, str], kind: str) -> tuple[np.ndarray, np.ndarray]:
     return pid_u[np.ix_(idx, idx)], score_u[np.ix_(idx, idx)]
 
 
-def center_star(seqs: dict[str, str], kind: str = "aa",
-                scores: np.ndarray | None = None) -> dict[str, str]:
+def center_star(
+    seqs: dict[str, str], kind: str = "aa", scores: np.ndarray | None = None
+) -> dict[str, str]:
     """Center-star multiple alignment. Returns gapped sequences in input order."""
     labels = list(seqs)
     if len(labels) == 1:
@@ -105,10 +107,11 @@ def codon_alignment(protein_msa: dict[str, str], nts: dict[str, str]) -> dict[st
     because alternative starts GTG/TTG are translated as Met).
     """
     from .codon import CODE
+
     out = {}
     for lab, row in protein_msa.items():
         nt = nts[lab]
-        cods = [nt[i:i + 3] for i in range(0, len(nt) - 2, 3)]
+        cods = [nt[i : i + 3] for i in range(0, len(nt) - 2, 3)]
         n_res = sum(ch != "-" for ch in row)
         cods = cods[:n_res]
         k, parts = 0, []

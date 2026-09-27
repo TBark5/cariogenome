@@ -122,10 +122,14 @@ chosen and why.
   of both proteins) in the five species representatives: 11 proteins (UA159 GtfB/C/D,
   SK36 GtfP, CH1 GtfG, six JIM8777 enzymes; *S. mitis* B6 has none). Using all 22 genomes
   would add near-duplicate strains and no new diversity.
-- **Catalytic residues come from the GtfC crystal-structure paper** (Ito et al. 2011,
-  J Mol Biol 408:177): D477 nucleophile, E515 acid/base, D588 transition-state stabilizer.
-  UniProt P13470 has no residue-level active-site annotation. The pipeline verifies that
-  each residue sits inside its canonical GH70 motif (regions II, III, IV) in UA159 GtfC.
+- **Catalytic residues are assigned from the canonical GH70 motifs** (D477 nucleophile in
+  region II, E515 acid/base in region III, D588 transition-state stabilizer in region IV)
+  and the pipeline verifies each motif in UA159 GtfC. UniProt P13470 has no residue-level
+  active-site annotation. *Correction made in the polish pass:* earlier documents credited
+  these three residue labels directly to Ito et al. 2011. Only the paper's abstract could
+  be checked, and it names the adjacent subsite residues (Asn481, Trp517, Ser589), which
+  confirms the numbering but does not itself list D477/E515/D588. The wording now says
+  exactly that. No number or result changed.
 - **Tie handling for P5 was fixed in code before the first M6 run:** the percentile of a
   column is its mid-rank (columns with equal conservation share the average rank).
   Strict and best-case ranks are also written to `m6_catalytic_residues.csv`.
@@ -141,7 +145,7 @@ chosen and why.
   instead by the centroid of the catalytic side chains.
 - **Conservation is written to the B-factor column** (x100; -1 = not scored), so py3Dmol
   colors the cartoon by conservation. The interactive view is
-  `figures/m7_structure_conservation.html` (loads 3Dmol.js from a CDN when opened).
+  `figures/26_m7_structure_3d.html` (self-contained since the polish pass; see below).
 - **P6 statistic:** Spearman correlation between residue conservation and C-alpha distance
   to the catalytic center, with a residue bootstrap CI. Neighbouring residues are not
   independent, so the p-value and CI are optimistic. The direction and size of rho are
@@ -165,6 +169,7 @@ chosen and why.
   file byte for byte (except `results/runtimes.tsv`).
 - **Rounding:** README and RESULTS_DISCUSSION numbers are Python-formatted from the CSVs
   (for example, 0.625 prints as 0.62). `tests/test_readme_numbers.py` enforces this.
-- **Runtime cap:** every step runs in under 2 minutes (M1 about 74 s from cache, full run
-  about 160 s). The one-time genome download is network-bound (about 106 s for 22 genomes).
-  No bootstrap counts had to be reduced below the brief's minimums.
+- **Runtime cap:** every step runs in under 2 minutes; the full run takes about 3 minutes
+  (per-step timings are written to `results/runtimes.tsv` on every run). The one-time
+  genome download is network-bound (about 106 s for 22 genomes). No bootstrap counts had
+  to be reduced below the brief's minimums.

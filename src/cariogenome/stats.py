@@ -6,7 +6,10 @@ The unit of replication is the gene. Each comparison reports:
 - a two-sided Mann-Whitney U p-value,
 and p-values from a family of tests are adjusted with Benjamini-Hochberg.
 """
+
 from __future__ import annotations
+
+from collections.abc import Callable
 
 import numpy as np
 import pandas as pd
@@ -37,8 +40,14 @@ def cliffs_delta(a: np.ndarray, b: np.ndarray) -> float:
     return float((np.sign(diff)).mean())
 
 
-def bootstrap_ci(stat, a: np.ndarray, b: np.ndarray, rng: np.random.Generator,
-                 n_boot: int = 5000, level: float = 0.95) -> tuple[float, float]:
+def bootstrap_ci(
+    stat: Callable[[np.ndarray, np.ndarray], float],
+    a: np.ndarray,
+    b: np.ndarray,
+    rng: np.random.Generator,
+    n_boot: int = 5000,
+    level: float = 0.95,
+) -> tuple[float, float]:
     """Percentile CI of ``stat(a, b)`` resampling each group independently."""
     a, b = np.asarray(a, float), np.asarray(b, float)
     vals = np.empty(n_boot)
@@ -53,8 +62,9 @@ def median_difference(x: np.ndarray, y: np.ndarray) -> float:
     return float(np.median(x) - np.median(y))
 
 
-def compare_groups(vir: np.ndarray, ctl: np.ndarray, rng: np.random.Generator,
-                   n_boot: int = 5000) -> dict[str, float]:
+def compare_groups(
+    vir: np.ndarray, ctl: np.ndarray, rng: np.random.Generator, n_boot: int = 5000
+) -> dict[str, float]:
     """Full virulence-vs-control comparison for one metric."""
     vir = np.asarray(vir, float)[~np.isnan(np.asarray(vir, float))]
     ctl = np.asarray(ctl, float)[~np.isnan(np.asarray(ctl, float))]
@@ -62,21 +72,36 @@ def compare_groups(vir: np.ndarray, ctl: np.ndarray, rng: np.random.Generator,
     c_lo, c_hi = bootstrap_ci(cliffs_delta, vir, ctl, rng, n_boot)
     p = mannwhitneyu(vir, ctl, alternative="two-sided").pvalue if len(vir) and len(ctl) else np.nan
     return {
-        "n_virulence": len(vir), "n_control": len(ctl),
-        "median_virulence": float(np.median(vir)), "median_control": float(np.median(ctl)),
-        "median_difference": median_difference(vir, ctl), "diff_ci_low": d_lo, "diff_ci_high": d_hi,
-        "cliffs_delta": cliffs_delta(vir, ctl), "delta_ci_low": c_lo, "delta_ci_high": c_hi,
+        "n_virulence": len(vir),
+        "n_control": len(ctl),
+        "median_virulence": float(np.median(vir)),
+        "median_control": float(np.median(ctl)),
+        "median_difference": median_difference(vir, ctl),
+        "diff_ci_low": d_lo,
+        "diff_ci_high": d_hi,
+        "cliffs_delta": cliffs_delta(vir, ctl),
+        "delta_ci_low": c_lo,
+        "delta_ci_high": c_hi,
         "p_mannwhitney": float(p),
     }
 
 
-def compare_table(df: pd.DataFrame, metrics: list[str], rng: np.random.Generator,
-                  class_col: str = "class", n_boot: int = 5000) -> pd.DataFrame:
+def compare_table(
+    df: pd.DataFrame,
+    metrics: list[str],
+    rng: np.random.Generator,
+    class_col: str = "class",
+    n_boot: int = 5000,
+) -> pd.DataFrame:
     """Run ``compare_groups`` for each metric column and add BH q-values across metrics."""
     rows = []
     for m in metrics:
-        res = compare_groups(df.loc[df[class_col] == "virulence", m].values,
-                             df.loc[df[class_col] == "control", m].values, rng, n_boot)
+        res = compare_groups(
+            df.loc[df[class_col] == "virulence", m].values,
+            df.loc[df[class_col] == "control", m].values,
+            rng,
+            n_boot,
+        )
         rows.append({"metric": m, **res})
     out = pd.DataFrame(rows)
     out["q_bh"] = benjamini_hochberg(out["p_mannwhitney"].values)

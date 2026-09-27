@@ -9,12 +9,13 @@ Records longer than 120% of the query are flagged "extended" as a warning only: 
 CDS with valid start and stop codons that is longer than the query reflects biology (extra
 domains), not a broken record. See DECISIONS.md.
 """
+
 from __future__ import annotations
 
 import pandas as pd
 from Bio.Seq import Seq
 
-from .config import GENES_DIR, ROOT, RESULTS, all_genes, gene_class, genomes, load_config
+from .config import GENES_DIR, RESULTS, ROOT, all_genes, gene_class, genomes, load_config
 from .entrez_client import download_log
 from .seqio import CATALOG, read_fasta
 
@@ -89,15 +90,17 @@ def presence_matrix(cat: pd.DataFrame) -> pd.DataFrame:
 def qc_summary(cat: pd.DataFrame) -> pd.DataFrame:
     """Per-gene counts and length statistics."""
     g = cat.groupby("gene", sort=False)
-    out = pd.DataFrame({
-        "class": g["class"].first(),
-        "n_found": g.size(),
-        "n_included": g["included"].sum(),
-        "n_species": g.apply(lambda d: d.loc[d.included, "species"].nunique()),
-        "median_nt_length": g["nt_length"].median(),
-        "min_nt_length": g["nt_length"].min(),
-        "max_nt_length": g["nt_length"].max(),
-    }).reindex(all_genes())
+    out = pd.DataFrame(
+        {
+            "class": g["class"].first(),
+            "n_found": g.size(),
+            "n_included": g["included"].sum(),
+            "n_species": g.apply(lambda d: d.loc[d.included, "species"].nunique()),
+            "median_nt_length": g["nt_length"].median(),
+            "min_nt_length": g["nt_length"].min(),
+            "max_nt_length": g["nt_length"].max(),
+        }
+    ).reindex(all_genes())
     out.index.name = "gene"
     out.to_csv(RESULTS / "m1_qc_summary.csv")
     return out
@@ -106,37 +109,66 @@ def qc_summary(cat: pd.DataFrame) -> pd.DataFrame:
 def write_accessions(cat: pd.DataFrame, fam: pd.DataFrame | None = None) -> None:
     """Write ACCESSIONS.md: every genome, gene record and structure used, with access dates."""
     from .m1_retrieval import genome_meta
+
     log = download_log()
-    lines = ["# Accessions", "",
-             "Every sequence and structure used in this project, with the date it was "
-             "downloaded. Coordinates are 1-based and inclusive.", "",
-             "## Genomes (NCBI nuccore, RefSeq)", "",
-             "| Label | Species | Accession | Length (bp) | GC | Title | Accessed |",
-             "|---|---|---|---|---|---|---|"]
+    lines = [
+        "# Accessions",
+        "",
+        "Every sequence and structure used in this project, with the date it was "
+        "downloaded. Coordinates are 1-based and inclusive.",
+        "",
+        "## Genomes (NCBI nuccore, RefSeq)",
+        "",
+        "| Label | Species | Accession | Length (bp) | GC | Title | Accessed |",
+        "|---|---|---|---|---|---|---|",
+    ]
     for g in genomes():
         meta = genome_meta(g)
-        lines.append(f"| {g.label} | *{g.species}* | {g.accession} | {meta['length']:,} | "
-                     f"{meta['gc']:.3f} | {meta['title']} | {log.get(g.accession, {}).get('accessed', '')} |")
-    lines += ["", "## Gene records", "",
-              "| Gene | Label | Locus tag | Protein ID | Location | Identity to UA159 | Included | QC flags |",
-              "|---|---|---|---|---|---|---|---|"]
+        lines.append(
+            f"| {g.label} | *{g.species}* | {g.accession} | {meta['length']:,} | "
+            f"{meta['gc']:.3f} | {meta['title']} | {log.get(g.accession, {}).get('accessed', '')} |"
+        )
+    lines += [
+        "",
+        "## Gene records",
+        "",
+        "| Gene | Label | Locus tag | Protein ID | Location | Identity to UA159 | Included "
+        "| QC flags |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
     for r in cat.itertuples():
         pid = r.protein_id if isinstance(r.protein_id, str) else ""
-        lines.append(f"| {r.gene} | {r.label} | {r.locus_tag} | {pid} | {r.accession}:{r.start}-{r.end}"
-                     f"({r.strand}) | {r.identity_to_query:.3f} | {'yes' if r.included else 'no'} | {r.flags} |")
+        lines.append(
+            f"| {r.gene} | {r.label} | {r.locus_tag} | {pid} | {r.accession}:{r.start}-{r.end}"
+            f"({r.strand}) | {r.identity_to_query:.3f} | {'yes' if r.included else 'no'} "
+            f"| {r.flags} |"
+        )
     if fam is not None and len(fam):
-        lines += ["", "## Glucansucrase (GH70) family set used in M6", "",
-                  "| ID | Species | Protein ID | Product | Length (aa) |", "|---|---|---|---|---|"]
+        lines += [
+            "",
+            "## Glucansucrase (GH70) family set used in M6",
+            "",
+            "| ID | Species | Protein ID | Product | Length (aa) |",
+            "|---|---|---|---|---|",
+        ]
         for r in fam.itertuples():
             lines.append(f"| {r.id} | *{r.species}* | {r.protein_id} | {r.product} | {r.length} |")
     other = {k: v for k, v in log.items() if not k.startswith(("NC_", "NZ_"))}
     if other:
-        lines += ["", "## Other downloads", "",
-                  "Structures of *S. mutans* GtfC. 3AIE (2.1 A, highest resolution) chain A is "
-                  "the one analysed in M7; the others were inspected when choosing it.", "",
-                  "| File | Source | URL | Accessed |", "|---|---|---|---|"]
+        lines += [
+            "",
+            "## Other downloads",
+            "",
+            "Structures of *S. mutans* GtfC. 3AIE (2.1 A, highest resolution) chain A is "
+            "the one analysed in M7; the others were inspected when choosing it.",
+            "",
+            "| File | Source | URL | Accessed |",
+            "|---|---|---|---|",
+        ]
         for k, v in sorted(other.items()):
-            lines.append(f"| {k} | {v.get('source', '')} | {v.get('url', '')} | {v.get('accessed', '')} |")
+            lines.append(
+                f"| {k} | {v.get('source', '')} | {v.get('url', '')} | {v.get('accessed', '')} |"
+            )
     (ROOT / "ACCESSIONS.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -150,6 +182,7 @@ def run(force_synthetic: bool = False, offline: bool = False) -> pd.DataFrame:
     from . import m1_figures, m1_retrieval, synthetic
     from .entrez_client import ncbi_reachable
     from .seqio import MODE_FILE
+
     RESULTS.mkdir(parents=True, exist_ok=True)
     hits_file, fam_file = GENES_DIR / "panel_hits.csv", GENES_DIR / "gtf_family.csv"
     raw_cached = all((m1_retrieval.PARSED / f"{g.accession}.pkl").exists() for g in genomes())

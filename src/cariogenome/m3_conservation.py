@@ -5,7 +5,10 @@ Conservation of an alignment column is 1 - H / log2(K), where H is the Shannon e
 alphabet size (20 amino acids, 4 nucleotides). 1 = invariant, 0 = all residues equally
 frequent. Columns with more than 50% gaps are not scored.
 """
+
 from __future__ import annotations
+
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -24,13 +27,15 @@ WINDOW = 30
 GTFC_ID = "Smu_UA159|SMU_RS04625"  # UA159 GtfC, numbering reference for M6/M7
 
 
-def write_fasta(path, seqs: dict[str, str]) -> None:
+def write_fasta(path: Path, seqs: dict[str, str]) -> None:
+    """Write ``{id: sequence}`` as FASTA, creating the folder if needed."""
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("".join(f">{k}\n{v}\n" for k, v in seqs.items()))
 
 
-def column_conservation(msa: dict[str, str], kind: str = "aa", ref: str | None = REF,
-                        max_gap: float = 0.5) -> pd.DataFrame:
+def column_conservation(
+    msa: dict[str, str], kind: str = "aa", ref: str | None = REF, max_gap: float = 0.5
+) -> pd.DataFrame:
     """Per-column entropy, conservation, gap fraction and reference-residue numbering."""
     labels = list(msa)
     rows = np.array([list(msa[k]) for k in labels])
@@ -55,9 +60,17 @@ def column_conservation(msa: dict[str, str], kind: str = "aa", ref: str | None =
             ref_pos += 1
             rp, rres = ref_pos, ref_row[j]
         vals, cnt = np.unique(col[mask], return_counts=True) if mask.any() else (["-"], [1])
-        out.append({"column": j + 1, "ref_position": rp, "ref_residue": rres,
-                    "consensus": vals[int(np.argmax(cnt))], "gap_fraction": round(gap, 4),
-                    "entropy_bits": ent, "conservation": cons})
+        out.append(
+            {
+                "column": j + 1,
+                "ref_position": rp,
+                "ref_residue": rres,
+                "consensus": vals[int(np.argmax(cnt))],
+                "gap_fraction": round(gap, 4),
+                "entropy_bits": ent,
+                "conservation": cons,
+            }
+        )
     return pd.DataFrame(out)
 
 
@@ -87,10 +100,17 @@ def extreme_regions(cons: pd.DataFrame, ref_seq: str, n: int = 3) -> list[dict]:
             taken.append(end)
             used.append(end)
             start = end - window + 1
-            found.append({"type": kind, "rank": len(taken), "window": window,
-                          "start": start, "end": end,
-                          "mean_conservation": round(float(val), 4),
-                          "ref_sequence": ref_seq[start - 1:end]})
+            found.append(
+                {
+                    "type": kind,
+                    "rank": len(taken),
+                    "window": window,
+                    "start": start,
+                    "end": end,
+                    "mean_conservation": round(float(val), 4),
+                    "ref_sequence": ref_seq[start - 1 : end],
+                }
+            )
             if len(taken) == n:
                 break
     return found
@@ -115,9 +135,12 @@ def analyse_gene(gene: str) -> tuple[dict, pd.DataFrame, list[dict]]:
     focal_msa = {k: msa[k] for k in labels if sp[k] == FOCAL}
     focal_cons = column_conservation(focal_msa, kind)
     summary = {
-        "gene": gene, "class": "rRNA control" if gene == "16S" else gene_class(gene),
-        "n_sequences": len(seqs), "n_species": len({sp[k] for k in labels}),
-        "n_Smutans": len(focal), "alignment_columns": len(next(iter(msa.values()))),
+        "gene": gene,
+        "class": "rRNA control" if gene == "16S" else gene_class(gene),
+        "n_sequences": len(seqs),
+        "n_species": len({sp[k] for k in labels}),
+        "n_Smutans": len(focal),
+        "alignment_columns": len(next(iter(msa.values()))),
         "mean_pid_all": float(pid[np.triu_indices(len(labels), 1)].mean()),
         "min_pid_all": float(pid.min()),
         "mean_pid_Smutans": float(sub_pid.mean()),
@@ -144,6 +167,7 @@ def gtf_family() -> pd.DataFrame:
 def run() -> dict[str, pd.DataFrame]:
     """Run M3 for every gene and the GH70 family; test virulence vs control conservation."""
     from . import m3_figures
+
     for d in (ALN_DIR, CONS_DIR, ID_DIR):
         d.mkdir(parents=True, exist_ok=True)
     summaries, regions, cons_all = [], [], {}
@@ -158,12 +182,39 @@ def run() -> dict[str, pd.DataFrame]:
     reg_df.to_csv(RESULTS / "m3_extreme_regions.csv", index=False)
     coding = summary[summary["class"] != "rRNA control"]
     n_boot = load_config()["bootstrap"]["stats_replicates"]
-    tests = compare_table(coding, ["mean_pid_Smutans", "mean_entropy_Smutans"], rng(5), n_boot=n_boot)
+    tests = compare_table(
+        coding, ["mean_pid_Smutans", "mean_entropy_Smutans"], rng(5), n_boot=n_boot
+    )
     tests.to_csv(RESULTS / "m3_tests.csv", index=False)
     fam_cons = gtf_family()
     m3_figures.plot_all(summary, cons_all, reg_df, tests)
-    print(summary[["gene", "n_sequences", "n_species", "mean_pid_all", "mean_pid_Smutans",
-                   "mean_entropy_Smutans"]].round(3).to_string(index=False))
-    print(tests[["metric", "median_virulence", "median_control", "cliffs_delta", "delta_ci_low",
-                 "delta_ci_high", "q_bh"]].round(4).to_string(index=False))
+    print(
+        summary[
+            [
+                "gene",
+                "n_sequences",
+                "n_species",
+                "mean_pid_all",
+                "mean_pid_Smutans",
+                "mean_entropy_Smutans",
+            ]
+        ]
+        .round(3)
+        .to_string(index=False)
+    )
+    print(
+        tests[
+            [
+                "metric",
+                "median_virulence",
+                "median_control",
+                "cliffs_delta",
+                "delta_ci_low",
+                "delta_ci_high",
+                "q_bh",
+            ]
+        ]
+        .round(4)
+        .to_string(index=False)
+    )
     return {"summary": summary, "regions": reg_df, "tests": tests, "gtf_family": fam_cons}

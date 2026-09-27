@@ -1,13 +1,15 @@
 """Headless dashboard test: every tab renders for every gene without an exception."""
+
 from pathlib import Path
 
 import pytest
 from streamlit.testing.v1 import AppTest
 
-
 ROOT = Path(__file__).resolve().parents[1]
-pytestmark = pytest.mark.skipif(not (ROOT / "results" / "m1_catalog.csv").exists(),
-                                reason="run run_all.py first to create results/")
+pytestmark = pytest.mark.skipif(
+    not (ROOT / "results" / "m1_catalog.csv").exists(),
+    reason="run run_all.py first to create results/",
+)
 
 
 def test_dashboard_all_genes_and_tabs():

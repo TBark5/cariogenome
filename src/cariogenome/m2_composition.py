@@ -3,6 +3,7 @@
 Primary test: 6 virulence vs 8 housekeeping genes in *S. mutans* (gene-level means over
 strains). The CAI reference set is the ribosomal-protein genes of the same genome.
 """
+
 from __future__ import annotations
 
 import gzip
@@ -12,7 +13,16 @@ import pandas as pd
 from Bio import SeqIO
 
 from .codon import CODE, SENSE_CODONS, SYNONYMS, cai, cai_weights, codon_counts, rscu
-from .config import GENOMES_DIR, RESULTS, coding_genes, all_genes, gene_class, genomes, load_config, rng
+from .config import (
+    GENOMES_DIR,
+    RESULTS,
+    all_genes,
+    coding_genes,
+    gene_class,
+    genomes,
+    load_config,
+    rng,
+)
 from .seqio import load_gene, species_map
 from .stats import benjamini_hochberg, compare_table
 
@@ -39,9 +49,14 @@ def sequence_metrics(nt: str, weights: dict[str, float] | None) -> dict[str, flo
         out.update({"gc1": np.nan, "gc2": np.nan, "gc3": np.nan, "cai": np.nan})
         return out
     body = nt[: len(nt) - len(nt) % 3]
-    out.update({"gc1": gc_fraction(body[0::3]), "gc2": gc_fraction(body[1::3]),
-                "gc3": gc_fraction(body[2::3]),
-                "cai": cai(nt, weights)})
+    out.update(
+        {
+            "gc1": gc_fraction(body[0::3]),
+            "gc2": gc_fraction(body[1::3]),
+            "gc3": gc_fraction(body[2::3]),
+            "cai": cai(nt, weights),
+        }
+    )
     return out
 
 
@@ -58,9 +73,15 @@ def per_sequence_table() -> pd.DataFrame:
     for gene in all_genes():
         for label, nt in load_gene(gene, "nt").items():
             w = None if gene == "16S" else wcache.setdefault(label, _weights(label))
-            rows.append({"gene": gene, "label": label, "species": sp[label],
-                         "class": "rRNA control" if gene == "16S" else gene_class(gene),
-                         **sequence_metrics(nt, w)})
+            rows.append(
+                {
+                    "gene": gene,
+                    "label": label,
+                    "species": sp[label],
+                    "class": "rRNA control" if gene == "16S" else gene_class(gene),
+                    **sequence_metrics(nt, w),
+                }
+            )
     df = pd.DataFrame(rows)
     df.to_csv(RESULTS / "m2_per_sequence.csv", index=False)
     return df
@@ -119,8 +140,16 @@ def genome_background() -> pd.DataFrame:
                 if len(s) < 300 or len(s) % 3:
                     continue
                 m = sequence_metrics(s, w)
-                rows.append({"label": g.label, "species": g.species, "id": r.id,
-                             "gc3": m["gc3"], "cai": m["cai"], "gc": m["gc"]})
+                rows.append(
+                    {
+                        "label": g.label,
+                        "species": g.species,
+                        "id": r.id,
+                        "gc3": m["gc3"],
+                        "cai": m["cai"],
+                        "gc": m["gc"],
+                    }
+                )
     bg = pd.DataFrame(rows)
     bg.to_csv(RESULTS / "m2_genome_background.csv", index=False)
     return bg
@@ -132,10 +161,17 @@ def percentiles(per_seq: pd.DataFrame, bg: pd.DataFrame) -> pd.DataFrame:
     for label, sub in bg.groupby("label"):
         mine = per_seq[(per_seq["label"] == label) & per_seq["gene"].isin(coding_genes())]
         for r in mine.to_dict("records"):
-            rows.append({"label": label, "species": r["species"], "gene": r["gene"],
-                         "class": r["class"], "cai": r["cai"],
-                         "cai_percentile": (sub["cai"] < r["cai"]).mean() * 100,
-                         "gc3_percentile": (sub["gc3"] < r["gc3"]).mean() * 100})
+            rows.append(
+                {
+                    "label": label,
+                    "species": r["species"],
+                    "gene": r["gene"],
+                    "class": r["class"],
+                    "cai": r["cai"],
+                    "cai_percentile": (sub["cai"] < r["cai"]).mean() * 100,
+                    "gc3_percentile": (sub["gc3"] < r["gc3"]).mean() * 100,
+                }
+            )
     out = pd.DataFrame(rows)
     out.to_csv(RESULTS / "m2_genome_percentiles.csv", index=False)
     return out
@@ -144,6 +180,7 @@ def percentiles(per_seq: pd.DataFrame, bg: pd.DataFrame) -> pd.DataFrame:
 def run() -> dict[str, pd.DataFrame]:
     """Compute all M2 tables, statistics and figures."""
     from . import m2_figures
+
     n_boot = load_config()["bootstrap"]["stats_replicates"]
     per_seq = per_sequence_table()
     gl = gene_level(per_seq)
@@ -171,6 +208,20 @@ def run() -> dict[str, pd.DataFrame]:
     bg = genome_background()
     pct = percentiles(per_seq, bg)
     m2_figures.plot_all(per_seq, gl, tests, aa, aa_tests, rs, bg, pct)
-    print(tests[["metric", "median_virulence", "median_control", "cliffs_delta",
-                 "delta_ci_low", "delta_ci_high", "p_mannwhitney", "q_bh"]].round(4).to_string(index=False))
+    print(
+        tests[
+            [
+                "metric",
+                "median_virulence",
+                "median_control",
+                "cliffs_delta",
+                "delta_ci_low",
+                "delta_ci_high",
+                "p_mannwhitney",
+                "q_bh",
+            ]
+        ]
+        .round(4)
+        .to_string(index=False)
+    )
     return {"per_sequence": per_seq, "gene_level": gl, "tests": tests, "aa_tests": aa_tests}

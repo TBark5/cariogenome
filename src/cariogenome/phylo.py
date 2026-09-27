@@ -3,14 +3,15 @@
 Bootstrap support is computed on unrooted bipartitions ("splits"), which is correct for
 NJ trees whose root position is arbitrary.
 """
+
 from __future__ import annotations
 
 from collections.abc import Callable
 
 import numpy as np
-from numpy.typing import ArrayLike
-from Bio.Phylo.BaseTree import Tree
+from Bio.Phylo.BaseTree import Clade, Tree
 from Bio.Phylo.TreeConstruction import DistanceMatrix, DistanceTreeConstructor
+from numpy.typing import ArrayLike
 
 ENC = {"A": 0, "C": 1, "G": 2, "T": 3}
 MAX_DIST = 3.0  # cap for saturated pairs (log argument <= 0)
@@ -91,7 +92,7 @@ def canonical(side: frozenset, taxa: frozenset) -> frozenset:
     return taxa - side if anchor in side else side
 
 
-def clade_split(clade, taxa: frozenset) -> frozenset | None:
+def clade_split(clade: Clade, taxa: frozenset) -> frozenset | None:
     """Canonical split induced by the edge above ``clade`` (None if trivial)."""
     side = frozenset(t.name for t in clade.get_terminals())
     if len(side) < 2 or len(taxa - side) < 2:
@@ -135,8 +136,14 @@ def robinson_foulds(s1: set, s2: set) -> tuple[int, float]:
     return rf, (rf / denom if denom else 0.0)
 
 
-def bootstrap_support(arr: np.ndarray, labels: list[str], method: str, n_rep: int,
-                      rng: np.random.Generator, model: str = "K2P") -> tuple[Tree, dict]:
+def bootstrap_support(
+    arr: np.ndarray,
+    labels: list[str],
+    method: str,
+    n_rep: int,
+    rng: np.random.Generator,
+    model: str = "K2P",
+) -> tuple[Tree, dict]:
     """Reference tree plus split support (%) from ``n_rep`` column-resampling replicates."""
     pc = PairCounts(arr)
     ref = build_tree(pc.distances(model=model), labels, method)
@@ -166,8 +173,9 @@ def annotate(tree: Tree, support: dict, midpoint: bool = True) -> Tree:
     return tree
 
 
-def run_bootstrap_tree(msa: dict[str, str], method: str, n_rep: int, rng: np.random.Generator,
-                       model: str = "K2P") -> tuple[Tree, dict]:
+def run_bootstrap_tree(
+    msa: dict[str, str], method: str, n_rep: int, rng: np.random.Generator, model: str = "K2P"
+) -> tuple[Tree, dict]:
     """Convenience wrapper: alignment dict -> annotated tree and split supports."""
     labels = list(msa)
     tree, sup = bootstrap_support(encode(msa), labels, method, n_rep, rng, model)

@@ -1,4 +1,5 @@
 """Loading cached, QC-filtered sequences for the analysis modules."""
+
 from __future__ import annotations
 
 from pathlib import Path

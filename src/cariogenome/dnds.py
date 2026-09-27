@@ -13,6 +13,7 @@ Pooled estimate over pairs: pS = sum Sd / sum S, pN = sum Nd / sum N, each Jukes
 corrected, d = -3/4 ln(1 - 4p/3); omega = dN / dS. Codons with a gap, an ambiguous base or
 a stop in either sequence are skipped for that pair (pairwise deletion).
 """
+
 from __future__ import annotations
 
 from functools import cache
@@ -33,7 +34,7 @@ def codon_sites(codon: str) -> tuple[float, float]:
         for b in BASES:
             if b == codon[pos]:
                 continue
-            mut = codon[:pos] + b + codon[pos + 1:]
+            mut = codon[:pos] + b + codon[pos + 1 :]
             if mut not in STOP_CODONS and CODE[mut] == CODE[codon]:
                 syn += 1
     s = syn / 3.0
@@ -51,7 +52,7 @@ def codon_diffs(c1: str, c2: str) -> tuple[float, float]:
     for order in permutations(pos):
         cur, s, n, ok = c1, 0.0, 0.0, True
         for p in order:
-            nxt = cur[:p] + c2[p] + cur[p + 1:]
+            nxt = cur[:p] + c2[p] + cur[p + 1 :]
             if nxt in STOP_CODONS:
                 ok = False
                 break
@@ -76,7 +77,7 @@ def jc(p: np.ndarray | float) -> np.ndarray:
 
 
 def _split(seq: str) -> list[str]:
-    return [seq[i:i + 3] for i in range(0, len(seq) - len(seq) % 3, 3)]
+    return [seq[i : i + 3] for i in range(0, len(seq) - len(seq) % 3, 3)]
 
 
 def _valid(c: str) -> bool:
@@ -113,8 +114,17 @@ class PooledNG86:
         pN = tNd / tN if tN else np.nan
         dS, dN = float(jc(pS)) + 0.0, float(jc(pN)) + 0.0  # +0.0 avoids printing -0.0
         omega = dN / dS if dS and dS > 0 else np.nan
-        return {"pN": pN, "pS": pS, "dN": dN, "dS": dS, "omega": omega,
-                "Nd": tNd, "Sd": tSd, "N_sites": tN, "S_sites": tS}
+        return {
+            "pN": pN,
+            "pS": pS,
+            "dN": dN,
+            "dS": dS,
+            "omega": omega,
+            "Nd": tNd,
+            "Sd": tSd,
+            "N_sites": tN,
+            "S_sites": tS,
+        }
 
     def column_totals(self) -> np.ndarray:
         """(4, L) array of per-codon totals summed over pairs: S, N, Sd, Nd."""
@@ -137,4 +147,5 @@ def bootstrap_totals(col_tot: np.ndarray, n_rep: int, rng: np.random.Generator) 
 
 
 def all_pairs(labels: list[str]) -> list[tuple[str, str]]:
+    """Every unordered pair of labels."""
     return list(combinations(labels, 2))

@@ -1,4 +1,5 @@
 """The pipeline must recover a known tree and known selection pressures from SYNTHETIC data."""
+
 import numpy as np
 from scipy.stats import spearmanr
 
@@ -11,7 +12,7 @@ def test_simulated_sequences_are_valid_cds():
     assert len(seqs) == 22
     for s in seqs.values():
         assert s.startswith("ATG") and s.endswith("TAA") and len(s) % 3 == 0
-        assert all(CODE[s[i:i + 3]] != "*" for i in range(0, len(s) - 3, 3))
+        assert all(CODE[s[i : i + 3]] != "*" for i in range(0, len(s) - 3, 3))
 
 
 def test_recovers_true_topology():

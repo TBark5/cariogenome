@@ -7,6 +7,7 @@ Usage:
     python run_all.py --out DIR    # write data/, results/, figures/ under DIR instead
     python run_all.py --clean      # delete results/ and generated figures first
 """
+
 from __future__ import annotations
 
 import argparse
@@ -14,14 +15,16 @@ import os
 import shutil
 import sys
 import time
-import warnings
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    """Command-line options (see the module docstring)."""
+    p = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     p.add_argument("--synthetic", action="store_true", help="force SYNTHETIC simulated data")
     p.add_argument("--offline", action="store_true", help="use only cached sequences")
     p.add_argument("--out", type=Path, default=None, help="output root (default: project)")
@@ -30,15 +33,25 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> int:
+    """Run every pipeline step in order and record per-step runtimes."""
     args = parse_args()
     if args.out is not None:
         os.environ["CARIOGENOME_OUT"] = str(args.out.resolve())
     if args.offline:
         os.environ["CARIOGENOME_OFFLINE"] = "1"  # every network call now raises OfflineError
     sys.path.insert(0, str(ROOT / "src"))
-    warnings.filterwarnings("ignore", category=RuntimeWarning)
-    from cariogenome import (captions, m1_qc, m2_composition, m3_conservation, m4_phylogeny,
-                             m5_selection, m6_motifs, m7_structure, summary, validation)
+    from cariogenome import (
+        captions,
+        m1_qc,
+        m2_composition,
+        m3_conservation,
+        m4_phylogeny,
+        m5_selection,
+        m6_motifs,
+        m7_structure,
+        summary,
+        validation,
+    )
     from cariogenome.config import FIGURES, RESULTS, ensure_dirs
 
     if args.clean:
@@ -48,7 +61,10 @@ def main() -> int:
                 f.unlink()
     ensure_dirs()
     steps = [
-        ("M1 retrieval and QC", lambda: m1_qc.run(force_synthetic=args.synthetic, offline=args.offline)),
+        (
+            "M1 retrieval and QC",
+            lambda: m1_qc.run(force_synthetic=args.synthetic, offline=args.offline),
+        ),
         ("M2 composition", m2_composition.run),
         ("M3 alignment and conservation", m3_conservation.run),
         ("M4 phylogenetics", m4_phylogeny.run),

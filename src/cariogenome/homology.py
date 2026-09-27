@@ -7,6 +7,7 @@
 3. Orthologs are called by reciprocal best hit (RBH): the best hit in genome X must
    itself hit the original query best when searched back against the reference genome.
 """
+
 from __future__ import annotations
 
 from collections import defaultdict
@@ -20,11 +21,11 @@ from Bio.Align import PairwiseAligner, substitution_matrices
 class Hit:
     """Summary of one local alignment between a query and a target protein."""
 
-    index: int          # position of the target in the searched index
+    index: int  # position of the target in the searched index
     score: float
-    identity: float     # identical positions / alignment columns
-    qcov: float         # fraction of the query covered by the local alignment
-    tcov: float         # fraction of the target covered
+    identity: float  # identical positions / alignment columns
+    qcov: float  # fraction of the query covered by the local alignment
+    tcov: float  # fraction of the target covered
 
 
 def _local_aligner() -> PairwiseAligner:
@@ -41,7 +42,7 @@ LOCAL = _local_aligner()
 
 def kmers(seq: str, k: int = 3) -> set[str]:
     """Set of all overlapping k-mers of ``seq``."""
-    return {seq[i:i + k] for i in range(len(seq) - k + 1)}
+    return {seq[i : i + k] for i in range(len(seq) - k + 1)}
 
 
 class ProteinIndex:
@@ -95,16 +96,25 @@ def best_hit(query: str, index: ProteinIndex, top: int = 5) -> Hit | None:
     return local_stats(query, index.seqs[best], best)
 
 
-def all_hits(query: str, index: ProteinIndex, top: int, min_identity: float,
-             min_coverage: float) -> list[Hit]:
+def all_hits(
+    query: str, index: ProteinIndex, top: int, min_identity: float, min_coverage: float
+) -> list[Hit]:
     """Every candidate passing identity and (query and target) coverage thresholds."""
     hits = [local_stats(query, index.seqs[i], i) for i in index.candidates(query, top)]
-    return [h for h in hits if h.identity >= min_identity
-            and h.qcov >= min_coverage and h.tcov >= min_coverage]
+    return [
+        h
+        for h in hits
+        if h.identity >= min_identity and h.qcov >= min_coverage and h.tcov >= min_coverage
+    ]
 
 
-def reciprocal_best_hit(query: str, query_index_in_ref: int, target_index: ProteinIndex,
-                        ref_index: ProteinIndex, top: int = 5) -> tuple[Hit | None, bool]:
+def reciprocal_best_hit(
+    query: str,
+    query_index_in_ref: int,
+    target_index: ProteinIndex,
+    ref_index: ProteinIndex,
+    top: int = 5,
+) -> tuple[Hit | None, bool]:
     """Forward best hit of ``query`` in the target genome, and whether it is reciprocal."""
     fwd = best_hit(query, target_index, top)
     if fwd is None:

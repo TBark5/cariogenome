@@ -8,6 +8,7 @@
   pipeline (registry in ``captions.py``), always at 300 dpi on an opaque white background
   so figures stay readable on GitHub's dark theme.
 """
+
 from __future__ import annotations
 
 from pathlib import Path
@@ -15,16 +16,24 @@ from pathlib import Path
 import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402  (the backend must be chosen before pyplot loads)
-from matplotlib.figure import Figure  # noqa: E402
+import matplotlib.pyplot as plt
+import pandas as pd
+from matplotlib.axes import Axes
+from matplotlib.figure import Figure
 
-from .captions import figure_filename  # noqa: E402
-from .config import FIGURES, housekeeping_genes, virulence_genes  # noqa: E402
+from .captions import figure_filename
+from .config import FIGURES, housekeeping_genes, virulence_genes
 
 # Okabe-Ito palette (Okabe & Ito 2008), safe for the common forms of color blindness.
 OKABE_ITO = {
-    "orange": "#E69F00", "sky": "#56B4E9", "green": "#009E73", "yellow": "#F0E442",
-    "blue": "#0072B2", "vermillion": "#D55E00", "purple": "#CC79A7", "black": "#000000",
+    "orange": "#E69F00",
+    "sky": "#56B4E9",
+    "green": "#009E73",
+    "yellow": "#F0E442",
+    "blue": "#0072B2",
+    "vermillion": "#D55E00",
+    "purple": "#CC79A7",
+    "black": "#000000",
 }
 GREY = "#7F7F7F"
 LIGHT_GREY = "#D9D9D9"
@@ -43,10 +52,15 @@ SIGNIFICANT, NOT_SIGNIFICANT = OKABE_ITO["black"], GREY
 CATALYTIC = OKABE_ITO["black"]
 # Amino-acid classes in alignments and logos: Paul Tol's colorblind-safe "light" scheme,
 # kept separate from the saturated gene-class colors above.
-RESIDUE_GROUPS = {"hydrophobic AILMV": ("AILMV", "#77AADD"), "aromatic FWY": ("FWY", "#99DDFF"),
-                  "basic KRH": ("KRH", "#EE8866"), "acidic DE": ("DE", "#FFAABB"),
-                  "polar STNQ": ("STNQ", "#44BB99"), "G/P": ("GP", "#EEDD88"),
-                  "C": ("C", "#BBCC33")}
+RESIDUE_GROUPS = {
+    "hydrophobic AILMV": ("AILMV", "#77AADD"),
+    "aromatic FWY": ("FWY", "#99DDFF"),
+    "basic KRH": ("KRH", "#EE8866"),
+    "acidic DE": ("DE", "#FFAABB"),
+    "polar STNQ": ("STNQ", "#44BB99"),
+    "G/P": ("GP", "#EEDD88"),
+    "C": ("C", "#BBCC33"),
+}
 RESIDUE_COLORS = {aa: col for letters, col in RESIDUE_GROUPS.values() for aa in letters}
 SEQUENTIAL_CMAP = "viridis"
 DIVERGING_CMAP = "PuOr_r"  # purple-orange: avoids the red/blue of the gene classes
@@ -67,32 +81,51 @@ LW = 1.4
 LW_THICK = 2.0
 
 # Figure widths (inches) per figure class; heights follow the content.
-W_SINGLE = 7.0   # one panel
-W_PAIR = 10.5    # two side-by-side panels (class comparisons, maps)
-W_FULL = 14.0    # a row of panels or one wide panel
-W_XL = 18.0      # dense grids (identity heatmaps, tree grids, tanglegrams)
+W_SINGLE = 7.0  # one panel
+W_PAIR = 10.5  # two side-by-side panels (class comparisons, maps)
+W_FULL = 14.0  # a row of panels or one wide panel
+W_XL = 18.0  # dense grids (identity heatmaps, tree grids, tanglegrams)
 
 
 def apply_style() -> None:
     """Set the matplotlib defaults shared by every figure."""
-    plt.rcParams.update({
-        "figure.dpi": 100, "savefig.dpi": DPI,
-        "figure.facecolor": "white", "axes.facecolor": "white", "savefig.facecolor": "white",
-        "savefig.transparent": False, "savefig.bbox": "tight", "savefig.pad_inches": 0.15,
-        "font.family": "DejaVu Sans", "font.size": FS_LABEL,
-        "figure.titlesize": FS_SUPTITLE, "figure.titleweight": "bold",
-        "axes.titlesize": FS_TITLE, "axes.titleweight": "bold", "axes.labelsize": FS_LABEL,
-        "xtick.labelsize": FS_TICK, "ytick.labelsize": FS_TICK, "legend.fontsize": FS_ANNOT,
-        "legend.frameon": False, "axes.spines.top": False, "axes.spines.right": False,
-        "axes.linewidth": LW_THIN, "lines.linewidth": LW, "patch.linewidth": LW_THIN,
-        "axes.grid": False,
-    })
+    plt.rcParams.update(
+        {
+            "figure.dpi": 100,
+            "savefig.dpi": DPI,
+            "figure.facecolor": "white",
+            "axes.facecolor": "white",
+            "savefig.facecolor": "white",
+            "savefig.transparent": False,
+            "savefig.bbox": "tight",
+            "savefig.pad_inches": 0.15,
+            "font.family": "DejaVu Sans",
+            "font.size": FS_LABEL,
+            "figure.titlesize": FS_SUPTITLE,
+            "figure.titleweight": "bold",
+            "axes.titlesize": FS_TITLE,
+            "axes.titleweight": "bold",
+            "axes.labelsize": FS_LABEL,
+            "xtick.labelsize": FS_TICK,
+            "ytick.labelsize": FS_TICK,
+            "legend.fontsize": FS_ANNOT,
+            "legend.frameon": False,
+            "axes.spines.top": False,
+            "axes.spines.right": False,
+            "axes.linewidth": LW_THIN,
+            "lines.linewidth": LW,
+            "patch.linewidth": LW_THIN,
+            "axes.grid": False,
+        }
+    )
 
 
 def class_n_text() -> str:
     """Standard sample-size note for figures that compare gene classes."""
-    return (f"n = {len(virulence_genes())} virulence-associated, "
-            f"n = {len(housekeeping_genes())} housekeeping genes")
+    return (
+        f"n = {len(virulence_genes())} virulence-associated, "
+        f"n = {len(housekeeping_genes())} housekeeping genes"
+    )
 
 
 def annotate_class_n(fig: Figure, y: float = -0.01) -> None:
@@ -100,20 +133,22 @@ def annotate_class_n(fig: Figure, y: float = -0.01) -> None:
     fig.text(0.5, y, class_n_text(), ha="center", va="top", fontsize=FS_ANNOT, color=DARK_GREY)
 
 
-def title_with_stats(ax, title: str, stats: str) -> None:
+def title_with_stats(ax: Axes, title: str, stats: str) -> None:
     """Bold panel title with a smaller, non-bold statistics line underneath."""
     ax.set_title(title, pad=16 + 11 * stats.count(chr(10)))  # chr(10): one more line of stats
-    ax.text(0.5, 1.012, stats, transform=ax.transAxes, ha="center", va="bottom",
-            fontsize=FS_ANNOT)
+    ax.text(0.5, 1.012, stats, transform=ax.transAxes, ha="center", va="bottom", fontsize=FS_ANNOT)
 
 
-def delta_stats(r) -> str:
+def delta_stats(r: pd.Series) -> str:
     """'Cliff's δ = d [lo, hi], q = q' from a stats row (Cliff's delta with CI and BH q)."""
-    return (f"Cliff's δ = {r.cliffs_delta:.2f} [{r.delta_ci_low:.2f}, {r.delta_ci_high:.2f}], "
-            f"q = {r.q_bh:.3f}")
+    return (
+        f"Cliff's δ = {r.cliffs_delta:.2f} [{r.delta_ci_low:.2f}, {r.delta_ci_high:.2f}], "
+        f"q = {r.q_bh:.3f}"
+    )
 
 
 def species_color(species: str) -> str:
+    """Fixed color of a species (dark grey if unknown)."""
     return SPECIES_COLORS.get(species, DARK_GREY)
 
 

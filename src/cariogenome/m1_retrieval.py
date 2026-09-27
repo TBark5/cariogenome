@@ -4,6 +4,7 @@ Orthologs of each UA159 query gene are called by reciprocal best hit, not by ann
 name. The first 16S rRNA copy of each genome is taken. Every extracted record is cached
 in ``data/genes`` (FASTA) and ``data/genbank`` (GenBank slice of the source record).
 """
+
 from __future__ import annotations
 
 import gzip
@@ -18,8 +19,7 @@ from Bio.SeqRecord import SeqRecord
 from Bio.SeqUtils import gc_fraction
 
 from . import entrez_client
-from .config import (GENBANK_DIR, GENES_DIR, GENOMES_DIR, RAW, Genome, genomes,
-                     load_config)
+from .config import GENBANK_DIR, GENES_DIR, GENOMES_DIR, RAW, Genome, genomes, load_config
 from .homology import ProteinIndex, all_hits, local_stats, reciprocal_best_hit
 
 PARSED = RAW / "parsed"
@@ -37,25 +37,30 @@ def parse_genome(genome: Genome) -> pd.DataFrame:
         if f.type not in ("CDS", "rRNA"):
             continue
         q = f.qualifiers
-        rows.append({
-            "type": f.type,
-            "locus_tag": q.get("locus_tag", [""])[0],
-            "old_locus_tag": q.get("old_locus_tag", [""])[0],
-            "protein_id": q.get("protein_id", [""])[0],
-            "gene_name": q.get("gene", [""])[0],
-            "product": q.get("product", [""])[0],
-            "start": int(f.location.start),
-            "end": int(f.location.end),
-            "strand": int(f.location.strand or 1),
-            "pseudo": "pseudo" in q or "pseudogene" in q,
-            "nt": str(f.extract(record.seq)).upper(),
-            "aa": q.get("translation", [""])[0],
-        })
+        rows.append(
+            {
+                "type": f.type,
+                "locus_tag": q.get("locus_tag", [""])[0],
+                "old_locus_tag": q.get("old_locus_tag", [""])[0],
+                "protein_id": q.get("protein_id", [""])[0],
+                "gene_name": q.get("gene", [""])[0],
+                "product": q.get("product", [""])[0],
+                "start": int(f.location.start),
+                "end": int(f.location.end),
+                "strand": int(f.location.strand or 1),
+                "pseudo": "pseudo" in q or "pseudogene" in q,
+                "nt": str(f.extract(record.seq)).upper(),
+                "aa": q.get("translation", [""])[0],
+            }
+        )
     df = pd.DataFrame(rows)
     PARSED.mkdir(parents=True, exist_ok=True)
     df.to_pickle(cache)
-    meta = {"title": record.description, "length": len(record.seq),
-            "gc": round(gc_fraction(record.seq), 4)}
+    meta = {
+        "title": record.description,
+        "length": len(record.seq),
+        "gc": round(gc_fraction(record.seq), 4),
+    }
     (PARSED / f"{genome.accession}.json").write_text(json.dumps(meta))
     return df
 
@@ -70,12 +75,15 @@ def genome_meta(genome: Genome) -> dict:
 
 def _write_genbank_slice(record: SeqRecord, genome: Genome, row: pd.Series, gene: str) -> Path:
     """Save the source-record region covering one gene as a small GenBank file."""
-    sub: SeqRecord = record[row.start:row.end]
+    sub: SeqRecord = record[row.start : row.end]
     sub.id = f"{genome.accession}:{row.start + 1}-{row.end}"
     sub.name = f"{genome.label}_{gene}"[:16]
     sub.description = f"{genome.label} {gene} {row.locus_tag} region of {genome.accession}"
-    sub.annotations = {"molecule_type": "DNA", "organism": genome.species,
-                       "source": record.annotations.get("source", genome.species)}
+    sub.annotations = {
+        "molecule_type": "DNA",
+        "organism": genome.species,
+        "source": record.annotations.get("source", genome.species),
+    }
     out = GENBANK_DIR / gene / f"{genome.label}.gb"
     out.parent.mkdir(parents=True, exist_ok=True)
     SeqIO.write(sub, out, "genbank")
@@ -114,12 +122,17 @@ def extract_panel() -> pd.DataFrame:
         index = ProteinIndex(list(cds["aa"]), cfg["kmer"])
         for gene, qi in queries.items():
             qseq = ref.at[qi, "aa"]
-            hit, rbh = reciprocal_best_hit(qseq, ref_pos[qi], index, ref_index,
-                                           cfg["prefilter_top"])
+            hit, rbh = reciprocal_best_hit(
+                qseq, ref_pos[qi], index, ref_index, cfg["prefilter_top"]
+            )
             if hit is None:
                 continue
             row = cds.iloc[hit.index]
-            ok = rbh and hit.identity >= cfg["min_identity"] and min(hit.qcov, hit.tcov) >= cfg["min_coverage"]
+            ok = (
+                rbh
+                and hit.identity >= cfg["min_identity"]
+                and min(hit.qcov, hit.tcov) >= cfg["min_coverage"]
+            )
             rows.append(_hit_row(g, gene, row, hit.identity, hit.qcov, hit.tcov, rbh, ok))
         rrna = df[(df["type"] == "rRNA") & df["product"].str.contains("16S")].sort_values("start")
         if len(rrna):
@@ -134,30 +147,54 @@ def _is_rep(genome: Genome, gl: list[Genome]) -> bool:
     return next(x for x in gl if x.species == genome.species).label == genome.label
 
 
-def _hit_row(g: Genome, gene: str, row: pd.Series, ident: float, qcov: float, tcov: float,
-             rbh: bool, ortholog: bool) -> dict:
+def _hit_row(
+    g: Genome,
+    gene: str,
+    row: pd.Series,
+    ident: float,
+    qcov: float,
+    tcov: float,
+    rbh: bool,
+    ortholog: bool,
+) -> dict:
     return {
-        "gene": gene, "label": g.label, "species": g.species, "accession": g.accession,
-        "row_index": int(row.name), "locus_tag": row.locus_tag,
-        "old_locus_tag": row.old_locus_tag, "protein_id": row.protein_id,
-        "annotation_gene": row.gene_name, "product": row["product"],
-        "start": int(row.start) + 1, "end": int(row.end), "strand": "+" if row.strand == 1 else "-",
-        "pseudo": bool(row.pseudo), "identity_to_query": round(float(ident), 4),
-        "query_coverage": round(float(qcov), 4), "hit_coverage": round(float(tcov), 4),
-        "reciprocal_best_hit": bool(rbh), "ortholog_call": bool(ortholog),
+        "gene": gene,
+        "label": g.label,
+        "species": g.species,
+        "accession": g.accession,
+        "row_index": int(row.name),
+        "locus_tag": row.locus_tag,
+        "old_locus_tag": row.old_locus_tag,
+        "protein_id": row.protein_id,
+        "annotation_gene": row.gene_name,
+        "product": row["product"],
+        "start": int(row.start) + 1,
+        "end": int(row.end),
+        "strand": "+" if row.strand == 1 else "-",
+        "pseudo": bool(row.pseudo),
+        "identity_to_query": round(float(ident), 4),
+        "query_coverage": round(float(qcov), 4),
+        "hit_coverage": round(float(tcov), 4),
+        "reciprocal_best_hit": bool(rbh),
+        "ortholog_call": bool(ortholog),
     }
 
 
-def _write_gene_fastas(hits: pd.DataFrame, gmap: dict[str, Genome],
-                       tables: dict[str, pd.DataFrame]) -> None:
+def _write_gene_fastas(
+    hits: pd.DataFrame, gmap: dict[str, Genome], tables: dict[str, pd.DataFrame]
+) -> None:
     """Write nucleotide and protein FASTA per gene plus one GenBank slice per record."""
     GENES_DIR.mkdir(parents=True, exist_ok=True)
     calls = hits[hits["ortholog_call"]]
     for gene, sub in calls.groupby("gene", sort=False):
-        with open(GENES_DIR / f"{gene}.fna", "w") as fna, open(GENES_DIR / f"{gene}.faa", "w") as faa:
+        with (
+            open(GENES_DIR / f"{gene}.fna", "w") as fna,
+            open(GENES_DIR / f"{gene}.faa", "w") as faa,
+        ):
             for r in sub.itertuples():
                 src = tables[r.label].loc[r.row_index]
-                head = f">{r.label} gene={gene} locus_tag={r.locus_tag} {r.accession}:{r.start}-{r.end}({r.strand})"
+                loc = f"{r.accession}:{r.start}-{r.end}({r.strand})"
+                head = f">{r.label} gene={gene} locus_tag={r.locus_tag} {loc}"
                 fna.write(f"{head}\n{src.nt}\n")
                 if src.aa:
                     faa.write(f"{head} protein_id={r.protein_id}\n{src.aa}\n")
@@ -204,12 +241,20 @@ def extract_gtf_family() -> pd.DataFrame:
                     continue
                 seen.add(r.aa)
                 best = max((local_stats(x, r.aa) for x in gtf_seqs), key=lambda s: s.score)
-                rows.append({"id": f"{g.label}|{r.locus_tag}", "label": g.label,
-                             "species": g.species, "locus_tag": r.locus_tag,
-                             "old_locus_tag": r.old_locus_tag, "protein_id": r.protein_id,
-                             "product": r["product"], "length": len(r.aa),
-                             "best_identity_to_Smu_gtf": round(float(best.identity), 4),
-                             "aa": r.aa})
+                rows.append(
+                    {
+                        "id": f"{g.label}|{r.locus_tag}",
+                        "label": g.label,
+                        "species": g.species,
+                        "locus_tag": r.locus_tag,
+                        "old_locus_tag": r.old_locus_tag,
+                        "protein_id": r.protein_id,
+                        "product": r["product"],
+                        "length": len(r.aa),
+                        "best_identity_to_Smu_gtf": round(float(best.identity), 4),
+                        "aa": r.aa,
+                    }
+                )
     fam = pd.DataFrame(rows)
     with open(GENES_DIR / "gtf_family.faa", "w") as fh:
         for r in fam.itertuples():

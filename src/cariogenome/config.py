@@ -1,4 +1,5 @@
 """Project paths, configuration loading and seeded random number generators."""
+
 from __future__ import annotations
 
 import os
@@ -54,10 +55,12 @@ def species_of(label: str) -> str:
 
 
 def virulence_genes() -> list[str]:
+    """Virulence-associated genes, in config order."""
     return list(load_config()["genes"]["virulence"])
 
 
 def housekeeping_genes() -> list[str]:
+    """Housekeeping (control) protein-coding genes, in config order."""
     return list(load_config()["genes"]["housekeeping"])
 
 

@@ -1,4 +1,5 @@
 """Unit tests for distances, trees, splits, bootstrap support and statistics."""
+
 import math
 
 import numpy as np
@@ -40,7 +41,9 @@ def test_nj_recovers_additive_tree():
     labels = ["A", "B", "C", "D"]
     d = np.array([[0, 3, 4, 6], [3, 0, 5, 7], [4, 5, 0, 4], [6, 7, 4, 0]], float)
     tree = phylo.build_tree(d, labels, "nj")
-    assert frozenset({"C", "D"}) in phylo.splits(tree) or frozenset({"A", "B"}) in phylo.splits(tree)
+    assert frozenset({"C", "D"}) in phylo.splits(tree) or frozenset({"A", "B"}) in phylo.splits(
+        tree
+    )
 
 
 def test_bootstrap_support_is_high_for_clear_signal():
@@ -49,7 +52,11 @@ def test_bootstrap_support_is_high_for_clear_signal():
     seqs = {}
     for name, flips in [("A", 0), ("B", 5), ("C", 90), ("D", 95)]:
         s = base.copy()
-        idx = rng.choice(600, flips, replace=False) if name in "AB" else np.r_[np.arange(60), rng.choice(np.arange(60, 600), flips - 60, replace=False)]
+        idx = (
+            rng.choice(600, flips, replace=False)
+            if name in "AB"
+            else np.r_[np.arange(60), rng.choice(np.arange(60, 600), flips - 60, replace=False)]
+        )
         s[idx] = [{"A": "C", "C": "G", "G": "T", "T": "A"}[x] for x in s[idx]]
         seqs[name] = "".join(s)
     _, sup = phylo.run_bootstrap_tree(seqs, "nj", 50, np.random.default_rng(1))
@@ -67,5 +74,7 @@ def test_cliffs_delta_extremes():
 
 
 def test_compare_groups_reports_effect_and_ci():
-    res = compare_groups(np.array([5, 6, 7.0]), np.array([1, 2, 3.0]), np.random.default_rng(0), 500)
+    res = compare_groups(
+        np.array([5, 6, 7.0]), np.array([1, 2, 3.0]), np.random.default_rng(0), 500
+    )
     assert res["cliffs_delta"] == 1.0 and res["delta_ci_low"] <= 1.0 and res["n_control"] == 3

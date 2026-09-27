@@ -4,14 +4,15 @@ Codon sequences are simulated along the known tree in ``synthetic.py`` (no indel
 simulated sequences are already aligned). We then run the same M4 (K2P + NJ) and M5
 (pooled NG86) code used on the real data and compare with the truth.
 """
+
 from __future__ import annotations
 
 import io
 from itertools import combinations
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from Bio import Phylo
 from scipy.stats import spearmanr
 
@@ -25,6 +26,7 @@ TEST_OMEGAS = [0.02, 0.05, 0.1, 0.2, 0.4, 0.7, 1.0]
 
 
 def true_splits() -> set[frozenset]:
+    """Bipartitions of the known simulation tree."""
     return phylo.splits(Phylo.read(io.StringIO(true_tree_newick()), "newick"))
 
 
@@ -35,8 +37,13 @@ def recover_topology(n_genes: int, n_codons: int, gen: np.random.Generator) -> d
     concat = {k: "".join(g[k] for g in genes) for k in genes[0]}
     _tree, sup = phylo.run_bootstrap_tree(concat, "nj", 50, gen)
     rf, nrf = phylo.robinson_foulds(set(sup), true_splits())
-    return {"n_genes": n_genes, "n_codons_per_gene": n_codons, "rf": rf, "nRF": nrf,
-            "mean_support": float(np.mean(list(sup.values())))}
+    return {
+        "n_genes": n_genes,
+        "n_codons_per_gene": n_codons,
+        "rf": rf,
+        "nRF": nrf,
+        "mean_support": float(np.mean(list(sup.values()))),
+    }
 
 
 def recover_omega(n_codons: int, gen: np.random.Generator, reps: int = 3) -> pd.DataFrame:
@@ -47,8 +54,9 @@ def recover_omega(n_codons: int, gen: np.random.Generator, reps: int = 3) -> pd.
         for r in range(reps):
             seqs = simulate_codons(true_tree_newick(), n_codons, om, gen, scale=3.0)
             est = PooledNG86(seqs, list(combinations(smu, 2))).estimate()
-            rows.append({"true_omega": om, "replicate": r, "estimated_omega": est["omega"],
-                         "pS": est["pS"]})
+            rows.append(
+                {"true_omega": om, "replicate": r, "estimated_omega": est["omega"], "pS": est["pS"]}
+            )
     return pd.DataFrame(rows)
 
 
@@ -59,20 +67,33 @@ def run(save_outputs: bool = True) -> dict:
     omega = recover_omega(500, gen)
     rho = spearmanr(omega["true_omega"], omega["estimated_omega"]).statistic
     rel_err = float(np.median(np.abs(omega["estimated_omega"] / omega["true_omega"] - 1)))
-    summary = {"topology_nRF": float(topo["nRF"].iloc[0]), "topology_mean_support": float(topo["mean_support"].iloc[0]),
-               "omega_spearman": float(rho), "omega_median_relative_error": rel_err}
+    summary = {
+        "topology_nRF": float(topo["nRF"].iloc[0]),
+        "topology_mean_support": float(topo["mean_support"].iloc[0]),
+        "omega_spearman": float(rho),
+        "omega_median_relative_error": rel_err,
+    }
     if save_outputs:
         topo.to_csv(RESULTS / "validation_synthetic_topology.csv", index=False)
         omega.to_csv(RESULTS / "validation_synthetic_omega.csv", index=False)
         pd.DataFrame([summary]).to_csv(RESULTS / "validation_synthetic_summary.csv", index=False)
         fig, ax = plt.subplots(figsize=(W_SINGLE, 6.0))
-        ax.plot([0, 1.1], [0, 1.1], color=GREY, ls="--", lw=LW_THIN, label="perfect recovery (y = x)")
-        ax.scatter(omega["true_omega"], omega["estimated_omega"], color="black", s=28,
-                   label=f"estimate ({len(omega)} simulated genes)")
+        ax.plot(
+            [0, 1.1], [0, 1.1], color=GREY, ls="--", lw=LW_THIN, label="perfect recovery (y = x)"
+        )
+        ax.scatter(
+            omega["true_omega"],
+            omega["estimated_omega"],
+            color="black",
+            s=28,
+            label=f"estimate ({len(omega)} simulated genes)",
+        )
         ax.set_xlabel("True omega used in the simulation (dN/dS)")
         ax.set_ylabel("Estimated omega, pooled NG86 (dN/dS)")
-        ax.set_title(f"SYNTHETIC validation: omega recovery (Spearman {rho:.2f})\n"
-                     f"NJ topology vs true tree: normalized RF = {summary['topology_nRF']:.2f}")
+        ax.set_title(
+            f"SYNTHETIC validation: omega recovery (Spearman {rho:.2f})\n"
+            f"NJ topology vs true tree: normalized RF = {summary['topology_nRF']:.2f}"
+        )
         ax.legend(loc="upper left")
         save(fig, "validation_synthetic_recovery")
     print("  synthetic validation:", {k: round(v, 3) for k, v in summary.items()})

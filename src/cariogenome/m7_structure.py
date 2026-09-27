@@ -1,11 +1,13 @@
 """M7: structural context of GH70 conservation on the S. mutans GtfC crystal structure.
 
-PDB 3AIE (GtfC catalytic core, residues 244-1087, 2.1 A, Ito et al. 2011) chain A is used.
+PDB 3AIE chain A is used (GtfC catalytic core, residues 244-1087, 2.1 A; Ito et al. 2011,
+PMID 21354427).
 The GH70 family conservation from M3/M6 is mapped onto residues by aligning the chain
 sequence to UA159 GtfC, stored in the B-factor column (x100) for coloring, and rendered
 with py3Dmol. P6 is tested with a Spearman correlation between residue conservation and
 C-alpha distance to the catalytic center (centroid of D477, E515, D588 side chains).
 """
+
 from __future__ import annotations
 
 import io
@@ -14,6 +16,7 @@ import math
 import numpy as np
 import pandas as pd
 from Bio.PDB import PDBIO, PDBParser, PPBuilder, Select
+from Bio.PDB.Chain import Chain
 from Bio.SeqUtils import seq1
 from scipy.stats import spearmanr
 
@@ -28,11 +31,11 @@ UNSCORED = -1.0
 
 
 class _ChainA(Select):
-    def accept_chain(self, chain):
+    def accept_chain(self, chain: Chain) -> bool:
         return chain.id == "A"
 
 
-def get_structure() -> tuple[str, object]:
+def get_structure() -> tuple[str, Chain]:
     """Download the first available preferred PDB entry; return (id, chain A)."""
     for pid in load_config()["pdb"]["preferred"]:
         try:
@@ -53,7 +56,7 @@ def get_structure() -> tuple[str, object]:
     raise RuntimeError("no GtfC structure could be retrieved")
 
 
-def residue_table(chain, cons: pd.DataFrame, gtfc: str) -> pd.DataFrame:
+def residue_table(chain: Chain, cons: pd.DataFrame, gtfc: str) -> pd.DataFrame:
     """Per-residue PDB number, GtfC position, conservation and C-alpha coordinates."""
     res = [r for r in chain if r.id[0] == " " and "CA" in r]
     seq = "".join(seq1(r.get_resname()) for r in res)
@@ -68,20 +71,29 @@ def residue_table(chain, cons: pd.DataFrame, gtfc: str) -> pd.DataFrame:
     rows = []
     for k, r in enumerate(res):
         pos = mapping.get(k)
-        rows.append({"pdb_resnum": r.id[1], "resname": r.get_resname(), "aa": seq[k],
-                     "gtfc_position": pos, "gtfc_aa": gtfc[pos - 1] if pos else "",
-                     "conservation": float(cmap.get(pos, np.nan)) if pos else np.nan,
-                     "x": r["CA"].coord[0], "y": r["CA"].coord[1], "z": r["CA"].coord[2]})
+        rows.append(
+            {
+                "pdb_resnum": r.id[1],
+                "resname": r.get_resname(),
+                "aa": seq[k],
+                "gtfc_position": pos,
+                "gtfc_aa": gtfc[pos - 1] if pos else "",
+                "conservation": float(cmap.get(pos, np.nan)) if pos else np.nan,
+                "x": r["CA"].coord[0],
+                "y": r["CA"].coord[1],
+                "z": r["CA"].coord[2],
+            }
+        )
     return pd.DataFrame(rows)
 
 
-def active_site_center(chain) -> np.ndarray:
+def active_site_center(chain: Chain) -> np.ndarray:
     """Centroid of the side-chain atoms of the three catalytic residues."""
     coords = [a.coord for pos in CATALYTIC for a in chain[pos] if a.get_id() not in BACKBONE]
     return np.mean(coords, axis=0)
 
 
-def ramachandran(chain) -> pd.DataFrame:
+def ramachandran(chain: Chain) -> pd.DataFrame:
     """phi/psi (degrees) for every residue with both angles defined."""
     rows = []
     for pp in PPBuilder().build_peptides(chain):
@@ -89,14 +101,26 @@ def ramachandran(chain) -> pd.DataFrame:
             if phi is None or psi is None:
                 continue
             name = r.get_resname()
-            rows.append({"pdb_resnum": r.id[1], "resname": name, "phi": math.degrees(phi),
-                         "psi": math.degrees(psi),
-                         "type": "Gly" if name == "GLY" else ("Pro" if name == "PRO" else "general")})
+            rows.append(
+                {
+                    "pdb_resnum": r.id[1],
+                    "resname": name,
+                    "phi": math.degrees(phi),
+                    "psi": math.degrees(psi),
+                    "type": "Gly" if name == "GLY" else ("Pro" if name == "PRO" else "general"),
+                }
+            )
     df = pd.DataFrame(rows)
     phi, psi = df["phi"], df["psi"]
     df["region"] = np.select(
-        [(phi < 0) & (psi > -120) & (psi < 50), (phi < 0) & ((psi >= 50) | (psi <= -150)), phi >= 0],
-        ["alpha (right-handed)", "beta / polyproline", "left-handed (phi > 0)"], "other")
+        [
+            (phi < 0) & (psi > -120) & (psi < 50),
+            (phi < 0) & ((psi >= 50) | (psi <= -150)),
+            phi >= 0,
+        ],
+        ["alpha (right-handed)", "beta / polyproline", "left-handed (phi > 0)"],
+        "other",
+    )
     return df
 
 
@@ -117,7 +141,9 @@ def write_conservation_pdb(pid: str, table: pd.DataFrame) -> str:
     return text
 
 
-def spearman_ci(x: np.ndarray, y: np.ndarray, n_boot: int = 2000) -> tuple[float, float, float, float]:
+def spearman_ci(
+    x: np.ndarray, y: np.ndarray, n_boot: int = 2000
+) -> tuple[float, float, float, float]:
     """Spearman rho, p-value, and a residue-bootstrap 95% CI."""
     res = spearmanr(x, y)
     gen = rng(8)
@@ -132,6 +158,7 @@ def spearman_ci(x: np.ndarray, y: np.ndarray, n_boot: int = 2000) -> tuple[float
 def run() -> dict:
     """Retrieve the structure, map conservation, test P6, Ramachandran, figures, 3D view."""
     from . import m7_figures
+
     fam = read_fasta(GENES_DIR / "gtf_family.faa")
     if GTFC_ID not in fam:
         print("  M7 skipped: UA159 GtfC not in the family set (synthetic data)")
@@ -140,18 +167,33 @@ def run() -> dict:
     pid, chain = get_structure()
     table = residue_table(chain, cons, fam[GTFC_ID])
     center = active_site_center(chain)
-    table["distance_to_active_site"] = np.linalg.norm(table[["x", "y", "z"]].values - center, axis=1)
+    table["distance_to_active_site"] = np.linalg.norm(
+        table[["x", "y", "z"]].values - center, axis=1
+    )
     table.to_csv(RESULTS / "m7_residue_conservation.csv", index=False)
     scored = table.dropna(subset=["conservation"])
-    rho, p, lo, hi = spearman_ci(scored["conservation"].values, scored["distance_to_active_site"].values)
+    rho, p, lo, hi = spearman_ci(
+        scored["conservation"].values, scored["distance_to_active_site"].values
+    )
     near = scored[scored["distance_to_active_site"] <= 12]
-    summary = {"pdb_id": pid, "chain": "A", "n_residues_modelled": len(table),
-               "n_residues_scored": len(scored),
-               "numbering_matches_gtfc": bool((table["pdb_resnum"] == table["gtfc_position"]).mean() > 0.99),
-               "spearman_rho_conservation_vs_distance": rho, "rho_ci_low": lo, "rho_ci_high": hi,
-               "spearman_p": p, "mean_conservation_within_12A": float(near["conservation"].mean()),
-               "n_within_12A": len(near),
-               "mean_conservation_beyond_12A": float(scored.loc[scored["distance_to_active_site"] > 12, "conservation"].mean())}
+    summary = {
+        "pdb_id": pid,
+        "chain": "A",
+        "n_residues_modelled": len(table),
+        "n_residues_scored": len(scored),
+        "numbering_matches_gtfc": bool(
+            (table["pdb_resnum"] == table["gtfc_position"]).mean() > 0.99
+        ),
+        "spearman_rho_conservation_vs_distance": rho,
+        "rho_ci_low": lo,
+        "rho_ci_high": hi,
+        "spearman_p": p,
+        "mean_conservation_within_12A": float(near["conservation"].mean()),
+        "n_within_12A": len(near),
+        "mean_conservation_beyond_12A": float(
+            scored.loc[scored["distance_to_active_site"] > 12, "conservation"].mean()
+        ),
+    }
     rama = ramachandran(chain)
     rama.to_csv(RESULTS / "m7_ramachandran.csv", index=False)
     for reg, frac in rama["region"].value_counts(normalize=True).items():

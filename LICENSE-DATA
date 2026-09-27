@@ -1,0 +1,51 @@
+DATA PROVENANCE AND TERMS
+
+The MIT License in LICENSE covers the code only. The data files in this repository come
+from public databases and carry their providers' terms, summarized below. Every accession
+and its access date is listed in ACCESSIONS.md.
+
+1. Sequences: NCBI RefSeq (National Center for Biotechnology Information)
+-------------------------------------------------------------------------
+Files:      data/genes/, data/genbank/, data/genomes/ (derived from the records below)
+Records:    22 complete RefSeq chromosomes of Streptococcus mutans, S. sanguinis,
+            S. gordonii, S. mitis and S. salivarius (accessions in ACCESSIONS.md)
+Retrieved:  2026-09-27, with Bio.Entrez efetch (rettype gbwithparts)
+Terms:      NCBI molecular data usage policy
+            (https://www.ncbi.nlm.nih.gov/home/about/policies/):
+            "NCBI itself places no restrictions on the use or distribution of the data
+            contained therein. [...] However, some submitters of the original data (or the
+            country of origin of such data) may claim patent, copyright, or other
+            intellectual property rights in all or a portion of the data."
+Citation:   Cite the individual genome records by accession (ACCESSIONS.md) and the
+            RefSeq database.
+
+2. Structure: RCSB Protein Data Bank entry 3AIE
+-----------------------------------------------
+Files:      data/structure/3AIE_chainA.pdb (chain A extracted from the entry)
+            data/structure/3AIE_chainA_conservation.pdb (same, with conservation scores
+            written in the B-factor column by this project)
+Entry:      3AIE, "Crystal Structure of glucansucrase from Streptococcus mutans",
+            GtfC catalytic core, 2.1 A resolution, released 2011-03-23
+Retrieved:  2026-09-27 from https://files.rcsb.org/download/3AIE.pdb
+Terms:      wwPDB usage policy (https://www.wwpdb.org/about/usage-policies):
+            "Data files contained in the PDB archive are available under the CC0 1.0
+            Universal (CC0 1.0) Public Domain Dedication. Users of PDB data are encouraged
+            to attribute the original authors of the PDB structure data where possible."
+Required citation (primary citation of 3AIE, as recorded by RCSB PDB):
+            Ito K, Ito S, Shimamura T, Weyand S, Kawarasaki Y, Misaka T, Abe K,
+            Kobayashi T, Cameron AD, Iwata S. Crystal structure of glucansucrase from the
+            dental caries pathogen Streptococcus mutans. J Mol Biol. 2011;408(2):177-186.
+            doi:10.1016/j.jmb.2011.02.028. PMID 21354427.
+
+3. Vendored software: 3Dmol.js 2.5.5
+------------------------------------
+Files:      data/vendor/3Dmol-min.js (embedded in figures/26_m7_structure_3d.html)
+Source:     https://cdn.jsdelivr.net/npm/3dmol@2.5.5/build/3Dmol-min.js
+Terms:      BSD-3-Clause; full text in data/vendor/3Dmol-LICENSE.txt and the bundled
+            third-party notices in data/vendor/3Dmol-min.js.LICENSE.txt.
+
+4. Derived results
+------------------
+Everything in results/ and figures/ is computed by this project's code from the data
+above. It may be reused under the MIT License, subject to the source-data terms and
+citations listed here.

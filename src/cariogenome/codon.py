@@ -1,4 +1,5 @@
 """Genetic code (NCBI table 11), codon usage, RSCU and the Codon Adaptation Index."""
+
 from __future__ import annotations
 
 import math
@@ -20,7 +21,7 @@ INFORMATIVE_AA = sorted(aa for aa, cs in SYNONYMS.items() if len(cs) > 1)
 
 def codons_of(seq: str) -> list[str]:
     """Split a CDS into codons, dropping a trailing stop and any incomplete/ambiguous codon."""
-    cods = [seq[i:i + 3] for i in range(0, len(seq) - len(seq) % 3, 3)]
+    cods = [seq[i : i + 3] for i in range(0, len(seq) - len(seq) % 3, 3)]
     if cods and cods[-1] in STOP_CODONS:
         cods = cods[:-1]
     return [c for c in cods if c in CODE]

@@ -164,10 +164,12 @@ recombination, but it would not prove it, and here there is little to explain.
 
 The family alignment has 11 glucansucrases from 4 species (*S. mitis* B6 has none) and
 1545 scored columns.
-- The three catalytic residues of GtfC (Ito et al. 2011) are D477 (nucleophile,
-  region II, `SIRVDAVDNV`), E515 (acid/base, region III, `ILEAW`) and D588
-  (transition-state stabilizer, region IV, `FIRAHD`). All three are verified to sit in
-  their canonical GH70 motifs.
+- The three catalytic residues of GtfC are assigned from the canonical GH70 motifs:
+  D477 (nucleophile, region II, `SIRVDAVDNV`), E515 (acid/base, region III, `ILEAW`) and
+  D588 (transition-state stabilizer, region IV, `FIRAHD`). The pipeline verifies that each
+  sits in its motif. The numbering matches the GtfC structure paper (Ito et al. 2011,
+  PMID 21354427), whose abstract names the neighbouring subsite residues Asn481, Trp517
+  and Ser589.
 - **All three are invariant** across the 11 enzymes (conservation = 1.0).
 - If 20.4% of columns are invariant, the chance that three random columns are all
   invariant is 0.204³ = 0.0085.

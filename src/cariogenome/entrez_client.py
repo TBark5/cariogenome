@@ -5,6 +5,7 @@ run never touches the network. Setting ``CARIOGENOME_OFFLINE=1`` (``run_all.py -
 forbids all network access: cached files are still used, anything else raises
 ``OfflineError``.
 """
+
 from __future__ import annotations
 
 import json
@@ -102,7 +103,8 @@ def fetch_genome(accession: str) -> Path:
         return path
     if offline():
         raise OfflineError(f"offline mode: {accession} is not in the local cache")
-    Entrez.email = contact_email()
+    # Biopython annotates Entrez.email as None although a str is expected at runtime.
+    Entrez.email = contact_email()  # type: ignore[assignment]
 
     def _get() -> str:
         handle = Entrez.efetch(db="nuccore", id=accession, rettype="gbwithparts", retmode="text")
@@ -115,8 +117,14 @@ def fetch_genome(accession: str) -> Path:
     text = _with_retries(_get)
     RAW.mkdir(parents=True, exist_ok=True)
     path.write_text(text)
-    _log(accession, {"source": "NCBI nuccore efetch gbwithparts",
-                     "accessed": date.today().isoformat(), "file": path.name})
+    _log(
+        accession,
+        {
+            "source": "NCBI nuccore efetch gbwithparts",
+            "accessed": date.today().isoformat(),
+            "file": path.name,
+        },
+    )
     return path
 
 
@@ -133,8 +141,10 @@ def fetch_url(url: str, filename: str, source: str) -> Path:
     content = _with_retries(_get)
     RAW.mkdir(parents=True, exist_ok=True)
     path.write_bytes(content)
-    _log(filename, {"source": source, "url": url,
-                    "accessed": date.today().isoformat(), "file": filename})
+    _log(
+        filename,
+        {"source": source, "url": url, "accessed": date.today().isoformat(), "file": filename},
+    )
     return path
 
 

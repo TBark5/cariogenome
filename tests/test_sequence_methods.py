@@ -1,4 +1,5 @@
 """Unit tests for codon usage, CAI, NG86 dN/dS, alignment, conservation and QC."""
+
 import math
 import warnings
 
@@ -37,9 +38,9 @@ def test_cai_is_one_for_preferred_codons_only():
 
 
 def test_ng86_sites_known_codons():
-    assert codon_sites("ATG") == (0.0, 3.0)           # Met: no synonymous changes
+    assert codon_sites("ATG") == (0.0, 3.0)  # Met: no synonymous changes
     assert codon_sites("TTT")[0] == pytest.approx(1 / 3)  # Phe: only TTC is synonymous
-    assert codon_sites("GGG")[0] == pytest.approx(1.0)    # Gly: 4-fold degenerate 3rd position
+    assert codon_sites("GGG")[0] == pytest.approx(1.0)  # Gly: 4-fold degenerate 3rd position
 
 
 def test_ng86_differences():
@@ -67,7 +68,7 @@ def test_pooled_ng86_matches_biopython():
     for i in rng.choice(len(a), 25, replace=False):
         cand = mutable[:]
         cand[i] = "ACGT"[(("ACGT".index(mutable[i])) + 1) % 4]
-        cod = "".join(cand[i - i % 3: i - i % 3 + 3])
+        cod = "".join(cand[i - i % 3 : i - i % 3 + 3])
         if CODE[cod] != "*":
             mutable = cand
     b = "".join(mutable)
