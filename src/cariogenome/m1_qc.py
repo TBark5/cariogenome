@@ -188,7 +188,10 @@ def write_accessions(cat: pd.DataFrame, fam: pd.DataFrame | None = None) -> None
             lines.append(f"| {r.id} | *{r.species}* | {r.protein_id} | {r.product} | {r.length} |")
     other = {k: v for k, v in log.items() if not k.startswith(("NC_", "NZ_"))}
     if other:
-        lines += ["", "## Other downloads", "", "| File | Source | URL | Accessed |", "|---|---|---|---|"]
+        lines += ["", "## Other downloads", "",
+                  "Structures of *S. mutans* GtfC. 3AIE (2.1 A, highest resolution) chain A is "
+                  "the one analysed in M7; the others were inspected when choosing it.", "",
+                  "| File | Source | URL | Accessed |", "|---|---|---|---|"]
         for k, v in sorted(other.items()):
             lines.append(f"| {k} | {v.get('source', '')} | {v.get('url', '')} | {v.get('accessed', '')} |")
     (ROOT / "ACCESSIONS.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

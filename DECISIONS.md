@@ -115,3 +115,36 @@ chosen and why.
 - **Sliding window:** 60 codons, step 20, 200 bootstrap replicates per window.
 - **Synthetic validation runs every time** (not only in fallback mode): recovery of a
   known 22-taxon topology and of known omega values (0.02-1.0) by the same code.
+
+## M6: motifs and catalytic residues
+
+- **GH70 family set** = every GH70 homolog of GtfB/C/D (identity >= 30%, coverage >= 50%
+  of both proteins) in the five species representatives: 11 proteins (UA159 GtfB/C/D,
+  SK36 GtfP, CH1 GtfG, six JIM8777 enzymes; *S. mitis* B6 has none). Using all 22 genomes
+  would add near-duplicate strains and no new diversity.
+- **Catalytic residues come from the GtfC crystal-structure paper** (Ito et al. 2011,
+  J Mol Biol 408:177): D477 nucleophile, E515 acid/base, D588 transition-state stabilizer.
+  UniProt P13470 has no residue-level active-site annotation. The pipeline verifies that
+  each residue sits inside its canonical GH70 motif (regions II, III, IV) in UA159 GtfC.
+- **Tie handling for P5 was fixed in code before the first M6 run:** the percentile of a
+  column is its mid-rank (columns with equal conservation share the average rank).
+  Strict and best-case ranks are also written to `m6_catalytic_residues.csv`.
+- **Motifs** = the 6 non-overlapping 10-residue windows with the highest mean
+  conservation (entropy approach), plus 11-column windows centered on each catalytic
+  residue. PWMs are log-odds (bits) against a uniform background with a 0.01 pseudocount.
+
+## M7: structure
+
+- **PDB 3AIE chain A** (GtfC residues 244-1087, 2.1 A, the best resolution of the three
+  GtfC entries). 3AIC (acarbose complex, 3.1 A) would mark the active site with a ligand,
+  but lower resolution makes the Ramachandran plot noisier. The active site is defined
+  instead by the centroid of the catalytic side chains.
+- **Conservation is written to the B-factor column** (x100; -1 = not scored), so py3Dmol
+  colors the cartoon by conservation. The interactive view is
+  `figures/m7_structure_conservation.html` (loads 3Dmol.js from a CDN when opened).
+- **P6 statistic:** Spearman correlation between residue conservation and C-alpha distance
+  to the catalytic center, with a residue bootstrap CI. Neighbouring residues are not
+  independent, so the p-value and CI are optimistic. The direction and size of rho are
+  the result, not its p-value.
+- **Ramachandran regions** are simple phi/psi boxes for description only. They are not a
+  MolProbity-style validation.

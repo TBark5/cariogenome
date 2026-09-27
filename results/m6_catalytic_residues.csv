@@ -1,0 +1,4 @@
+position,residue,role,alignment_column,conservation,gap_fraction,top_percent_midrank,top_percent_strict,top_percent_best_case,in_top10_midrank
+477,D,nucleophile,727,1.0,0.0,10.194174757281553,20.388349514563107,0.06472491909385113,False
+515,E,acid/base,765,1.0,0.0,10.194174757281553,20.388349514563107,0.06472491909385113,False
+588,D,transition-state stabilizer,895,1.0,0.0,10.194174757281553,20.388349514563107,0.06472491909385113,False

@@ -1,0 +1,4 @@
+position,expected,observed,role,motif,in_motif,context
+477,D,D,nucleophile,region II,True,DSIRVDAVDNV
+515,E,E,acid/base,region III,True,HLSILEAWSYN
+588,D,D,transition-state stabilizer,region IV,True,FIRAHDSEVQD

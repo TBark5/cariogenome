@@ -1,6 +1,9 @@
 # PROGRESS
 
 ## Done
+- Phase 6 (M6 + M7): GH70 family motifs, PWMs and logos, catalytic-residue ranks
+  (`results/m6_*.csv`); PDB 3AIE conservation mapping, P6 correlation, Ramachandran,
+  interactive `figures/m7_structure_conservation.html` (`results/m7_*.csv`). Runtime ~8 s.
 - Phase 5 (M5): pooled NG86 dN/dS within each species with codon-bootstrap CIs,
   between-species saturation check, class test (`results/m5_tests.csv`), per-gene vs
   controls, sliding windows, synthetic recovery validation (`validation.py`), 5 figures.
@@ -25,7 +28,7 @@
   (`src/cariogenome/plotting.py`).
 
 ## In progress
-- Phase 6 (M6 motifs, M7 structure).
+- Phase 7 (visual pass + captions), then Phase 8 (Streamlit app).
 
 ## Next
 - Phases 2-10 as listed in the project brief.

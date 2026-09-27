@@ -1,0 +1,2 @@
+pdb_id,chain,n_residues_modelled,n_residues_scored,numbering_matches_gtfc,spearman_rho_conservation_vs_distance,rho_ci_low,rho_ci_high,spearman_p,mean_conservation_within_12A,n_within_12A,mean_conservation_beyond_12A,rama_fraction_alpha,rama_fraction_beta,rama_fraction_left-handed,rama_fraction_other,rama_n_residues
+3AIE,A,844,839,True,-0.2964968997900394,-0.3634144946928877,-0.23218581521866308,1.733429647907663e-18,0.9537560751341552,34,0.7671769410280207,0.5095011876484561,0.42280285035629456,0.06532066508313539,0.0023752969121140144,842
