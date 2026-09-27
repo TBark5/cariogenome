@@ -71,7 +71,8 @@ def jc(p: np.ndarray | float) -> np.ndarray:
     """Jukes-Cantor correction; NaN where p >= 0.75 (saturated)."""
     p = np.asarray(p, float)
     with np.errstate(invalid="ignore", divide="ignore"):
-        return np.where(p < 0.75, -0.75 * np.log(1 - 4 * p / 3), np.nan)
+        # "+ 0.0" turns -0.0 (from p = 0) into 0.0 so tables never print "-0.000"
+        return np.where(p < 0.75, -0.75 * np.log(1 - 4 * p / 3), np.nan) + 0.0
 
 
 def _split(seq: str) -> list[str]:
