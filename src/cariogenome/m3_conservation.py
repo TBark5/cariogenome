@@ -47,7 +47,8 @@ def column_conservation(msa: dict[str, str], kind: str = "aa", ref: str | None =
             ww = w[mask] / w[mask].sum()
             _, inv = np.unique(col[mask], return_inverse=True)
             freqs = np.bincount(inv, weights=ww)
-            ent = float(-(freqs * np.log2(freqs)).sum()) + 0.0
+            ent = float(-(freqs * np.log2(freqs)).sum())
+            ent = 0.0 if ent < 1e-9 else ent  # invariant column: remove float round-off
             cons = 1 - ent / np.log2(K)
         rp, rres = np.nan, ""
         if ref_row is not None and ref_row[j] != "-":
