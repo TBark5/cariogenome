@@ -1,6 +1,9 @@
 # PROGRESS
 
 ## Done
+- Phase 8: Streamlit dashboard `app.py` (overview + one tab per module, gene selector,
+  interactive py3Dmol view). Verified with AppTest (`tests/test_app.py`) and a live
+  server health check; screenshots in `docs/screenshots/`.
 - Phase 7: visual pass; synthesis forest plot (`summary.py`,
   `figures/summary_effect_sizes.png`), per-species replication of the dN/dS pattern
   (`results/m5_replication_by_species.csv`), label fixes, `figures/CAPTIONS.md`
@@ -32,7 +35,7 @@
   (`src/cariogenome/plotting.py`).
 
 ## In progress
-- Phase 8 (Streamlit app).
+- Phase 9 (tests, run_all.py, fresh-venv check).
 
 ## Next
 - Phases 2-10 as listed in the project brief.
@@ -43,6 +46,7 @@
 ## How to run
 ```
 .venv\Scripts\python -m pip install -r requirements.txt
+.venv\Scripts\streamlit run app.py
 ```
 
 ## Key files
