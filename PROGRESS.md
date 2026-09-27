@@ -1,6 +1,9 @@
 # PROGRESS
 
 ## Done
+- Phase 4 (M4): NJ + UPGMA trees with 100 bootstrap replicates for 15 genes and the
+  concatenated housekeeping reference (`results/trees/*.nwk`), discordance table
+  (`results/m4_discordance.csv`, `m4_conflicts.csv`), tests, 5 figures. Runtime ~50 s.
 - Phase 3 (M3): pairwise identity matrices, center-star MSAs + codon alignments
   (`results/alignments/`), Henikoff-weighted entropy per column (`results/conservation/`),
   extreme regions, GH70 family alignment, P2 test (`results/m3_tests.csv`), 5 figures.
@@ -18,7 +21,7 @@
   (`src/cariogenome/plotting.py`).
 
 ## In progress
-- Phase 4 (M4 phylogenetics).
+- Phase 5 (M5 selection / dN/dS).
 
 ## Next
 - Phases 2-10 as listed in the project brief.
