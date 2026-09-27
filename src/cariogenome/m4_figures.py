@@ -122,8 +122,7 @@ def plot_discordance(disc: pd.DataFrame, tests: pd.DataFrame) -> None:
     x = np.arange(len(coding))
     axes[0].bar(x, coding["nRF_vs_reference"], color=colors)
     axes[0].set_ylabel("normalised RF distance")
-    axes[0].set_title("Gene tree vs reference, all taxa of the gene
-(taxon sets differ between genes, so not tested)", fontsize=9.5)
+    axes[0].set_title("Gene tree vs reference, all taxa of the gene\n(taxon sets differ between genes, so not tested)", fontsize=9.5)
     axes[1].bar(x, coding["nRF_within_Smutans"], color=colors)
     r = t.loc["nRF_within_Smutans"]
     axes[1].set_title(f"Within S. mutans only: Cliff's d = {r.cliffs_delta:.2f} "
