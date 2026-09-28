@@ -1,8 +1,65 @@
-[server]
-headless = false
-
 [browser]
 gatherUsageStats = false
 
+[client]
+# Visitors of the hosted app get the viewer toolbar, not the developer menu.
+toolbarMode = "viewer"
+
 [theme]
-primaryColor = "#D55E00"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+headingFont = "'Source Serif 4':https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+codeFont = "'JetBrains Mono':https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+baseFontSize = 15
+codeFontSize = "0.85rem"
+headingFontWeights = [700, 600, 600, 600, 600, 600]
+headingFontSizes = ["2.3rem", "1.6rem", "1.25rem", "1.05rem", "0.95rem", "0.85rem"]
+baseRadius = "10px"
+buttonRadius = "8px"
+showWidgetBorder = true
+showSidebarBorder = true
+linkUnderline = false
+
+[theme.light]
+primaryColor = "#0F766E"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F2F6F6"
+textColor = "#15232B"
+linkColor = "#0F766E"
+borderColor = "#DCE4E6"
+dataframeBorderColor = "#E3EAEC"
+dataframeHeaderBackgroundColor = "#F2F6F6"
+codeBackgroundColor = "#F2F6F6"
+greenColor = "#15803D"
+orangeColor = "#C2410C"
+redColor = "#B91C1C"
+blueColor = "#0072B2"
+grayColor = "#5B6B73"
+# Okabe-Ito, in the same order as the static figures (vermillion = virulence, blue = control).
+chartCategoricalColors = ["#D55E00", "#0072B2", "#009E73", "#E69F00", "#CC79A7", "#56B4E9", "#7F7F7F"]
+chartSequentialColors = ["#440154", "#482878", "#3E4A89", "#31688E", "#26828E", "#1F9E89", "#35B779", "#6DCD59", "#B4DE2C", "#FDE725"]
+
+[theme.dark]
+primaryColor = "#0D9488"
+backgroundColor = "#0B1417"
+secondaryBackgroundColor = "#13232A"
+textColor = "#E3ECEE"
+linkColor = "#5EEAD4"
+borderColor = "#23363D"
+dataframeBorderColor = "#23363D"
+dataframeHeaderBackgroundColor = "#13232A"
+codeBackgroundColor = "#13232A"
+greenColor = "#4ADE80"
+orangeColor = "#FB923C"
+redColor = "#F87171"
+blueColor = "#56B4E9"
+grayColor = "#94A3AB"
+chartCategoricalColors = ["#E8743B", "#3A9BDC", "#2BB38C", "#F0B429", "#D98CB8", "#7CC6F0", "#9AA5AB"]
+chartSequentialColors = ["#440154", "#482878", "#3E4A89", "#31688E", "#26828E", "#1F9E89", "#35B779", "#6DCD59", "#B4DE2C", "#FDE725"]
+
+[theme.light.sidebar]
+backgroundColor = "#F6F9F9"
+secondaryBackgroundColor = "#EAF0F1"
+
+[theme.dark.sidebar]
+backgroundColor = "#0E1A1E"
+secondaryBackgroundColor = "#172A31"

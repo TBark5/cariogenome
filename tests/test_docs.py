@@ -101,7 +101,7 @@ def _markdown_numbers(text: str) -> list[str]:
     text = re.sub(r"\]\([^)]*\)", "]", text)  # link targets
     text = re.sub(r"`[^`]*`", "", text)  # inline code (file names, flags)
     text = re.sub(r"\d{4}-\d{2}-\d{2}", "", text)  # ISO dates
-    text = text.replace("−", "-")  # noqa: RUF001 (typographic minus in the docs)
+    text = text.replace("−", "-")
     tokens = re.findall(r"(?<![\w.])-?\d+(?:\.\d+)*%?", text)
     return [t.rstrip("%").lstrip("-") for t in tokens]
 
@@ -161,16 +161,15 @@ def test_captions_one_per_figure_file() -> None:
 
 def test_every_figure_referenced_and_every_reference_exists() -> None:
     texts = {p: p.read_text(encoding="utf-8") for p in _tracked_markdown()}
-    texts[ROOT / "app.py"] = (ROOT / "app.py").read_text(encoding="utf-8")
+    app_files = [ROOT / "app.py", *(ROOT / "app_pages").glob("*.py")]
+    app_text = "\n".join(p.read_text(encoding="utf-8") for p in app_files)
     refs = set()
     for text in texts.values():
         refs |= set(re.findall(r"(\d\d_[A-Za-z0-9_]+\.(?:png|html))", text))
     for r in refs:
         assert (FIG / r).exists(), f"referenced figure missing: {r}"
     app_names = set(
-        re.findall(
-            r'"(m\d_[A-Za-z0-9_]+|summary_[a-z_]+|validation_[a-z_]+)"', texts[ROOT / "app.py"]
-        )
+        re.findall(r'"(m\d_[A-Za-z0-9_]+|summary_[a-z_]+|validation_[a-z_]+)"', app_text)
     )
     for f in FIG.iterdir():
         if f.suffix in (".png", ".html"):

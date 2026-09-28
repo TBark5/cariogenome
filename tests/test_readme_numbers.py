@@ -15,7 +15,7 @@ pytestmark = pytest.mark.skipif(
 
 def _fmt(x: float, d: int) -> str:
     # README uses the typographic minus sign, so the test must too.
-    return f"{x:.{d}f}".replace("-", "−")  # noqa: RUF001
+    return f"{x:.{d}f}".replace("-", "−")
 
 
 def _readme() -> str:
@@ -48,10 +48,10 @@ def test_headline_numbers_match_results():
     m7 = pd.read_csv(RES / "m7_summary.csv").iloc[0]
     m6 = pd.read_csv(RES / "m6_summary.csv").iloc[0]
     cat = pd.read_csv(RES / "m1_catalog.csv")
-    assert f"ρ = {val.omega_spearman:.3f}" in text  # noqa: RUF001 (Greek rho, as in README)
+    assert f"ρ = {val.omega_spearman:.3f}" in text
     assert f"{100 * val.omega_median_relative_error:.1f}%" in text
     assert (
-        f"ρ = {_fmt(m7.spearman_rho_conservation_vs_distance, 2)} "  # noqa: RUF001
+        f"ρ = {_fmt(m7.spearman_rho_conservation_vs_distance, 2)} "
         f"[{_fmt(m7.rho_ci_low, 2)}, {_fmt(m7.rho_ci_high, 2)}]"
     ) in text
     assert f"{100 * m6.fraction_invariant_columns:.1f}%" in text

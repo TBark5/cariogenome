@@ -199,21 +199,32 @@ colored by conservation is [figures/26_m7_structure_3d.html](figures/26_m7_struc
 
 ## Dashboard
 
-`streamlit run app.py` opens a dashboard with an overview tab, one tab per module, and a
-gene selector. Screenshots (1500 × 1250 browser window):
+`streamlit run app.py` opens a dashboard with an overview page and one page per module.
+The overview gives the headline, an interactive effect-size plot and the prediction
+scorecard. The M1 to M5 pages share a gene selector, which is kept in the URL (for
+example `?gene=spaP`), so a link opens on the same gene. Charts are interactive and use
+the colors of the static figures. The 300 dpi figures load only when their tab is opened.
+The app has light and dark themes. Screenshots (1500 × 1250 browser window):
 
 | Overview | Selection (M5) |
 |:---:|:---:|
-| ![Dashboard overview tab with summary metrics and the effect-size forest plot](docs/screenshots/dashboard_overview.png) | ![Dashboard selection tab with dN/dS metrics and the sliding-window chart for the selected gene](docs/screenshots/dashboard_selection.png) |
+| ![Dashboard overview page with the headline, summary metrics, effect-size plot and prediction scorecard](docs/screenshots/dashboard_overview.png) | ![Dashboard selection page with dN/dS metrics, the per-gene dN/dS chart and the sliding-window chart for the selected gene](docs/screenshots/dashboard_selection.png) |
 
 | Conservation (M3) | Structure (M7) |
 |:---:|:---:|
-| ![Dashboard conservation tab with identity metrics and the per-column conservation chart](docs/screenshots/dashboard_conservation.png) | ![Dashboard structure tab with the interactive GtfC model colored by conservation](docs/screenshots/dashboard_structure.png) |
+| ![Dashboard conservation page with identity metrics and the per-column conservation chart](docs/screenshots/dashboard_conservation.png) | ![Dashboard structure page with the interactive GtfC model colored by conservation](docs/screenshots/dashboard_structure.png) |
+
+**Hosting on Streamlit Community Cloud.** The app reads only the committed `results/` and
+`figures/`, so it deploys straight from this repository and computes nothing at runtime. At
+[share.streamlit.io](https://share.streamlit.io), choose *Create app*, select this
+repository and branch, and set the main file path to `app.py`. Under *Advanced settings*,
+pick Python 3.12 or newer, because the pinned NumPy and SciPy need it. Community Cloud
+installs `requirements.txt` and applies the theme in `.streamlit/config.toml`.
 
 ## How to run
 
-Requires Python 3.10 or newer (developed on 3.14, Windows 11). No GPU and no external
-binaries. The package does **not** need to be installed: `run_all.py` and `app.py` add
+Requires Python 3.12 or newer, which the pinned NumPy and SciPy need (developed on 3.14,
+Windows 11). No GPU and no external binaries. The package does **not** need to be installed: `run_all.py` and `app.py` add
 `src/` to the import path, and pytest does the same through `pyproject.toml`.
 (`pip install -e .` also works if you prefer.)
 
@@ -328,7 +339,7 @@ The formulas are written out in [METHODS.md](METHODS.md); every judgment call is
 
 Code and data carry **different terms**:
 
-- **Code** (everything in `src/`, `tests/`, `run_all.py`, `app.py`): MIT License, see
+- **Code** (everything in `src/`, `tests/`, `run_all.py`, `app.py`, `app_pages/`): MIT License, see
   [LICENSE](LICENSE).
 - **Data**: the sequences are NCBI RefSeq records and the structure is RCSB PDB entry
   3AIE, each under its provider's terms; the vendored 3Dmol.js library is BSD-3-Clause.
@@ -339,8 +350,11 @@ Code and data carry **different terms**:
 ```
 config.yaml               genomes, gene panel, parameters, seeds
 run_all.py                regenerates everything
-app.py                    Streamlit dashboard
+app.py                    Streamlit dashboard (entry point and navigation)
+app_pages/                one dashboard page per module, plus the overview
+assets/                   dashboard logo (light and dark)
 src/cariogenome/          one module per analysis (m1_ ... m7_) plus shared helpers
+                          (dashboard.py holds the dashboard's charts and layout helpers)
 tests/                    pytest suite (methods, synthetic recovery, docs, dashboard)
 data/genes, data/genbank  extracted sequences (FASTA + GenBank)
 data/genomes              CAI reference sets and genome CDS backgrounds

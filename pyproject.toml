@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "cariogenome"
 version = "1.0.0"
 description = "Comparative genomics of cariogenic and commensal oral streptococci"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -24,6 +24,8 @@ target-version = "py310"
 # Pylint "refactor" (PLR: magic values, argument counts) and "convention" (PLC) rules are
 # style opinions, not defects, and are not selected (see DECISIONS.md).
 select = ["E", "W", "F", "B", "UP", "SIM", "RUF", "PLE", "PLW"]
+# Scientific symbols shown in the dashboard (en dash, times, minus, Greek letters).
+allowed-confusables = ["–", "×", "−", "α", "β", "ρ"]
 
 [tool.mypy]
 python_version = "3.14"
